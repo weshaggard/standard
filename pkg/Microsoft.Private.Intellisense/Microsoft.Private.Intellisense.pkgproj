@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$([MSBuild]::GetDirectoryNameOfFileAbove($(MSBuildThisFileDirectory), dir.props))\dir.props" />
+
+  <PropertyGroup>
+    <Version>2.0.0</Version>
+    <PrereleaseLabel>preview3</PrereleaseLabel>
+    <HarvestStablePackage>false</HarvestStablePackage>
+    <SkipPackageFileCheck>true</SkipPackageFileCheck>
+    <OmitDependencies>true</OmitDependencies>
+    <SkipValidatePackage>true</SkipValidatePackage>
+
+    <NETStandardXmlDocsRoot>$(BaseXMLDocs)\netstandard-2-0</NETStandardXmlDocsRoot>
+    <NETCoreXmlDocsRoot>$(BaseXMLDocs)\netcore-2-0</NETCoreXmlDocsRoot>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <File Include="$(NETStandardXmlDocsRoot)\**\*.xml">
+      <TargetPath>xmldocs\netstandard\%(RecursiveDir)</TargetPath>
+    </File>
+    <File Include="$(NETCoreXmlDocsRoot)\**\*.xml">
+      <TargetPath>xmldocs\netcoreapp\%(RecursiveDir)</TargetPath>
+    </File>
+  </ItemGroup>
+
+  <Import Project="$([MSBuild]::GetDirectoryNameOfFileAbove($(MSBuildThisFileDirectory), dir.targets))\dir.targets" />
+</Project>

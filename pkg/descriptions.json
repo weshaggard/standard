@@ -15,5 +15,11 @@
         "Description": "A set of standard .NET APIs that are prescribed to be used and supported together.",
         "CommonTypes": [
         ]
+    },
+    {
+        "Name": "Microsoft.Private.Intellisense",
+        "Description": "Private package used to transport intellisense files from build to build.",
+        "CommonTypes": [
+        ]
     }
 ]
