@@ -9,17 +9,11 @@
     <SkipPackageFileCheck>true</SkipPackageFileCheck>
     <OmitDependencies>true</OmitDependencies>
     <SkipValidatePackage>true</SkipValidatePackage>
-
-    <NETStandardXmlDocsRoot>$(BaseXMLDocs)\netstandard-2-0</NETStandardXmlDocsRoot>
-    <NETCoreXmlDocsRoot>$(BaseXMLDocs)\netcore-2-0</NETCoreXmlDocsRoot>
   </PropertyGroup>
 
   <ItemGroup>
-    <File Include="$(NETStandardXmlDocsRoot)\**\*.xml">
-      <TargetPath>xmldocs\netstandard\%(RecursiveDir)</TargetPath>
-    </File>
-    <File Include="$(NETCoreXmlDocsRoot)\**\*.xml">
-      <TargetPath>xmldocs\netcoreapp\%(RecursiveDir)</TargetPath>
+    <File Include="xmldocs\**\*.xml">
+      <TargetPath>xmldocs\%(RecursiveDir)</TargetPath>
     </File>
   </ItemGroup>
 
