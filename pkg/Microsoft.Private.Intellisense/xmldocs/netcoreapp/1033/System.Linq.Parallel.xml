@@ -1,5 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?><span>
-<doc>
+﻿<?xml version="1.0" encoding="utf-8"?><doc>
   <assembly>
     <name>System.Linq.Parallel</name>
   </assembly>
@@ -119,7 +118,7 @@
       <summary>Converts a <see cref="T:System.Linq.ParallelQuery`1"></see> into an <see cref="T:System.Collections.Generic.IEnumerable`1"></see> to force sequential evaluation of the query.</summary>
       <param name="source">The sequence to cast as <see cref="T:System.Collections.Generic.IEnumerable`1"></see>.</param>
       <typeparam name="TSource">The type of the elements of source.</typeparam>
-      <returns>The input sequence typed as <see cref="T:System.Collections.Generic.IEnumerable`1"></see>.</returns>
+      <returns>The input sequence typed as <see cref="System.Collections.Generic.IEnumerable`1"></see>.</returns>
       <exception cref="T:System.ArgumentNullException"><paramref name="source">source</paramref> is a null reference (Nothing in Visual Basic).</exception>
     </member>
     <member name="M:System.Linq.ParallelEnumerable.AsOrdered(System.Linq.ParallelQuery)">
@@ -127,7 +126,9 @@
       <param name="source">The input sequence.</param>
       <returns>The source sequence which will maintain the original ordering in the subsequent query operators.</returns>
       <exception cref="T:System.ArgumentNullException"><paramref name="source">source</paramref> is a null reference (Nothing in Visual Basic).</exception>
-      <exception cref="T:System.InvalidOperationException">thrown if <paramref name="source">source</paramref> contains no elements   -or-   if AsOrdered is called midway through a query. It is allowed to be called immediately after <see cref="M:System.Linq.ParallelEnumerable.AsParallel(System.Collections.IEnumerable)"></see>, <see cref="M:System.Linq.ParallelEnumerable.Range(System.Int32,System.Int32)"></see> or <see cref="M:System.Linq.ParallelEnumerable.Repeat``1(``0,System.Int32)"></see>.</exception>
+      <exception cref="T:System.InvalidOperationException">thrown if <paramref name="source">source</paramref> contains no elements  
+ -or-  
+ if AsOrdered is called midway through a query. It is allowed to be called immediately after <see cref="System.Linq.ParallelEnumerable.AsParallel(System.Collections.IEnumerable)"></see>, <see cref="System.Linq.ParallelEnumerable.Range(System.Int32,System.Int32)"></see> or <see cref="System.Linq.ParallelEnumerable.Repeat``1(``0,System.Int32)"></see>.</exception>
     </member>
     <member name="M:System.Linq.ParallelEnumerable.AsOrdered``1(System.Linq.ParallelQuery{``0})">
       <summary>Enables treatment of a data source as if it were ordered, overriding the default of unordered. AsOrdered may only be invoked on generic sequences returned by AsParallel, ParallelEnumerable.Range, and ParallelEnumerable.Repeat.</summary>
@@ -135,7 +136,9 @@
       <typeparam name="TSource">The type of elements of source.</typeparam>
       <returns>The source sequence which will maintain the original ordering in the subsequent query operators.</returns>
       <exception cref="T:System.ArgumentNullException"><paramref name="source">source</paramref> is a null reference (Nothing in Visual Basic).</exception>
-      <exception cref="T:System.InvalidOperationException">Thrown if <paramref name="source">source</paramref> contains no elements   -or-   if <paramref name="source">source</paramref> is not one of AsParallel, ParallelEnumerable.Range, or ParallelEnumerable.Repeat.</exception>
+      <exception cref="T:System.InvalidOperationException">Thrown if <paramref name="source">source</paramref> contains no elements  
+ -or-  
+ if <paramref name="source">source</paramref> is not one of AsParallel, ParallelEnumerable.Range, or ParallelEnumerable.Repeat.</exception>
     </member>
     <member name="M:System.Linq.ParallelEnumerable.AsParallel(System.Collections.IEnumerable)">
       <summary>Enables parallelization of a query.</summary>
@@ -154,14 +157,14 @@
       <summary>Enables parallelization of a query.</summary>
       <param name="source">An <see cref="T:System.Collections.Generic.IEnumerable`1"></see> to convert to a <see cref="T:System.Linq.ParallelQuery`1"></see>.</param>
       <typeparam name="TSource">The type of elements of source.</typeparam>
-      <returns>The source as a <see cref="T:System.Linq.ParallelQuery`1"></see> to bind to ParallelEnumerable extension methods.</returns>
+      <returns>The source as a <see cref="System.Linq.ParallelQuery`1"></see> to bind to ParallelEnumerable extension methods.</returns>
       <exception cref="T:System.ArgumentNullException"><paramref name="source">source</paramref> is a null reference (Nothing in Visual Basic).</exception>
     </member>
     <member name="M:System.Linq.ParallelEnumerable.AsSequential``1(System.Linq.ParallelQuery{``0})">
       <summary>Converts a <see cref="T:System.Linq.ParallelQuery`1"></see> into an <see cref="T:System.Collections.Generic.IEnumerable`1"></see> to force sequential evaluation of the query.</summary>
       <param name="source">A <see cref="T:System.Linq.ParallelQuery`1"></see> to convert to an <see cref="T:System.Collections.Generic.IEnumerable`1"></see>.</param>
       <typeparam name="TSource">The type of elements of source.</typeparam>
-      <returns>The source as an <see cref="T:System.Collections.Generic.IEnumerable`1"></see> to bind to sequential extension methods.</returns>
+      <returns>The source as an <see cref="System.Collections.Generic.IEnumerable`1"></see> to bind to sequential extension methods.</returns>
       <exception cref="T:System.ArgumentNullException"><paramref name="source">source</paramref> is a null reference (Nothing in Visual Basic).</exception>
     </member>
     <member name="M:System.Linq.ParallelEnumerable.AsUnordered``1(System.Linq.ParallelQuery{``0})">
@@ -186,7 +189,7 @@
       <returns>The average of the sequence of values.</returns>
       <exception cref="T:System.OperationCanceledException">The query was canceled with the token passed in through <paramref name="WithCancellation">WithCancellation</paramref>.</exception>
       <exception cref="T:System.ArgumentNullException"><paramref name="source">source</paramref> is a null reference (Nothing in Visual Basic).</exception>
-      <exception cref="T:System.AggregateException">The sum or count of the elements in the sequence is larger than <see cref="F:System.Int32.MaxValue"></see>. -or- One or more exceptions occurred during the evaluation of the query.</exception>
+      <exception cref="T:System.AggregateException">The sum or count of the elements in the sequence is larger than <see cref="System.Int32.MaxValue"></see>. -or- One or more exceptions occurred during the evaluation of the query.</exception>
       <exception cref="T:System.InvalidOperationException"><paramref name="source">source</paramref> contains no elements.</exception>
     </member>
     <member name="M:System.Linq.ParallelEnumerable.Average(System.Linq.ParallelQuery{System.Nullable{System.Int32}})">
@@ -195,7 +198,7 @@
       <returns>The average of the sequence of values.</returns>
       <exception cref="T:System.OperationCanceledException">The query was canceled with the token passed in through <paramref name="WithCancellation">WithCancellation</paramref>.</exception>
       <exception cref="T:System.ArgumentNullException"><paramref name="source">source</paramref> is a null reference (Nothing in Visual Basic).</exception>
-      <exception cref="T:System.AggregateException">The sum or count of the elements in the sequence is larger than <see cref="F:System.Int32.MaxValue"></see>. -or- One or more exceptions occurred during the evaluation of the query.</exception>
+      <exception cref="T:System.AggregateException">The sum or count of the elements in the sequence is larger than <see cref="System.Int32.MaxValue"></see>. -or- One or more exceptions occurred during the evaluation of the query.</exception>
       <exception cref="T:System.InvalidOperationException"><paramref name="source">source</paramref> contains no elements.</exception>
     </member>
     <member name="M:System.Linq.ParallelEnumerable.Average(System.Linq.ParallelQuery{System.Nullable{System.Double}})">
@@ -222,7 +225,7 @@
       <returns>The average of the sequence of values.</returns>
       <exception cref="T:System.OperationCanceledException">The query was canceled with the token passed in through <paramref name="WithCancellation">WithCancellation</paramref>.</exception>
       <exception cref="T:System.ArgumentNullException"><paramref name="source">source</paramref> is a null reference (Nothing in Visual Basic).</exception>
-      <exception cref="T:System.AggregateException">The sum or count of the elements in the sequence is larger than <see cref="F:System.Int32.MaxValue"></see>. -or- One or more exceptions occurred during the evaluation of the query.</exception>
+      <exception cref="T:System.AggregateException">The sum or count of the elements in the sequence is larger than <see cref="System.Int32.MaxValue"></see>. -or- One or more exceptions occurred during the evaluation of the query.</exception>
       <exception cref="T:System.InvalidOperationException"><paramref name="source">source</paramref> contains no elements.</exception>
     </member>
     <member name="M:System.Linq.ParallelEnumerable.Average(System.Linq.ParallelQuery{System.Int32})">
@@ -231,7 +234,7 @@
       <returns>The average of the sequence of values.</returns>
       <exception cref="T:System.OperationCanceledException">The query was canceled with the token passed in through <paramref name="WithCancellation">WithCancellation</paramref>.</exception>
       <exception cref="T:System.ArgumentNullException"><paramref name="source">source</paramref> is a null reference (Nothing in Visual Basic).</exception>
-      <exception cref="T:System.AggregateException">The sum or count of the elements in the sequence is larger than <see cref="F:System.Int32.MaxValue"></see>. -or- One or more exceptions occurred during the evaluation of the query.</exception>
+      <exception cref="T:System.AggregateException">The sum or count of the elements in the sequence is larger than <see cref="System.Int32.MaxValue"></see>. -or- One or more exceptions occurred during the evaluation of the query.</exception>
       <exception cref="T:System.InvalidOperationException"><paramref name="source">source</paramref> contains no elements.</exception>
     </member>
     <member name="M:System.Linq.ParallelEnumerable.Average(System.Linq.ParallelQuery{System.Double})">
@@ -271,7 +274,7 @@
       <exception cref="T:System.ArgumentNullException"><paramref name="source">source</paramref> or <paramref name="selector">selector</paramref> is a null reference (Nothing in Visual Basic).</exception>
       <exception cref="T:System.AggregateException">One or more exceptions occurred during the evaluation of the query.</exception>
       <exception cref="T:System.InvalidOperationException"><paramref name="source">source</paramref> contains no elements.</exception>
-      <exception cref="T:System.OverflowException">(Thrown as inner exception in an <see cref="T:System.AggregateException"></see>). The <paramref name="selector">selector</paramref> function returns a value greater than MaxValue for the element type.</exception>
+      <exception cref="T:System.OverflowException">(Thrown as inner exception in an <see cref="System.AggregateException"></see>). The <paramref name="selector">selector</paramref> function returns a value greater than MaxValue for the element type.</exception>
     </member>
     <member name="M:System.Linq.ParallelEnumerable.Average``1(System.Linq.ParallelQuery{``0},System.Func{``0,System.Nullable{System.Int64}})">
       <summary>Computes in parallel the average of a sequence of values that are obtained by invoking a transform function on each element of the input sequence.</summary>
@@ -281,9 +284,9 @@
       <returns>The average of the sequence of values.</returns>
       <exception cref="T:System.OperationCanceledException">The query was canceled with the token passed in through <paramref name="WithCancellation">WithCancellation</paramref>.</exception>
       <exception cref="T:System.ArgumentNullException"><paramref name="source">source</paramref> or <paramref name="selector">selector</paramref> is a null reference (Nothing in Visual Basic).</exception>
-      <exception cref="T:System.AggregateException">The sum or count of the elements in the sequence is larger than <see cref="F:System.Int64.MaxValue"></see>. -or- One or more exceptions occurred during the evaluation of the query.</exception>
+      <exception cref="T:System.AggregateException">The sum or count of the elements in the sequence is larger than <see cref="System.Int64.MaxValue"></see>. -or- One or more exceptions occurred during the evaluation of the query.</exception>
       <exception cref="T:System.InvalidOperationException"><paramref name="source">source</paramref> contains no elements.</exception>
-      <exception cref="T:System.OverflowException">(Thrown as inner exception in an <see cref="T:System.AggregateException"></see>). The <paramref name="selector">selector</paramref> function returns a value greater than MaxValue for the element type.</exception>
+      <exception cref="T:System.OverflowException">(Thrown as inner exception in an <see cref="System.AggregateException"></see>). The <paramref name="selector">selector</paramref> function returns a value greater than MaxValue for the element type.</exception>
     </member>
     <member name="M:System.Linq.ParallelEnumerable.Average``1(System.Linq.ParallelQuery{``0},System.Func{``0,System.Nullable{System.Int32}})">
       <summary>Computes in parallel the average of a sequence of values that are obtained by invoking a transform function on each element of the input sequence.</summary>
@@ -293,9 +296,9 @@
       <returns>The average of the sequence of values.</returns>
       <exception cref="T:System.OperationCanceledException">The query was canceled with the token passed in through <paramref name="WithCancellation">WithCancellation</paramref>.</exception>
       <exception cref="T:System.ArgumentNullException"><paramref name="source">source</paramref> or <paramref name="selector">selector</paramref> is a null reference (Nothing in Visual Basic).</exception>
-      <exception cref="T:System.AggregateException">The sum or count of the elements in the sequence is larger than <see cref="F:System.Int32.MaxValue"></see>. -or- One or more exceptions occurred during the evaluation of the query.</exception>
+      <exception cref="T:System.AggregateException">The sum or count of the elements in the sequence is larger than <see cref="System.Int32.MaxValue"></see>. -or- One or more exceptions occurred during the evaluation of the query.</exception>
       <exception cref="T:System.InvalidOperationException"><paramref name="source">source</paramref> contains no elements.</exception>
-      <exception cref="T:System.OverflowException">(Thrown as inner exception in an <see cref="T:System.AggregateException"></see>). The <paramref name="selector">selector</paramref> function returns a value greater than MaxValue for the element type.</exception>
+      <exception cref="T:System.OverflowException">(Thrown as inner exception in an <see cref="System.AggregateException"></see>). The <paramref name="selector">selector</paramref> function returns a value greater than MaxValue for the element type.</exception>
     </member>
     <member name="M:System.Linq.ParallelEnumerable.Average``1(System.Linq.ParallelQuery{``0},System.Func{``0,System.Nullable{System.Double}})">
       <summary>Computes in parallel the average of a sequence of values that are obtained by invoking a transform function on each element of the input sequence.</summary>
@@ -307,7 +310,7 @@
       <exception cref="T:System.ArgumentNullException"><paramref name="source">source</paramref> or <paramref name="selector">selector</paramref> is a null reference (Nothing in Visual Basic).</exception>
       <exception cref="T:System.AggregateException">One or more exceptions occurred during the evaluation of the query.</exception>
       <exception cref="T:System.InvalidOperationException"><paramref name="source">source</paramref> contains no elements.</exception>
-      <exception cref="T:System.OverflowException">(Thrown as inner exception in an <see cref="T:System.AggregateException"></see>). The <paramref name="selector">selector</paramref> function returns a value greater than MaxValue for the element type.</exception>
+      <exception cref="T:System.OverflowException">(Thrown as inner exception in an <see cref="System.AggregateException"></see>). The <paramref name="selector">selector</paramref> function returns a value greater than MaxValue for the element type.</exception>
     </member>
     <member name="M:System.Linq.ParallelEnumerable.Average``1(System.Linq.ParallelQuery{``0},System.Func{``0,System.Nullable{System.Single}})">
       <summary>Computes in parallel the average of a sequence of values that are obtained by invoking a transform function on each element of the input sequence.</summary>
@@ -319,7 +322,7 @@
       <exception cref="T:System.ArgumentNullException"><paramref name="source">source</paramref> or <paramref name="selector">selector</paramref> is a null reference (Nothing in Visual Basic).</exception>
       <exception cref="T:System.AggregateException">One or more exceptions occurred during the evaluation of the query.</exception>
       <exception cref="T:System.InvalidOperationException"><paramref name="source">source</paramref> contains no elements.</exception>
-      <exception cref="T:System.OverflowException">(Thrown as inner exception in an <see cref="T:System.AggregateException"></see>). The <paramref name="selector">selector</paramref> function returns a value greater than MaxValue for the element type.</exception>
+      <exception cref="T:System.OverflowException">(Thrown as inner exception in an <see cref="System.AggregateException"></see>). The <paramref name="selector">selector</paramref> function returns a value greater than MaxValue for the element type.</exception>
     </member>
     <member name="M:System.Linq.ParallelEnumerable.Average``1(System.Linq.ParallelQuery{``0},System.Func{``0,System.Int64})">
       <summary>Computes in parallel the average of a sequence of values that are obtained by invoking a transform function on each element of the input sequence.</summary>
@@ -329,9 +332,9 @@
       <returns>The average of the sequence of values.</returns>
       <exception cref="T:System.OperationCanceledException">The query was canceled with the token passed in through <paramref name="WithCancellation">WithCancellation</paramref>.</exception>
       <exception cref="T:System.ArgumentNullException"><paramref name="source">source</paramref> or <paramref name="selector">selector</paramref> is a null reference (Nothing in Visual Basic).</exception>
-      <exception cref="T:System.AggregateException">The sum or count of the elements in the sequence is larger than <see cref="F:System.Int32.MaxValue"></see>. -or- One or more exceptions occurred during the evaluation of the query.</exception>
+      <exception cref="T:System.AggregateException">The sum or count of the elements in the sequence is larger than <see cref="System.Int32.MaxValue"></see>. -or- One or more exceptions occurred during the evaluation of the query.</exception>
       <exception cref="T:System.InvalidOperationException"><paramref name="source">source</paramref> contains no elements.</exception>
-      <exception cref="T:System.OverflowException">(Thrown as inner exception in an <see cref="T:System.AggregateException"></see>). The <paramref name="selector">selector</paramref> function returns a value greater than MaxValue for the element type.</exception>
+      <exception cref="T:System.OverflowException">(Thrown as inner exception in an <see cref="System.AggregateException"></see>). The <paramref name="selector">selector</paramref> function returns a value greater than MaxValue for the element type.</exception>
     </member>
     <member name="M:System.Linq.ParallelEnumerable.Average``1(System.Linq.ParallelQuery{``0},System.Func{``0,System.Int32})">
       <summary>Computes in parallel the average of a sequence of values that are obtained by invoking a transform function on each element of the input sequence.</summary>
@@ -341,9 +344,9 @@
       <returns>The average of the sequence of values.</returns>
       <exception cref="T:System.OperationCanceledException">The query was canceled with the token passed in through <paramref name="WithCancellation">WithCancellation</paramref>.</exception>
       <exception cref="T:System.ArgumentNullException"><paramref name="source">source</paramref> or <paramref name="selector">selector</paramref> is a null reference (Nothing in Visual Basic).</exception>
-      <exception cref="T:System.AggregateException">The sum or count of the elements in the sequence is larger than <see cref="F:System.Int32.MaxValue"></see>. -or- One or more exceptions occurred during the evaluation of the query.</exception>
+      <exception cref="T:System.AggregateException">The sum or count of the elements in the sequence is larger than <see cref="System.Int32.MaxValue"></see>. -or- One or more exceptions occurred during the evaluation of the query.</exception>
       <exception cref="T:System.InvalidOperationException"><paramref name="source">source</paramref> contains no elements.</exception>
-      <exception cref="T:System.OverflowException">(Thrown as inner exception in an <see cref="T:System.AggregateException"></see>). The <paramref name="selector">selector</paramref> function returns a value greater than MaxValue for the element type.</exception>
+      <exception cref="T:System.OverflowException">(Thrown as inner exception in an <see cref="System.AggregateException"></see>). The <paramref name="selector">selector</paramref> function returns a value greater than MaxValue for the element type.</exception>
     </member>
     <member name="M:System.Linq.ParallelEnumerable.Average``1(System.Linq.ParallelQuery{``0},System.Func{``0,System.Double})">
       <summary>Computes in parallel the average of a sequence of values that are obtained by invoking a transform function on each element of the input sequence.</summary>
@@ -355,7 +358,7 @@
       <exception cref="T:System.ArgumentNullException"><paramref name="source">source</paramref> or <paramref name="selector">selector</paramref> is a null reference (Nothing in Visual Basic).</exception>
       <exception cref="T:System.AggregateException">One or more exceptions occurred during the evaluation of the query.</exception>
       <exception cref="T:System.InvalidOperationException"><paramref name="source">source</paramref> contains no elements.</exception>
-      <exception cref="T:System.OverflowException">(Thrown as inner exception in an <see cref="T:System.AggregateException"></see>). The <paramref name="selector">selector</paramref> function returns a value greater than MaxValue for the element type.</exception>
+      <exception cref="T:System.OverflowException">(Thrown as inner exception in an <see cref="System.AggregateException"></see>). The <paramref name="selector">selector</paramref> function returns a value greater than MaxValue for the element type.</exception>
     </member>
     <member name="M:System.Linq.ParallelEnumerable.Average``1(System.Linq.ParallelQuery{``0},System.Func{``0,System.Decimal})">
       <summary>Computes in parallel the average of a sequence of values that are obtained by invoking a transform function on each element of the input sequence.</summary>
@@ -367,7 +370,7 @@
       <exception cref="T:System.ArgumentNullException"><paramref name="source">source</paramref> or <paramref name="selector">selector</paramref> is a null reference (Nothing in Visual Basic).</exception>
       <exception cref="T:System.AggregateException">One or more exceptions occurred during the evaluation of the query.</exception>
       <exception cref="T:System.InvalidOperationException"><paramref name="source">source</paramref> contains no elements.</exception>
-      <exception cref="T:System.OverflowException">(Thrown as inner exception in an <see cref="T:System.AggregateException"></see>). The <paramref name="selector">selector</paramref> function returns a value greater than MaxValue for the element type.</exception>
+      <exception cref="T:System.OverflowException">(Thrown as inner exception in an <see cref="System.AggregateException"></see>). The <paramref name="selector">selector</paramref> function returns a value greater than MaxValue for the element type.</exception>
     </member>
     <member name="M:System.Linq.ParallelEnumerable.Average``1(System.Linq.ParallelQuery{``0},System.Func{``0,System.Nullable{System.Decimal}})">
       <summary>Computes in parallel the average of a sequence of values that are obtained by invoking a transform function on each element of the input sequence.</summary>
@@ -379,7 +382,7 @@
       <exception cref="T:System.ArgumentNullException"><paramref name="source">source</paramref> or <paramref name="selector">selector</paramref> is a null reference (Nothing in Visual Basic).</exception>
       <exception cref="T:System.AggregateException">One or more exceptions occurred during the evaluation of the query.</exception>
       <exception cref="T:System.InvalidOperationException"><paramref name="source">source</paramref> contains no elements.</exception>
-      <exception cref="T:System.OverflowException">(Thrown as inner exception in an <see cref="T:System.AggregateException"></see>). The <paramref name="selector">selector</paramref> function returns a value greater than MaxValue for the element type.</exception>
+      <exception cref="T:System.OverflowException">(Thrown as inner exception in an <see cref="System.AggregateException"></see>). The <paramref name="selector">selector</paramref> function returns a value greater than MaxValue for the element type.</exception>
     </member>
     <member name="M:System.Linq.ParallelEnumerable.Cast``1(System.Linq.ParallelQuery)">
       <summary>Converts the elements of a ParallelQuery to the specified type.</summary>
@@ -394,7 +397,7 @@
       <param name="first">This parameter is not used.</param>
       <param name="second">This parameter is not used.</param>
       <typeparam name="TSource">This type parameter is not used.</typeparam>
-      <returns>This overload always throws a <see cref="T:System.NotSupportedException"></see>.</returns>
+      <returns>This overload always throws a <see cref="System.NotSupportedException"></see>.</returns>
       <exception cref="T:System.NotSupportedException">The exception that occurs when this method is called.</exception>
     </member>
     <member name="M:System.Linq.ParallelEnumerable.Concat``1(System.Linq.ParallelQuery{``0},System.Linq.ParallelQuery{``0})">
@@ -433,7 +436,7 @@
       <returns>The number of elements in the input sequence.</returns>
       <exception cref="T:System.OperationCanceledException">The query was canceled with the token passed in through <paramref name="WithCancellation">WithCancellation</paramref>.</exception>
       <exception cref="T:System.ArgumentNullException"><paramref name="source">source</paramref> is a null reference (Nothing in Visual Basic).</exception>
-      <exception cref="T:System.AggregateException">The number of elements in source is larger than <see cref="F:System.Int32.MaxValue"></see>. (In this case the InnerException is <see cref="T:System.OverflowException"></see>) -or- One or more exceptions occurred during the evaluation of the query.</exception>
+      <exception cref="T:System.AggregateException">The number of elements in source is larger than <see cref="System.Int32.MaxValue"></see>. (In this case the InnerException is <see cref="System.OverflowException"></see>) -or- One or more exceptions occurred during the evaluation of the query.</exception>
     </member>
     <member name="M:System.Linq.ParallelEnumerable.Count``1(System.Linq.ParallelQuery{``0},System.Func{``0,System.Boolean})">
       <summary>Returns a number that represents how many elements in the specified parallel sequence satisfy a condition.</summary>
@@ -443,10 +446,10 @@
       <returns>A number that represents how many elements in the sequence satisfy the condition in the predicate function.</returns>
       <exception cref="T:System.OperationCanceledException">The query was canceled with the token passed in through <paramref name="WithCancellation">WithCancellation</paramref>.</exception>
       <exception cref="T:System.ArgumentNullException"><paramref name="source">source</paramref> or <paramref name="predicate">predicate</paramref> is a null reference (Nothing in Visual Basic).</exception>
-      <exception cref="T:System.AggregateException">The number of elements in source is larger than <see cref="F:System.Int32.MaxValue"></see>. (In this case the InnerException is <see cref="T:System.OverflowException"></see>) -or- One or more exceptions occurred during the evaluation of the query.</exception>
+      <exception cref="T:System.AggregateException">The number of elements in source is larger than <see cref="System.Int32.MaxValue"></see>. (In this case the InnerException is <see cref="System.OverflowException"></see>) -or- One or more exceptions occurred during the evaluation of the query.</exception>
     </member>
     <member name="M:System.Linq.ParallelEnumerable.DefaultIfEmpty``1(System.Linq.ParallelQuery{``0})">
-      <summary>Returns the elements of the specified parallel sequence or the type parameter's default value in a singleton collection if the sequence is empty.</summary>
+      <summary>Returns the elements of the specified parallel sequence or the type parameter&amp;#39;s default value in a singleton collection if the sequence is empty.</summary>
       <param name="source">The sequence to return a default value for if it is empty.</param>
       <typeparam name="TSource">The type of the elements of source.</typeparam>
       <returns>A sequence that contains default(TSource) if <paramref name="source">source</paramref> is empty; otherwise, <paramref name="source">source</paramref>.</returns>
@@ -513,7 +516,7 @@
       <param name="first">This parameter is not used.</param>
       <param name="second">This parameter is not used.</param>
       <typeparam name="TSource">This type parameter is not used.</typeparam>
-      <returns>This overload always throws a <see cref="T:System.NotSupportedException"></see>.</returns>
+      <returns>This overload always throws a <see cref="System.NotSupportedException"></see>.</returns>
       <exception cref="T:System.NotSupportedException">The exception that occurs when this method is called.</exception>
     </member>
     <member name="M:System.Linq.ParallelEnumerable.Except``1(System.Linq.ParallelQuery{``0},System.Linq.ParallelQuery{``0})">
@@ -532,7 +535,7 @@
       <param name="second">This parameter is not used.</param>
       <param name="comparer">This parameter is not used.</param>
       <typeparam name="TSource">This type parameter is not used.</typeparam>
-      <returns>This overload always throws a <see cref="T:System.NotSupportedException"></see>.</returns>
+      <returns>This overload always throws a <see cref="System.NotSupportedException"></see>.</returns>
       <exception cref="T:System.NotSupportedException">The exception that occurs when this method is called.</exception>
     </member>
     <member name="M:System.Linq.ParallelEnumerable.Except``1(System.Linq.ParallelQuery{``0},System.Linq.ParallelQuery{``0},System.Collections.Generic.IEqualityComparer{``0})">
@@ -615,9 +618,7 @@
       <summary>Groups in parallel the elements of a sequence according to a specified key selector function and creates a result value from each group and its key. The elements of each group are projected by using a specified function.</summary>
       <param name="source">A sequence whose elements to group.</param>
       <param name="keySelector">A function to extract the key for each element.</param>
-      <param name="elementSelector"><p sourcefile="System.Linq.Parallel.yml" sourcestartlinenumber="1" sourceendlinenumber="2"><p sourcefile="System.Linq.Parallel.yml" sourcestartlinenumber="1" sourceendlinenumber="1">A function to map each source element to an element in an IGrouping<_tkey2c_ telement="">.<p>
-</_tkey2c_></p>
-</param>
+      <param name="elementSelector">A function to map each source element to an element in an IGrouping&amp;lt;TKey, TElement&amp;gt;.</param>
       <param name="resultSelector">A function to create a result value from each group.</param>
       <typeparam name="TSource">The type of the elements of source.</typeparam>
       <typeparam name="TKey">The type of the key returned by keySelector.</typeparam>
@@ -642,7 +643,7 @@
       <exception cref="T:System.AggregateException">One or more exceptions occurred during the evaluation of the query.</exception>
     </member>
     <member name="M:System.Linq.ParallelEnumerable.GroupBy``3(System.Linq.ParallelQuery{``0},System.Func{``0,``1},System.Func{``0,``2},System.Collections.Generic.IEqualityComparer{``1})">
-      <summary>Groups in parallel the elements of a sequence according to a key selector function. The keys are compared by using a comparer and each group's elements are projected by using a specified function.</summary>
+      <summary>Groups in parallel the elements of a sequence according to a key selector function. The keys are compared by using a comparer and each group&amp;#39;s elements are projected by using a specified function.</summary>
       <param name="source">An OrderedParallelQuery{TSource}that contains elements to sort.</param>
       <param name="keySelector">A function to extract a key from an element.</param>
       <param name="elementSelector">A function to map each source element to an element in an IGrouping.</param>
@@ -688,7 +689,7 @@
       <param name="keySelector">A function to extract a key from an element.</param>
       <param name="comparer">An <see cref="T:System.Collections.Generic.IComparer`1"></see> to compare keys.</param>
       <typeparam name="TSource">The type of elements of source.</typeparam>
-      <typeparam name="TKey">The type of the key returned by keySelector&gt;.</typeparam>
+      <typeparam name="TKey">The type of the key returned by keySelector&amp;gt;.</typeparam>
       <returns>A sequence of groups that are sorted descending according to <paramref name="TKey">TKey</paramref>.</returns>
       <exception cref="T:System.OperationCanceledException">The query was canceled with the token passed in through <paramref name="WithCancellation">WithCancellation</paramref>.</exception>
       <exception cref="T:System.ArgumentNullException"><paramref name="source">source</paramref> or <paramref name="action">action</paramref> is a null reference (Nothing in Visual Basic).</exception>
@@ -716,7 +717,7 @@
       <typeparam name="TInner">This type parameter is not used.</typeparam>
       <typeparam name="TKey">This type parameter is not used.</typeparam>
       <typeparam name="TResult">This type parameter is not used.</typeparam>
-      <returns>This overload always throws a <see cref="T:System.NotSupportedException"></see>.</returns>
+      <returns>This overload always throws a <see cref="System.NotSupportedException"></see>.</returns>
       <exception cref="T:System.OperationCanceledException">The query was canceled with the token passed in through <paramref name="WithCancellation">WithCancellation</paramref>.</exception>
       <exception cref="T:System.ArgumentNullException"><paramref name="source">source</paramref> or <paramref name="action">action</paramref> is a null reference (Nothing in Visual Basic).</exception>
       <exception cref="T:System.AggregateException">One or more exceptions occurred during the evaluation of the query.</exception>
@@ -749,7 +750,7 @@
       <typeparam name="TInner">This type parameter is not used.</typeparam>
       <typeparam name="TKey">This type parameter is not used.</typeparam>
       <typeparam name="TResult">This type parameter is not used.</typeparam>
-      <returns>This overload always throws a <see cref="T:System.NotSupportedException"></see>.</returns>
+      <returns>This overload always throws a <see cref="System.NotSupportedException"></see>.</returns>
       <exception cref="T:System.NotSupportedException">The exception that occurs when this method is called.</exception>
     </member>
     <member name="M:System.Linq.ParallelEnumerable.GroupJoin``4(System.Linq.ParallelQuery{``0},System.Linq.ParallelQuery{``1},System.Func{``0,``2},System.Func{``1,``2},System.Func{``0,System.Collections.Generic.IEnumerable{``1},``3},System.Collections.Generic.IEqualityComparer{``2})">
@@ -775,7 +776,7 @@
       <param name="second">This parameter is not used.</param>
       <param name="comparer">This parameter is not used.</param>
       <typeparam name="TSource">This type parameter is not used.</typeparam>
-      <returns>This overload always throws a <see cref="T:System.NotSupportedException"></see>.</returns>
+      <returns>This overload always throws a <see cref="System.NotSupportedException"></see>.</returns>
       <exception cref="T:System.NotSupportedException">The exception that occurs when this method is called.</exception>
     </member>
     <member name="M:System.Linq.ParallelEnumerable.Intersect``1(System.Linq.ParallelQuery{``0},System.Linq.ParallelQuery{``0},System.Collections.Generic.IEqualityComparer{``0})">
@@ -794,7 +795,7 @@
       <param name="first">This parameter is not used.</param>
       <param name="second">This parameter is not used.</param>
       <typeparam name="TSource">This type parameter is not used.</typeparam>
-      <returns>This overload always throws a <see cref="T:System.NotSupportedException"></see>.</returns>
+      <returns>This overload always throws a <see cref="System.NotSupportedException"></see>.</returns>
       <exception cref="T:System.NotSupportedException">The exception that occurs when this method is called.</exception>
     </member>
     <member name="M:System.Linq.ParallelEnumerable.Intersect``1(System.Linq.ParallelQuery{``0},System.Linq.ParallelQuery{``0})">
@@ -818,7 +819,7 @@
       <typeparam name="TInner">This type parameter is not used.</typeparam>
       <typeparam name="TKey">This type parameter is not used.</typeparam>
       <typeparam name="TResult">This type parameter is not used.</typeparam>
-      <returns>This overload always throws a <see cref="T:System.NotSupportedException"></see>.</returns>
+      <returns>This overload always throws a <see cref="System.NotSupportedException"></see>.</returns>
       <exception cref="T:System.OperationCanceledException">The query was canceled with the token passed in through <paramref name="WithCancellation">WithCancellation</paramref>.</exception>
       <exception cref="T:System.ArgumentNullException"><paramref name="source">source</paramref> or <paramref name="action">action</paramref> is a null reference (Nothing in Visual Basic).</exception>
       <exception cref="T:System.AggregateException">One or more exceptions occurred during the evaluation of the query.</exception>
@@ -851,7 +852,7 @@
       <typeparam name="TInner">This type parameter is not used.</typeparam>
       <typeparam name="TKey">This type parameter is not used.</typeparam>
       <typeparam name="TResult">This type parameter is not used.</typeparam>
-      <returns>This overload always throws a <see cref="T:System.NotSupportedException"></see>.</returns>
+      <returns>This overload always throws a <see cref="System.NotSupportedException"></see>.</returns>
       <exception cref="T:System.NotSupportedException">The exception that occurs when this method is called.</exception>
     </member>
     <member name="M:System.Linq.ParallelEnumerable.Join``4(System.Linq.ParallelQuery{``0},System.Linq.ParallelQuery{``1},System.Func{``0,``2},System.Func{``1,``2},System.Func{``0,``1,``3},System.Collections.Generic.IEqualityComparer{``2})">
@@ -918,8 +919,8 @@
       <returns>The number of elements in the input sequence.</returns>
       <exception cref="T:System.OperationCanceledException">The query was canceled with the token passed in through <paramref name="WithCancellation">WithCancellation</paramref>.</exception>
       <exception cref="T:System.ArgumentNullException"><paramref name="source">source</paramref> is a null reference (Nothing in Visual Basic).</exception>
-      <exception cref="T:System.AggregateException">The number of elements in source is larger than <see cref="F:System.Int64.MaxValue"></see>. -or- One or more exceptions occurred during the evaluation of the query.</exception>
-      <exception cref="T:System.OverflowException">The computed result is greater than <see cref="F:System.Int64.MaxValue"></see>.</exception>
+      <exception cref="T:System.AggregateException">The number of elements in source is larger than <see cref="System.Int64.MaxValue"></see>. -or- One or more exceptions occurred during the evaluation of the query.</exception>
+      <exception cref="T:System.OverflowException">The computed result is greater than <see cref="System.Int64.MaxValue"></see>.</exception>
     </member>
     <member name="M:System.Linq.ParallelEnumerable.LongCount``1(System.Linq.ParallelQuery{``0},System.Func{``0,System.Boolean})">
       <summary>Returns an Int64 that represents how many elements in a parallel sequence satisfy a condition.</summary>
@@ -929,8 +930,8 @@
       <returns>A number that represents how many elements in the sequence satisfy the condition in the predicate function.</returns>
       <exception cref="T:System.OperationCanceledException">The query was canceled with the token passed in through <paramref name="WithCancellation">WithCancellation</paramref>.</exception>
       <exception cref="T:System.ArgumentNullException"><paramref name="source">source</paramref> or <paramref name="predicate">predicate</paramref> is a null reference (Nothing in Visual Basic).</exception>
-      <exception cref="T:System.AggregateException">The number of elements in source is larger than <see cref="F:System.Int64.MaxValue"></see>. -or- One or more exceptions occurred during the evaluation of the query.</exception>
-      <exception cref="T:System.OverflowException">The computed result is greater than <see cref="F:System.Int64.MaxValue"></see>.</exception>
+      <exception cref="T:System.AggregateException">The number of elements in source is larger than <see cref="System.Int64.MaxValue"></see>. -or- One or more exceptions occurred during the evaluation of the query.</exception>
+      <exception cref="T:System.OverflowException">The computed result is greater than <see cref="System.Int64.MaxValue"></see>.</exception>
     </member>
     <member name="M:System.Linq.ParallelEnumerable.Max(System.Linq.ParallelQuery{System.Nullable{System.Single}})">
       <summary>Returns the maximum value in a parallel sequence of values.</summary>
@@ -1435,10 +1436,8 @@
       <summary>Generates a parallel sequence of integral numbers within a specified range.</summary>
       <param name="start">The value of the first integer in the sequence.</param>
       <param name="count">The number of sequential integers to generate.</param>
-      <returns><p sourcefile="System.Linq.Parallel.yml" sourcestartlinenumber="1" sourceendlinenumber="2"><p sourcefile="System.Linq.Parallel.yml" sourcestartlinenumber="1" sourceendlinenumber="1">An IEnumerable<int32> in C# or IEnumerable(Of Int32) in Visual Basic that contains a range of sequential integral numbers.<p>
-</int32></p>
-</returns>
-      <exception cref="T:System.ArgumentOutOfRangeException"><paramref name="count">count</paramref> is less than 0 -or- <paramref name="start">start</paramref> + <paramref name="count">count</paramref> - 1 is larger than <see cref="F:System.Int32.MaxValue"></see>.</exception>
+      <returns>An IEnumerable&amp;lt;Int32&amp;gt; in C# or IEnumerable(Of Int32) in Visual Basic that contains a range of sequential integral numbers.</returns>
+      <exception cref="T:System.ArgumentOutOfRangeException"><paramref name="count">count</paramref> is less than 0 -or- <paramref name="start">start</paramref> + <paramref name="count">count</paramref> - 1 is larger than <see cref="System.Int32.MaxValue"></see>.</exception>
     </member>
     <member name="M:System.Linq.ParallelEnumerable.Repeat``1(``0,System.Int32)">
       <summary>Generates a parallel sequence that contains one repeated value.</summary>
@@ -1458,7 +1457,7 @@
       <exception cref="T:System.AggregateException">One or more exceptions occurred during the evaluation of the query.</exception>
     </member>
     <member name="M:System.Linq.ParallelEnumerable.Select``2(System.Linq.ParallelQuery{``0},System.Func{``0,System.Int32,``1})">
-      <summary>Projects in parallel each element of a sequence into a new form by incorporating the element's index.</summary>
+      <summary>Projects in parallel each element of a sequence into a new form by incorporating the element&amp;#39;s index.</summary>
       <param name="source">A sequence of values to invoke a transform function on.</param>
       <param name="selector">A transform function to apply to each element.</param>
       <typeparam name="TSource">The type of the elements of source.</typeparam>
@@ -1467,7 +1466,7 @@
       <exception cref="T:System.ArgumentNullException"><paramref name="source">source</paramref> or <paramref name="selector">selector</paramref> is a null reference (Nothing in Visual Basic).</exception>
       <exception cref="T:System.OperationCanceledException">The query was canceled with the token passed in through <paramref name="WithCancellation">WithCancellation</paramref>.</exception>
       <exception cref="T:System.AggregateException">One or more exceptions occurred during the evaluation of the query.</exception>
-      <exception cref="T:System.OverflowException">More than <see cref="F:System.Int32.MaxValue"></see> elements are enumerated by the query. This condition might occur in streaming scenarios.</exception>
+      <exception cref="T:System.OverflowException">More than <see cref="System.Int32.MaxValue"></see> elements are enumerated by the query. This condition might occur in streaming scenarios.</exception>
     </member>
     <member name="M:System.Linq.ParallelEnumerable.Select``2(System.Linq.ParallelQuery{``0},System.Func{``0,``1})">
       <summary>Projects in parallel each element of a sequence into a new form.</summary>
@@ -1491,7 +1490,7 @@
       <returns>A sequence whose elements are the result of invoking the one-to-many transform function <paramref name="collectionSelector">collectionSelector</paramref> on each element of <paramref name="source">source</paramref> based on the index supplied to <paramref name="collectionSelector">collectionSelector</paramref>, and then mapping each of those sequence elements and their corresponding source element to a result element.</returns>
       <exception cref="T:System.ArgumentNullException"><paramref name="source">source</paramref> or <paramref name="selector">selector</paramref> is a null reference (Nothing in Visual Basic).</exception>
       <exception cref="T:System.OperationCanceledException">The query was canceled with the token passed in through <paramref name="WithCancellation">WithCancellation</paramref>.</exception>
-      <exception cref="T:System.OverflowException">More than <see cref="F:System.Int32.MaxValue"></see> elements are enumerated by the query.</exception>
+      <exception cref="T:System.OverflowException">More than <see cref="System.Int32.MaxValue"></see> elements are enumerated by the query.</exception>
       <exception cref="T:System.AggregateException">One or more exceptions occurred during the evaluation of the query.</exception>
     </member>
     <member name="M:System.Linq.ParallelEnumerable.SelectMany``3(System.Linq.ParallelQuery{``0},System.Func{``0,System.Int32,System.Collections.Generic.IEnumerable{``1}},System.Func{``0,``1,``2})">
@@ -1505,7 +1504,7 @@
       <returns>A sequence whose elements are the result of invoking the one-to-many transform function <paramref name="collectionSelector">collectionSelector</paramref> on each element of <paramref name="source">source</paramref> based on the index supplied to <paramref name="collectionSelector">collectionSelector</paramref>, and then mapping each of those sequence elements and their corresponding source element to a result element.</returns>
       <exception cref="T:System.ArgumentNullException"><paramref name="source">source</paramref> or <paramref name="selector">selector</paramref> is a null reference (Nothing in Visual Basic).</exception>
       <exception cref="T:System.OperationCanceledException">The query was canceled with the token passed in through <paramref name="WithCancellation">WithCancellation</paramref>.</exception>
-      <exception cref="T:System.OverflowException">More than <see cref="F:System.Int32.MaxValue"></see> elements are enumerated by the query.</exception>
+      <exception cref="T:System.OverflowException">More than <see cref="System.Int32.MaxValue"></see> elements are enumerated by the query.</exception>
       <exception cref="T:System.AggregateException">One or more exceptions occurred during the evaluation of the query.</exception>
     </member>
     <member name="M:System.Linq.ParallelEnumerable.SelectMany``2(System.Linq.ParallelQuery{``0},System.Func{``0,System.Collections.Generic.IEnumerable{``1}})">
@@ -1528,7 +1527,7 @@
       <returns>A sequence whose elements are the result of invoking the one-to-many transform function on each element of the input sequence.</returns>
       <exception cref="T:System.ArgumentNullException"><paramref name="source">source</paramref> or <paramref name="selector">selector</paramref> is a null reference (Nothing in Visual Basic).</exception>
       <exception cref="T:System.OperationCanceledException">The query was canceled with the token passed in through <paramref name="WithCancellation">WithCancellation</paramref>.</exception>
-      <exception cref="T:System.OverflowException">More than <see cref="F:System.Int32.MaxValue"></see> elements are enumerated by the query.</exception>
+      <exception cref="T:System.OverflowException">More than <see cref="System.Int32.MaxValue"></see> elements are enumerated by the query.</exception>
       <exception cref="T:System.AggregateException">One or more exceptions occurred during the evaluation of the query.</exception>
     </member>
     <member name="M:System.Linq.ParallelEnumerable.SequenceEqual``1(System.Linq.ParallelQuery{``0},System.Collections.Generic.IEnumerable{``0})">
@@ -1536,7 +1535,7 @@
       <param name="first">This parameter is not used.</param>
       <param name="second">This parameter is not used.</param>
       <typeparam name="TSource">This type parameter is not used.</typeparam>
-      <returns>This overload always throws a <see cref="T:System.NotSupportedException"></see>.</returns>
+      <returns>This overload always throws a <see cref="System.NotSupportedException"></see>.</returns>
       <exception cref="T:System.NotSupportedException">Thrown every time this method is called.</exception>
     </member>
     <member name="M:System.Linq.ParallelEnumerable.SequenceEqual``1(System.Linq.ParallelQuery{``0},System.Linq.ParallelQuery{``0})">
@@ -1555,7 +1554,7 @@
       <param name="second">This parameter is not used.</param>
       <param name="comparer">This parameter is not used.</param>
       <typeparam name="TSource">This type parameter is not used.</typeparam>
-      <returns>This overload always throws a <see cref="T:System.NotSupportedException"></see>.</returns>
+      <returns>This overload always throws a <see cref="System.NotSupportedException"></see>.</returns>
       <exception cref="T:System.NotSupportedException">Thrown every time this method is called.</exception>
     </member>
     <member name="M:System.Linq.ParallelEnumerable.SequenceEqual``1(System.Linq.ParallelQuery{``0},System.Linq.ParallelQuery{``0},System.Collections.Generic.IEqualityComparer{``0})">
@@ -1618,7 +1617,7 @@
       <returns>A sequence that contains the elements that occur after the specified index in the input sequence.</returns>
       <exception cref="T:System.ArgumentNullException"><paramref name="source">source</paramref> is a null reference (Nothing in Visual Basic).</exception>
       <exception cref="T:System.OperationCanceledException">The query was canceled with the token passed in through <paramref name="WithCancellation">WithCancellation</paramref>.</exception>
-      <exception cref="T:System.OverflowException">Count is greater than <see cref="F:System.Int32.MaxValue"></see></exception>
+      <exception cref="T:System.OverflowException">Count is greater than <see cref="System.Int32.MaxValue"></see></exception>
       <exception cref="T:System.AggregateException">One or more exceptions occurred during the evaluation of the query.</exception>
     </member>
     <member name="M:System.Linq.ParallelEnumerable.SkipWhile``1(System.Linq.ParallelQuery{``0},System.Func{``0,System.Boolean})">
@@ -1632,14 +1631,14 @@
       <exception cref="T:System.AggregateException">One or more exceptions occurred during the evaluation of the query.</exception>
     </member>
     <member name="M:System.Linq.ParallelEnumerable.SkipWhile``1(System.Linq.ParallelQuery{``0},System.Func{``0,System.Int32,System.Boolean})">
-      <summary>Bypasses elements in a parallel sequence as long as a specified condition is true and then returns the remaining elements. The element's index is used in the logic of the predicate function.</summary>
+      <summary>Bypasses elements in a parallel sequence as long as a specified condition is true and then returns the remaining elements. The element&amp;#39;s index is used in the logic of the predicate function.</summary>
       <param name="source">The sequence to return elements from.</param>
       <param name="predicate">A function to test each source element for a condition; the second parameter of the function represents the index of the source element.</param>
       <typeparam name="TSource">The type of elements of source.</typeparam>
       <returns>A sequence that contains the elements from the input sequence starting at the first element in the linear series that does not pass the test specified by predicate.</returns>
       <exception cref="T:System.ArgumentNullException"><paramref name="source">source</paramref> or <paramref name="predicate">predicate</paramref> is a null reference (Nothing in Visual Basic).</exception>
       <exception cref="T:System.OperationCanceledException">The query was canceled with the token passed in through <paramref name="WithCancellation">WithCancellation</paramref>.</exception>
-      <exception cref="T:System.OverflowException">More than <see cref="F:System.Int32.MaxValue"></see> elements are enumerated by the query.</exception>
+      <exception cref="T:System.OverflowException">More than <see cref="System.Int32.MaxValue"></see> elements are enumerated by the query.</exception>
       <exception cref="T:System.AggregateException">One or more exceptions occurred during the evaluation of the query.</exception>
     </member>
     <member name="M:System.Linq.ParallelEnumerable.Sum(System.Linq.ParallelQuery{System.Nullable{System.Single}})">
@@ -1648,7 +1647,7 @@
       <returns>The sum of the projected values in the sequence.</returns>
       <exception cref="T:System.OperationCanceledException">The query was canceled with the token passed in through <paramref name="WithCancellation">WithCancellation</paramref>.</exception>
       <exception cref="T:System.ArgumentNullException"><paramref name="source">source</paramref> is a null reference (Nothing in Visual Basic).</exception>
-      <exception cref="T:System.AggregateException">The sum is larger than <see cref="F:System.Single.MaxValue"></see>. -or-  One or more exceptions occurred during the evaluation of the query.</exception>
+      <exception cref="T:System.AggregateException">The sum is larger than <see cref="System.Single.MaxValue"></see>. -or-  One or more exceptions occurred during the evaluation of the query.</exception>
     </member>
     <member name="M:System.Linq.ParallelEnumerable.Sum(System.Linq.ParallelQuery{System.Nullable{System.Int64}})">
       <summary>Computes in parallel the sum of a sequence of values.</summary>
@@ -1656,7 +1655,7 @@
       <returns>The sum of the projected values in the sequence.</returns>
       <exception cref="T:System.OperationCanceledException">The query was canceled with the token passed in through <paramref name="WithCancellation">WithCancellation</paramref>.</exception>
       <exception cref="T:System.ArgumentNullException"><paramref name="source">source</paramref> is a null reference (Nothing in Visual Basic).</exception>
-      <exception cref="T:System.AggregateException">The sum is larger than <see cref="F:System.Int64.MaxValue"></see>. -or- One or more exceptions occurred during the evaluation of the query.</exception>
+      <exception cref="T:System.AggregateException">The sum is larger than <see cref="System.Int64.MaxValue"></see>. -or- One or more exceptions occurred during the evaluation of the query.</exception>
     </member>
     <member name="M:System.Linq.ParallelEnumerable.Sum(System.Linq.ParallelQuery{System.Nullable{System.Int32}})">
       <summary>Computes in parallel the sum of a sequence of values.</summary>
@@ -1664,7 +1663,7 @@
       <returns>The sum of the projected values in the sequence.</returns>
       <exception cref="T:System.OperationCanceledException">The query was canceled with the token passed in through <paramref name="WithCancellation">WithCancellation</paramref>.</exception>
       <exception cref="T:System.ArgumentNullException"><paramref name="source">source</paramref> is a null reference (Nothing in Visual Basic).</exception>
-      <exception cref="T:System.AggregateException">The sum is larger than <see cref="F:System.Int32.MaxValue"></see>. -or- One or more exceptions occurred during the evaluation of the query.</exception>
+      <exception cref="T:System.AggregateException">The sum is larger than <see cref="System.Int32.MaxValue"></see>. -or- One or more exceptions occurred during the evaluation of the query.</exception>
     </member>
     <member name="M:System.Linq.ParallelEnumerable.Sum(System.Linq.ParallelQuery{System.Nullable{System.Double}})">
       <summary>Computes in parallel the sum of a sequence of values.</summary>
@@ -1672,7 +1671,7 @@
       <returns>The sum of the projected values in the sequence.</returns>
       <exception cref="T:System.OperationCanceledException">The query was canceled with the token passed in through <paramref name="WithCancellation">WithCancellation</paramref>.</exception>
       <exception cref="T:System.ArgumentNullException"><paramref name="source">source</paramref> is a null reference (Nothing in Visual Basic).</exception>
-      <exception cref="T:System.AggregateException">The sum is larger than <see cref="F:System.Double.MaxValue"></see>. -or- One or more exceptions occurred during the evaluation of the query.</exception>
+      <exception cref="T:System.AggregateException">The sum is larger than <see cref="System.Double.MaxValue"></see>. -or- One or more exceptions occurred during the evaluation of the query.</exception>
     </member>
     <member name="M:System.Linq.ParallelEnumerable.Sum(System.Linq.ParallelQuery{System.Single})">
       <summary>Computes in parallel the sum of a sequence of values.</summary>
@@ -1680,7 +1679,7 @@
       <returns>The sum of the projected values in the sequence.</returns>
       <exception cref="T:System.OperationCanceledException">The query was canceled with the token passed in through <paramref name="WithCancellation">WithCancellation</paramref>.</exception>
       <exception cref="T:System.ArgumentNullException"><paramref name="source">source</paramref> is a null reference (Nothing in Visual Basic).</exception>
-      <exception cref="T:System.AggregateException">The sum is larger than <see cref="F:System.Single.MaxValue"></see>. -or- One or more exceptions occurred during the evaluation of the query.</exception>
+      <exception cref="T:System.AggregateException">The sum is larger than <see cref="System.Single.MaxValue"></see>. -or- One or more exceptions occurred during the evaluation of the query.</exception>
     </member>
     <member name="M:System.Linq.ParallelEnumerable.Sum(System.Linq.ParallelQuery{System.Int64})">
       <summary>Computes in parallel the sum of a sequence of values.</summary>
@@ -1688,7 +1687,7 @@
       <returns>The sum of the projected values in the sequence.</returns>
       <exception cref="T:System.OperationCanceledException">The query was canceled with the token passed in through <paramref name="WithCancellation">WithCancellation</paramref>.</exception>
       <exception cref="T:System.ArgumentNullException"><paramref name="source">source</paramref> is a null reference (Nothing in Visual Basic).</exception>
-      <exception cref="T:System.AggregateException">The sum is larger than <see cref="F:System.Int64.MaxValue"></see>. -or- One or more exceptions occurred during the evaluation of the query.</exception>
+      <exception cref="T:System.AggregateException">The sum is larger than <see cref="System.Int64.MaxValue"></see>. -or- One or more exceptions occurred during the evaluation of the query.</exception>
     </member>
     <member name="M:System.Linq.ParallelEnumerable.Sum(System.Linq.ParallelQuery{System.Int32})">
       <summary>Computes in parallel the sum of a sequence of values.</summary>
@@ -1696,7 +1695,7 @@
       <returns>The sum of the projected values in the sequence.</returns>
       <exception cref="T:System.OperationCanceledException">The query was canceled with the token passed in through <paramref name="WithCancellation">WithCancellation</paramref>.</exception>
       <exception cref="T:System.ArgumentNullException"><paramref name="source">source</paramref> is a null reference (Nothing in Visual Basic).</exception>
-      <exception cref="T:System.AggregateException">The sum is larger than <see cref="F:System.Int32.MaxValue"></see>. -or- One or more exceptions occurred during the evaluation of the query.</exception>
+      <exception cref="T:System.AggregateException">The sum is larger than <see cref="System.Int32.MaxValue"></see>. -or- One or more exceptions occurred during the evaluation of the query.</exception>
     </member>
     <member name="M:System.Linq.ParallelEnumerable.Sum(System.Linq.ParallelQuery{System.Double})">
       <summary>Computes in parallel the sum of a sequence of values.</summary>
@@ -1704,7 +1703,7 @@
       <returns>The sum of the projected values in the sequence.</returns>
       <exception cref="T:System.OperationCanceledException">The query was canceled with the token passed in through <paramref name="WithCancellation">WithCancellation</paramref>.</exception>
       <exception cref="T:System.ArgumentNullException"><paramref name="source">source</paramref> is a null reference (Nothing in Visual Basic).</exception>
-      <exception cref="T:System.AggregateException">The sum is larger than <see cref="F:System.Double.MaxValue"></see>. -or- One or more exceptions occurred during the evaluation of the query.</exception>
+      <exception cref="T:System.AggregateException">The sum is larger than <see cref="System.Double.MaxValue"></see>. -or- One or more exceptions occurred during the evaluation of the query.</exception>
     </member>
     <member name="M:System.Linq.ParallelEnumerable.Sum(System.Linq.ParallelQuery{System.Decimal})">
       <summary>Computes in parallel the sum of a sequence of values.</summary>
@@ -1712,7 +1711,7 @@
       <returns>The sum of the projected values in the sequence.</returns>
       <exception cref="T:System.OperationCanceledException">The query was canceled with the token passed in through <paramref name="WithCancellation">WithCancellation</paramref>.</exception>
       <exception cref="T:System.ArgumentNullException"><paramref name="source">source</paramref> is a null reference (Nothing in Visual Basic).</exception>
-      <exception cref="T:System.AggregateException">The sum is larger than <see cref="F:System.Decimal.MaxValue"></see>. -or- One or more exceptions occurred during the evaluation of the query.</exception>
+      <exception cref="T:System.AggregateException">The sum is larger than <see cref="System.Decimal.MaxValue"></see>. -or- One or more exceptions occurred during the evaluation of the query.</exception>
     </member>
     <member name="M:System.Linq.ParallelEnumerable.Sum(System.Linq.ParallelQuery{System.Nullable{System.Decimal}})">
       <summary>Computes in parallel the sum of a sequence of values.</summary>
@@ -1720,7 +1719,7 @@
       <returns>The sum of the projected values in the sequence.</returns>
       <exception cref="T:System.OperationCanceledException">The query was canceled with the token passed in through <paramref name="WithCancellation">WithCancellation</paramref>.</exception>
       <exception cref="T:System.ArgumentNullException"><paramref name="source">source</paramref> is a null reference (Nothing in Visual Basic).</exception>
-      <exception cref="T:System.AggregateException">The sum is larger than <see cref="F:System.Decimal.MaxValue"></see>. -or- One or more exceptions occurred during the evaluation of the query.</exception>
+      <exception cref="T:System.AggregateException">The sum is larger than <see cref="System.Decimal.MaxValue"></see>. -or- One or more exceptions occurred during the evaluation of the query.</exception>
     </member>
     <member name="M:System.Linq.ParallelEnumerable.Sum``1(System.Linq.ParallelQuery{``0},System.Func{``0,System.Single})">
       <summary>Computes in parallel the sum of the sequence of values that are obtained by invoking a transform function on each element of the input sequence.</summary>
@@ -1730,7 +1729,7 @@
       <returns>The sum of the projected values in the sequence.</returns>
       <exception cref="T:System.OperationCanceledException">The query was canceled with the token passed in through <paramref name="WithCancellation">WithCancellation</paramref>.</exception>
       <exception cref="T:System.ArgumentNullException"><paramref name="source">source</paramref> or <paramref name="selector">selector</paramref> is a null reference (Nothing in Visual Basic).</exception>
-      <exception cref="T:System.AggregateException">The sum is larger than <see cref="F:System.Single.MaxValue"></see>. -or- One or more exceptions occurred during the evaluation of the query.</exception>
+      <exception cref="T:System.AggregateException">The sum is larger than <see cref="System.Single.MaxValue"></see>. -or- One or more exceptions occurred during the evaluation of the query.</exception>
     </member>
     <member name="M:System.Linq.ParallelEnumerable.Sum``1(System.Linq.ParallelQuery{``0},System.Func{``0,System.Decimal})">
       <summary>Computes in parallel the sum of the sequence of values that are obtained by invoking a transform function on each element of the input sequence.</summary>
@@ -1740,7 +1739,7 @@
       <returns>The sum of the projected values in the sequence.</returns>
       <exception cref="T:System.OperationCanceledException">The query was canceled with the token passed in through <paramref name="WithCancellation">WithCancellation</paramref>.</exception>
       <exception cref="T:System.ArgumentNullException"><paramref name="source">source</paramref> or <paramref name="selector">selector</paramref> is a null reference (Nothing in Visual Basic).</exception>
-      <exception cref="T:System.AggregateException">The sum is larger than <see cref="F:System.Decimal.MaxValue"></see>. -or- One or more exceptions occurred during the evaluation of the query.</exception>
+      <exception cref="T:System.AggregateException">The sum is larger than <see cref="System.Decimal.MaxValue"></see>. -or- One or more exceptions occurred during the evaluation of the query.</exception>
     </member>
     <member name="M:System.Linq.ParallelEnumerable.Sum``1(System.Linq.ParallelQuery{``0},System.Func{``0,System.Double})">
       <summary>Computes in parallel the sum of the sequence of values that are obtained by invoking a transform function on each element of the input sequence.</summary>
@@ -1750,7 +1749,7 @@
       <returns>The sum of the projected values in the sequence.</returns>
       <exception cref="T:System.OperationCanceledException">The query was canceled with the token passed in through <paramref name="WithCancellation">WithCancellation</paramref>.</exception>
       <exception cref="T:System.ArgumentNullException"><paramref name="source">source</paramref> or <paramref name="selector">selector</paramref> is a null reference (Nothing in Visual Basic).</exception>
-      <exception cref="T:System.AggregateException">The sum is larger than <see cref="F:System.Double.MaxValue"></see>. -or- One or more exceptions occurred during the evaluation of the query.</exception>
+      <exception cref="T:System.AggregateException">The sum is larger than <see cref="System.Double.MaxValue"></see>. -or- One or more exceptions occurred during the evaluation of the query.</exception>
     </member>
     <member name="M:System.Linq.ParallelEnumerable.Sum``1(System.Linq.ParallelQuery{``0},System.Func{``0,System.Int32})">
       <summary>Computes in parallel the sum of the sequence of values that are obtained by invoking a transform function on each element of the input sequence.</summary>
@@ -1760,7 +1759,7 @@
       <returns>The sum of the projected values in the sequence.</returns>
       <exception cref="T:System.OperationCanceledException">The query was canceled with the token passed in through <paramref name="WithCancellation">WithCancellation</paramref>.</exception>
       <exception cref="T:System.ArgumentNullException"><paramref name="source">source</paramref> or <paramref name="selector">selector</paramref> is a null reference (Nothing in Visual Basic).</exception>
-      <exception cref="T:System.AggregateException">The sum is larger than <see cref="F:System.Int32.MaxValue"></see>. -or- One or more exceptions occurred during the evaluation of the query.</exception>
+      <exception cref="T:System.AggregateException">The sum is larger than <see cref="System.Int32.MaxValue"></see>. -or- One or more exceptions occurred during the evaluation of the query.</exception>
     </member>
     <member name="M:System.Linq.ParallelEnumerable.Sum``1(System.Linq.ParallelQuery{``0},System.Func{``0,System.Int64})">
       <summary>Computes in parallel the sum of the sequence of values that are obtained by invoking a transform function on each element of the input sequence.</summary>
@@ -1770,7 +1769,7 @@
       <returns>The sum of the projected values in the sequence.</returns>
       <exception cref="T:System.OperationCanceledException">The query was canceled with the token passed in through <paramref name="WithCancellation">WithCancellation</paramref>.</exception>
       <exception cref="T:System.ArgumentNullException"><paramref name="source">source</paramref> or <paramref name="selector">selector</paramref> is a null reference (Nothing in Visual Basic).</exception>
-      <exception cref="T:System.AggregateException">The sum is larger than <see cref="F:System.Int64.MaxValue"></see>. -or- One or more exceptions occurred during the evaluation of the query.</exception>
+      <exception cref="T:System.AggregateException">The sum is larger than <see cref="System.Int64.MaxValue"></see>. -or- One or more exceptions occurred during the evaluation of the query.</exception>
     </member>
     <member name="M:System.Linq.ParallelEnumerable.Sum``1(System.Linq.ParallelQuery{``0},System.Func{``0,System.Nullable{System.Decimal}})">
       <summary>Computes in parallel the sum of the sequence of values that are obtained by invoking a transform function on each element of the input sequence.</summary>
@@ -1780,7 +1779,7 @@
       <returns>The sum of the projected values in the sequence.</returns>
       <exception cref="T:System.OperationCanceledException">The query was canceled with the token passed in through <paramref name="WithCancellation">WithCancellation</paramref>.</exception>
       <exception cref="T:System.ArgumentNullException"><paramref name="source">source</paramref> or <paramref name="selector">selector</paramref> is a null reference (Nothing in Visual Basic).</exception>
-      <exception cref="T:System.AggregateException">The sum is larger than <see cref="F:System.Decimal.MaxValue"></see>. -or- One or more exceptions occurred during the evaluation of the query.</exception>
+      <exception cref="T:System.AggregateException">The sum is larger than <see cref="System.Decimal.MaxValue"></see>. -or- One or more exceptions occurred during the evaluation of the query.</exception>
     </member>
     <member name="M:System.Linq.ParallelEnumerable.Sum``1(System.Linq.ParallelQuery{``0},System.Func{``0,System.Nullable{System.Double}})">
       <summary>Computes in parallel the sum of the sequence of values that are obtained by invoking a transform function on each element of the input sequence.</summary>
@@ -1790,7 +1789,7 @@
       <returns>The sum of the projected values in the sequence.</returns>
       <exception cref="T:System.OperationCanceledException">The query was canceled with the token passed in through <paramref name="WithCancellation">WithCancellation</paramref>.</exception>
       <exception cref="T:System.ArgumentNullException"><paramref name="source">source</paramref> or <paramref name="selector">selector</paramref> is a null reference (Nothing in Visual Basic).</exception>
-      <exception cref="T:System.AggregateException">The sum is larger than <see cref="F:System.Double.MaxValue"></see>. -or- One or more exceptions occurred during the evaluation of the query.</exception>
+      <exception cref="T:System.AggregateException">The sum is larger than <see cref="System.Double.MaxValue"></see>. -or- One or more exceptions occurred during the evaluation of the query.</exception>
     </member>
     <member name="M:System.Linq.ParallelEnumerable.Sum``1(System.Linq.ParallelQuery{``0},System.Func{``0,System.Nullable{System.Int32}})">
       <summary>Computes in parallel the sum of the sequence of values that are obtained by invoking a transform function on each element of the input sequence.</summary>
@@ -1800,7 +1799,7 @@
       <returns>The sum of the projected values in the sequence.</returns>
       <exception cref="T:System.OperationCanceledException">The query was canceled with the token passed in through <paramref name="WithCancellation">WithCancellation</paramref>.</exception>
       <exception cref="T:System.ArgumentNullException"><paramref name="source">source</paramref> or <paramref name="selector">selector</paramref> is a null reference (Nothing in Visual Basic).</exception>
-      <exception cref="T:System.AggregateException">The sum is larger than <see cref="F:System.Int32.MaxValue"></see>. -or- One or more exceptions occurred during the evaluation of the query.</exception>
+      <exception cref="T:System.AggregateException">The sum is larger than <see cref="System.Int32.MaxValue"></see>. -or- One or more exceptions occurred during the evaluation of the query.</exception>
     </member>
     <member name="M:System.Linq.ParallelEnumerable.Sum``1(System.Linq.ParallelQuery{``0},System.Func{``0,System.Nullable{System.Int64}})">
       <summary>Computes in parallel the sum of the sequence of values that are obtained by invoking a transform function on each element of the input sequence.</summary>
@@ -1810,7 +1809,7 @@
       <returns>The sum of the projected values in the sequence.</returns>
       <exception cref="T:System.OperationCanceledException">The query was canceled with the token passed in through <paramref name="WithCancellation">WithCancellation</paramref>.</exception>
       <exception cref="T:System.ArgumentNullException"><paramref name="source">source</paramref> or <paramref name="selector">selector</paramref> is a null reference (Nothing in Visual Basic).</exception>
-      <exception cref="T:System.AggregateException">The sum is larger than <see cref="F:System.Int64.MaxValue"></see>. -or- One or more exceptions occurred during the evaluation of the query.</exception>
+      <exception cref="T:System.AggregateException">The sum is larger than <see cref="System.Int64.MaxValue"></see>. -or- One or more exceptions occurred during the evaluation of the query.</exception>
     </member>
     <member name="M:System.Linq.ParallelEnumerable.Sum``1(System.Linq.ParallelQuery{``0},System.Func{``0,System.Nullable{System.Single}})">
       <summary>Computes in parallel the sum of the sequence of values that are obtained by invoking a transform function on each element of the input sequence.</summary>
@@ -1820,7 +1819,7 @@
       <returns>The sum of the projected values in the sequence.</returns>
       <exception cref="T:System.OperationCanceledException">The query was canceled with the token passed in through <paramref name="WithCancellation">WithCancellation</paramref>.</exception>
       <exception cref="T:System.ArgumentNullException"><paramref name="source">source</paramref> or <paramref name="selector">selector</paramref> is a null reference (Nothing in Visual Basic).</exception>
-      <exception cref="T:System.AggregateException">The sum is larger than <see cref="F:System.Single.MaxValue"></see>. -or-  One or more exceptions occurred during the evaluation of the query.</exception>
+      <exception cref="T:System.AggregateException">The sum is larger than <see cref="System.Single.MaxValue"></see>. -or-  One or more exceptions occurred during the evaluation of the query.</exception>
     </member>
     <member name="M:System.Linq.ParallelEnumerable.Take``1(System.Linq.ParallelQuery{``0},System.Int32)">
       <summary>Returns a specified number of contiguous elements from the start of a parallel sequence.</summary>
@@ -1833,14 +1832,14 @@
       <exception cref="T:System.AggregateException">One or more exceptions occurred during the evaluation of the query.</exception>
     </member>
     <member name="M:System.Linq.ParallelEnumerable.TakeWhile``1(System.Linq.ParallelQuery{``0},System.Func{``0,System.Int32,System.Boolean})">
-      <summary>Returns elements from a parallel sequence as long as a specified condition is true. The element's index is used in the logic of the predicate function.</summary>
+      <summary>Returns elements from a parallel sequence as long as a specified condition is true. The element&amp;#39;s index is used in the logic of the predicate function.</summary>
       <param name="source">The sequence to return elements from.</param>
       <param name="predicate">A function to test each source element for a condition; the second parameter of the function represents the index of the source element.</param>
       <typeparam name="TSource">The type of elements of source.</typeparam>
       <returns>A sequence that contains elements from the input sequence that occur before the element at which the test no longer passes.</returns>
       <exception cref="T:System.ArgumentNullException"><paramref name="source">source</paramref> or <paramref name="predicate">predicate</paramref> is a null reference (Nothing in Visual Basic).</exception>
       <exception cref="T:System.OperationCanceledException">The query was canceled with the token passed in through <paramref name="WithCancellation">WithCancellation</paramref>.</exception>
-      <exception cref="T:System.OverflowException">More than <see cref="F:System.Int32.MaxValue"></see> elements are enumerated by this query.</exception>
+      <exception cref="T:System.OverflowException">More than <see cref="System.Int32.MaxValue"></see> elements are enumerated by this query.</exception>
       <exception cref="T:System.AggregateException">One or more exceptions occurred during the evaluation of the query.</exception>
     </member>
     <member name="M:System.Linq.ParallelEnumerable.TakeWhile``1(System.Linq.ParallelQuery{``0},System.Func{``0,System.Boolean})">
@@ -1916,7 +1915,7 @@
       <typeparam name="TSource">The type of the elements of source.</typeparam>
       <typeparam name="TKey">The type of the key returned by keySelector.</typeparam>
       <typeparam name="TElement">The type of the value returned by elementSelector.</typeparam>
-      <returns>A <see cref="T:System.Collections.Generic.Dictionary`2"></see> that contains values of type <paramref name="TElement">TElement</paramref> selected from the input sequence</returns>
+      <returns>A <see cref="System.Collections.Generic.Dictionary`2"></see> that contains values of type <paramref name="TElement">TElement</paramref> selected from the input sequence</returns>
       <exception cref="T:System.OperationCanceledException">The query was canceled with the token passed in through <paramref name="WithCancellation">WithCancellation</paramref>.</exception>
       <exception cref="T:System.ArgumentNullException"><paramref name="source">source</paramref> or <paramref name="keySelector">keySelector</paramref> or <paramref name="elementSelector">elementSelector</paramref> is a null reference (Nothing in Visual Basic).</exception>
       <exception cref="T:System.AggregateException"><paramref name="keySelector">keySelector</paramref> produces a key that is a null reference (Nothing in Visual Basic). -or- <paramref name="keySelector">keySelector</paramref> produces duplicate keys for two elements. -or- One or more exceptions occurred during the evaluation of the query.</exception>
@@ -1930,7 +1929,7 @@
       <typeparam name="TSource">The type of the elements of source.</typeparam>
       <typeparam name="TKey">The type of the key returned by keySelector.</typeparam>
       <typeparam name="TElement">The type of the value returned by elementSelector.</typeparam>
-      <returns>A <see cref="T:System.Collections.Generic.Dictionary`2"></see> that contains values of type <paramref name="TElement">TElement</paramref> selected from the input sequence</returns>
+      <returns>A <see cref="System.Collections.Generic.Dictionary`2"></see> that contains values of type <paramref name="TElement">TElement</paramref> selected from the input sequence</returns>
       <exception cref="T:System.OperationCanceledException">The query was canceled with the token passed in through <paramref name="WithCancellation">WithCancellation</paramref>.</exception>
       <exception cref="T:System.ArgumentNullException"><paramref name="source">source</paramref> or <paramref name="keySelector">keySelector</paramref> or <paramref name="elementSelector">elementSelector</paramref> is a null reference (Nothing in Visual Basic).</exception>
       <exception cref="T:System.AggregateException"><paramref name="keySelector">keySelector</paramref> produces a key that is a null reference (Nothing in Visual Basic). -or- <paramref name="keySelector">keySelector</paramref> produces duplicate keys for two elements. -or- One or more exceptions occurred during the evaluation of the query.</exception>
@@ -1941,7 +1940,7 @@
       <param name="keySelector">A function to extract a key from each element.</param>
       <typeparam name="TSource">The type of the elements of source.</typeparam>
       <typeparam name="TKey">The type of the key returned by keySelector.</typeparam>
-      <returns>A <see cref="T:System.Collections.Generic.Dictionary`2"></see> that contains keys and values.</returns>
+      <returns>A <see cref="System.Collections.Generic.Dictionary`2"></see> that contains keys and values.</returns>
       <exception cref="T:System.OperationCanceledException">The query was canceled with the token passed in through <paramref name="WithCancellation">WithCancellation</paramref>.</exception>
       <exception cref="T:System.ArgumentNullException"><paramref name="source">source</paramref> or <paramref name="keySelector">keySelector</paramref> is a null reference (Nothing in Visual Basic).</exception>
       <exception cref="T:System.AggregateException"><paramref name="keySelector">keySelector</paramref> produces a key that is a null reference (Nothing in Visual Basic). -or- <paramref name="keySelector">keySelector</paramref> produces duplicate keys for two elements. -or- One or more exceptions occurred during the evaluation of the query.</exception>
@@ -1953,7 +1952,7 @@
       <param name="comparer">An <see cref="T:System.Collections.Generic.IEqualityComparer`1"></see> to compare keys.</param>
       <typeparam name="TSource">The type of the elements of source.</typeparam>
       <typeparam name="TKey">The type of the key returned by keySelector.</typeparam>
-      <returns>A <see cref="T:System.Collections.Generic.Dictionary`2"></see> that contains keys and values.</returns>
+      <returns>A <see cref="System.Collections.Generic.Dictionary`2"></see> that contains keys and values.</returns>
       <exception cref="T:System.OperationCanceledException">The query was canceled with the token passed in through <paramref name="WithCancellation">WithCancellation</paramref>.</exception>
       <exception cref="T:System.ArgumentNullException"><paramref name="source">source</paramref> or <paramref name="keySelector">keySelector</paramref> is a null reference (Nothing in Visual Basic).</exception>
       <exception cref="T:System.AggregateException"><paramref name="keySelector">keySelector</paramref> produces a key that is a null reference (Nothing in Visual Basic). -or- <paramref name="keySelector">keySelector</paramref> produces duplicate keys for two elements. -or- One or more exceptions occurred during the evaluation of the query.</exception>
@@ -1962,7 +1961,7 @@
       <summary>Creates a <see cref="T:System.Collections.Generic.List`1"></see> from an <see cref="T:System.Linq.ParallelQuery`1"></see>.</summary>
       <param name="source">A sequence to create a <see cref="T:System.Collections.Generic.List`1"></see> from.</param>
       <typeparam name="TSource">The type of the elements of source.</typeparam>
-      <returns>A <see cref="T:System.Collections.Generic.List`1"></see> that contains elements from the input sequence.</returns>
+      <returns>A <see cref="System.Collections.Generic.List`1"></see> that contains elements from the input sequence.</returns>
       <exception cref="T:System.OperationCanceledException">The query was canceled with the token passed in through <paramref name="WithCancellation">WithCancellation</paramref>.</exception>
       <exception cref="T:System.ArgumentNullException"><paramref name="source">source</paramref> is a null reference (Nothing in Visual Basic).</exception>
       <exception cref="T:System.AggregateException">One or more exceptions occurred during the evaluation of the query.</exception>
@@ -1976,7 +1975,7 @@
       <typeparam name="TSource">The type of elements of source.</typeparam>
       <typeparam name="TKey">The type of the key returned by keySelector.</typeparam>
       <typeparam name="TElement">The type of the value returned by elementSelector.</typeparam>
-      <returns>A Lookup&lt;(Of &lt;(TKey, TElement&gt;)&gt;) that contains values of type TElement selected from the input sequence.</returns>
+      <returns>A Lookup&amp;lt;(Of &amp;lt;(TKey, TElement&amp;gt;)&amp;gt;) that contains values of type TElement selected from the input sequence.</returns>
       <exception cref="T:System.OperationCanceledException">The query was canceled with the token passed in through <paramref name="WithCancellation">WithCancellation</paramref>.</exception>
       <exception cref="T:System.ArgumentNullException"><paramref name="source">source</paramref> or <paramref name="keySelector">keySelector</paramref> or <paramref name="elementSelector">elementSelector</paramref> is a null reference (Nothing in Visual Basic).</exception>
       <exception cref="T:System.AggregateException">One or more exceptions occurred during the evaluation of the query.</exception>
@@ -1989,7 +1988,7 @@
       <typeparam name="TSource">The type of elements of source.</typeparam>
       <typeparam name="TKey">The type of the key returned by keySelector.</typeparam>
       <typeparam name="TElement">The type of the value returned by elementSelector.</typeparam>
-      <returns>A <see cref="T:System.Linq.ILookup`2"></see> that contains values of type <paramref name="TElement">TElement</paramref> selected from the input sequence.</returns>
+      <returns>A <see cref="System.Linq.ILookup`2"></see> that contains values of type <paramref name="TElement">TElement</paramref> selected from the input sequence.</returns>
       <exception cref="T:System.OperationCanceledException">The query was canceled with the token passed in through <paramref name="WithCancellation">WithCancellation</paramref>.</exception>
       <exception cref="T:System.ArgumentNullException"><paramref name="source">source</paramref> or <paramref name="keySelector">keySelector</paramref> or <paramref name="elementSelector">elementSelector</paramref> is a null reference (Nothing in Visual Basic).</exception>
       <exception cref="T:System.AggregateException">One or more exceptions occurred during the evaluation of the query.</exception>
@@ -2001,7 +2000,7 @@
       <param name="comparer">An <see cref="T:System.Collections.Generic.IEqualityComparer`1"></see> to compare keys.</param>
       <typeparam name="TSource">The type of elements of source.</typeparam>
       <typeparam name="TKey">The type of the key returned by keySelector.</typeparam>
-      <returns>A <see cref="T:System.Linq.ILookup`2"></see> that contains keys and values.</returns>
+      <returns>A <see cref="System.Linq.ILookup`2"></see> that contains keys and values.</returns>
       <exception cref="T:System.OperationCanceledException">The query was canceled with the token passed in through <paramref name="WithCancellation">WithCancellation</paramref>.</exception>
       <exception cref="T:System.ArgumentNullException"><paramref name="source">source</paramref> or <paramref name="keySelector">keySelector</paramref> or is a null reference (Nothing in Visual Basic).</exception>
       <exception cref="T:System.AggregateException">One or more exceptions occurred during the evaluation of the query.</exception>
@@ -2012,7 +2011,7 @@
       <param name="keySelector">A function to extract a key from each element.</param>
       <typeparam name="TSource">The type of elements of source.</typeparam>
       <typeparam name="TKey">The type of the key returned by keySelector.</typeparam>
-      <returns>A <see cref="T:System.Linq.ILookup`2"></see> that contains keys and values.</returns>
+      <returns>A <see cref="System.Linq.ILookup`2"></see> that contains keys and values.</returns>
       <exception cref="T:System.OperationCanceledException">The query was canceled with the token passed in through <paramref name="WithCancellation">WithCancellation</paramref>.</exception>
       <exception cref="T:System.ArgumentNullException"><paramref name="source">source</paramref> or <paramref name="keySelector">keySelector</paramref> is a null reference (Nothing in Visual Basic).</exception>
       <exception cref="T:System.AggregateException">One or more exceptions occurred during the evaluation of the query.</exception>
@@ -2022,7 +2021,7 @@
       <param name="first">This parameter is not used.</param>
       <param name="second">This parameter is not used.</param>
       <typeparam name="TSource">This type parameter is not used.</typeparam>
-      <returns>This overload always throws a <see cref="T:System.NotSupportedException"></see>.</returns>
+      <returns>This overload always throws a <see cref="System.NotSupportedException"></see>.</returns>
       <exception cref="T:System.NotSupportedException">The exception that occurs when this method is called.</exception>
       <exception cref="T:System.OperationCanceledException">The query was canceled with the token passed in through <paramref name="WithCancellation">WithCancellation</paramref>.</exception>
       <exception cref="T:System.AggregateException">One or more exceptions occurred during the evaluation of the query.</exception>
@@ -2043,7 +2042,7 @@
       <param name="second">This parameter is not used.</param>
       <param name="comparer">This parameter is not used.</param>
       <typeparam name="TSource">This type parameter is not used.</typeparam>
-      <returns>This overload always throws a <see cref="T:System.NotSupportedException"></see>.</returns>
+      <returns>This overload always throws a <see cref="System.NotSupportedException"></see>.</returns>
       <exception cref="T:System.NotSupportedException">The exception that occurs when this method is called.</exception>
       <exception cref="T:System.OperationCanceledException">The query was canceled with the token passed in through <paramref name="WithCancellation">WithCancellation</paramref>.</exception>
       <exception cref="T:System.AggregateException">One or more exceptions occurred during the evaluation of the query.</exception>
@@ -2070,14 +2069,14 @@
       <exception cref="T:System.AggregateException">One or more exceptions occurred during the evaluation of the query.</exception>
     </member>
     <member name="M:System.Linq.ParallelEnumerable.Where``1(System.Linq.ParallelQuery{``0},System.Func{``0,System.Int32,System.Boolean})">
-      <summary>Filters in parallel a sequence of values based on a predicate. Each element's index is used in the logic of the predicate function.</summary>
+      <summary>Filters in parallel a sequence of values based on a predicate. Each element&amp;#39;s index is used in the logic of the predicate function.</summary>
       <param name="source">A sequence to filter.</param>
       <param name="predicate">A function to test each element for a condition.</param>
       <typeparam name="TSource">The type of the elements of source.</typeparam>
       <returns>A sequence that contains elements from the input sequence that satisfy the condition.</returns>
       <exception cref="T:System.ArgumentNullException"><paramref name="source">source</paramref> or <paramref name="predicate">predicate</paramref> is a null reference (Nothing in Visual Basic).</exception>
       <exception cref="T:System.OperationCanceledException">The query was canceled with the token passed in through <paramref name="WithCancellation">WithCancellation</paramref>.</exception>
-      <exception cref="T:System.OverflowException">More than <see cref="F:System.Int32.MaxValue"></see> elements are enumerated by the query.</exception>
+      <exception cref="T:System.OverflowException">More than <see cref="System.Int32.MaxValue"></see> elements are enumerated by the query.</exception>
       <exception cref="T:System.AggregateException">One or more exceptions occurred during the evaluation of the query.</exception>
     </member>
     <member name="M:System.Linq.ParallelEnumerable.WithCancellation``1(System.Linq.ParallelQuery{``0},System.Threading.CancellationToken)">
@@ -2086,7 +2085,7 @@
       <param name="cancellationToken">A cancellation token.</param>
       <typeparam name="TSource">The type of elements of source.</typeparam>
       <returns>ParallelQuery representing the same query as source, but with the registered cancellation token.</returns>
-      <exception cref="T:System.ObjectDisposedException">The <see cref="T:System.Threading.CancellationTokenSource"></see> associated with the <paramref name="cancellationToken">cancellationToken</paramref> has been disposed.</exception>
+      <exception cref="T:System.ObjectDisposedException">The <see cref="System.Threading.CancellationTokenSource"></see> associated with the <paramref name="cancellationToken">cancellationToken</paramref> has been disposed.</exception>
       <exception cref="T:System.ArgumentNullException"><paramref name="source">source</paramref> is a null reference (Nothing in Visual Basic).</exception>
       <exception cref="T:System.InvalidOperationException"><paramref name="WithCancellation">WithCancellation</paramref> is used multiple times in the query.</exception>
     </member>
@@ -2107,7 +2106,7 @@
       <typeparam name="TSource">The type of elements of source.</typeparam>
       <returns>ParallelQuery representing the same query as source, but with the registered execution mode.</returns>
       <exception cref="T:System.ArgumentNullException"><paramref name="source">source</paramref> is a null reference (Nothing in Visual Basic).</exception>
-      <exception cref="T:System.ArgumentException"><paramref name="executionMode">executionMode</paramref> is not a valid <see cref="T:System.Linq.ParallelExecutionMode"></see> value.</exception>
+      <exception cref="T:System.ArgumentException"><paramref name="executionMode">executionMode</paramref> is not a valid <see cref="System.Linq.ParallelExecutionMode"></see> value.</exception>
       <exception cref="T:System.InvalidOperationException">WithExecutionMode is used multiple times in the query.</exception>
     </member>
     <member name="M:System.Linq.ParallelEnumerable.WithMergeOptions``1(System.Linq.ParallelQuery{``0},System.Linq.ParallelMergeOptions)">
@@ -2117,7 +2116,7 @@
       <typeparam name="TSource">The type of elements of source.</typeparam>
       <returns>ParallelQuery representing the same query as source, but with the registered merge options.</returns>
       <exception cref="T:System.ArgumentNullException"><paramref name="source">source</paramref> is a null reference (Nothing in Visual Basic).</exception>
-      <exception cref="T:System.ArgumentException"><paramref name="mergeOptions">mergeOptions</paramref> is not a valid <see cref="T:System.Linq.ParallelMergeOptions"></see> value.</exception>
+      <exception cref="T:System.ArgumentException"><paramref name="mergeOptions">mergeOptions</paramref> is not a valid <see cref="System.Linq.ParallelMergeOptions"></see> value.</exception>
       <exception cref="T:System.InvalidOperationException"><paramref name="WithMergeOptions">WithMergeOptions</paramref> is used multiple times in the query.</exception>
     </member>
     <member name="M:System.Linq.ParallelEnumerable.Zip``3(System.Linq.ParallelQuery{``0},System.Collections.Generic.IEnumerable{``1},System.Func{``0,``1,``2})">
@@ -2128,7 +2127,7 @@
       <typeparam name="TFirst">This type parameter is not used.</typeparam>
       <typeparam name="TSecond">This type parameter is not used.</typeparam>
       <typeparam name="TResult">This type parameter is not used.</typeparam>
-      <returns>This overload always throws a <see cref="T:System.NotSupportedException"></see>.</returns>
+      <returns>This overload always throws a <see cref="System.NotSupportedException"></see>.</returns>
       <exception cref="T:System.NotSupportedException">The exception that occurs when this method is called.</exception>
     </member>
     <member name="M:System.Linq.ParallelEnumerable.Zip``3(System.Linq.ParallelQuery{``0},System.Linq.ParallelQuery{``1},System.Func{``0,``1,``2})">
@@ -2148,7 +2147,7 @@
       <summary>The query execution mode is a hint that specifies how the system should handle performance trade-offs when parallelizing queries.</summary>
     </member>
     <member name="F:System.Linq.ParallelExecutionMode.Default">
-      <summary>This is the default setting. PLINQ will examine the query's structure and will only parallelize the query if will likely result in speedup. If the query structure indicates that speedup is not likely to be obtained, then PLINQ will execute the query as an ordinary LINQ to Objects query.</summary>
+      <summary>This is the default setting. PLINQ will examine the query&amp;#39;s structure and will only parallelize the query if will likely result in speedup. If the query structure indicates that speedup is not likely to be obtained, then PLINQ will execute the query as an ordinary LINQ to Objects query.</summary>
       <returns></returns>
     </member>
     <member name="F:System.Linq.ParallelExecutionMode.ForceParallelism">
@@ -2190,4 +2189,4 @@
       <returns>An enumerator that iterates through the sequence.</returns>
     </member>
   </members>
-</doc></span>
+</doc>

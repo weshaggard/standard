@@ -1,9 +1,41 @@
-﻿<?xml version="1.0" encoding="utf-8"?><span>
-<doc>
+﻿<?xml version="1.0" encoding="utf-8"?><doc>
   <assembly>
     <name>System.Runtime.CompilerServices.VisualC</name>
   </assembly>
   <members>
+    <member name="T:System.Runtime.CompilerServices.IsPinned">
+      <summary>Indicates that a modified instance is pinned in memory. This class cannot be inherited.</summary>
+    </member>
+    <member name="T:System.Runtime.CompilerServices.IsSignUnspecifiedByte">
+      <summary>Indicates that a modifier is neither signed nor unsigned. This class cannot be inherited.</summary>
+    </member>
+    <member name="T:System.Runtime.CompilerServices.IsUdtReturn">
+      <summary>Indicates that a return type is a user-defined type. This class cannot be inherited.</summary>
+    </member>
+    <member name="T:System.Runtime.CompilerServices.NativeCppClassAttribute">
+      <summary>Applies metadata to an assembly that indicates that a type is an unmanaged type.  This class cannot be inherited.</summary>
+    </member>
+    <member name="M:System.Runtime.CompilerServices.NativeCppClassAttribute.#ctor">
+      <summary>Initializes a new instance of the <see cref="T:System.Runtime.CompilerServices.NativeCppClassAttribute"></see> class.</summary>
+    </member>
+    <member name="T:System.Runtime.CompilerServices.RequiredAttributeAttribute">
+      <summary>Specifies that an importing compiler must fully understand the semantics of a type definition, or refuse to use it.  This class cannot be inherited.</summary>
+    </member>
+    <member name="M:System.Runtime.CompilerServices.RequiredAttributeAttribute.#ctor(System.Type)">
+      <summary>Initializes a new instance of the <see cref="T:System.Runtime.CompilerServices.RequiredAttributeAttribute"></see> class.</summary>
+      <param name="requiredContract">A type that an importing compiler must fully understand.  
+ This parameter is not supported in the .NET Framework version 2.0 and later.</param>
+    </member>
+    <member name="P:System.Runtime.CompilerServices.RequiredAttributeAttribute.RequiredContract">
+      <summary>Gets a type that an importing compiler must fully understand.</summary>
+      <returns>A type that an importing compiler must fully understand.</returns>
+    </member>
+    <member name="T:System.Runtime.CompilerServices.ScopelessEnumAttribute">
+      <summary>Indicates that a native enumeration is not qualified by the enumeration type name. This class cannot be inherited.</summary>
+    </member>
+    <member name="M:System.Runtime.CompilerServices.ScopelessEnumAttribute.#ctor">
+      <summary>Initializes a new instance of the <see cref="T:System.Runtime.CompilerServices.ScopelessEnumAttribute"></see> class.</summary>
+    </member>
     <member name="T:System.Runtime.CompilerServices.CallConvCdecl">
       <summary>Indicates that a method should use the Cdecl calling convention.</summary>
     </member>
@@ -58,37 +90,5 @@
     <member name="T:System.Runtime.CompilerServices.IsLong">
       <summary>Indicates that a modified integer is a standard C++ long value. This class cannot be inherited.</summary>
     </member>
-    <member name="T:System.Runtime.CompilerServices.IsPinned">
-      <summary>Indicates that a modified instance is pinned in memory. This class cannot be inherited.</summary>
-    </member>
-    <member name="T:System.Runtime.CompilerServices.IsSignUnspecifiedByte">
-      <summary>Indicates that a modifier is neither signed nor unsigned. This class cannot be inherited.</summary>
-    </member>
-    <member name="T:System.Runtime.CompilerServices.IsUdtReturn">
-      <summary>Indicates that a return type is a user-defined type. This class cannot be inherited.</summary>
-    </member>
-    <member name="T:System.Runtime.CompilerServices.NativeCppClassAttribute">
-      <summary>Applies metadata to an assembly that indicates that a type is an unmanaged type.  This class cannot be inherited.</summary>
-    </member>
-    <member name="M:System.Runtime.CompilerServices.NativeCppClassAttribute.#ctor">
-      <summary>Initializes a new instance of the <see cref="T:System.Runtime.CompilerServices.NativeCppClassAttribute"></see> class.</summary>
-    </member>
-    <member name="T:System.Runtime.CompilerServices.RequiredAttributeAttribute">
-      <summary>Specifies that an importing compiler must fully understand the semantics of a type definition, or refuse to use it.  This class cannot be inherited.</summary>
-    </member>
-    <member name="M:System.Runtime.CompilerServices.RequiredAttributeAttribute.#ctor(System.Type)">
-      <summary>Initializes a new instance of the <see cref="T:System.Runtime.CompilerServices.RequiredAttributeAttribute"></see> class.</summary>
-      <param name="requiredContract">A type that an importing compiler must fully understand.   This parameter is not supported in the .NET Framework version 2.0 and later.</param>
-    </member>
-    <member name="P:System.Runtime.CompilerServices.RequiredAttributeAttribute.RequiredContract">
-      <summary>Gets a type that an importing compiler must fully understand.</summary>
-      <returns>A type that an importing compiler must fully understand.</returns>
-    </member>
-    <member name="T:System.Runtime.CompilerServices.ScopelessEnumAttribute">
-      <summary>Indicates that a native enumeration is not qualified by the enumeration type name. This class cannot be inherited.</summary>
-    </member>
-    <member name="M:System.Runtime.CompilerServices.ScopelessEnumAttribute.#ctor">
-      <summary>Initializes a new instance of the <see cref="T:System.Runtime.CompilerServices.ScopelessEnumAttribute"></see> class.</summary>
-    </member>
   </members>
-</doc></span>
+</doc>

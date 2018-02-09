@@ -1,5 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?><span>
-<doc>
+﻿<?xml version="1.0" encoding="utf-8"?><doc>
   <assembly>
     <name>System.Diagnostics.FileVersionInfo</name>
   </assembly>
@@ -33,7 +32,7 @@
     </member>
     <member name="P:System.Diagnostics.FileVersionInfo.FileName">
       <summary>Gets the name of the file that this instance of <see cref="T:System.Diagnostics.FileVersionInfo"></see> describes.</summary>
-      <returns>The name of the file described by this instance of <see cref="T:System.Diagnostics.FileVersionInfo"></see>.</returns>
+      <returns>The name of the file described by this instance of <see cref="System.Diagnostics.FileVersionInfo"></see>.</returns>
     </member>
     <member name="P:System.Diagnostics.FileVersionInfo.FilePrivatePart">
       <summary>Gets the file private part number.</summary>
@@ -46,7 +45,7 @@
     <member name="M:System.Diagnostics.FileVersionInfo.GetVersionInfo(System.String)">
       <summary>Returns a <see cref="T:System.Diagnostics.FileVersionInfo"></see> representing the version information associated with the specified file.</summary>
       <param name="fileName">The fully qualified path and name of the file to retrieve the version information for.</param>
-      <returns>A <see cref="T:System.Diagnostics.FileVersionInfo"></see> containing information about the file. If the file did not contain version information, the <see cref="T:System.Diagnostics.FileVersionInfo"></see> contains only the name of the file requested.</returns>
+      <returns>A <see cref="System.Diagnostics.FileVersionInfo"></see> containing information about the file. If the file did not contain version information, the <see cref="System.Diagnostics.FileVersionInfo"></see> contains only the name of the file requested.</returns>
       <exception cref="T:System.IO.FileNotFoundException">The file specified cannot be found.</exception>
     </member>
     <member name="P:System.Diagnostics.FileVersionInfo.InternalName">
@@ -123,7 +122,10 @@
     </member>
     <member name="M:System.Diagnostics.FileVersionInfo.ToString">
       <summary>Returns a partial list of properties in the <see cref="T:System.Diagnostics.FileVersionInfo"></see> and their values.</summary>
-      <returns>A list of the following properties in this class and their values:  <see cref="P:System.Diagnostics.FileVersionInfo.FileName"></see>, <see cref="P:System.Diagnostics.FileVersionInfo.InternalName"></see>, <see cref="P:System.Diagnostics.FileVersionInfo.OriginalFilename"></see>, <see cref="P:System.Diagnostics.FileVersionInfo.FileVersion"></see>, <see cref="P:System.Diagnostics.FileVersionInfo.FileDescription"></see>, <see cref="P:System.Diagnostics.FileVersionInfo.ProductName"></see>, <see cref="P:System.Diagnostics.FileVersionInfo.ProductVersion"></see>, <see cref="P:System.Diagnostics.FileVersionInfo.IsDebug"></see>, <see cref="P:System.Diagnostics.FileVersionInfo.IsPatched"></see>, <see cref="P:System.Diagnostics.FileVersionInfo.IsPreRelease"></see>, <see cref="P:System.Diagnostics.FileVersionInfo.IsPrivateBuild"></see>, <see cref="P:System.Diagnostics.FileVersionInfo.IsSpecialBuild"></see>,  <see cref="P:System.Diagnostics.FileVersionInfo.Language"></see>.   If the file did not contain version information, this list will contain only the name of the requested file. Boolean values will be false, and all other entries will be null.</returns>
+      <returns>A list of the following properties in this class and their values:  
+ <see cref="System.Diagnostics.FileVersionInfo.FileName"></see>, <see cref="System.Diagnostics.FileVersionInfo.InternalName"></see>, <see cref="System.Diagnostics.FileVersionInfo.OriginalFilename"></see>, <see cref="System.Diagnostics.FileVersionInfo.FileVersion"></see>, <see cref="System.Diagnostics.FileVersionInfo.FileDescription"></see>, <see cref="System.Diagnostics.FileVersionInfo.ProductName"></see>, <see cref="System.Diagnostics.FileVersionInfo.ProductVersion"></see>, <see cref="System.Diagnostics.FileVersionInfo.IsDebug"></see>, <see cref="System.Diagnostics.FileVersionInfo.IsPatched"></see>, <see cref="System.Diagnostics.FileVersionInfo.IsPreRelease"></see>, <see cref="System.Diagnostics.FileVersionInfo.IsPrivateBuild"></see>, <see cref="System.Diagnostics.FileVersionInfo.IsSpecialBuild"></see>,  
+ <see cref="System.Diagnostics.FileVersionInfo.Language"></see>.  
+ If the file did not contain version information, this list will contain only the name of the requested file. Boolean values will be false, and all other entries will be null.</returns>
     </member>
   </members>
-</doc></span>
+</doc>

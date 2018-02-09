@@ -1,5 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?><span>
-<doc>
+﻿<?xml version="1.0" encoding="utf-8"?><doc>
   <assembly>
     <name>System.Json</name>
   </assembly>
@@ -134,14 +133,14 @@
     <member name="P:System.Json.JsonObject.Values">
       <returns></returns>
     </member>
-    <member name="M:System.Json.JsonObject.System#Collections#Generic#ICollection{System#Collections#Generic#KeyValuePair{System#String,System#Json#JsonValue}}#Contains(System.Collections.Generic.KeyValuePair{System.String,System.Json.JsonValue})">
+    <member name="M:System.Json.JsonObject.System#Collections#Generic#ICollection{System#Collections#Generic#KeyValuePair{System#String@System#Json#JsonValue}}#Contains(System.Collections.Generic.KeyValuePair{System.String,System.Json.JsonValue})">
       <param name="item"></param>
       <returns></returns>
     </member>
-    <member name="P:System.Json.JsonObject.System#Collections#Generic#ICollection{System#Collections#Generic#KeyValuePair{System#String,System#Json#JsonValue}}#IsReadOnly">
+    <member name="P:System.Json.JsonObject.System#Collections#Generic#ICollection{System#Collections#Generic#KeyValuePair{System#String@System#Json#JsonValue}}#IsReadOnly">
       <returns></returns>
     </member>
-    <member name="M:System.Json.JsonObject.System#Collections#Generic#ICollection{System#Collections#Generic#KeyValuePair{System#String,System#Json#JsonValue}}#Remove(System.Collections.Generic.KeyValuePair{System.String,System.Json.JsonValue})">
+    <member name="M:System.Json.JsonObject.System#Collections#Generic#ICollection{System#Collections#Generic#KeyValuePair{System#String@System#Json#JsonValue}}#Remove(System.Collections.Generic.KeyValuePair{System.String,System.Json.JsonValue})">
       <param name="item"></param>
       <returns></returns>
     </member>
@@ -264,155 +263,155 @@
       <param name="textReader"></param>
       <returns></returns>
     </member>
-    <member name="M:System.Json.JsonValue.op_Implicit(System.Json.JsonValue to System.Int64)">
+    <member name="M:System.Json.JsonValue.op_Implicit(System.Json.JsonValue)~System.Int64">
       <param name="value"></param>
       <returns></returns>
     </member>
-    <member name="M:System.Json.JsonValue.op_Implicit(System.Json.JsonValue to System.SByte)">
+    <member name="M:System.Json.JsonValue.op_Implicit(System.Json.JsonValue)~System.SByte">
       <param name="value"></param>
       <returns></returns>
     </member>
-    <member name="M:System.Json.JsonValue.op_Implicit(System.Json.JsonValue to System.Single)">
+    <member name="M:System.Json.JsonValue.op_Implicit(System.Json.JsonValue)~System.Single">
       <param name="value"></param>
       <returns></returns>
     </member>
-    <member name="M:System.Json.JsonValue.op_Implicit(System.Json.JsonValue to System.String)">
+    <member name="M:System.Json.JsonValue.op_Implicit(System.Json.JsonValue)~System.String">
       <param name="value"></param>
       <returns></returns>
     </member>
-    <member name="M:System.Json.JsonValue.op_Implicit(System.Json.JsonValue to System.TimeSpan)">
+    <member name="M:System.Json.JsonValue.op_Implicit(System.Json.JsonValue)~System.TimeSpan">
       <param name="value"></param>
       <returns></returns>
     </member>
-    <member name="M:System.Json.JsonValue.op_Implicit(System.Json.JsonValue to System.UInt16)">
+    <member name="M:System.Json.JsonValue.op_Implicit(System.Json.JsonValue)~System.UInt16">
       <param name="value"></param>
       <returns></returns>
     </member>
-    <member name="M:System.Json.JsonValue.op_Implicit(System.Json.JsonValue to System.UInt32)">
+    <member name="M:System.Json.JsonValue.op_Implicit(System.Json.JsonValue)~System.UInt32">
       <param name="value"></param>
       <returns></returns>
     </member>
-    <member name="M:System.Json.JsonValue.op_Implicit(System.Json.JsonValue to System.UInt64)">
+    <member name="M:System.Json.JsonValue.op_Implicit(System.Json.JsonValue)~System.UInt64">
       <param name="value"></param>
       <returns></returns>
     </member>
-    <member name="M:System.Json.JsonValue.op_Implicit(System.String to System.Json.JsonValue)">
+    <member name="M:System.Json.JsonValue.op_Implicit(System.String)~System.Json.JsonValue">
       <param name="value"></param>
       <returns></returns>
     </member>
-    <member name="M:System.Json.JsonValue.op_Implicit(System.SByte to System.Json.JsonValue)">
+    <member name="M:System.Json.JsonValue.op_Implicit(System.SByte)~System.Json.JsonValue">
       <param name="value"></param>
       <returns></returns>
     </member>
-    <member name="M:System.Json.JsonValue.op_Implicit(System.Single to System.Json.JsonValue)">
+    <member name="M:System.Json.JsonValue.op_Implicit(System.Single)~System.Json.JsonValue">
       <param name="value"></param>
       <returns></returns>
     </member>
-    <member name="M:System.Json.JsonValue.op_Implicit(System.Json.JsonValue to System.Int32)">
+    <member name="M:System.Json.JsonValue.op_Implicit(System.Json.JsonValue)~System.Int32">
       <param name="value"></param>
       <returns></returns>
     </member>
-    <member name="M:System.Json.JsonValue.op_Implicit(System.TimeSpan to System.Json.JsonValue)">
+    <member name="M:System.Json.JsonValue.op_Implicit(System.TimeSpan)~System.Json.JsonValue">
       <param name="value"></param>
       <returns></returns>
     </member>
-    <member name="M:System.Json.JsonValue.op_Implicit(System.UInt16 to System.Json.JsonValue)">
+    <member name="M:System.Json.JsonValue.op_Implicit(System.UInt16)~System.Json.JsonValue">
       <param name="value"></param>
       <returns></returns>
     </member>
-    <member name="M:System.Json.JsonValue.op_Implicit(System.UInt32 to System.Json.JsonValue)">
+    <member name="M:System.Json.JsonValue.op_Implicit(System.UInt32)~System.Json.JsonValue">
       <param name="value"></param>
       <returns></returns>
     </member>
-    <member name="M:System.Json.JsonValue.op_Implicit(System.UInt64 to System.Json.JsonValue)">
+    <member name="M:System.Json.JsonValue.op_Implicit(System.UInt64)~System.Json.JsonValue">
       <param name="value"></param>
       <returns></returns>
     </member>
-    <member name="M:System.Json.JsonValue.op_Implicit(System.Uri to System.Json.JsonValue)">
+    <member name="M:System.Json.JsonValue.op_Implicit(System.Uri)~System.Json.JsonValue">
       <param name="value"></param>
       <returns></returns>
     </member>
-    <member name="M:System.Json.JsonValue.op_Implicit(System.Json.JsonValue to System.Uri)">
+    <member name="M:System.Json.JsonValue.op_Implicit(System.Json.JsonValue)~System.Uri">
       <param name="value"></param>
       <returns></returns>
     </member>
-    <member name="M:System.Json.JsonValue.op_Implicit(System.Json.JsonValue to System.Int16)">
+    <member name="M:System.Json.JsonValue.op_Implicit(System.Json.JsonValue)~System.Int16">
       <param name="value"></param>
       <returns></returns>
     </member>
-    <member name="M:System.Json.JsonValue.op_Implicit(System.Json.JsonValue to System.Double)">
+    <member name="M:System.Json.JsonValue.op_Implicit(System.Json.JsonValue)~System.Double">
       <param name="value"></param>
       <returns></returns>
     </member>
-    <member name="M:System.Json.JsonValue.op_Implicit(System.Double to System.Json.JsonValue)">
+    <member name="M:System.Json.JsonValue.op_Implicit(System.Double)~System.Json.JsonValue">
       <param name="value"></param>
       <returns></returns>
     </member>
-    <member name="M:System.Json.JsonValue.op_Implicit(System.Boolean to System.Json.JsonValue)">
+    <member name="M:System.Json.JsonValue.op_Implicit(System.Boolean)~System.Json.JsonValue">
       <param name="value"></param>
       <returns></returns>
     </member>
-    <member name="M:System.Json.JsonValue.op_Implicit(System.Byte to System.Json.JsonValue)">
+    <member name="M:System.Json.JsonValue.op_Implicit(System.Byte)~System.Json.JsonValue">
       <param name="value"></param>
       <returns></returns>
     </member>
-    <member name="M:System.Json.JsonValue.op_Implicit(System.Char to System.Json.JsonValue)">
+    <member name="M:System.Json.JsonValue.op_Implicit(System.Char)~System.Json.JsonValue">
       <param name="value"></param>
       <returns></returns>
     </member>
-    <member name="M:System.Json.JsonValue.op_Implicit(System.DateTime to System.Json.JsonValue)">
+    <member name="M:System.Json.JsonValue.op_Implicit(System.DateTime)~System.Json.JsonValue">
       <param name="value"></param>
       <returns></returns>
     </member>
-    <member name="M:System.Json.JsonValue.op_Implicit(System.DateTimeOffset to System.Json.JsonValue)">
+    <member name="M:System.Json.JsonValue.op_Implicit(System.DateTimeOffset)~System.Json.JsonValue">
       <param name="value"></param>
       <returns></returns>
     </member>
-    <member name="M:System.Json.JsonValue.op_Implicit(System.Decimal to System.Json.JsonValue)">
+    <member name="M:System.Json.JsonValue.op_Implicit(System.Decimal)~System.Json.JsonValue">
       <param name="value"></param>
       <returns></returns>
     </member>
-    <member name="M:System.Json.JsonValue.op_Implicit(System.Json.JsonValue to System.Guid)">
+    <member name="M:System.Json.JsonValue.op_Implicit(System.Json.JsonValue)~System.Guid">
       <param name="value"></param>
       <returns></returns>
     </member>
-    <member name="M:System.Json.JsonValue.op_Implicit(System.Int16 to System.Json.JsonValue)">
+    <member name="M:System.Json.JsonValue.op_Implicit(System.Int16)~System.Json.JsonValue">
       <param name="value"></param>
       <returns></returns>
     </member>
-    <member name="M:System.Json.JsonValue.op_Implicit(System.Guid to System.Json.JsonValue)">
+    <member name="M:System.Json.JsonValue.op_Implicit(System.Guid)~System.Json.JsonValue">
       <param name="value"></param>
       <returns></returns>
     </member>
-    <member name="M:System.Json.JsonValue.op_Implicit(System.Int64 to System.Json.JsonValue)">
+    <member name="M:System.Json.JsonValue.op_Implicit(System.Int64)~System.Json.JsonValue">
       <param name="value"></param>
       <returns></returns>
     </member>
-    <member name="M:System.Json.JsonValue.op_Implicit(System.Json.JsonValue to System.Boolean)">
+    <member name="M:System.Json.JsonValue.op_Implicit(System.Json.JsonValue)~System.Boolean">
       <param name="value"></param>
       <returns></returns>
     </member>
-    <member name="M:System.Json.JsonValue.op_Implicit(System.Json.JsonValue to System.Byte)">
+    <member name="M:System.Json.JsonValue.op_Implicit(System.Json.JsonValue)~System.Byte">
       <param name="value"></param>
       <returns></returns>
     </member>
-    <member name="M:System.Json.JsonValue.op_Implicit(System.Json.JsonValue to System.Char)">
+    <member name="M:System.Json.JsonValue.op_Implicit(System.Json.JsonValue)~System.Char">
       <param name="value"></param>
       <returns></returns>
     </member>
-    <member name="M:System.Json.JsonValue.op_Implicit(System.Json.JsonValue to System.DateTime)">
+    <member name="M:System.Json.JsonValue.op_Implicit(System.Json.JsonValue)~System.DateTime">
       <param name="value"></param>
       <returns></returns>
     </member>
-    <member name="M:System.Json.JsonValue.op_Implicit(System.Json.JsonValue to System.DateTimeOffset)">
+    <member name="M:System.Json.JsonValue.op_Implicit(System.Json.JsonValue)~System.DateTimeOffset">
       <param name="value"></param>
       <returns></returns>
     </member>
-    <member name="M:System.Json.JsonValue.op_Implicit(System.Json.JsonValue to System.Decimal)">
+    <member name="M:System.Json.JsonValue.op_Implicit(System.Json.JsonValue)~System.Decimal">
       <param name="value"></param>
       <returns></returns>
     </member>
-    <member name="M:System.Json.JsonValue.op_Implicit(System.Int32 to System.Json.JsonValue)">
+    <member name="M:System.Json.JsonValue.op_Implicit(System.Int32)~System.Json.JsonValue">
       <param name="value"></param>
       <returns></returns>
     </member>
@@ -433,4 +432,4 @@
       <returns></returns>
     </member>
   </members>
-</doc></span>
+</doc>

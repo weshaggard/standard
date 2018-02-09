@@ -1,5 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?><span>
-<doc>
+﻿<?xml version="1.0" encoding="utf-8"?><doc>
   <assembly>
     <name>System.Composition.Convention</name>
   </assembly>
@@ -154,14 +153,14 @@
       <param name="propertySelector">A function that selects the property to export.</param>
       <param name="exportConfiguration">An action that configures the exported property.</param>
       <returns>An object that can be used to further configure the part.</returns>
-      <exception cref="T:System.Argument">The <paramref name="propertySelector">propertySelector</paramref> expression must be a <see cref="T:System.Linq.Expressions.MemberExpression"></see> for accessing a property.</exception>
+      <exception cref="T:System.Argument">The <paramref name="propertySelector">propertySelector</paramref> expression must be a <see cref="System.Linq.Expressions.MemberExpression"></see> for accessing a property.</exception>
     </member>
     <member name="M:System.Composition.Convention.PartConventionBuilder`1.ExportProperty``1(System.Linq.Expressions.Expression{System.Func{`0,System.Object}})">
       <summary>Exports a specified property as a specified contract type.</summary>
       <param name="propertySelector">A function that selects the property to export.</param>
       <typeparam name="TContract">The contract type.</typeparam>
       <returns>An object that can be used to further configure the part.</returns>
-      <exception cref="T:System.Argument">The <paramref name="propertySelector">propertySelector</paramref> expression must be a <see cref="T:System.Linq.Expressions.MemberExpression"></see> for accessing a property.</exception>
+      <exception cref="T:System.Argument">The <paramref name="propertySelector">propertySelector</paramref> expression must be a <see cref="System.Linq.Expressions.MemberExpression"></see> for accessing a property.</exception>
     </member>
     <member name="M:System.Composition.Convention.PartConventionBuilder`1.ExportProperty``1(System.Linq.Expressions.Expression{System.Func{`0,System.Object}},System.Action{System.Composition.Convention.ExportConventionBuilder})">
       <summary>Exports a specified property as a specified contract type by using the specified configuration.</summary>
@@ -180,7 +179,7 @@
       <param name="propertySelector">A function that selects the property to import.</param>
       <param name="importConfiguration">An action that configures the imported property.</param>
       <returns>An object that can be used to further configure the part.</returns>
-      <exception cref="T:System.Argument">The <paramref name="propertySelector">propertySelector</paramref> expression must be a <see cref="T:System.Linq.Expressions.MemberExpression"></see> for accessing a property.</exception>
+      <exception cref="T:System.Argument">The <paramref name="propertySelector">propertySelector</paramref> expression must be a <see cref="System.Linq.Expressions.MemberExpression"></see> for accessing a property.</exception>
     </member>
     <member name="M:System.Composition.Convention.PartConventionBuilder`1.ImportProperty``1(System.Linq.Expressions.Expression{System.Func{`0,System.Object}})">
       <summary>Imports a specified property with the specified contract type.</summary>
@@ -194,7 +193,7 @@
       <param name="importConfiguration">An action that configures the imported property.</param>
       <typeparam name="TContract">The contract type.</typeparam>
       <returns>An object that can be used to further configure the part.</returns>
-      <exception cref="T:System.Argument">The <paramref name="propertySelector">propertySelector</paramref> expression must be a <see cref="T:System.Linq.Expressions.MemberExpression"></see> for accessing a property.</exception>
+      <exception cref="T:System.Argument">The <paramref name="propertySelector">propertySelector</paramref> expression must be a <see cref="System.Linq.Expressions.MemberExpression"></see> for accessing a property.</exception>
     </member>
     <member name="M:System.Composition.Convention.PartConventionBuilder`1.NotifyImportsSatisfied(System.Linq.Expressions.Expression{System.Action{`0}})">
       <summary>Selects a method to be called when composition is complete.</summary>
@@ -319,7 +318,7 @@
     <member name="M:System.Composition.Convention.PartConventionBuilder.SelectConstructor(System.Func{System.Collections.Generic.IEnumerable{System.Reflection.ConstructorInfo},System.Reflection.ConstructorInfo},System.Action{System.Reflection.ParameterInfo,System.Composition.Convention.ImportConventionBuilder})">
       <summary>Selects the constructor used to initialize the part by using the specified function and import configuration.</summary>
       <param name="constructorSelector">A function that returns a single constructor.</param>
-      <param name="importConfiguration">A method that configures the constructor's imports.</param>
+      <param name="importConfiguration">A method that configures the constructor&amp;#39;s imports.</param>
       <returns>A part builder that can be used to further configure the part.</returns>
     </member>
     <member name="M:System.Composition.Convention.PartConventionBuilder.Shared">
@@ -332,4 +331,4 @@
       <returns>A part builder that can be used to further configure the part.</returns>
     </member>
   </members>
-</doc></span>
+</doc>

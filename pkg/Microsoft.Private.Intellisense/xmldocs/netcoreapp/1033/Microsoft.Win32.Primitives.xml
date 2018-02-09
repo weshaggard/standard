@@ -1,5 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?><span>
-<doc>
+﻿<?xml version="1.0" encoding="utf-8"?><doc>
   <assembly>
     <name>Microsoft.Win32.Primitives</name>
   </assembly>
@@ -44,4 +43,4 @@
       <returns>The Win32 error code associated with this exception.</returns>
     </member>
   </members>
-</doc></span>
+</doc>

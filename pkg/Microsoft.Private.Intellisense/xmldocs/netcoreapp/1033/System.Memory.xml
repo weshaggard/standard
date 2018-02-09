@@ -1,94 +1,8 @@
-﻿<?xml version="1.0" encoding="utf-8"?><span>
-<doc>
+﻿<?xml version="1.0" encoding="utf-8"?><doc>
   <assembly>
     <name>System.Memory</name>
   </assembly>
   <members>
-    <member name="T:System.ReadOnlySpan`1">
-      <typeparam name="T"></typeparam>
-    </member>
-    <member name="M:System.ReadOnlySpan`1.#ctor(`0[])">
-      <param name="array"></param>
-    </member>
-    <member name="M:System.ReadOnlySpan`1.#ctor(System.Void*,System.Int32)">
-      <param name="pointer"></param>
-      <param name="length"></param>
-    </member>
-    <member name="M:System.ReadOnlySpan`1.#ctor(`0[],System.Int32)">
-      <param name="array"></param>
-      <param name="start"></param>
-    </member>
-    <member name="M:System.ReadOnlySpan`1.#ctor(`0[],System.Int32,System.Int32)">
-      <param name="array"></param>
-      <param name="start"></param>
-      <param name="length"></param>
-    </member>
-    <member name="M:System.ReadOnlySpan`1.CopyTo(System.Span{`0})">
-      <param name="destination"></param>
-    </member>
-    <member name="M:System.ReadOnlySpan`1.DangerousCreate(System.Object,`0@,System.Int32)">
-      <param name="obj"></param>
-      <param name="objectData"></param>
-      <param name="length"></param>
-      <returns></returns>
-    </member>
-    <member name="M:System.ReadOnlySpan`1.DangerousGetPinnableReference">
-      <returns></returns>
-    </member>
-    <member name="P:System.ReadOnlySpan`1.Empty">
-      <returns></returns>
-    </member>
-    <member name="M:System.ReadOnlySpan`1.Equals(System.Object)">
-      <param name="obj"></param>
-      <returns></returns>
-    </member>
-    <member name="M:System.ReadOnlySpan`1.GetHashCode">
-      <returns></returns>
-    </member>
-    <member name="P:System.ReadOnlySpan`1.IsEmpty">
-      <returns></returns>
-    </member>
-    <member name="P:System.ReadOnlySpan`1.Item(System.Int32)">
-      <param name="index"></param>
-      <returns></returns>
-    </member>
-    <member name="P:System.ReadOnlySpan`1.Length">
-      <returns></returns>
-    </member>
-    <member name="M:System.ReadOnlySpan`1.op_Equality(System.ReadOnlySpan{`0},System.ReadOnlySpan{`0})">
-      <param name="left"></param>
-      <param name="right"></param>
-      <returns></returns>
-    </member>
-    <member name="M:System.ReadOnlySpan`1.op_Implicit(System.ArraySegment{T} to System.ReadOnlySpan{T})">
-      <param name="arraySegment"></param>
-      <returns></returns>
-    </member>
-    <member name="M:System.ReadOnlySpan`1.op_Implicit(T[] to System.ReadOnlySpan{T})">
-      <param name="array"></param>
-      <returns></returns>
-    </member>
-    <member name="M:System.ReadOnlySpan`1.op_Inequality(System.ReadOnlySpan{`0},System.ReadOnlySpan{`0})">
-      <param name="left"></param>
-      <param name="right"></param>
-      <returns></returns>
-    </member>
-    <member name="M:System.ReadOnlySpan`1.Slice(System.Int32)">
-      <param name="start"></param>
-      <returns></returns>
-    </member>
-    <member name="M:System.ReadOnlySpan`1.Slice(System.Int32,System.Int32)">
-      <param name="start"></param>
-      <param name="length"></param>
-      <returns></returns>
-    </member>
-    <member name="M:System.ReadOnlySpan`1.ToArray">
-      <returns></returns>
-    </member>
-    <member name="M:System.ReadOnlySpan`1.TryCopyTo(System.Span{`0})">
-      <param name="destination"></param>
-      <returns></returns>
-    </member>
     <member name="T:System.Span`1">
       <typeparam name="T"></typeparam>
     </member>
@@ -151,15 +65,15 @@
       <param name="right"></param>
       <returns></returns>
     </member>
-    <member name="M:System.Span`1.op_Implicit(System.ArraySegment{T} to System.Span{T})">
+    <member name="M:System.Span`1.op_Implicit(System.ArraySegment{T})~System.Span{T}">
       <param name="arraySegment"></param>
       <returns></returns>
     </member>
-    <member name="M:System.Span`1.op_Implicit(System.Span{T} to System.ReadOnlySpan{T})">
+    <member name="M:System.Span`1.op_Implicit(System.Span{T})~System.ReadOnlySpan{T}">
       <param name="span"></param>
       <returns></returns>
     </member>
-    <member name="M:System.Span`1.op_Implicit(T[] to System.Span{T})">
+    <member name="M:System.Span`1.op_Implicit(T[])~System.Span{T}">
       <param name="array"></param>
       <returns></returns>
     </member>
@@ -352,5 +266,90 @@
       <typeparam name="T"></typeparam>
       <returns></returns>
     </member>
+    <member name="T:System.ReadOnlySpan`1">
+      <typeparam name="T"></typeparam>
+    </member>
+    <member name="M:System.ReadOnlySpan`1.#ctor(`0[])">
+      <param name="array"></param>
+    </member>
+    <member name="M:System.ReadOnlySpan`1.#ctor(System.Void*,System.Int32)">
+      <param name="pointer"></param>
+      <param name="length"></param>
+    </member>
+    <member name="M:System.ReadOnlySpan`1.#ctor(`0[],System.Int32)">
+      <param name="array"></param>
+      <param name="start"></param>
+    </member>
+    <member name="M:System.ReadOnlySpan`1.#ctor(`0[],System.Int32,System.Int32)">
+      <param name="array"></param>
+      <param name="start"></param>
+      <param name="length"></param>
+    </member>
+    <member name="M:System.ReadOnlySpan`1.CopyTo(System.Span{`0})">
+      <param name="destination"></param>
+    </member>
+    <member name="M:System.ReadOnlySpan`1.DangerousCreate(System.Object,`0@,System.Int32)">
+      <param name="obj"></param>
+      <param name="objectData"></param>
+      <param name="length"></param>
+      <returns></returns>
+    </member>
+    <member name="M:System.ReadOnlySpan`1.DangerousGetPinnableReference">
+      <returns></returns>
+    </member>
+    <member name="P:System.ReadOnlySpan`1.Empty">
+      <returns></returns>
+    </member>
+    <member name="M:System.ReadOnlySpan`1.Equals(System.Object)">
+      <param name="obj"></param>
+      <returns></returns>
+    </member>
+    <member name="M:System.ReadOnlySpan`1.GetHashCode">
+      <returns></returns>
+    </member>
+    <member name="P:System.ReadOnlySpan`1.IsEmpty">
+      <returns></returns>
+    </member>
+    <member name="P:System.ReadOnlySpan`1.Item(System.Int32)">
+      <param name="index"></param>
+      <returns></returns>
+    </member>
+    <member name="P:System.ReadOnlySpan`1.Length">
+      <returns></returns>
+    </member>
+    <member name="M:System.ReadOnlySpan`1.op_Equality(System.ReadOnlySpan{`0},System.ReadOnlySpan{`0})">
+      <param name="left"></param>
+      <param name="right"></param>
+      <returns></returns>
+    </member>
+    <member name="M:System.ReadOnlySpan`1.op_Implicit(System.ArraySegment{T})~System.ReadOnlySpan{T}">
+      <param name="arraySegment"></param>
+      <returns></returns>
+    </member>
+    <member name="M:System.ReadOnlySpan`1.op_Implicit(T[])~System.ReadOnlySpan{T}">
+      <param name="array"></param>
+      <returns></returns>
+    </member>
+    <member name="M:System.ReadOnlySpan`1.op_Inequality(System.ReadOnlySpan{`0},System.ReadOnlySpan{`0})">
+      <param name="left"></param>
+      <param name="right"></param>
+      <returns></returns>
+    </member>
+    <member name="M:System.ReadOnlySpan`1.Slice(System.Int32)">
+      <param name="start"></param>
+      <returns></returns>
+    </member>
+    <member name="M:System.ReadOnlySpan`1.Slice(System.Int32,System.Int32)">
+      <param name="start"></param>
+      <param name="length"></param>
+      <returns></returns>
+    </member>
+    <member name="M:System.ReadOnlySpan`1.ToArray">
+      <returns></returns>
+    </member>
+    <member name="M:System.ReadOnlySpan`1.TryCopyTo(System.Span{`0})">
+      <param name="destination"></param>
+      <returns></returns>
+    </member>
   </members>
-</doc></span>
+</doc>

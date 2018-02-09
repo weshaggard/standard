@@ -1,116 +1,8 @@
-﻿<?xml version="1.0" encoding="utf-8"?><span>
-<doc>
+﻿<?xml version="1.0" encoding="utf-8"?><doc>
   <assembly>
     <name>System.Diagnostics.StackTrace</name>
   </assembly>
   <members>
-    <member name="T:System.Diagnostics.SymbolStore.SymbolToken">
-      <summary>The <see cref="T:System.Diagnostics.SymbolStore.SymbolToken"></see> structure is an object representation of a token that represents symbolic information.</summary>
-    </member>
-    <member name="M:System.Diagnostics.SymbolStore.SymbolToken.#ctor(System.Int32)">
-      <summary>Initializes a new instance of the <see cref="T:System.Diagnostics.SymbolStore.SymbolToken"></see> structure when given a value.</summary>
-      <param name="val">The value to be used for the token.</param>
-    </member>
-    <member name="M:System.Diagnostics.SymbolStore.SymbolToken.Equals(System.Diagnostics.SymbolStore.SymbolToken)">
-      <summary>Determines whether <paramref name="obj">obj</paramref> is equal to this instance.</summary>
-      <param name="obj">The <see cref="T:System.Diagnostics.SymbolStore.SymbolToken"></see> to check.</param>
-      <returns>true if <paramref name="obj">obj</paramref> is equal to this instance; otherwise, false.</returns>
-    </member>
-    <member name="M:System.Diagnostics.SymbolStore.SymbolToken.Equals(System.Object)">
-      <summary>Determines whether <paramref name="obj">obj</paramref> is an instance of <see cref="T:System.Diagnostics.SymbolStore.SymbolToken"></see> and is equal to this instance.</summary>
-      <param name="obj">The object to check.</param>
-      <returns>true if <paramref name="obj">obj</paramref> is an instance of <see cref="T:System.Diagnostics.SymbolStore.SymbolToken"></see> and is equal to this instance; otherwise, false.</returns>
-    </member>
-    <member name="M:System.Diagnostics.SymbolStore.SymbolToken.GetHashCode">
-      <summary>Generates the hash code for the current token.</summary>
-      <returns>The hash code for the current token.</returns>
-    </member>
-    <member name="M:System.Diagnostics.SymbolStore.SymbolToken.GetToken">
-      <summary>Gets the value of the current token.</summary>
-      <returns>The value of the current token.</returns>
-    </member>
-    <member name="M:System.Diagnostics.SymbolStore.SymbolToken.op_Equality(System.Diagnostics.SymbolStore.SymbolToken,System.Diagnostics.SymbolStore.SymbolToken)">
-      <summary>Returns a value indicating whether two <see cref="T:System.Diagnostics.SymbolStore.SymbolToken"></see> objects are equal.</summary>
-      <param name="a">A <see cref="T:System.Diagnostics.SymbolStore.SymbolToken"></see> structure.</param>
-      <param name="b">A <see cref="T:System.Diagnostics.SymbolStore.SymbolToken"></see> structure.</param>
-      <returns>true if <paramref name="a">a</paramref> and <paramref name="b">b</paramref> are equal; otherwise, false.</returns>
-    </member>
-    <member name="M:System.Diagnostics.SymbolStore.SymbolToken.op_Inequality(System.Diagnostics.SymbolStore.SymbolToken,System.Diagnostics.SymbolStore.SymbolToken)">
-      <summary>Returns a value indicating whether two <see cref="T:System.Diagnostics.SymbolStore.SymbolToken"></see> objects are not equal.</summary>
-      <param name="a">A <see cref="T:System.Diagnostics.SymbolStore.SymbolToken"></see> structure.</param>
-      <param name="b">A <see cref="T:System.Diagnostics.SymbolStore.SymbolToken"></see> structure.</param>
-      <returns>true if <paramref name="a">a</paramref> and <paramref name="b">b</paramref> are not equal; otherwise, false.</returns>
-    </member>
-    <member name="T:System.Diagnostics.SymbolStore.SymDocumentType">
-      <summary>Holds the public GUIDs for document types to be used with the symbol store.</summary>
-    </member>
-    <member name="M:System.Diagnostics.SymbolStore.SymDocumentType.#ctor">
-      <summary>Initializes a new instance of the <see cref="T:System.Diagnostics.SymbolStore.SymDocumentType"></see> class.</summary>
-    </member>
-    <member name="F:System.Diagnostics.SymbolStore.SymDocumentType.Text">
-      <summary>Specifies the GUID of the document type to be used with the symbol store.</summary>
-      <returns></returns>
-    </member>
-    <member name="T:System.Diagnostics.SymbolStore.SymLanguageType">
-      <summary>Holds the public GUIDs for language types to be used with the symbol store.</summary>
-    </member>
-    <member name="M:System.Diagnostics.SymbolStore.SymLanguageType.#ctor">
-      <summary>Initializes a new instance of the <see cref="T:System.Diagnostics.SymbolStore.SymLanguageType"></see> class.</summary>
-    </member>
-    <member name="F:System.Diagnostics.SymbolStore.SymLanguageType.Basic">
-      <summary>Specifies the GUID of the Basic language type to be used with the symbol store.</summary>
-      <returns></returns>
-    </member>
-    <member name="F:System.Diagnostics.SymbolStore.SymLanguageType.C">
-      <summary>Specifies the GUID of the C language type to be used with the symbol store.</summary>
-      <returns></returns>
-    </member>
-    <member name="F:System.Diagnostics.SymbolStore.SymLanguageType.Cobol">
-      <summary>Specifies the GUID of the Cobol language type to be used with the symbol store.</summary>
-      <returns></returns>
-    </member>
-    <member name="F:System.Diagnostics.SymbolStore.SymLanguageType.CPlusPlus">
-      <summary>Specifies the GUID of the C++ language type to be used with the symbol store.</summary>
-      <returns></returns>
-    </member>
-    <member name="F:System.Diagnostics.SymbolStore.SymLanguageType.CSharp">
-      <summary>Specifies the GUID of the C# language type to be used with the symbol store.</summary>
-      <returns></returns>
-    </member>
-    <member name="F:System.Diagnostics.SymbolStore.SymLanguageType.ILAssembly">
-      <summary>Specifies the GUID of the ILAssembly language type to be used with the symbol store.</summary>
-      <returns></returns>
-    </member>
-    <member name="F:System.Diagnostics.SymbolStore.SymLanguageType.Java">
-      <summary>Specifies the GUID of the Java language type to be used with the symbol store.</summary>
-      <returns></returns>
-    </member>
-    <member name="F:System.Diagnostics.SymbolStore.SymLanguageType.JScript">
-      <summary>Specifies the GUID of the JScript language type to be used with the symbol store.</summary>
-      <returns></returns>
-    </member>
-    <member name="F:System.Diagnostics.SymbolStore.SymLanguageType.MCPlusPlus">
-      <summary>Specifies the GUID of the C++ language type to be used with the symbol store.</summary>
-      <returns></returns>
-    </member>
-    <member name="F:System.Diagnostics.SymbolStore.SymLanguageType.Pascal">
-      <summary>Specifies the GUID of the Pascal language type to be used with the symbol store.</summary>
-      <returns></returns>
-    </member>
-    <member name="F:System.Diagnostics.SymbolStore.SymLanguageType.SMC">
-      <summary>Specifies the GUID of the SMC language type to be used with the symbol store.</summary>
-      <returns></returns>
-    </member>
-    <member name="T:System.Diagnostics.SymbolStore.SymLanguageVendor">
-      <summary>Holds the public GUIDs for language vendors to be used with the symbol store.</summary>
-    </member>
-    <member name="M:System.Diagnostics.SymbolStore.SymLanguageVendor.#ctor">
-      <summary>Initializes a new instance of the <see cref="T:System.Diagnostics.SymbolStore.SymLanguageVendor"></see> class.</summary>
-    </member>
-    <member name="F:System.Diagnostics.SymbolStore.SymLanguageVendor.Microsoft">
-      <summary>Specifies the GUID of the Microsoft language vendor.</summary>
-      <returns></returns>
-    </member>
     <member name="T:System.Diagnostics.StackFrame">
       <summary>Provides information about a <see cref="T:System.Diagnostics.StackFrame"></see>, which represents a function call on the call stack for the current thread.</summary>
     </member>
@@ -174,40 +66,46 @@
       <returns>A readable representation of the stack trace.</returns>
     </member>
     <member name="T:System.Diagnostics.StackFrameExtensions">
-      
+      <summary>Provides extension methods for the <see cref="T:System.Diagnostics.StackFrame"></see> class, which represents a function call on the call stack for the current thread.</summary>
     </member>
     <member name="M:System.Diagnostics.StackFrameExtensions.GetNativeImageBase(System.Diagnostics.StackFrame)">
-      <param name="stackFrame"></param>
-      <returns></returns>
+      <summary>Returns a pointer to the base address of the native just-in-time (JIT)-compiled image that this stack frame is executing.</summary>
+      <param name="stackFrame">A stack frame.</param>
+      <returns>This method always returns <see cref="System.IntPtr.Zero"></see>.</returns>
     </member>
     <member name="M:System.Diagnostics.StackFrameExtensions.GetNativeIP(System.Diagnostics.StackFrame)">
-      <param name="stackFrame"></param>
-      <returns></returns>
+      <summary>Gets an interface pointer to the start of the native code for the method that is being executed.</summary>
+      <param name="stackFrame">A stack frame.</param>
+      <returns>This method always returns  <see cref="System.IntPtr.Zero"></see>.</returns>
     </member>
     <member name="M:System.Diagnostics.StackFrameExtensions.HasILOffset(System.Diagnostics.StackFrame)">
-      <param name="stackFrame"></param>
-      <returns></returns>
+      <summary>Indicates whether an offset from the start of the IL code for the method that is executing is available.</summary>
+      <param name="stackFrame">A stack frame.</param>
+      <returns>true if the offset is available; otherwise, false.</returns>
     </member>
     <member name="M:System.Diagnostics.StackFrameExtensions.HasMethod(System.Diagnostics.StackFrame)">
-      <param name="stackFrame"></param>
-      <returns></returns>
+      <summary>Indicates whether information about the method in which the specified frame is executing is available.</summary>
+      <param name="stackFrame">A stack frame.</param>
+      <returns>true if information about the method in which the current frame is executing is available; otherwise, false.</returns>
     </member>
     <member name="M:System.Diagnostics.StackFrameExtensions.HasNativeImage(System.Diagnostics.StackFrame)">
-      <param name="stackFrame"></param>
-      <returns></returns>
+      <summary>Indicates whether the native just-in-time (JIT)-compiled image is available for the specified stack frame.</summary>
+      <param name="stackFrame">A stack frame.</param>
+      <returns>true if a native image is available for this stack frame; otherwise, false.</returns>
     </member>
     <member name="M:System.Diagnostics.StackFrameExtensions.HasSource(System.Diagnostics.StackFrame)">
-      <param name="stackFrame"></param>
-      <returns></returns>
+      <summary>Indicates whether the file that contains the code that the specified stack frame is executing is available.</summary>
+      <param name="stackFrame">A stack frame.</param>
+      <returns>true if the code that the specified stack frame is executing is available; otherwise, false.</returns>
     </member>
     <member name="T:System.Diagnostics.StackTrace">
       <summary>Represents a stack trace, which is an ordered collection of one or more stack frames.</summary>
     </member>
     <member name="M:System.Diagnostics.StackTrace.#ctor">
-      <summary>Initializes a new instance of the <see cref="T:System.Diagnostics.StackTrace"></see> class from the caller's frame.</summary>
+      <summary>Initializes a new instance of the <see cref="T:System.Diagnostics.StackTrace"></see> class from the caller&amp;#39;s frame.</summary>
     </member>
     <member name="M:System.Diagnostics.StackTrace.#ctor(System.Boolean)">
-      <summary>Initializes a new instance of the <see cref="T:System.Diagnostics.StackTrace"></see> class from the caller's frame, optionally capturing source information.</summary>
+      <summary>Initializes a new instance of the <see cref="T:System.Diagnostics.StackTrace"></see> class from the caller&amp;#39;s frame, optionally capturing source information.</summary>
       <param name="fNeedFileInfo">true to capture the file name, line number, and column number; otherwise, false.</param>
     </member>
     <member name="M:System.Diagnostics.StackTrace.#ctor(System.Diagnostics.StackFrame)">
@@ -220,7 +118,7 @@
       <exception cref="T:System.ArgumentNullException">The parameter <paramref name="e">e</paramref> is null.</exception>
     </member>
     <member name="M:System.Diagnostics.StackTrace.#ctor(System.Int32)">
-      <summary>Initializes a new instance of the <see cref="T:System.Diagnostics.StackTrace"></see> class from the caller's frame, skipping the specified number of frames.</summary>
+      <summary>Initializes a new instance of the <see cref="T:System.Diagnostics.StackTrace"></see> class from the caller&amp;#39;s frame, skipping the specified number of frames.</summary>
       <param name="skipFrames">The number of frames up the stack from which to start the trace.</param>
       <exception cref="T:System.ArgumentOutOfRangeException">The <paramref name="skipFrames">skipFrames</paramref> parameter is negative.</exception>
     </member>
@@ -238,7 +136,7 @@
       <exception cref="T:System.ArgumentOutOfRangeException">The <paramref name="skipFrames">skipFrames</paramref> parameter is negative.</exception>
     </member>
     <member name="M:System.Diagnostics.StackTrace.#ctor(System.Int32,System.Boolean)">
-      <summary>Initializes a new instance of the <see cref="T:System.Diagnostics.StackTrace"></see> class from the caller's frame, skipping the specified number of frames and optionally capturing source information.</summary>
+      <summary>Initializes a new instance of the <see cref="T:System.Diagnostics.StackTrace"></see> class from the caller&amp;#39;s frame, skipping the specified number of frames and optionally capturing source information.</summary>
       <param name="skipFrames">The number of frames up the stack from which to start the trace.</param>
       <param name="fNeedFileInfo">true to capture the file name, line number, and column number; otherwise, false.</param>
       <exception cref="T:System.ArgumentOutOfRangeException">The <paramref name="skipFrames">skipFrames</paramref> parameter is negative.</exception>
@@ -262,7 +160,7 @@
     </member>
     <member name="M:System.Diagnostics.StackTrace.GetFrames">
       <summary>Returns a copy of all stack frames in the current stack trace.</summary>
-      <returns>An array of type <see cref="T:System.Diagnostics.StackFrame"></see> representing the function calls in the stack trace.</returns>
+      <returns>An array of type <see cref="System.Diagnostics.StackFrame"></see> representing the function calls in the stack trace.</returns>
     </member>
     <member name="F:System.Diagnostics.StackTrace.METHODS_TO_SKIP">
       <summary>Defines the default for the number of methods to omit from the stack trace. This field is constant.</summary>
@@ -280,7 +178,7 @@
       <param name="importer">The metadata import interface.</param>
       <param name="filename">The name of the file for which the reader interface is required.</param>
       <param name="searchPath">The search path used to locate the symbol file.</param>
-      <returns>The <see cref="T:System.Diagnostics.SymbolStore.ISymbolReader"></see> interface that reads the debugging symbols.</returns>
+      <returns>The <see cref="System.Diagnostics.SymbolStore.ISymbolReader"></see> interface that reads the debugging symbols.</returns>
     </member>
     <member name="T:System.Diagnostics.SymbolStore.ISymbolBinder1">
       <summary>Represents a symbol binder for managed code.</summary>
@@ -290,7 +188,7 @@
       <param name="importer">An <see cref="T:System.IntPtr"></see> that refers to the metadata import interface.</param>
       <param name="filename">The name of the file for which the reader interface is required.</param>
       <param name="searchPath">The search path used to locate the symbol file.</param>
-      <returns>The <see cref="T:System.Diagnostics.SymbolStore.ISymbolReader"></see> interface that reads the debugging symbols.</returns>
+      <returns>The <see cref="System.Diagnostics.SymbolStore.ISymbolReader"></see> interface that reads the debugging symbols.</returns>
     </member>
     <member name="T:System.Diagnostics.SymbolStore.ISymbolDocument">
       <summary>Represents a document referenced by a symbol store.</summary>
@@ -529,7 +427,7 @@
     </member>
     <member name="P:System.Diagnostics.SymbolStore.ISymbolVariable.AddressKind">
       <summary>Gets the <see cref="T:System.Diagnostics.SymbolStore.SymAddressKind"></see> value describing the type of the address.</summary>
-      <returns>The type of the address. One of the <see cref="T:System.Diagnostics.SymbolStore.SymAddressKind"></see> values.</returns>
+      <returns>The type of the address. One of the <see cref="System.Diagnostics.SymbolStore.SymAddressKind"></see> values.</returns>
     </member>
     <member name="P:System.Diagnostics.SymbolStore.ISymbolVariable.Attributes">
       <summary>Gets the attributes of the variable.</summary>
@@ -644,7 +542,7 @@
     <member name="M:System.Diagnostics.SymbolStore.ISymbolWriter.OpenScope(System.Int32)">
       <summary>Opens a new lexical scope in the current method.</summary>
       <param name="startOffset">The offset, in bytes, from the beginning of the method to the first instruction in the lexical scope.</param>
-      <returns>An opaque scope identifier that can be used with <see cref="M:System.Diagnostics.SymbolStore.ISymbolWriter.SetScopeRange(System.Int32,System.Int32,System.Int32)"></see> to define the start and end offsets of a scope at a later time. In this case, the offsets passed to <see cref="M:System.Diagnostics.SymbolStore.ISymbolWriter.OpenScope(System.Int32)"></see> and <see cref="M:System.Diagnostics.SymbolStore.ISymbolWriter.CloseScope(System.Int32)"></see> are ignored. A scope identifier is valid only in the current method.</returns>
+      <returns>An opaque scope identifier that can be used with <see cref="System.Diagnostics.SymbolStore.ISymbolWriter.SetScopeRange(System.Int32,System.Int32,System.Int32)"></see> to define the start and end offsets of a scope at a later time. In this case, the offsets passed to <see cref="System.Diagnostics.SymbolStore.ISymbolWriter.OpenScope(System.Int32)"></see> and <see cref="System.Diagnostics.SymbolStore.ISymbolWriter.CloseScope(System.Int32)"></see> are ignored. A scope identifier is valid only in the current method.</returns>
     </member>
     <member name="M:System.Diagnostics.SymbolStore.ISymbolWriter.SetMethodSourceRange(System.Diagnostics.SymbolStore.ISymbolDocumentWriter,System.Int32,System.Int32,System.Diagnostics.SymbolStore.ISymbolDocumentWriter,System.Int32,System.Int32)">
       <summary>Specifies the true start and end of a method within a source file. Use <see cref="M:System.Diagnostics.SymbolStore.ISymbolWriter.SetMethodSourceRange(System.Diagnostics.SymbolStore.ISymbolDocumentWriter,System.Int32,System.Int32,System.Diagnostics.SymbolStore.ISymbolDocumentWriter,System.Int32,System.Int32)"></see> to specify the extent of a method, independent of the sequence points that exist within the method.</summary>
@@ -722,5 +620,112 @@
       <summary>A register-relative address. The <paramref name="addr1">addr1</paramref> parameter is the stack register, the <paramref name="addr2">addr2</paramref> parameter is the offset from the stack pointer to the low-order part of the value, and the <paramref name="addr3">addr3</paramref> parameter is the high-order register.</summary>
       <returns></returns>
     </member>
+    <member name="T:System.Diagnostics.SymbolStore.SymbolToken">
+      <summary>The <see cref="T:System.Diagnostics.SymbolStore.SymbolToken"></see> structure is an object representation of a token that represents symbolic information.</summary>
+    </member>
+    <member name="M:System.Diagnostics.SymbolStore.SymbolToken.#ctor(System.Int32)">
+      <summary>Initializes a new instance of the <see cref="T:System.Diagnostics.SymbolStore.SymbolToken"></see> structure when given a value.</summary>
+      <param name="val">The value to be used for the token.</param>
+    </member>
+    <member name="M:System.Diagnostics.SymbolStore.SymbolToken.Equals(System.Diagnostics.SymbolStore.SymbolToken)">
+      <summary>Determines whether <paramref name="obj">obj</paramref> is equal to this instance.</summary>
+      <param name="obj">The <see cref="T:System.Diagnostics.SymbolStore.SymbolToken"></see> to check.</param>
+      <returns>true if <paramref name="obj">obj</paramref> is equal to this instance; otherwise, false.</returns>
+    </member>
+    <member name="M:System.Diagnostics.SymbolStore.SymbolToken.Equals(System.Object)">
+      <summary>Determines whether <paramref name="obj">obj</paramref> is an instance of <see cref="T:System.Diagnostics.SymbolStore.SymbolToken"></see> and is equal to this instance.</summary>
+      <param name="obj">The object to check.</param>
+      <returns>true if <paramref name="obj">obj</paramref> is an instance of <see cref="System.Diagnostics.SymbolStore.SymbolToken"></see> and is equal to this instance; otherwise, false.</returns>
+    </member>
+    <member name="M:System.Diagnostics.SymbolStore.SymbolToken.GetHashCode">
+      <summary>Generates the hash code for the current token.</summary>
+      <returns>The hash code for the current token.</returns>
+    </member>
+    <member name="M:System.Diagnostics.SymbolStore.SymbolToken.GetToken">
+      <summary>Gets the value of the current token.</summary>
+      <returns>The value of the current token.</returns>
+    </member>
+    <member name="M:System.Diagnostics.SymbolStore.SymbolToken.op_Equality(System.Diagnostics.SymbolStore.SymbolToken,System.Diagnostics.SymbolStore.SymbolToken)">
+      <summary>Returns a value indicating whether two <see cref="T:System.Diagnostics.SymbolStore.SymbolToken"></see> objects are equal.</summary>
+      <param name="a">A <see cref="T:System.Diagnostics.SymbolStore.SymbolToken"></see> structure.</param>
+      <param name="b">A <see cref="T:System.Diagnostics.SymbolStore.SymbolToken"></see> structure.</param>
+      <returns>true if <paramref name="a">a</paramref> and <paramref name="b">b</paramref> are equal; otherwise, false.</returns>
+    </member>
+    <member name="M:System.Diagnostics.SymbolStore.SymbolToken.op_Inequality(System.Diagnostics.SymbolStore.SymbolToken,System.Diagnostics.SymbolStore.SymbolToken)">
+      <summary>Returns a value indicating whether two <see cref="T:System.Diagnostics.SymbolStore.SymbolToken"></see> objects are not equal.</summary>
+      <param name="a">A <see cref="T:System.Diagnostics.SymbolStore.SymbolToken"></see> structure.</param>
+      <param name="b">A <see cref="T:System.Diagnostics.SymbolStore.SymbolToken"></see> structure.</param>
+      <returns>true if <paramref name="a">a</paramref> and <paramref name="b">b</paramref> are not equal; otherwise, false.</returns>
+    </member>
+    <member name="T:System.Diagnostics.SymbolStore.SymDocumentType">
+      <summary>Holds the public GUIDs for document types to be used with the symbol store.</summary>
+    </member>
+    <member name="M:System.Diagnostics.SymbolStore.SymDocumentType.#ctor">
+      <summary>Initializes a new instance of the <see cref="T:System.Diagnostics.SymbolStore.SymDocumentType"></see> class.</summary>
+    </member>
+    <member name="F:System.Diagnostics.SymbolStore.SymDocumentType.Text">
+      <summary>Specifies the GUID of the document type to be used with the symbol store.</summary>
+      <returns></returns>
+    </member>
+    <member name="T:System.Diagnostics.SymbolStore.SymLanguageType">
+      <summary>Holds the public GUIDs for language types to be used with the symbol store.</summary>
+    </member>
+    <member name="M:System.Diagnostics.SymbolStore.SymLanguageType.#ctor">
+      <summary>Initializes a new instance of the <see cref="T:System.Diagnostics.SymbolStore.SymLanguageType"></see> class.</summary>
+    </member>
+    <member name="F:System.Diagnostics.SymbolStore.SymLanguageType.Basic">
+      <summary>Specifies the GUID of the Basic language type to be used with the symbol store.</summary>
+      <returns></returns>
+    </member>
+    <member name="F:System.Diagnostics.SymbolStore.SymLanguageType.C">
+      <summary>Specifies the GUID of the C language type to be used with the symbol store.</summary>
+      <returns></returns>
+    </member>
+    <member name="F:System.Diagnostics.SymbolStore.SymLanguageType.Cobol">
+      <summary>Specifies the GUID of the Cobol language type to be used with the symbol store.</summary>
+      <returns></returns>
+    </member>
+    <member name="F:System.Diagnostics.SymbolStore.SymLanguageType.CPlusPlus">
+      <summary>Specifies the GUID of the C++ language type to be used with the symbol store.</summary>
+      <returns></returns>
+    </member>
+    <member name="F:System.Diagnostics.SymbolStore.SymLanguageType.CSharp">
+      <summary>Specifies the GUID of the C# language type to be used with the symbol store.</summary>
+      <returns></returns>
+    </member>
+    <member name="F:System.Diagnostics.SymbolStore.SymLanguageType.ILAssembly">
+      <summary>Specifies the GUID of the ILAssembly language type to be used with the symbol store.</summary>
+      <returns></returns>
+    </member>
+    <member name="F:System.Diagnostics.SymbolStore.SymLanguageType.Java">
+      <summary>Specifies the GUID of the Java language type to be used with the symbol store.</summary>
+      <returns></returns>
+    </member>
+    <member name="F:System.Diagnostics.SymbolStore.SymLanguageType.JScript">
+      <summary>Specifies the GUID of the JScript language type to be used with the symbol store.</summary>
+      <returns></returns>
+    </member>
+    <member name="F:System.Diagnostics.SymbolStore.SymLanguageType.MCPlusPlus">
+      <summary>Specifies the GUID of the C++ language type to be used with the symbol store.</summary>
+      <returns></returns>
+    </member>
+    <member name="F:System.Diagnostics.SymbolStore.SymLanguageType.Pascal">
+      <summary>Specifies the GUID of the Pascal language type to be used with the symbol store.</summary>
+      <returns></returns>
+    </member>
+    <member name="F:System.Diagnostics.SymbolStore.SymLanguageType.SMC">
+      <summary>Specifies the GUID of the SMC language type to be used with the symbol store.</summary>
+      <returns></returns>
+    </member>
+    <member name="T:System.Diagnostics.SymbolStore.SymLanguageVendor">
+      <summary>Holds the public GUIDs for language vendors to be used with the symbol store.</summary>
+    </member>
+    <member name="M:System.Diagnostics.SymbolStore.SymLanguageVendor.#ctor">
+      <summary>Initializes a new instance of the <see cref="T:System.Diagnostics.SymbolStore.SymLanguageVendor"></see> class.</summary>
+    </member>
+    <member name="F:System.Diagnostics.SymbolStore.SymLanguageVendor.Microsoft">
+      <summary>Specifies the GUID of the Microsoft language vendor.</summary>
+      <returns></returns>
+    </member>
   </members>
-</doc></span>
+</doc>

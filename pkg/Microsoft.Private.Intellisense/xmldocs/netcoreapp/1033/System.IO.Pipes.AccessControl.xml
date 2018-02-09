@@ -1,5 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?><span>
-<doc>
+﻿<?xml version="1.0" encoding="utf-8"?><doc>
   <assembly>
     <name>System.IO.Pipes.AccessControl</name>
   </assembly>
@@ -92,7 +91,7 @@
     </member>
     <member name="P:System.IO.Pipes.PipeAccessRule.PipeAccessRights">
       <summary>Gets the <see cref="T:System.IO.Pipes.PipeAccessRights"></see> flags that are associated with the current <see cref="T:System.IO.Pipes.PipeAccessRule"></see> object.</summary>
-      <returns>A bitwise combination of the <see cref="T:System.IO.Pipes.PipeAccessRights"></see> values.</returns>
+      <returns>A bitwise combination of the <see cref="System.IO.Pipes.PipeAccessRights"></see> values.</returns>
     </member>
     <member name="T:System.IO.Pipes.PipeAuditRule">
       <summary>Represents an abstraction of an access control entry (ACE) that defines an audit rule for a pipe.</summary>
@@ -111,7 +110,7 @@
     </member>
     <member name="P:System.IO.Pipes.PipeAuditRule.PipeAccessRights">
       <summary>Gets the <see cref="T:System.IO.Pipes.PipeAccessRights"></see> flags that are associated with the current <see cref="T:System.IO.Pipes.PipeAuditRule"></see> object.</summary>
-      <returns>A bitwise combination of the <see cref="T:System.IO.Pipes.PipeAccessRights"></see> values.</returns>
+      <returns>A bitwise combination of the <see cref="System.IO.Pipes.PipeAccessRights"></see> values.</returns>
     </member>
     <member name="T:System.IO.Pipes.PipesAclExtensions">
       
@@ -132,7 +131,7 @@
     </member>
     <member name="P:System.IO.Pipes.PipeSecurity.AccessRightType">
       <summary>Gets the <see cref="T:System.Type"></see> of the securable object that is associated with the current <see cref="T:System.IO.Pipes.PipeSecurity"></see> object.</summary>
-      <returns>The type of the securable object that is associated with the current <see cref="T:System.IO.Pipes.PipeSecurity"></see> object.</returns>
+      <returns>The type of the securable object that is associated with the current <see cref="System.IO.Pipes.PipeSecurity"></see> object.</returns>
     </member>
     <member name="M:System.IO.Pipes.PipeSecurity.AccessRuleFactory(System.Security.Principal.IdentityReference,System.Int32,System.Boolean,System.Security.AccessControl.InheritanceFlags,System.Security.AccessControl.PropagationFlags,System.Security.AccessControl.AccessControlType)">
       <summary>Initializes a new instance of the <see cref="T:System.Security.AccessControl.AccessRule"></see> class with the specified values.</summary>
@@ -142,14 +141,16 @@
       <param name="inheritanceFlags">One of the <see cref="T:System.Security.AccessControl.InheritanceFlags"></see> values that specifies the inheritance properties of the access rule.</param>
       <param name="propagationFlags">One of the <see cref="T:System.Security.AccessControl.PropagationFlags"></see> values that specifies whether inherited access rules are automatically propagated. The propagation flags are ignored if inheritanceFlags is set to <see cref="F:System.Security.AccessControl.InheritanceFlags.None"></see>.</param>
       <param name="type">Specifies the valid access control type.</param>
-      <returns>The <see cref="T:System.Security.AccessControl.AccessRule"></see> object that this method creates.</returns>
+      <returns>The <see cref="System.Security.AccessControl.AccessRule"></see> object that this method creates.</returns>
       <exception cref="T:System.ArgumentOutOfRangeException"><paramref name="accessMask">accessMask</paramref>, <paramref name="inheritanceFlags">inheritanceFlags</paramref>, <paramref name="propagationFlags">propagationFlags</paramref>, or <paramref name="type">type</paramref> specifies an invalid value.</exception>
-      <exception cref="T:System.ArgumentNullException"><paramref name="identityReference">identityReference</paramref> is null.   -or-  <paramref name="accessMask">accessMask</paramref> is zero.</exception>
-      <exception cref="T:System.ArgumentException"><paramref name="identityReference">identityReference</paramref> is neither of type <see cref="T:System.Security.Principal.SecurityIdentifier"></see> nor of a type, such as <see cref="T:System.Security.Principal.NTAccount"></see>, that can be converted to type <see cref="T:System.Security.Principal.SecurityIdentifier"></see>.</exception>
+      <exception cref="T:System.ArgumentNullException"><paramref name="identityReference">identityReference</paramref> is null.  
+ -or-  
+ <paramref name="accessMask">accessMask</paramref> is zero.</exception>
+      <exception cref="T:System.ArgumentException"><paramref name="identityReference">identityReference</paramref> is neither of type <see cref="System.Security.Principal.SecurityIdentifier"></see> nor of a type, such as <see cref="System.Security.Principal.NTAccount"></see>, that can be converted to type <see cref="System.Security.Principal.SecurityIdentifier"></see>.</exception>
     </member>
     <member name="P:System.IO.Pipes.PipeSecurity.AccessRuleType">
       <summary>Gets the <see cref="T:System.Type"></see> of the object that is associated with the access rules of the current <see cref="T:System.IO.Pipes.PipeSecurity"></see> object.</summary>
-      <returns>The type of the object that is associated with the access rules of the current <see cref="T:System.IO.Pipes.PipeSecurity"></see> object.</returns>
+      <returns>The type of the object that is associated with the access rules of the current <see cref="System.IO.Pipes.PipeSecurity"></see> object.</returns>
     </member>
     <member name="M:System.IO.Pipes.PipeSecurity.AddAccessRule(System.IO.Pipes.PipeAccessRule)">
       <summary>Adds an access rule to the Discretionary Access Control List (DACL) that is associated with the current <see cref="T:System.IO.Pipes.PipeSecurity"></see> object.</summary>
@@ -169,14 +170,16 @@
       <param name="inheritanceFlags">One of the <see cref="T:System.Security.AccessControl.InheritanceFlags"></see> values that specifies the inheritance properties of the access rule.</param>
       <param name="propagationFlags">One of the <see cref="T:System.Security.AccessControl.PropagationFlags"></see> values that specifies whether inherited access rules are automatically propagated. The propagation flags are ignored if inheritanceFlags is set to <see cref="F:System.Security.AccessControl.InheritanceFlags.None"></see>.</param>
       <param name="flags">One of the <see cref="T:System.Security.AccessControl.AuditFlags"></see> values that specifies the valid access control type.</param>
-      <returns>The <see cref="T:System.Security.AccessControl.AuditRule"></see> object that this method creates.</returns>
+      <returns>The <see cref="System.Security.AccessControl.AuditRule"></see> object that this method creates.</returns>
       <exception cref="T:System.ArgumentOutOfRangeException">The <paramref name="accessMask">accessMask</paramref>, <paramref name="inheritanceFlags">inheritanceFlags</paramref>, <paramref name="propagationFlags">propagationFlags</paramref>, or <paramref name="flags">flags</paramref> properties specify an invalid value.</exception>
-      <exception cref="T:System.ArgumentNullException">The <paramref name="identityReference">identityReference</paramref> property is null.   -or-   The <paramref name="accessMask">accessMask</paramref> property is zero.</exception>
-      <exception cref="T:System.ArgumentException">The <paramref name="identityReference">identityReference</paramref> property is neither of type <see cref="T:System.Security.Principal.SecurityIdentifier"></see> nor of a type, such as <see cref="T:System.Security.Principal.NTAccount"></see>, that can be converted to type <see cref="T:System.Security.Principal.SecurityIdentifier"></see>.</exception>
+      <exception cref="T:System.ArgumentNullException">The <paramref name="identityReference">identityReference</paramref> property is null.  
+ -or-  
+ The <paramref name="accessMask">accessMask</paramref> property is zero.</exception>
+      <exception cref="T:System.ArgumentException">The <paramref name="identityReference">identityReference</paramref> property is neither of type <see cref="System.Security.Principal.SecurityIdentifier"></see> nor of a type, such as <see cref="System.Security.Principal.NTAccount"></see>, that can be converted to type <see cref="System.Security.Principal.SecurityIdentifier"></see>.</exception>
     </member>
     <member name="P:System.IO.Pipes.PipeSecurity.AuditRuleType">
       <summary>Gets the <see cref="T:System.Type"></see> object associated with the audit rules of the current <see cref="T:System.IO.Pipes.PipeSecurity"></see> object.</summary>
-      <returns>The type of the object that is associated with the audit rules of the current <see cref="T:System.IO.Pipes.PipeSecurity"></see> object.</returns>
+      <returns>The type of the object that is associated with the audit rules of the current <see cref="System.IO.Pipes.PipeSecurity"></see> object.</returns>
     </member>
     <member name="M:System.IO.Pipes.PipeSecurity.Persist(System.String)">
       <summary>Saves the specified sections of the security descriptor that is associated with the current <see cref="T:System.IO.Pipes.PipeSecurity"></see> object to permanent storage.</summary>
@@ -229,4 +232,4 @@
       <exception cref="T:System.ArgumentNullException">The <paramref name="rule">rule</paramref> parameter is null.</exception>
     </member>
   </members>
-</doc></span>
+</doc>

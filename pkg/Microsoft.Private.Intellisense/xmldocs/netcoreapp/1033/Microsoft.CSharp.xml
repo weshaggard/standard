@@ -1,9 +1,48 @@
-﻿<?xml version="1.0" encoding="utf-8"?><span>
-<doc>
+﻿<?xml version="1.0" encoding="utf-8"?><doc>
   <assembly>
     <name>Microsoft.CSharp</name>
   </assembly>
   <members>
+    <member name="T:Microsoft.CSharp.RuntimeBinder.RuntimeBinderException">
+      <summary>Represents an error that occurs when a dynamic bind in the C# runtime binder is processed.</summary>
+    </member>
+    <member name="M:Microsoft.CSharp.RuntimeBinder.RuntimeBinderException.#ctor">
+      <summary>Initializes a new instance of the <see cref="T:Microsoft.CSharp.RuntimeBinder.RuntimeBinderException"></see> class.</summary>
+    </member>
+    <member name="M:Microsoft.CSharp.RuntimeBinder.RuntimeBinderException.#ctor(System.String)">
+      <summary>Initializes a new instance of the <see cref="T:Microsoft.CSharp.RuntimeBinder.RuntimeBinderException"></see> class that has a specified error message.</summary>
+      <param name="message">The message that describes the exception. The caller of this constructor is required to ensure that this string has been localized for the current system culture.</param>
+    </member>
+    <member name="M:Microsoft.CSharp.RuntimeBinder.RuntimeBinderException.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+      <summary>Initializes a new instance of the <see cref="T:Microsoft.CSharp.RuntimeBinder.RuntimeBinderException"></see> class that has serialized data.</summary>
+      <param name="info">The object that holds the serialized object data about the exception being thrown..</param>
+      <param name="context">The contextual information about the source or destination.</param>
+    </member>
+    <member name="M:Microsoft.CSharp.RuntimeBinder.RuntimeBinderException.#ctor(System.String,System.Exception)">
+      <summary>Initializes a new instance of the <see cref="T:Microsoft.CSharp.RuntimeBinder.RuntimeBinderException"></see> class that has a specified error message and a reference to the inner exception that is the cause of this exception.</summary>
+      <param name="message">The error message that explains the reason for the exception.</param>
+      <param name="innerException">The exception that is the cause of the current exception, or a null reference if no inner exception is specified.</param>
+    </member>
+    <member name="T:Microsoft.CSharp.RuntimeBinder.RuntimeBinderInternalCompilerException">
+      <summary>Represents an error that occurs when a dynamic bind in the C# runtime binder is processed.</summary>
+    </member>
+    <member name="M:Microsoft.CSharp.RuntimeBinder.RuntimeBinderInternalCompilerException.#ctor">
+      <summary>Initializes a new instance of the <see cref="T:Microsoft.CSharp.RuntimeBinder.RuntimeBinderInternalCompilerException"></see> class with a system-supplied message that describes the error.</summary>
+    </member>
+    <member name="M:Microsoft.CSharp.RuntimeBinder.RuntimeBinderInternalCompilerException.#ctor(System.String)">
+      <summary>Initializes a new instance of the <see cref="T:Microsoft.CSharp.RuntimeBinder.RuntimeBinderInternalCompilerException"></see> class with a specified message that describes the error.</summary>
+      <param name="message">The message that describes the exception. The caller of this constructor is required to ensure that this string has been localized for the current system culture.</param>
+    </member>
+    <member name="M:Microsoft.CSharp.RuntimeBinder.RuntimeBinderInternalCompilerException.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+      <summary>Initializes a new instance of the <see cref="T:Microsoft.CSharp.RuntimeBinder.RuntimeBinderInternalCompilerException"></see> class with serialized data.</summary>
+      <param name="info">The <see cref="T:System.Runtime.Serialization.SerializationInfo"></see> that holds the serialized object data about the exception being thrown.</param>
+      <param name="context">The <see cref="T:System.Runtime.Serialization.StreamingContext"></see> that contains contextual information about the source or destination.</param>
+    </member>
+    <member name="M:Microsoft.CSharp.RuntimeBinder.RuntimeBinderInternalCompilerException.#ctor(System.String,System.Exception)">
+      <summary>Initializes a new instance of the <see cref="T:Microsoft.CSharp.RuntimeBinder.RuntimeBinderInternalCompilerException"></see> class that has a specified error message and a reference to the inner exception that is the cause of this exception.</summary>
+      <param name="message">The error message that explains the reason for the exception.</param>
+      <param name="innerException">The exception that is the cause of the current exception, or a null reference if no inner exception is specified.</param>
+    </member>
     <member name="T:Microsoft.CSharp.RuntimeBinder.Binder">
       <summary>Contains factory methods to create dynamic call site binders for CSharp.</summary>
     </member>
@@ -97,7 +136,7 @@
       <summary>Initializes a new instance of the <see cref="T:Microsoft.CSharp.RuntimeBinder.CSharpArgumentInfo"></see> class.</summary>
       <param name="flags">The flags for the argument.</param>
       <param name="name">The name of the argument, if named; otherwise null.</param>
-      <returns>A new instance of the <see cref="T:Microsoft.CSharp.RuntimeBinder.CSharpArgumentInfo"></see> class.</returns>
+      <returns>A new instance of the <see cref="Microsoft.CSharp.RuntimeBinder.CSharpArgumentInfo"></see> class.</returns>
     </member>
     <member name="T:Microsoft.CSharp.RuntimeBinder.CSharpArgumentInfoFlags">
       <summary>Represents information about C# dynamic operations that are specific to particular arguments at a call site. Instances of this class are generated by the C# compiler.</summary>
@@ -127,7 +166,7 @@
       <returns></returns>
     </member>
     <member name="F:Microsoft.CSharp.RuntimeBinder.CSharpArgumentInfoFlags.UseCompileTimeType">
-      <summary>The argument's compile-time type should be considered during binding.</summary>
+      <summary>The argument&amp;#39;s compile-time type should be considered during binding.</summary>
       <returns></returns>
     </member>
     <member name="T:Microsoft.CSharp.RuntimeBinder.CSharpBinderFlags">
@@ -173,45 +212,5 @@
       <summary>The value in this set index or set member comes a compound assignment operator.</summary>
       <returns></returns>
     </member>
-    <member name="T:Microsoft.CSharp.RuntimeBinder.RuntimeBinderException">
-      <summary>Represents an error that occurs when a dynamic bind in the C# runtime binder is processed.</summary>
-    </member>
-    <member name="M:Microsoft.CSharp.RuntimeBinder.RuntimeBinderException.#ctor">
-      <summary>Initializes a new instance of the <see cref="T:Microsoft.CSharp.RuntimeBinder.RuntimeBinderException"></see> class.</summary>
-    </member>
-    <member name="M:Microsoft.CSharp.RuntimeBinder.RuntimeBinderException.#ctor(System.String)">
-      <summary>Initializes a new instance of the <see cref="T:Microsoft.CSharp.RuntimeBinder.RuntimeBinderException"></see> class that has a specified error message.</summary>
-      <param name="message">The message that describes the exception. The caller of this constructor is required to ensure that this string has been localized for the current system culture.</param>
-    </member>
-    <member name="M:Microsoft.CSharp.RuntimeBinder.RuntimeBinderException.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
-      <summary>Initializes a new instance of the <see cref="T:Microsoft.CSharp.RuntimeBinder.RuntimeBinderException"></see> class that has serialized data.</summary>
-      <param name="info">The object that holds the serialized object data about the exception being thrown..</param>
-      <param name="context">The contextual information about the source or destination.</param>
-    </member>
-    <member name="M:Microsoft.CSharp.RuntimeBinder.RuntimeBinderException.#ctor(System.String,System.Exception)">
-      <summary>Initializes a new instance of the <see cref="T:Microsoft.CSharp.RuntimeBinder.RuntimeBinderException"></see> class that has a specified error message and a reference to the inner exception that is the cause of this exception.</summary>
-      <param name="message">The error message that explains the reason for the exception.</param>
-      <param name="innerException">The exception that is the cause of the current exception, or a null reference if no inner exception is specified.</param>
-    </member>
-    <member name="T:Microsoft.CSharp.RuntimeBinder.RuntimeBinderInternalCompilerException">
-      <summary>Represents an error that occurs when a dynamic bind in the C# runtime binder is processed.</summary>
-    </member>
-    <member name="M:Microsoft.CSharp.RuntimeBinder.RuntimeBinderInternalCompilerException.#ctor">
-      <summary>Initializes a new instance of the <see cref="T:Microsoft.CSharp.RuntimeBinder.RuntimeBinderInternalCompilerException"></see> class with a system-supplied message that describes the error.</summary>
-    </member>
-    <member name="M:Microsoft.CSharp.RuntimeBinder.RuntimeBinderInternalCompilerException.#ctor(System.String)">
-      <summary>Initializes a new instance of the <see cref="T:Microsoft.CSharp.RuntimeBinder.RuntimeBinderInternalCompilerException"></see> class with a specified message that describes the error.</summary>
-      <param name="message">The message that describes the exception. The caller of this constructor is required to ensure that this string has been localized for the current system culture.</param>
-    </member>
-    <member name="M:Microsoft.CSharp.RuntimeBinder.RuntimeBinderInternalCompilerException.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
-      <summary>Initializes a new instance of the <see cref="T:Microsoft.CSharp.RuntimeBinder.RuntimeBinderInternalCompilerException"></see> class with serialized data.</summary>
-      <param name="info">The <see cref="T:System.Runtime.Serialization.SerializationInfo"></see> that holds the serialized object data about the exception being thrown.</param>
-      <param name="context">The <see cref="T:System.Runtime.Serialization.StreamingContext"></see> that contains contextual information about the source or destination.</param>
-    </member>
-    <member name="M:Microsoft.CSharp.RuntimeBinder.RuntimeBinderInternalCompilerException.#ctor(System.String,System.Exception)">
-      <summary>Initializes a new instance of the <see cref="T:Microsoft.CSharp.RuntimeBinder.RuntimeBinderInternalCompilerException"></see> class that has a specified error message and a reference to the inner exception that is the cause of this exception.</summary>
-      <param name="message">The error message that explains the reason for the exception.</param>
-      <param name="innerException">The exception that is the cause of the current exception, or a null reference if no inner exception is specified.</param>
-    </member>
   </members>
-</doc></span>
+</doc>

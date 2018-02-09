@@ -1,5 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?><span>
-<doc>
+﻿<?xml version="1.0" encoding="utf-8"?><doc>
   <assembly>
     <name>System.Diagnostics.Tracing</name>
   </assembly>
@@ -32,7 +31,7 @@
     </member>
     <member name="P:System.Diagnostics.Tracing.EventAttribute.ActivityOptions">
       <summary>Specifies the behavior of the start and stop events of an activity. An activity is the region of time in an app between the start and the stop.</summary>
-      <returns>Returns <see cref="T:System.Diagnostics.Tracing.EventActivityOptions"></see>.</returns>
+      <returns>Returns <see cref="System.Diagnostics.Tracing.EventActivityOptions"></see>.</returns>
     </member>
     <member name="P:System.Diagnostics.Tracing.EventAttribute.Channel">
       <summary>Gets or sets an additional event log where the event should be written.</summary>
@@ -60,7 +59,7 @@
     </member>
     <member name="P:System.Diagnostics.Tracing.EventAttribute.Tags">
       <summary>Gets and sets the <see cref="T:System.Diagnostics.Tracing.EventTags"></see> value for this <see cref="T:System.Diagnostics.Tracing.EventAttribute"></see> object. An event tag is a user-defined value that is passed through when the event is logged.</summary>
-      <returns>Returns the <see cref="T:System.Diagnostics.Tracing.EventTags"></see> value.</returns>
+      <returns>Returns the <see cref="System.Diagnostics.Tracing.EventTags"></see> value.</returns>
     </member>
     <member name="P:System.Diagnostics.Tracing.EventAttribute.Task">
       <summary>Gets or sets the task for the event.</summary>
@@ -134,14 +133,19 @@
       <returns>true if <paramref name="eventId">eventId</paramref> is in range; otherwise, false.</returns>
     </member>
     <member name="T:System.Diagnostics.Tracing.EventCounter">
-      
+      <summary>Provides the ability to collect statistics for very frequent events through the  <see cref="T:System.Diagnostics.Tracing.EventSource"></see> class.</summary>
     </member>
     <member name="M:System.Diagnostics.Tracing.EventCounter.#ctor(System.String,System.Diagnostics.Tracing.EventSource)">
-      <param name="name"></param>
-      <param name="eventSource"></param>
+      <summary>Initializes a new instance of the <see cref="T:System.Diagnostics.Tracing.EventCounter"></see> class.</summary>
+      <param name="name">The event counter name.</param>
+      <param name="eventSource">The event source.</param>
+      <exception cref="T:System.ArgumentNullException"><paramref name="name">name</paramref> is null.  
+ -or-  
+ <paramref name="eventSource">eventSource</paramref> is null.</exception>
     </member>
     <member name="M:System.Diagnostics.Tracing.EventCounter.WriteMetric(System.Single)">
-      <param name="value"></param>
+      <summary>Writes the metric if performance counters are on.</summary>
+      <param name="value">The value to be written.</param>
     </member>
     <member name="T:System.Diagnostics.Tracing.EventDataAttribute">
       <summary>Specifies a type to be passed to the <see cref="M:System.Diagnostics.Tracing.EventSource.Write``1(System.String,System.Diagnostics.Tracing.EventSourceOptions,``0)"></see> method.</summary>
@@ -161,11 +165,11 @@
     </member>
     <member name="P:System.Diagnostics.Tracing.EventFieldAttribute.Format">
       <summary>Gets and sets the value that specifies how to format the value of a user-defined type.</summary>
-      <returns>Returns a <see cref="T:System.Diagnostics.Tracing.EventFieldFormat"></see> value.</returns>
+      <returns>Returns a <see cref="System.Diagnostics.Tracing.EventFieldFormat"></see> value.</returns>
     </member>
     <member name="P:System.Diagnostics.Tracing.EventFieldAttribute.Tags">
-      <summary>Gets and sets the user-defined <see cref="T:System.Diagnostics.Tracing.EventFieldTags"></see> value that is required for fields that contain data that isn't one of the supported types.</summary>
-      <returns>Returns <see cref="T:System.Diagnostics.Tracing.EventFieldTags"></see>.</returns>
+      <summary>Gets and sets the user-defined <see cref="T:System.Diagnostics.Tracing.EventFieldTags"></see> value that is required for fields that contain data that isn&amp;#39;t one of the supported types.</summary>
+      <returns>Returns <see cref="System.Diagnostics.Tracing.EventFieldTags"></see>.</returns>
     </member>
     <member name="T:System.Diagnostics.Tracing.EventFieldFormat">
       <summary>Specifies how to format the value of a user-defined type and can be used to override the default formatting for a field.</summary>
@@ -282,47 +286,54 @@
       <returns></returns>
     </member>
     <member name="T:System.Diagnostics.Tracing.EventListener">
-      
+      <summary>Provides methods for enabling and disabling events from event sources.</summary>
     </member>
     <member name="M:System.Diagnostics.Tracing.EventListener.#ctor">
-      
+      <summary>Creates a new instance of the <see cref="T:System.Diagnostics.Tracing.EventListener"></see> class.</summary>
     </member>
     <member name="M:System.Diagnostics.Tracing.EventListener.DisableEvents(System.Diagnostics.Tracing.EventSource)">
-      <param name="eventSource"></param>
+      <summary>Disables all events for the specified event source.</summary>
+      <param name="eventSource">The event source to disable events for.</param>
     </member>
     <member name="M:System.Diagnostics.Tracing.EventListener.Dispose">
-      
+      <summary>Releases the resources used by the current instance of the <see cref="T:System.Diagnostics.Tracing.EventListener"></see> class.</summary>
     </member>
     <member name="M:System.Diagnostics.Tracing.EventListener.EnableEvents(System.Diagnostics.Tracing.EventSource,System.Diagnostics.Tracing.EventLevel)">
-      <param name="eventSource"></param>
-      <param name="level"></param>
+      <summary>Enables events for the specified event source that has the specified verbosity level or lower.</summary>
+      <param name="eventSource">The event source to enable events for.</param>
+      <param name="level">The level of events to enable.</param>
     </member>
     <member name="M:System.Diagnostics.Tracing.EventListener.EnableEvents(System.Diagnostics.Tracing.EventSource,System.Diagnostics.Tracing.EventLevel,System.Diagnostics.Tracing.EventKeywords)">
-      <param name="eventSource"></param>
-      <param name="level"></param>
-      <param name="matchAnyKeyword"></param>
+      <summary>Enables events for the specified event source that has the specified verbosity level or lower, and matching keyword flags.</summary>
+      <param name="eventSource">The event source to enable events for.</param>
+      <param name="level">The level of events to enable.</param>
+      <param name="matchAnyKeyword">The keyword flags necessary to enable the events.</param>
     </member>
     <member name="M:System.Diagnostics.Tracing.EventListener.EnableEvents(System.Diagnostics.Tracing.EventSource,System.Diagnostics.Tracing.EventLevel,System.Diagnostics.Tracing.EventKeywords,System.Collections.Generic.IDictionary{System.String,System.String})">
-      <param name="eventSource"></param>
-      <param name="level"></param>
-      <param name="matchAnyKeyword"></param>
-      <param name="arguments"></param>
+      <summary>Enables events for the specified event source that has the specified verbosity level or lower, matching event keyword flag, and matching arguments.</summary>
+      <param name="eventSource">The event source to enable events for.</param>
+      <param name="level">The level of events to enable.</param>
+      <param name="matchAnyKeyword">The keyword flags necessary to enable the events.</param>
+      <param name="arguments">The arguments to be matched to enable the events.</param>
     </member>
     <member name="E:System.Diagnostics.Tracing.EventListener.EventSourceCreated">
-      <returns></returns>
+      <summary>Occurs when an event source (<see cref="T:System.Diagnostics.Tracing.EventSource"></see> object) is attached to the dispatcher.</summary>
     </member>
     <member name="M:System.Diagnostics.Tracing.EventListener.EventSourceIndex(System.Diagnostics.Tracing.EventSource)">
-      <param name="eventSource"></param>
-      <returns></returns>
+      <summary>Gets a small non-negative number that represents the specified event source.</summary>
+      <param name="eventSource">The event source to find the index for.</param>
+      <returns>A small non-negative number that represents the specified event source.</returns>
     </member>
     <member name="E:System.Diagnostics.Tracing.EventListener.EventWritten">
-      <returns></returns>
+      <summary>Occurs when an event has been written by an event source (<see cref="T:System.Diagnostics.Tracing.EventSource"></see> object) for which the event listener has enabled events.</summary>
     </member>
     <member name="M:System.Diagnostics.Tracing.EventListener.OnEventSourceCreated(System.Diagnostics.Tracing.EventSource)">
-      <param name="eventSource"></param>
+      <summary>Called for all existing event sources when the event listener is created and when a new event source is attached to the listener.</summary>
+      <param name="eventSource">The event source.</param>
     </member>
     <member name="M:System.Diagnostics.Tracing.EventListener.OnEventWritten(System.Diagnostics.Tracing.EventWrittenEventArgs)">
-      <param name="eventData"></param>
+      <summary>Called whenever an event has been written by an event source for which the event listener has enabled events.</summary>
+      <param name="eventData">The event arguments that describe the event.</param>
     </member>
     <member name="T:System.Diagnostics.Tracing.EventManifestOptions">
       <summary>Specifies how the ETW manifest for the event source is generated.</summary>
@@ -445,11 +456,13 @@
       <exception cref="T:System.ArgumentException"><paramref name="traits">traits</paramref> is not specified in key-value pairs.</exception>
     </member>
     <member name="P:System.Diagnostics.Tracing.EventSource.ConstructionException">
-      <summary>[Supported in the .NET Framework 4.5.1 and later versions]   Gets any exception that was thrown during the construction of the event source.</summary>
+      <summary>[Supported in the .NET Framework 4.5.1 and later versions]  
+ Gets any exception that was thrown during the construction of the event source.</summary>
       <returns>The exception that was thrown during the construction of the event source, or null if no exception was thrown.</returns>
     </member>
     <member name="P:System.Diagnostics.Tracing.EventSource.CurrentThreadActivityId">
-      <summary>[Supported in the .NET Framework 4.5.1 and later versions]   Gets the activity ID of the current thread.</summary>
+      <summary>[Supported in the .NET Framework 4.5.1 and later versions]  
+ Gets the activity ID of the current thread.</summary>
       <returns>The activity ID of the current thread.</returns>
     </member>
     <member name="M:System.Diagnostics.Tracing.EventSource.Dispose">
@@ -461,7 +474,6 @@
     </member>
     <member name="E:System.Diagnostics.Tracing.EventSource.EventCommandExecuted">
       <summary>Occurs when a command comes from an event listener.</summary>
-      <returns></returns>
     </member>
     <member name="M:System.Diagnostics.Tracing.EventSource.Finalize">
       <summary>Allows the <see cref="T:System.Diagnostics.Tracing.EventSource"></see> object to attempt to free resources and perform other cleanup operations before the  object is reclaimed by garbage collection.</summary>
@@ -469,14 +481,14 @@
     <member name="M:System.Diagnostics.Tracing.EventSource.GenerateManifest(System.Type,System.String,System.Diagnostics.Tracing.EventManifestOptions)">
       <summary>Returns a string of the XML manifest that is associated with the current event source.</summary>
       <param name="eventSourceType">The type of the event source.</param>
-      <param name="assemblyPathToIncludeInManifest">The path to the assembly file (.dll) file to include in the <see cref="http://msdn.microsoft.com/library/windows/desktop/aa384022(v=vs.85).aspx">provider</see> element of the manifest.</param>
+      <param name="assemblyPathToIncludeInManifest">The path to the assembly file (.dll) file to include in the provider element of the manifest.</param>
       <param name="flags">A bitwise combination of the enumeration values that specify how the manifest is generated.</param>
       <returns>The XML data string or null.</returns>
     </member>
     <member name="M:System.Diagnostics.Tracing.EventSource.GenerateManifest(System.Type,System.String)">
       <summary>Returns a string of the XML manifest that is associated with the current event source.</summary>
       <param name="eventSourceType">The type of the event source.</param>
-      <param name="assemblyPathToIncludeInManifest">The path to the assembly file (.dll) to include in the <see cref="http://msdn.microsoft.com/library/windows/desktop/aa384022(v=vs.85).aspx">provider</see> element of the manifest.</param>
+      <param name="assemblyPathToIncludeInManifest">The path to the assembly file (.dll) to include in the provider element of the manifest.</param>
       <returns>The XML data string.</returns>
     </member>
     <member name="M:System.Diagnostics.Tracing.EventSource.GetGuid(System.Type)">
@@ -517,7 +529,8 @@
       <param name="level">The event level to check. An event source will be considered enabled when its level is greater than or equal to level.</param>
       <param name="keywords">The event keywords to check.</param>
       <param name="channel">The event channel to check.</param>
-      <returns>true if the event source is enabled for the specified event level, keywords and channel; otherwise, false.   The result of this method is only an approximation of whether a particular event is active.  Use it to avoid expensive computation for logging when logging is disabled.   Event sources may have additional filtering that determines their activity..</returns>
+      <returns>true if the event source is enabled for the specified event level, keywords and channel; otherwise, false.  
+ The result of this method is only an approximation of whether a particular event is active.  Use it to avoid expensive computation for logging when logging is disabled.   Event sources may have additional filtering that determines their activity..</returns>
     </member>
     <member name="P:System.Diagnostics.Tracing.EventSource.Name">
       <summary>The friendly name of the class that is derived from the event source.</summary>
@@ -534,12 +547,14 @@
       <param name="commandArguments">The arguments for the event command.</param>
     </member>
     <member name="M:System.Diagnostics.Tracing.EventSource.SetCurrentThreadActivityId(System.Guid)">
-      <summary>[Supported in the .NET Framework 4.5.1 and later versions]   Sets the activity ID on the current thread.</summary>
-      <param name="activityId">The current thread's new activity ID, or <see cref="F:System.Guid.Empty"></see> to indicate that work on the current thread is not associated with any activity.</param>
+      <summary>[Supported in the .NET Framework 4.5.1 and later versions]  
+ Sets the activity ID on the current thread.</summary>
+      <param name="activityId">The current thread&amp;#39;s new activity ID, or <see cref="F:System.Guid.Empty"></see> to indicate that work on the current thread is not associated with any activity.</param>
     </member>
     <member name="M:System.Diagnostics.Tracing.EventSource.SetCurrentThreadActivityId(System.Guid,System.Guid@)">
-      <summary>[Supported in the .NET Framework 4.5.1 and later versions]   Sets the activity ID on the current thread, and returns the previous activity ID.</summary>
-      <param name="activityId">The current thread's new activity ID, or <see cref="F:System.Guid.Empty"></see> to indicate that work on the current thread is not associated with any activity.</param>
+      <summary>[Supported in the .NET Framework 4.5.1 and later versions]  
+ Sets the activity ID on the current thread, and returns the previous activity ID.</summary>
+      <param name="activityId">The current thread&amp;#39;s new activity ID, or <see cref="F:System.Guid.Empty"></see> to indicate that work on the current thread is not associated with any activity.</param>
       <param name="oldActivityThatWillContinue">When this method returns, contains the previous activity ID on the current thread.</param>
     </member>
     <member name="P:System.Diagnostics.Tracing.EventSource.Settings">
@@ -702,13 +717,15 @@
       <param name="data">The structure that contains the event data.</param>
     </member>
     <member name="M:System.Diagnostics.Tracing.EventSource.WriteEventWithRelatedActivityId(System.Int32,System.Guid,System.Object[])">
-      <summary>[Supported in the .NET Framework 4.5.1 and later versions]   Writes an event that indicates that the current activity is related to another activity.</summary>
+      <summary>[Supported in the .NET Framework 4.5.1 and later versions]  
+ Writes an event that indicates that the current activity is related to another activity.</summary>
       <param name="eventId">An identifier that uniquely identifies this event within the <see cref="T:System.Diagnostics.Tracing.EventSource"></see>.</param>
       <param name="relatedActivityId">The related activity identifier.</param>
       <param name="args">An array of objects that contain data about the event.</param>
     </member>
     <member name="M:System.Diagnostics.Tracing.EventSource.WriteEventWithRelatedActivityIdCore(System.Int32,System.Guid*,System.Int32,System.Diagnostics.Tracing.EventSource.EventData*)">
-      <summary>[Supported in the .NET Framework 4.5.1 and later versions]   Writes an event that indicates that the current activity is related to another activity.</summary>
+      <summary>[Supported in the .NET Framework 4.5.1 and later versions]  
+ Writes an event that indicates that the current activity is related to another activity.</summary>
       <param name="eventId">An identifier that uniquely identifies this event within the <see cref="T:System.Diagnostics.Tracing.EventSource"></see>.</param>
       <param name="relatedActivityId">A pointer to the GUID of the related activity ID.</param>
       <param name="eventDataCount">The number of items in the data field.</param>
@@ -767,7 +784,7 @@
     </member>
     <member name="P:System.Diagnostics.Tracing.EventSourceOptions.ActivityOptions">
       <summary>The activity options defined for this event source.</summary>
-      <returns>Returns <see cref="T:System.Diagnostics.Tracing.EventActivityOptions"></see>.</returns>
+      <returns>Returns <see cref="System.Diagnostics.Tracing.EventActivityOptions"></see>.</returns>
     </member>
     <member name="P:System.Diagnostics.Tracing.EventSourceOptions.Keywords">
       <summary>Gets or sets the keywords applied to the event. If this property is not set, the event’s keywords will be None.</summary>
@@ -783,7 +800,7 @@
     </member>
     <member name="P:System.Diagnostics.Tracing.EventSourceOptions.Tags">
       <summary>The event tags defined for this event source.</summary>
-      <returns>Returns <see cref="T:System.Diagnostics.Tracing.EventTags"></see>.</returns>
+      <returns>Returns <see cref="System.Diagnostics.Tracing.EventTags"></see>.</returns>
     </member>
     <member name="T:System.Diagnostics.Tracing.EventSourceSettings">
       <summary>Specifies configuration options for an event source.</summary>
@@ -822,7 +839,8 @@
       <summary>Provides data for the <see cref="M:System.Diagnostics.Tracing.EventListener.OnEventWritten(System.Diagnostics.Tracing.EventWrittenEventArgs)"></see> callback.</summary>
     </member>
     <member name="P:System.Diagnostics.Tracing.EventWrittenEventArgs.ActivityId">
-      <summary>[Supported in the .NET Framework 4.5.1 and later versions]   Gets the activity ID on the thread that the event was written to.</summary>
+      <summary>[Supported in the .NET Framework 4.5.1 and later versions]  
+ Gets the activity ID on the thread that the event was written to.</summary>
       <returns>The activity ID on the thread that the event was written to.</returns>
     </member>
     <member name="P:System.Diagnostics.Tracing.EventWrittenEventArgs.Channel">
@@ -863,15 +881,16 @@
     </member>
     <member name="P:System.Diagnostics.Tracing.EventWrittenEventArgs.PayloadNames">
       <summary>Returns a list of strings that represent the property names of the event.</summary>
-      <returns>Returns <see cref="T:System.Collections.ObjectModel.ReadOnlyCollection`1"></see>.</returns>
+      <returns>Returns <see cref="System.Collections.ObjectModel.ReadOnlyCollection`1"></see>.</returns>
     </member>
     <member name="P:System.Diagnostics.Tracing.EventWrittenEventArgs.RelatedActivityId">
-      <summary>[Supported in the .NET Framework 4.5.1 and later versions]   Gets the identifier of an activity that is related to the activity represented by the current instance.</summary>
-      <returns>The identifier of the related activity, or <see cref="F:System.Guid.Empty"></see> if there is no related activity.</returns>
+      <summary>[Supported in the .NET Framework 4.5.1 and later versions]  
+ Gets the identifier of an activity that is related to the activity represented by the current instance.</summary>
+      <returns>The identifier of the related activity, or <see cref="System.Guid.Empty"></see> if there is no related activity.</returns>
     </member>
     <member name="P:System.Diagnostics.Tracing.EventWrittenEventArgs.Tags">
       <summary>Returns the tags specified in the call to the <see cref="M:System.Diagnostics.Tracing.EventSource.Write(System.String,System.Diagnostics.Tracing.EventSourceOptions)"></see> method.</summary>
-      <returns>Returns <see cref="T:System.Diagnostics.Tracing.EventTags"></see>.</returns>
+      <returns>Returns <see cref="System.Diagnostics.Tracing.EventTags"></see>.</returns>
     </member>
     <member name="P:System.Diagnostics.Tracing.EventWrittenEventArgs.Task">
       <summary>Gets the task for the event.</summary>
@@ -888,4 +907,4 @@
       <summary>Creates a new instance of the <see cref="T:System.Diagnostics.Tracing.NonEventAttribute"></see> class.</summary>
     </member>
   </members>
-</doc></span>
+</doc>

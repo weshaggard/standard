@@ -1,5 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?><span>
-<doc>
+﻿<?xml version="1.0" encoding="utf-8"?><doc>
   <assembly>
     <name>System.Diagnostics.TraceSource</name>
   </assembly>
@@ -13,7 +12,7 @@
     </member>
     <member name="P:System.Diagnostics.EventTypeFilter.EventType">
       <summary>Gets or sets the event type of the messages to trace.</summary>
-      <returns>A bitwise combination of the <see cref="T:System.Diagnostics.SourceLevels"></see> values.</returns>
+      <returns>A bitwise combination of the <see cref="System.Diagnostics.SourceLevels"></see> values.</returns>
     </member>
     <member name="M:System.Diagnostics.EventTypeFilter.ShouldTrace(System.Diagnostics.TraceEventCache,System.String,System.Diagnostics.TraceEventType,System.Int32,System.String,System.Object[],System.Object,System.Object[])">
       <summary>Determines whether the trace listener should trace the event.</summary>
@@ -26,6 +25,257 @@
       <param name="data1">A trace data object.</param>
       <param name="data">An array of trace data objects.</param>
       <returns>true if the trace should be produced; otherwise, false.</returns>
+    </member>
+    <member name="T:System.Diagnostics.CorrelationManager">
+      <summary>Correlates traces that are part of a logical transaction.</summary>
+    </member>
+    <member name="P:System.Diagnostics.CorrelationManager.ActivityId">
+      <summary>Gets or sets the identity for a global activity.</summary>
+      <returns>A <see cref="System.Guid"></see> structure that identifies the global activity.</returns>
+    </member>
+    <member name="P:System.Diagnostics.CorrelationManager.LogicalOperationStack">
+      <summary>Gets the logical operation stack from the call context.</summary>
+      <returns>A <see cref="System.Collections.Stack"></see> object that represents the logical operation stack for the call context.</returns>
+    </member>
+    <member name="M:System.Diagnostics.CorrelationManager.StartLogicalOperation">
+      <summary>Starts a logical operation on a thread.</summary>
+    </member>
+    <member name="M:System.Diagnostics.CorrelationManager.StartLogicalOperation(System.Object)">
+      <summary>Starts a logical operation with the specified identity on a thread.</summary>
+      <param name="operationId">An object identifying the operation.</param>
+      <exception cref="T:System.ArgumentNullException">The <paramref name="operationId">operationId</paramref> parameter is null.</exception>
+    </member>
+    <member name="M:System.Diagnostics.CorrelationManager.StopLogicalOperation">
+      <summary>Stops the current logical operation.</summary>
+      <exception cref="T:System.InvalidOperationException">The <see cref="System.Diagnostics.CorrelationManager.LogicalOperationStack"></see> property is an empty stack.</exception>
+    </member>
+    <member name="T:System.Diagnostics.DefaultTraceListener">
+      <summary>Provides the default output methods and behavior for tracing.</summary>
+    </member>
+    <member name="M:System.Diagnostics.DefaultTraceListener.#ctor">
+      <summary>Initializes a new instance of the <see cref="T:System.Diagnostics.DefaultTraceListener"></see> class with &amp;quot;Default&amp;quot; as its <see cref="P:System.Diagnostics.TraceListener.Name"></see> property value.</summary>
+    </member>
+    <member name="P:System.Diagnostics.DefaultTraceListener.AssertUiEnabled">
+      <summary>Gets or sets a value indicating whether the application is running in user-interface mode.</summary>
+      <returns>true if user-interface mode is enabled; otherwise, false.</returns>
+    </member>
+    <member name="M:System.Diagnostics.DefaultTraceListener.Fail(System.String)">
+      <summary>Emits or displays a message and a stack trace for an assertion that always fails.</summary>
+      <param name="message">The message to emit or display.</param>
+    </member>
+    <member name="M:System.Diagnostics.DefaultTraceListener.Fail(System.String,System.String)">
+      <summary>Emits or displays detailed messages and a stack trace for an assertion that always fails.</summary>
+      <param name="message">The message to emit or display.</param>
+      <param name="detailMessage">The detailed message to emit or display.</param>
+    </member>
+    <member name="P:System.Diagnostics.DefaultTraceListener.LogFileName">
+      <summary>Gets or sets the name of a log file to write trace or debug messages to.</summary>
+      <returns>The name of a log file to write trace or debug messages to.</returns>
+    </member>
+    <member name="M:System.Diagnostics.DefaultTraceListener.Write(System.String)">
+      <summary>Writes the output to the OutputDebugString function and to the <see cref="M:System.Diagnostics.Debugger.Log(System.Int32,System.String,System.String)"></see> method.</summary>
+      <param name="message">The message to write to OutputDebugString and <see cref="M:System.Diagnostics.Debugger.Log(System.Int32,System.String,System.String)"></see>.</param>
+    </member>
+    <member name="M:System.Diagnostics.DefaultTraceListener.WriteLine(System.String)">
+      <summary>Writes the output to the OutputDebugString function and to the <see cref="M:System.Diagnostics.Debugger.Log(System.Int32,System.String,System.String)"></see> method, followed by a carriage return and line feed (\r\n).</summary>
+      <param name="message">The message to write to OutputDebugString and <see cref="M:System.Diagnostics.Debugger.Log(System.Int32,System.String,System.String)"></see>.</param>
+    </member>
+    <member name="T:System.Diagnostics.SourceFilter">
+      <summary>Indicates whether a listener should trace a message based on the source of a trace.</summary>
+    </member>
+    <member name="M:System.Diagnostics.SourceFilter.#ctor(System.String)">
+      <summary>Initializes a new instance of the <see cref="T:System.Diagnostics.SourceFilter"></see> class, specifying the name of the trace source.</summary>
+      <param name="source">The name of the trace source.</param>
+    </member>
+    <member name="M:System.Diagnostics.SourceFilter.ShouldTrace(System.Diagnostics.TraceEventCache,System.String,System.Diagnostics.TraceEventType,System.Int32,System.String,System.Object[],System.Object,System.Object[])">
+      <summary>Determines whether the trace listener should trace the event.</summary>
+      <param name="cache">An object that represents the information cache for the trace event.</param>
+      <param name="source">The name of the source.</param>
+      <param name="eventType">One of the enumeration values that identifies the event type.</param>
+      <param name="id">A trace identifier number.</param>
+      <param name="formatOrMessage">The format to use for writing an array of arguments or a message to write.</param>
+      <param name="args">An array of argument objects.</param>
+      <param name="data1">A trace data object.</param>
+      <param name="data">An array of trace data objects.</param>
+      <returns>true if the trace should be produced; otherwise, false.</returns>
+      <exception cref="T:System.ArgumentNullException"><paramref name="source">source</paramref> is null.</exception>
+    </member>
+    <member name="P:System.Diagnostics.SourceFilter.Source">
+      <summary>Gets or sets the name of the trace source.</summary>
+      <returns>The name of the trace source.</returns>
+      <exception cref="T:System.ArgumentNullException">The value is null.</exception>
+    </member>
+    <member name="T:System.Diagnostics.SourceLevels">
+      <summary>Specifies the levels of trace messages filtered by the source switch and event type filter.</summary>
+    </member>
+    <member name="F:System.Diagnostics.SourceLevels.ActivityTracing">
+      <summary>Allows the <see cref="F:System.Diagnostics.TraceEventType.Stop"></see>, <see cref="F:System.Diagnostics.TraceEventType.Start"></see>, <see cref="F:System.Diagnostics.TraceEventType.Suspend"></see>, <see cref="F:System.Diagnostics.TraceEventType.Transfer"></see>, and <see cref="F:System.Diagnostics.TraceEventType.Resume"></see> events through.</summary>
+      <returns></returns>
+    </member>
+    <member name="F:System.Diagnostics.SourceLevels.All">
+      <summary>Allows all events through.</summary>
+      <returns></returns>
+    </member>
+    <member name="F:System.Diagnostics.SourceLevels.Critical">
+      <summary>Allows only <see cref="F:System.Diagnostics.TraceEventType.Critical"></see> events through.</summary>
+      <returns></returns>
+    </member>
+    <member name="F:System.Diagnostics.SourceLevels.Error">
+      <summary>Allows <see cref="F:System.Diagnostics.TraceEventType.Critical"></see> and <see cref="F:System.Diagnostics.TraceEventType.Error"></see> events through.</summary>
+      <returns></returns>
+    </member>
+    <member name="F:System.Diagnostics.SourceLevels.Information">
+      <summary>Allows <see cref="F:System.Diagnostics.TraceEventType.Critical"></see>, <see cref="F:System.Diagnostics.TraceEventType.Error"></see>, <see cref="F:System.Diagnostics.TraceEventType.Warning"></see>, and <see cref="F:System.Diagnostics.TraceEventType.Information"></see> events through.</summary>
+      <returns></returns>
+    </member>
+    <member name="F:System.Diagnostics.SourceLevels.Off">
+      <summary>Does not allow any events through.</summary>
+      <returns></returns>
+    </member>
+    <member name="F:System.Diagnostics.SourceLevels.Verbose">
+      <summary>Allows <see cref="F:System.Diagnostics.TraceEventType.Critical"></see>, <see cref="F:System.Diagnostics.TraceEventType.Error"></see>, <see cref="F:System.Diagnostics.TraceEventType.Warning"></see>, <see cref="F:System.Diagnostics.TraceEventType.Information"></see>, and <see cref="F:System.Diagnostics.TraceEventType.Verbose"></see> events through.</summary>
+      <returns></returns>
+    </member>
+    <member name="F:System.Diagnostics.SourceLevels.Warning">
+      <summary>Allows <see cref="F:System.Diagnostics.TraceEventType.Critical"></see>, <see cref="F:System.Diagnostics.TraceEventType.Error"></see>, and <see cref="F:System.Diagnostics.TraceEventType.Warning"></see> events through.</summary>
+      <returns></returns>
+    </member>
+    <member name="T:System.Diagnostics.SourceSwitch">
+      <summary>Provides a multilevel switch to control tracing and debug output without recompiling your code.</summary>
+    </member>
+    <member name="M:System.Diagnostics.SourceSwitch.#ctor(System.String)">
+      <summary>Initializes a new instance of the <see cref="T:System.Diagnostics.SourceSwitch"></see> class, specifying the name of the source.</summary>
+      <param name="name">The name of the source.</param>
+    </member>
+    <member name="M:System.Diagnostics.SourceSwitch.#ctor(System.String,System.String)">
+      <summary>Initializes a new instance of the <see cref="T:System.Diagnostics.SourceSwitch"></see> class, specifying the display name and the default value for the source switch.</summary>
+      <param name="displayName">The name of the source switch.</param>
+      <param name="defaultSwitchValue">The default value for the switch.</param>
+    </member>
+    <member name="P:System.Diagnostics.SourceSwitch.Level">
+      <summary>Gets or sets the level of the switch.</summary>
+      <returns>One of the <see cref="System.Diagnostics.SourceLevels"></see> values that represents the event level of the switch.</returns>
+    </member>
+    <member name="M:System.Diagnostics.SourceSwitch.OnValueChanged">
+      <summary>Invoked when the value of the <see cref="P:System.Diagnostics.Switch.Value"></see> property changes.</summary>
+      <exception cref="T:System.ArgumentException">The new value of <see cref="System.Diagnostics.Switch.Value"></see> is not one of the <see cref="System.Diagnostics.SourceLevels"></see> values.</exception>
+    </member>
+    <member name="M:System.Diagnostics.SourceSwitch.ShouldTrace(System.Diagnostics.TraceEventType)">
+      <summary>Determines if trace listeners should be called, based on the trace event type.</summary>
+      <param name="eventType">One of the <see cref="T:System.Diagnostics.TraceEventType"></see> values.</param>
+      <returns>True if the trace listeners should be called; otherwise, false.</returns>
+    </member>
+    <member name="T:System.Diagnostics.Switch">
+      <summary>Provides an abstract base class to create new debugging and tracing switches.</summary>
+    </member>
+    <member name="M:System.Diagnostics.Switch.#ctor(System.String,System.String)">
+      <summary>Initializes a new instance of the <see cref="T:System.Diagnostics.Switch"></see> class.</summary>
+      <param name="displayName">The name of the switch.</param>
+      <param name="description">The description for the switch.</param>
+    </member>
+    <member name="M:System.Diagnostics.Switch.#ctor(System.String,System.String,System.String)">
+      <summary>Initializes a new instance of the <see cref="T:System.Diagnostics.Switch"></see> class, specifying the display name, description, and default value for the switch.</summary>
+      <param name="displayName">The name of the switch.</param>
+      <param name="description">The description of the switch.</param>
+      <param name="defaultSwitchValue">The default value for the switch.</param>
+    </member>
+    <member name="P:System.Diagnostics.Switch.Attributes">
+      <summary>Gets the custom switch attributes defined in the application configuration file.</summary>
+      <returns>A <see cref="System.Collections.Specialized.StringDictionary"></see> containing the case-insensitive custom attributes for the trace switch.</returns>
+    </member>
+    <member name="P:System.Diagnostics.Switch.Description">
+      <summary>Gets a description of the switch.</summary>
+      <returns>The description of the switch. The default value is an empty string (&amp;quot;&amp;quot;).</returns>
+    </member>
+    <member name="P:System.Diagnostics.Switch.DisplayName">
+      <summary>Gets a name used to identify the switch.</summary>
+      <returns>The name used to identify the switch. The default value is an empty string (&amp;quot;&amp;quot;).</returns>
+    </member>
+    <member name="M:System.Diagnostics.Switch.GetSupportedAttributes">
+      <summary>Gets the custom attributes supported by the switch.</summary>
+      <returns>A string array that contains the names of the custom attributes supported by the switch, or null if there no custom attributes are supported.</returns>
+    </member>
+    <member name="M:System.Diagnostics.Switch.OnSwitchSettingChanged">
+      <summary>Invoked when the <see cref="P:System.Diagnostics.Switch.SwitchSetting"></see> property is changed.</summary>
+    </member>
+    <member name="M:System.Diagnostics.Switch.OnValueChanged">
+      <summary>Invoked when the <see cref="P:System.Diagnostics.Switch.Value"></see> property is changed.</summary>
+    </member>
+    <member name="P:System.Diagnostics.Switch.SwitchSetting">
+      <summary>Gets or sets the current setting for this switch.</summary>
+      <returns>The current setting for this switch. The default is zero.</returns>
+    </member>
+    <member name="P:System.Diagnostics.Switch.Value">
+      <summary>Gets or sets the value of the switch.</summary>
+      <returns>A string representing the value of the switch.</returns>
+      <exception cref="T:System.Configuration.ConfigurationErrorsException">The value is null.  
+ -or-  
+ The value does not consist solely of an optional negative sign followed by a sequence of digits ranging from 0 to 9.  
+ -or-  
+ The value represents a number less than <see cref="System.Int32.MinValue"></see> or greater than <see cref="System.Int32.MaxValue"></see>.</exception>
+    </member>
+    <member name="T:System.Diagnostics.SwitchAttribute">
+      <summary>Identifies a switch used in an assembly, class, or member.</summary>
+    </member>
+    <member name="M:System.Diagnostics.SwitchAttribute.#ctor(System.String,System.Type)">
+      <summary>Initializes a new instance of the <see cref="T:System.Diagnostics.SwitchAttribute"></see> class, specifying the name and the type of the switch.</summary>
+      <param name="switchName">The display name of the switch.</param>
+      <param name="switchType">The type of the switch.</param>
+    </member>
+    <member name="M:System.Diagnostics.SwitchAttribute.GetAll(System.Reflection.Assembly)">
+      <summary>Returns all switch attributes for the specified assembly.</summary>
+      <param name="assembly">The assembly to check for switch attributes.</param>
+      <returns>An array that contains all the switch attributes for the assembly.</returns>
+      <exception cref="T:System.ArgumentNullException"><paramref name="assembly">assembly</paramref> is null.</exception>
+    </member>
+    <member name="P:System.Diagnostics.SwitchAttribute.SwitchDescription">
+      <summary>Gets or sets the description of the switch.</summary>
+      <returns>The description of the switch.</returns>
+    </member>
+    <member name="P:System.Diagnostics.SwitchAttribute.SwitchName">
+      <summary>Gets or sets the display name of the switch.</summary>
+      <returns>The display name of the switch.</returns>
+      <exception cref="T:System.ArgumentNullException"><see cref="System.Diagnostics.SwitchAttribute.SwitchName"></see> is set to null.</exception>
+      <exception cref="T:System.ArgumentException"><see cref="System.Diagnostics.SwitchAttribute.SwitchName"></see> is set to an empty string.</exception>
+    </member>
+    <member name="P:System.Diagnostics.SwitchAttribute.SwitchType">
+      <summary>Gets or sets the type of the switch.</summary>
+      <returns>The type of the switch.</returns>
+      <exception cref="T:System.ArgumentNullException"><see cref="System.Diagnostics.SwitchAttribute.SwitchType"></see> is set to null.</exception>
+    </member>
+    <member name="T:System.Diagnostics.SwitchLevelAttribute">
+      <summary>Identifies the level type for a switch.</summary>
+    </member>
+    <member name="M:System.Diagnostics.SwitchLevelAttribute.#ctor(System.Type)">
+      <summary>Initializes a new instance of the <see cref="T:System.Diagnostics.SwitchLevelAttribute"></see> class, specifying the type that determines whether a trace should be written.</summary>
+      <param name="switchLevelType">The <see cref="T:System.Type"></see> that determines whether a trace should be written.</param>
+    </member>
+    <member name="P:System.Diagnostics.SwitchLevelAttribute.SwitchLevelType">
+      <summary>Gets or sets the type that determines whether a trace should be written.</summary>
+      <returns>The <see cref="System.Type"></see> that determines whether a trace should be written.</returns>
+      <exception cref="T:System.ArgumentNullException">The set operation failed because the value is null.</exception>
+    </member>
+    <member name="T:System.Diagnostics.BooleanSwitch">
+      <summary>Provides a simple on/off switch that controls debugging and tracing output.</summary>
+    </member>
+    <member name="M:System.Diagnostics.BooleanSwitch.#ctor(System.String,System.String)">
+      <summary>Initializes a new instance of the <see cref="T:System.Diagnostics.BooleanSwitch"></see> class with the specified display name and description.</summary>
+      <param name="displayName">The name to display on a user interface.</param>
+      <param name="description">The description of the switch.</param>
+    </member>
+    <member name="M:System.Diagnostics.BooleanSwitch.#ctor(System.String,System.String,System.String)">
+      <summary>Initializes a new instance of the <see cref="T:System.Diagnostics.BooleanSwitch"></see> class with the specified display name, description, and default switch value.</summary>
+      <param name="displayName">The name to display on the user interface.</param>
+      <param name="description">The description of the switch.</param>
+      <param name="defaultSwitchValue">The default value of the switch.</param>
+    </member>
+    <member name="P:System.Diagnostics.BooleanSwitch.Enabled">
+      <summary>Gets or sets a value indicating whether the switch is enabled or disabled.</summary>
+      <returns>true if the switch is enabled; otherwise, false. The default is false.</returns>
+      <exception cref="T:System.Security.SecurityException">The caller does not have the correct permission.</exception>
+    </member>
+    <member name="M:System.Diagnostics.BooleanSwitch.OnValueChanged">
+      <summary>Determines whether the new value of the <see cref="P:System.Diagnostics.Switch.Value"></see> property can be parsed as a Boolean value.</summary>
     </member>
     <member name="T:System.Diagnostics.Trace">
       <summary>Provides a set of methods and properties that help you trace the execution of your code. This class cannot be inherited.</summary>
@@ -47,14 +297,14 @@
     </member>
     <member name="P:System.Diagnostics.Trace.AutoFlush">
       <summary>Gets or sets whether <see cref="M:System.Diagnostics.Trace.Flush"></see> should be called on the <see cref="P:System.Diagnostics.Trace.Listeners"></see> after every write.</summary>
-      <returns>true if <see cref="M:System.Diagnostics.Trace.Flush"></see> is called on the <see cref="P:System.Diagnostics.Trace.Listeners"></see> after every write; otherwise, false.</returns>
+      <returns>true if <see cref="System.Diagnostics.Trace.Flush"></see> is called on the <see cref="System.Diagnostics.Trace.Listeners"></see> after every write; otherwise, false.</returns>
     </member>
     <member name="M:System.Diagnostics.Trace.Close">
       <summary>Flushes the output buffer, and then closes the <see cref="P:System.Diagnostics.Trace.Listeners"></see>.</summary>
     </member>
     <member name="P:System.Diagnostics.Trace.CorrelationManager">
       <summary>Gets the correlation manager for the thread for this trace.</summary>
-      <returns>The <see cref="T:System.Diagnostics.CorrelationManager"></see> object associated with the thread for this trace.</returns>
+      <returns>The <see cref="System.Diagnostics.CorrelationManager"></see> object associated with the thread for this trace.</returns>
     </member>
     <member name="M:System.Diagnostics.Trace.Fail(System.String)">
       <summary>Emits the specified error message.</summary>
@@ -81,7 +331,7 @@
     </member>
     <member name="P:System.Diagnostics.Trace.Listeners">
       <summary>Gets the collection of listeners that is monitoring the trace output.</summary>
-      <returns>A <see cref="T:System.Diagnostics.TraceListenerCollection"></see> that represents a collection of type <see cref="T:System.Diagnostics.TraceListener"></see> monitoring the trace output.</returns>
+      <returns>A <see cref="System.Diagnostics.TraceListenerCollection"></see> that represents a collection of type <see cref="System.Diagnostics.TraceListener"></see> monitoring the trace output.</returns>
     </member>
     <member name="M:System.Diagnostics.Trace.Refresh">
       <summary>Refreshes the trace configuration data.</summary>
@@ -121,7 +371,7 @@
       <returns>true if the global lock is to be used; otherwise, false. The default is true.</returns>
     </member>
     <member name="M:System.Diagnostics.Trace.Write(System.Object)">
-      <summary>Writes the value of the object's <see cref="M:System.Object.ToString"></see> method to the trace listeners in the <see cref="P:System.Diagnostics.Trace.Listeners"></see> collection.</summary>
+      <summary>Writes the value of the object&amp;#39;s <see cref="M:System.Object.ToString"></see> method to the trace listeners in the <see cref="P:System.Diagnostics.Trace.Listeners"></see> collection.</summary>
       <param name="value">An <see cref="T:System.Object"></see> whose name is sent to the <see cref="P:System.Diagnostics.Trace.Listeners"></see>.</param>
     </member>
     <member name="M:System.Diagnostics.Trace.Write(System.String)">
@@ -129,7 +379,7 @@
       <param name="message">A message to write.</param>
     </member>
     <member name="M:System.Diagnostics.Trace.Write(System.Object,System.String)">
-      <summary>Writes a category name and the value of the object's <see cref="M:System.Object.ToString"></see> method to the trace listeners in the <see cref="P:System.Diagnostics.Trace.Listeners"></see> collection.</summary>
+      <summary>Writes a category name and the value of the object&amp;#39;s <see cref="M:System.Object.ToString"></see> method to the trace listeners in the <see cref="P:System.Diagnostics.Trace.Listeners"></see> collection.</summary>
       <param name="value">An <see cref="T:System.Object"></see> name is sent to the <see cref="P:System.Diagnostics.Trace.Listeners"></see>.</param>
       <param name="category">A category name used to organize the output.</param>
     </member>
@@ -145,13 +395,13 @@
       <param name="category">A category name used to organize the output.</param>
     </member>
     <member name="M:System.Diagnostics.Trace.WriteIf(System.Boolean,System.Object,System.String)">
-      <summary>Writes a category name and the value of the object's <see cref="M:System.Object.ToString"></see> method to the trace listeners in the <see cref="P:System.Diagnostics.Trace.Listeners"></see> collection if a condition is true.</summary>
+      <summary>Writes a category name and the value of the object&amp;#39;s <see cref="M:System.Object.ToString"></see> method to the trace listeners in the <see cref="P:System.Diagnostics.Trace.Listeners"></see> collection if a condition is true.</summary>
       <param name="condition">true to cause a message to be written; otherwise, false.</param>
       <param name="value">An <see cref="T:System.Object"></see> whose name is sent to the <see cref="P:System.Diagnostics.Trace.Listeners"></see>.</param>
       <param name="category">A category name used to organize the output.</param>
     </member>
     <member name="M:System.Diagnostics.Trace.WriteIf(System.Boolean,System.Object)">
-      <summary>Writes the value of the object's <see cref="M:System.Object.ToString"></see> method to the trace listeners in the <see cref="P:System.Diagnostics.Trace.Listeners"></see> collection if a condition is true.</summary>
+      <summary>Writes the value of the object&amp;#39;s <see cref="M:System.Object.ToString"></see> method to the trace listeners in the <see cref="P:System.Diagnostics.Trace.Listeners"></see> collection if a condition is true.</summary>
       <param name="condition">true to cause a message to be written; otherwise, false.</param>
       <param name="value">An <see cref="T:System.Object"></see> whose name is sent to the <see cref="P:System.Diagnostics.Trace.Listeners"></see>.</param>
     </member>
@@ -161,7 +411,7 @@
       <param name="message">A message to write.</param>
     </member>
     <member name="M:System.Diagnostics.Trace.WriteLine(System.Object)">
-      <summary>Writes the value of the object's <see cref="M:System.Object.ToString"></see> method to the trace listeners in the <see cref="P:System.Diagnostics.Trace.Listeners"></see> collection.</summary>
+      <summary>Writes the value of the object&amp;#39;s <see cref="M:System.Object.ToString"></see> method to the trace listeners in the <see cref="P:System.Diagnostics.Trace.Listeners"></see> collection.</summary>
       <param name="value">An <see cref="T:System.Object"></see> whose name is sent to the <see cref="P:System.Diagnostics.Trace.Listeners"></see>.</param>
     </member>
     <member name="M:System.Diagnostics.Trace.WriteLine(System.String)">
@@ -169,7 +419,7 @@
       <param name="message">A message to write.</param>
     </member>
     <member name="M:System.Diagnostics.Trace.WriteLine(System.Object,System.String)">
-      <summary>Writes a category name and the value of the object's <see cref="M:System.Object.ToString"></see> method to the trace listeners in the <see cref="P:System.Diagnostics.Trace.Listeners"></see> collection.</summary>
+      <summary>Writes a category name and the value of the object&amp;#39;s <see cref="M:System.Object.ToString"></see> method to the trace listeners in the <see cref="P:System.Diagnostics.Trace.Listeners"></see> collection.</summary>
       <param name="value">An <see cref="T:System.Object"></see> whose name is sent to the <see cref="P:System.Diagnostics.Trace.Listeners"></see>.</param>
       <param name="category">A category name used to organize the output.</param>
     </member>
@@ -179,13 +429,13 @@
       <param name="category">A category name used to organize the output.</param>
     </member>
     <member name="M:System.Diagnostics.Trace.WriteLineIf(System.Boolean,System.Object,System.String)">
-      <summary>Writes a category name and the value of the object's <see cref="M:System.Object.ToString"></see> method to the trace listeners in the <see cref="P:System.Diagnostics.Trace.Listeners"></see> collection if a condition is true.</summary>
+      <summary>Writes a category name and the value of the object&amp;#39;s <see cref="M:System.Object.ToString"></see> method to the trace listeners in the <see cref="P:System.Diagnostics.Trace.Listeners"></see> collection if a condition is true.</summary>
       <param name="condition">true to cause a message to be written; otherwise, false.</param>
       <param name="value">An <see cref="T:System.Object"></see> whose name is sent to the <see cref="P:System.Diagnostics.Trace.Listeners"></see>.</param>
       <param name="category">A category name used to organize the output.</param>
     </member>
     <member name="M:System.Diagnostics.Trace.WriteLineIf(System.Boolean,System.Object)">
-      <summary>Writes the value of the object's <see cref="M:System.Object.ToString"></see> method to the trace listeners in the <see cref="P:System.Diagnostics.Trace.Listeners"></see> collection if a condition is true.</summary>
+      <summary>Writes the value of the object&amp;#39;s <see cref="M:System.Object.ToString"></see> method to the trace listeners in the <see cref="P:System.Diagnostics.Trace.Listeners"></see> collection if a condition is true.</summary>
       <param name="condition">true to cause a message to be written; otherwise, false.</param>
       <param name="value">An <see cref="T:System.Object"></see> whose name is sent to the <see cref="P:System.Diagnostics.Trace.Listeners"></see>.</param>
     </member>
@@ -208,15 +458,15 @@
     </member>
     <member name="P:System.Diagnostics.TraceEventCache.Callstack">
       <summary>Gets the call stack for the current thread.</summary>
-      <returns>A string containing stack trace information. This value can be an empty string (&quot;&quot;).</returns>
+      <returns>A string containing stack trace information. This value can be an empty string (&amp;quot;&amp;quot;).</returns>
     </member>
     <member name="P:System.Diagnostics.TraceEventCache.DateTime">
       <summary>Gets the date and time at which the event trace occurred.</summary>
-      <returns>A <see cref="T:System.DateTime"></see> structure whose value is a date and time expressed in Coordinated Universal Time (UTC).</returns>
+      <returns>A <see cref="System.DateTime"></see> structure whose value is a date and time expressed in Coordinated Universal Time (UTC).</returns>
     </member>
     <member name="P:System.Diagnostics.TraceEventCache.LogicalOperationStack">
       <summary>Gets the correlation data, contained in a stack.</summary>
-      <returns>A <see cref="T:System.Collections.Stack"></see> containing correlation data.</returns>
+      <returns>A <see cref="System.Collections.Stack"></see> containing correlation data.</returns>
     </member>
     <member name="P:System.Diagnostics.TraceEventCache.ProcessId">
       <summary>Gets the unique identifier of the current process.</summary>
@@ -326,7 +576,7 @@
     </member>
     <member name="P:System.Diagnostics.TraceListener.Attributes">
       <summary>Gets the custom trace listener attributes defined in the application configuration file.</summary>
-      <returns>A <see cref="T:System.Collections.Specialized.StringDictionary"></see> containing the custom attributes for the trace listener.</returns>
+      <returns>A <see cref="System.Collections.Specialized.StringDictionary"></see> containing the custom attributes for the trace listener.</returns>
     </member>
     <member name="M:System.Diagnostics.TraceListener.Close">
       <summary>When overridden in a derived class, closes the output stream so it no longer receives tracing or debugging output.</summary>
@@ -349,7 +599,7 @@
     </member>
     <member name="P:System.Diagnostics.TraceListener.Filter">
       <summary>Gets and sets the trace filter for the trace listener.</summary>
-      <returns>An object derived from the <see cref="T:System.Diagnostics.TraceFilter"></see> base class.</returns>
+      <returns>An object derived from the <see cref="System.Diagnostics.TraceFilter"></see> base class.</returns>
     </member>
     <member name="M:System.Diagnostics.TraceListener.Flush">
       <summary>When overridden in a derived class, flushes the output buffer.</summary>
@@ -373,7 +623,7 @@
     </member>
     <member name="P:System.Diagnostics.TraceListener.Name">
       <summary>Gets or sets a name for this <see cref="T:System.Diagnostics.TraceListener"></see>.</summary>
-      <returns>A name for this <see cref="T:System.Diagnostics.TraceListener"></see>. The default is an empty string (&quot;&quot;).</returns>
+      <returns>A name for this <see cref="System.Diagnostics.TraceListener"></see>. The default is an empty string (&amp;quot;&amp;quot;).</returns>
     </member>
     <member name="P:System.Diagnostics.TraceListener.NeedIndent">
       <summary>Gets or sets a value indicating whether to indent the output.</summary>
@@ -421,7 +671,7 @@
     </member>
     <member name="P:System.Diagnostics.TraceListener.TraceOutputOptions">
       <summary>Gets or sets the trace output options.</summary>
-      <returns>A bitwise combination of the enumeration values. The default is <see cref="F:System.Diagnostics.TraceOptions.None"></see>.</returns>
+      <returns>A bitwise combination of the enumeration values. The default is <see cref="System.Diagnostics.TraceOptions.None"></see>.</returns>
       <exception cref="T:System.ArgumentOutOfRangeException">Set operation failed because the value is invalid.</exception>
     </member>
     <member name="M:System.Diagnostics.TraceListener.TraceTransfer(System.Diagnostics.TraceEventCache,System.String,System.Int32,System.String,System.Guid)">
@@ -433,7 +683,7 @@
       <param name="relatedActivityId">A <see cref="T:System.Guid"></see> object identifying a related activity.</param>
     </member>
     <member name="M:System.Diagnostics.TraceListener.Write(System.Object)">
-      <summary>Writes the value of the object's <see cref="M:System.Object.ToString"></see> method to the listener you create when you implement the <see cref="T:System.Diagnostics.TraceListener"></see> class.</summary>
+      <summary>Writes the value of the object&amp;#39;s <see cref="M:System.Object.ToString"></see> method to the listener you create when you implement the <see cref="T:System.Diagnostics.TraceListener"></see> class.</summary>
       <param name="o">An <see cref="T:System.Object"></see> whose fully qualified class name you want to write.</param>
     </member>
     <member name="M:System.Diagnostics.TraceListener.Write(System.String)">
@@ -441,7 +691,7 @@
       <param name="message">A message to write.</param>
     </member>
     <member name="M:System.Diagnostics.TraceListener.Write(System.Object,System.String)">
-      <summary>Writes a category name and the value of the object's <see cref="M:System.Object.ToString"></see> method to the listener you create when you implement the <see cref="T:System.Diagnostics.TraceListener"></see> class.</summary>
+      <summary>Writes a category name and the value of the object&amp;#39;s <see cref="M:System.Object.ToString"></see> method to the listener you create when you implement the <see cref="T:System.Diagnostics.TraceListener"></see> class.</summary>
       <param name="o">An <see cref="T:System.Object"></see> whose fully qualified class name you want to write.</param>
       <param name="category">A category name used to organize the output.</param>
     </member>
@@ -454,7 +704,7 @@
       <summary>Writes the indent to the listener you create when you implement this class, and resets the <see cref="P:System.Diagnostics.TraceListener.NeedIndent"></see> property to false.</summary>
     </member>
     <member name="M:System.Diagnostics.TraceListener.WriteLine(System.Object)">
-      <summary>Writes the value of the object's <see cref="M:System.Object.ToString"></see> method to the listener you create when you implement the <see cref="T:System.Diagnostics.TraceListener"></see> class, followed by a line terminator.</summary>
+      <summary>Writes the value of the object&amp;#39;s <see cref="M:System.Object.ToString"></see> method to the listener you create when you implement the <see cref="T:System.Diagnostics.TraceListener"></see> class, followed by a line terminator.</summary>
       <param name="o">An <see cref="T:System.Object"></see> whose fully qualified class name you want to write.</param>
     </member>
     <member name="M:System.Diagnostics.TraceListener.WriteLine(System.String)">
@@ -462,7 +712,7 @@
       <param name="message">A message to write.</param>
     </member>
     <member name="M:System.Diagnostics.TraceListener.WriteLine(System.Object,System.String)">
-      <summary>Writes a category name and the value of the object's <see cref="M:System.Object.ToString"></see> method to the listener you create when you implement the <see cref="T:System.Diagnostics.TraceListener"></see> class, followed by a line terminator.</summary>
+      <summary>Writes a category name and the value of the object&amp;#39;s <see cref="M:System.Object.ToString"></see> method to the listener you create when you implement the <see cref="T:System.Diagnostics.TraceListener"></see> class, followed by a line terminator.</summary>
       <param name="o">An <see cref="T:System.Object"></see> whose fully qualified class name you want to write.</param>
       <param name="category">A category name used to organize the output.</param>
     </member>
@@ -508,7 +758,7 @@
     </member>
     <member name="M:System.Diagnostics.TraceListenerCollection.GetEnumerator">
       <summary>Gets an enumerator for this list.</summary>
-      <returns>An enumerator of type <see cref="T:System.Collections.IEnumerator"></see>.</returns>
+      <returns>An enumerator of type <see cref="System.Collections.IEnumerator"></see>.</returns>
     </member>
     <member name="M:System.Diagnostics.TraceListenerCollection.IndexOf(System.Diagnostics.TraceListener)">
       <summary>Gets the index of the specified listener.</summary>
@@ -525,13 +775,13 @@
     <member name="P:System.Diagnostics.TraceListenerCollection.Item(System.Int32)">
       <summary>Gets or sets the <see cref="T:System.Diagnostics.TraceListener"></see> at the specified index.</summary>
       <param name="i">The zero-based index of the <see cref="T:System.Diagnostics.TraceListener"></see> to get from the list.</param>
-      <returns>A <see cref="T:System.Diagnostics.TraceListener"></see> with the specified index.</returns>
+      <returns>A <see cref="System.Diagnostics.TraceListener"></see> with the specified index.</returns>
       <exception cref="T:System.ArgumentNullException">The value is null.</exception>
     </member>
     <member name="P:System.Diagnostics.TraceListenerCollection.Item(System.String)">
       <summary>Gets the first <see cref="T:System.Diagnostics.TraceListener"></see> in the list with the specified name.</summary>
       <param name="name">The name of the <see cref="T:System.Diagnostics.TraceListener"></see> to get from the list.</param>
-      <returns>The first <see cref="T:System.Diagnostics.TraceListener"></see> in the list with the given <see cref="P:System.Diagnostics.TraceListener.Name"></see>. This item returns null if no <see cref="T:System.Diagnostics.TraceListener"></see> with the given name can be found.</returns>
+      <returns>The first <see cref="System.Diagnostics.TraceListener"></see> in the list with the given <see cref="System.Diagnostics.TraceListener.Name"></see>. This item returns null if no <see cref="System.Diagnostics.TraceListener"></see> with the given name can be found.</returns>
     </member>
     <member name="M:System.Diagnostics.TraceListenerCollection.Remove(System.String)">
       <summary>Removes from the collection the first <see cref="T:System.Diagnostics.TraceListener"></see> with the specified name.</summary>
@@ -557,29 +807,31 @@
     </member>
     <member name="P:System.Diagnostics.TraceListenerCollection.System#Collections#ICollection#SyncRoot">
       <summary>Gets an object that can be used to synchronize access to the <see cref="T:System.Diagnostics.TraceListenerCollection"></see>.</summary>
-      <returns>The current <see cref="T:System.Diagnostics.TraceListenerCollection"></see> object.</returns>
+      <returns>The current <see cref="System.Diagnostics.TraceListenerCollection"></see> object.</returns>
     </member>
     <member name="M:System.Diagnostics.TraceListenerCollection.System#Collections#IList#Add(System.Object)">
       <summary>Adds a trace listener to the <see cref="T:System.Diagnostics.TraceListenerCollection"></see>.</summary>
       <param name="value">The object to add to the <see cref="T:System.Diagnostics.TraceListenerCollection"></see>.</param>
       <returns>The position into which the new trace listener was inserted.</returns>
-      <exception cref="T:System.ArgumentException"><paramref name="value">value</paramref> is null.   -or-  <paramref name="value">value</paramref> is not a <see cref="T:System.Diagnostics.TraceListener"></see>.</exception>
+      <exception cref="T:System.ArgumentException"><paramref name="value">value</paramref> is null.  
+ -or-  
+ <paramref name="value">value</paramref> is not a <see cref="System.Diagnostics.TraceListener"></see>.</exception>
     </member>
     <member name="M:System.Diagnostics.TraceListenerCollection.System#Collections#IList#Contains(System.Object)">
       <summary>Determines whether the <see cref="T:System.Diagnostics.TraceListenerCollection"></see> contains a specific object.</summary>
       <param name="value">The object to locate in the <see cref="T:System.Diagnostics.TraceListenerCollection"></see>.</param>
-      <returns>true if the <see cref="T:System.Object"></see> is found in the <see cref="T:System.Diagnostics.TraceListenerCollection"></see>; otherwise, false.</returns>
+      <returns>true if the <see cref="System.Object"></see> is found in the <see cref="System.Diagnostics.TraceListenerCollection"></see>; otherwise, false.</returns>
     </member>
     <member name="M:System.Diagnostics.TraceListenerCollection.System#Collections#IList#IndexOf(System.Object)">
       <summary>Determines the index of a specific object in the <see cref="T:System.Diagnostics.TraceListenerCollection"></see>.</summary>
       <param name="value">The object to locate in the <see cref="T:System.Diagnostics.TraceListenerCollection"></see>.</param>
-      <returns>The index of <paramref name="value">value</paramref> if found in the <see cref="T:System.Diagnostics.TraceListenerCollection"></see>; otherwise, -1.</returns>
+      <returns>The index of <paramref name="value">value</paramref> if found in the <see cref="System.Diagnostics.TraceListenerCollection"></see>; otherwise, -1.</returns>
     </member>
     <member name="M:System.Diagnostics.TraceListenerCollection.System#Collections#IList#Insert(System.Int32,System.Object)">
       <summary>Inserts a <see cref="T:System.Diagnostics.TraceListener"></see> object at the specified position in the <see cref="T:System.Diagnostics.TraceListenerCollection"></see>.</summary>
       <param name="index">The zero-based index at which value should be inserted.</param>
       <param name="value">The <see cref="T:System.Diagnostics.TraceListener"></see> object to insert into the <see cref="T:System.Diagnostics.TraceListenerCollection"></see>.</param>
-      <exception cref="T:System.ArgumentException"><paramref name="value">value</paramref> is not a <see cref="T:System.Diagnostics.TraceListener"></see> object.</exception>
+      <exception cref="T:System.ArgumentException"><paramref name="value">value</paramref> is not a <see cref="System.Diagnostics.TraceListener"></see> object.</exception>
     </member>
     <member name="P:System.Diagnostics.TraceListenerCollection.System#Collections#IList#IsFixedSize">
       <summary>Gets a value indicating whether the <see cref="T:System.Diagnostics.TraceListenerCollection"></see> has a fixed size.</summary>
@@ -592,7 +844,7 @@
     <member name="P:System.Diagnostics.TraceListenerCollection.System#Collections#IList#Item(System.Int32)">
       <summary>Gets or sets the <see cref="T:System.Diagnostics.TraceListener"></see> at the specified index in the <see cref="T:System.Diagnostics.TraceListenerCollection"></see>.</summary>
       <param name="index">The zero-based index of the value to get.</param>
-      <returns>The <see cref="T:System.Diagnostics.TraceListener"></see> at the specified index.</returns>
+      <returns>The <see cref="System.Diagnostics.TraceListener"></see> at the specified index.</returns>
     </member>
     <member name="M:System.Diagnostics.TraceListenerCollection.System#Collections#IList#Remove(System.Object)">
       <summary>Removes an object from the <see cref="T:System.Diagnostics.TraceListenerCollection"></see>.</summary>
@@ -636,18 +888,18 @@
       <summary>Initializes a new instance of the <see cref="T:System.Diagnostics.TraceSource"></see> class, using the specified name for the source.</summary>
       <param name="name">The name of the source (typically, the name of the application).</param>
       <exception cref="T:System.ArgumentNullException"><paramref name="name">name</paramref> is null.</exception>
-      <exception cref="T:System.ArgumentException"><paramref name="name">name</paramref> is an empty string (&quot;&quot;).</exception>
+      <exception cref="T:System.ArgumentException"><paramref name="name">name</paramref> is an empty string (&amp;quot;&amp;quot;).</exception>
     </member>
     <member name="M:System.Diagnostics.TraceSource.#ctor(System.String,System.Diagnostics.SourceLevels)">
       <summary>Initializes a new instance of the <see cref="T:System.Diagnostics.TraceSource"></see> class, using the specified name for the source and the default source level at which tracing is to occur.</summary>
       <param name="name">The name of the source, typically the name of the application.</param>
       <param name="defaultLevel">A bitwise combination of the enumeration values that specifies the default source level at which to trace.</param>
       <exception cref="T:System.ArgumentNullException"><paramref name="name">name</paramref> is null.</exception>
-      <exception cref="T:System.ArgumentException"><paramref name="name">name</paramref> is an empty string (&quot;&quot;).</exception>
+      <exception cref="T:System.ArgumentException"><paramref name="name">name</paramref> is an empty string (&amp;quot;&amp;quot;).</exception>
     </member>
     <member name="P:System.Diagnostics.TraceSource.Attributes">
       <summary>Gets the custom switch attributes defined in the application configuration file.</summary>
-      <returns>A <see cref="T:System.Collections.Specialized.StringDictionary"></see> containing the custom attributes for the trace switch.</returns>
+      <returns>A <see cref="System.Collections.Specialized.StringDictionary"></see> containing the custom attributes for the trace switch.</returns>
     </member>
     <member name="M:System.Diagnostics.TraceSource.Close">
       <summary>Closes all the trace listeners in the trace listener collection.</summary>
@@ -662,7 +914,7 @@
     </member>
     <member name="P:System.Diagnostics.TraceSource.Listeners">
       <summary>Gets the collection of trace listeners for the trace source.</summary>
-      <returns>A <see cref="T:System.Diagnostics.TraceListenerCollection"></see> that contains the active trace listeners associated with the source.</returns>
+      <returns>A <see cref="System.Diagnostics.TraceListenerCollection"></see> that contains the active trace listeners associated with the source.</returns>
     </member>
     <member name="P:System.Diagnostics.TraceSource.Name">
       <summary>Gets the name of the trace source.</summary>
@@ -670,8 +922,8 @@
     </member>
     <member name="P:System.Diagnostics.TraceSource.Switch">
       <summary>Gets or sets the source switch value.</summary>
-      <returns>A <see cref="T:System.Diagnostics.SourceSwitch"></see> object representing the source switch value.</returns>
-      <exception cref="T:System.ArgumentNullException"><see cref="P:System.Diagnostics.TraceSource.Switch"></see> is set to null.</exception>
+      <returns>A <see cref="System.Diagnostics.SourceSwitch"></see> object representing the source switch value.</returns>
+      <exception cref="T:System.ArgumentNullException"><see cref="System.Diagnostics.TraceSource.Switch"></see> is set to null.</exception>
     </member>
     <member name="M:System.Diagnostics.TraceSource.TraceData(System.Diagnostics.TraceEventType,System.Int32,System.Object)">
       <summary>Writes trace data to the trace listeners in the <see cref="P:System.Diagnostics.TraceSource.Listeners"></see> collection using the specified event type, event identifier, and trace data.</summary>
@@ -707,7 +959,9 @@
       <param name="format">A composite format string that contains text intermixed with zero or more format items, which correspond to objects in the args array.</param>
       <param name="args">An object array containing zero or more objects to format.</param>
       <exception cref="T:System.ArgumentNullException"><paramref name="format">format</paramref> is null.</exception>
-      <exception cref="T:System.FormatException"><paramref name="format">format</paramref> is invalid.   -or-   The number that indicates an argument to format is less than zero, or greater than or equal to the number of specified objects to format.</exception>
+      <exception cref="T:System.FormatException"><paramref name="format">format</paramref> is invalid.  
+ -or-  
+ The number that indicates an argument to format is less than zero, or greater than or equal to the number of specified objects to format.</exception>
       <exception cref="T:System.ObjectDisposedException">An attempt was made to trace an event during finalization.</exception>
     </member>
     <member name="M:System.Diagnostics.TraceSource.TraceInformation(System.String)">
@@ -720,7 +974,9 @@
       <param name="format">A composite format string that contains text intermixed with zero or more format items, which correspond to objects in the args array.</param>
       <param name="args">An array containing zero or more objects to format.</param>
       <exception cref="T:System.ArgumentNullException"><paramref name="format">format</paramref> is null.</exception>
-      <exception cref="T:System.FormatException"><paramref name="format">format</paramref> is invalid.   -or-   The number that indicates an argument to format is less than zero, or greater than or equal to the number of specified objects to format.</exception>
+      <exception cref="T:System.FormatException"><paramref name="format">format</paramref> is invalid.  
+ -or-  
+ The number that indicates an argument to format is less than zero, or greater than or equal to the number of specified objects to format.</exception>
       <exception cref="T:System.ObjectDisposedException">An attempt was made to trace an event during finalization.</exception>
     </member>
     <member name="M:System.Diagnostics.TraceSource.TraceTransfer(System.Int32,System.String,System.Guid)">
@@ -745,8 +1001,8 @@
     </member>
     <member name="P:System.Diagnostics.TraceSwitch.Level">
       <summary>Gets or sets the trace level that determines the messages the switch allows.</summary>
-      <returns>One of the <see cref="T:System.Diagnostics.TraceLevel"></see> values that that specifies the level of messages that are allowed by the switch.</returns>
-      <exception cref="T:System.ArgumentException"><see cref="P:System.Diagnostics.TraceSwitch.Level"></see> is set to a value that is not one of the <see cref="T:System.Diagnostics.TraceLevel"></see> values.</exception>
+      <returns>One of the <see cref="System.Diagnostics.TraceLevel"></see> values that that specifies the level of messages that are allowed by the switch.</returns>
+      <exception cref="T:System.ArgumentException"><see cref="System.Diagnostics.TraceSwitch.Level"></see> is set to a value that is not one of the <see cref="System.Diagnostics.TraceLevel"></see> values.</exception>
     </member>
     <member name="M:System.Diagnostics.TraceSwitch.OnSwitchSettingChanged">
       <summary>Updates and corrects the level for this switch.</summary>
@@ -756,266 +1012,19 @@
     </member>
     <member name="P:System.Diagnostics.TraceSwitch.TraceError">
       <summary>Gets a value indicating whether the switch allows error-handling messages.</summary>
-      <returns>true if the <see cref="P:System.Diagnostics.TraceSwitch.Level"></see> property is set to <see cref="F:System.Diagnostics.TraceLevel.Error"></see>, <see cref="F:System.Diagnostics.TraceLevel.Warning"></see>, <see cref="F:System.Diagnostics.TraceLevel.Info"></see>, or <see cref="F:System.Diagnostics.TraceLevel.Verbose"></see>; otherwise, false.</returns>
+      <returns>true if the <see cref="System.Diagnostics.TraceSwitch.Level"></see> property is set to <see cref="System.Diagnostics.TraceLevel.Error"></see>, <see cref="System.Diagnostics.TraceLevel.Warning"></see>, <see cref="System.Diagnostics.TraceLevel.Info"></see>, or <see cref="System.Diagnostics.TraceLevel.Verbose"></see>; otherwise, false.</returns>
     </member>
     <member name="P:System.Diagnostics.TraceSwitch.TraceInfo">
       <summary>Gets a value indicating whether the switch allows informational messages.</summary>
-      <returns>true if the <see cref="P:System.Diagnostics.TraceSwitch.Level"></see> property is set to <see cref="F:System.Diagnostics.TraceLevel.Info"></see> or <see cref="F:System.Diagnostics.TraceLevel.Verbose"></see>; otherwise, false.</returns>
+      <returns>true if the <see cref="System.Diagnostics.TraceSwitch.Level"></see> property is set to <see cref="System.Diagnostics.TraceLevel.Info"></see> or <see cref="System.Diagnostics.TraceLevel.Verbose"></see>; otherwise, false.</returns>
     </member>
     <member name="P:System.Diagnostics.TraceSwitch.TraceVerbose">
       <summary>Gets a value indicating whether the switch allows all messages.</summary>
-      <returns>true if the <see cref="P:System.Diagnostics.TraceSwitch.Level"></see> property is set to <see cref="F:System.Diagnostics.TraceLevel.Verbose"></see>; otherwise, false.</returns>
+      <returns>true if the <see cref="System.Diagnostics.TraceSwitch.Level"></see> property is set to <see cref="System.Diagnostics.TraceLevel.Verbose"></see>; otherwise, false.</returns>
     </member>
     <member name="P:System.Diagnostics.TraceSwitch.TraceWarning">
       <summary>Gets a value indicating whether the switch allows warning messages.</summary>
-      <returns>true if the <see cref="P:System.Diagnostics.TraceSwitch.Level"></see> property is set to <see cref="F:System.Diagnostics.TraceLevel.Warning"></see>, <see cref="F:System.Diagnostics.TraceLevel.Info"></see>, or <see cref="F:System.Diagnostics.TraceLevel.Verbose"></see>; otherwise, false.</returns>
-    </member>
-    <member name="T:System.Diagnostics.CorrelationManager">
-      <summary>Correlates traces that are part of a logical transaction.</summary>
-    </member>
-    <member name="P:System.Diagnostics.CorrelationManager.ActivityId">
-      <summary>Gets or sets the identity for a global activity.</summary>
-      <returns>A <see cref="T:System.Guid"></see> structure that identifies the global activity.</returns>
-    </member>
-    <member name="P:System.Diagnostics.CorrelationManager.LogicalOperationStack">
-      <summary>Gets the logical operation stack from the call context.</summary>
-      <returns>A <see cref="T:System.Collections.Stack"></see> object that represents the logical operation stack for the call context.</returns>
-    </member>
-    <member name="M:System.Diagnostics.CorrelationManager.StartLogicalOperation">
-      <summary>Starts a logical operation on a thread.</summary>
-    </member>
-    <member name="M:System.Diagnostics.CorrelationManager.StartLogicalOperation(System.Object)">
-      <summary>Starts a logical operation with the specified identity on a thread.</summary>
-      <param name="operationId">An object identifying the operation.</param>
-      <exception cref="T:System.ArgumentNullException">The <paramref name="operationId">operationId</paramref> parameter is null.</exception>
-    </member>
-    <member name="M:System.Diagnostics.CorrelationManager.StopLogicalOperation">
-      <summary>Stops the current logical operation.</summary>
-      <exception cref="T:System.InvalidOperationException">The <see cref="P:System.Diagnostics.CorrelationManager.LogicalOperationStack"></see> property is an empty stack.</exception>
-    </member>
-    <member name="T:System.Diagnostics.DefaultTraceListener">
-      <summary>Provides the default output methods and behavior for tracing.</summary>
-    </member>
-    <member name="M:System.Diagnostics.DefaultTraceListener.#ctor">
-      <summary>Initializes a new instance of the <see cref="T:System.Diagnostics.DefaultTraceListener"></see> class with &quot;Default&quot; as its <see cref="P:System.Diagnostics.TraceListener.Name"></see> property value.</summary>
-    </member>
-    <member name="P:System.Diagnostics.DefaultTraceListener.AssertUiEnabled">
-      <summary>Gets or sets a value indicating whether the application is running in user-interface mode.</summary>
-      <returns>true if user-interface mode is enabled; otherwise, false.</returns>
-    </member>
-    <member name="M:System.Diagnostics.DefaultTraceListener.Fail(System.String)">
-      <summary>Emits or displays a message and a stack trace for an assertion that always fails.</summary>
-      <param name="message">The message to emit or display.</param>
-    </member>
-    <member name="M:System.Diagnostics.DefaultTraceListener.Fail(System.String,System.String)">
-      <summary>Emits or displays detailed messages and a stack trace for an assertion that always fails.</summary>
-      <param name="message">The message to emit or display.</param>
-      <param name="detailMessage">The detailed message to emit or display.</param>
-    </member>
-    <member name="P:System.Diagnostics.DefaultTraceListener.LogFileName">
-      <summary>Gets or sets the name of a log file to write trace or debug messages to.</summary>
-      <returns>The name of a log file to write trace or debug messages to.</returns>
-    </member>
-    <member name="M:System.Diagnostics.DefaultTraceListener.Write(System.String)">
-      <summary>Writes the output to the OutputDebugString function and to the <see cref="M:System.Diagnostics.Debugger.Log(System.Int32,System.String,System.String)"></see> method.</summary>
-      <param name="message">The message to write to OutputDebugString and <see cref="M:System.Diagnostics.Debugger.Log(System.Int32,System.String,System.String)"></see>.</param>
-    </member>
-    <member name="M:System.Diagnostics.DefaultTraceListener.WriteLine(System.String)">
-      <summary>Writes the output to the OutputDebugString function and to the <see cref="M:System.Diagnostics.Debugger.Log(System.Int32,System.String,System.String)"></see> method, followed by a carriage return and line feed (\r\n).</summary>
-      <param name="message">The message to write to OutputDebugString and <see cref="M:System.Diagnostics.Debugger.Log(System.Int32,System.String,System.String)"></see>.</param>
-    </member>
-    <member name="T:System.Diagnostics.BooleanSwitch">
-      <summary>Provides a simple on/off switch that controls debugging and tracing output.</summary>
-    </member>
-    <member name="M:System.Diagnostics.BooleanSwitch.#ctor(System.String,System.String)">
-      <summary>Initializes a new instance of the <see cref="T:System.Diagnostics.BooleanSwitch"></see> class with the specified display name and description.</summary>
-      <param name="displayName">The name to display on a user interface.</param>
-      <param name="description">The description of the switch.</param>
-    </member>
-    <member name="M:System.Diagnostics.BooleanSwitch.#ctor(System.String,System.String,System.String)">
-      <summary>Initializes a new instance of the <see cref="T:System.Diagnostics.BooleanSwitch"></see> class with the specified display name, description, and default switch value.</summary>
-      <param name="displayName">The name to display on the user interface.</param>
-      <param name="description">The description of the switch.</param>
-      <param name="defaultSwitchValue">The default value of the switch.</param>
-    </member>
-    <member name="P:System.Diagnostics.BooleanSwitch.Enabled">
-      <summary>Gets or sets a value indicating whether the switch is enabled or disabled.</summary>
-      <returns>true if the switch is enabled; otherwise, false. The default is false.</returns>
-      <exception cref="T:System.Security.SecurityException">The caller does not have the correct permission.</exception>
-    </member>
-    <member name="M:System.Diagnostics.BooleanSwitch.OnValueChanged">
-      <summary>Determines whether the new value of the <see cref="P:System.Diagnostics.Switch.Value"></see> property can be parsed as a Boolean value.</summary>
-    </member>
-    <member name="T:System.Diagnostics.SourceFilter">
-      <summary>Indicates whether a listener should trace a message based on the source of a trace.</summary>
-    </member>
-    <member name="M:System.Diagnostics.SourceFilter.#ctor(System.String)">
-      <summary>Initializes a new instance of the <see cref="T:System.Diagnostics.SourceFilter"></see> class, specifying the name of the trace source.</summary>
-      <param name="source">The name of the trace source.</param>
-    </member>
-    <member name="M:System.Diagnostics.SourceFilter.ShouldTrace(System.Diagnostics.TraceEventCache,System.String,System.Diagnostics.TraceEventType,System.Int32,System.String,System.Object[],System.Object,System.Object[])">
-      <summary>Determines whether the trace listener should trace the event.</summary>
-      <param name="cache">An object that represents the information cache for the trace event.</param>
-      <param name="source">The name of the source.</param>
-      <param name="eventType">One of the enumeration values that identifies the event type.</param>
-      <param name="id">A trace identifier number.</param>
-      <param name="formatOrMessage">The format to use for writing an array of arguments or a message to write.</param>
-      <param name="args">An array of argument objects.</param>
-      <param name="data1">A trace data object.</param>
-      <param name="data">An array of trace data objects.</param>
-      <returns>true if the trace should be produced; otherwise, false.</returns>
-      <exception cref="T:System.ArgumentNullException"><paramref name="source">source</paramref> is null.</exception>
-    </member>
-    <member name="P:System.Diagnostics.SourceFilter.Source">
-      <summary>Gets or sets the name of the trace source.</summary>
-      <returns>The name of the trace source.</returns>
-      <exception cref="T:System.ArgumentNullException">The value is null.</exception>
-    </member>
-    <member name="T:System.Diagnostics.SourceLevels">
-      <summary>Specifies the levels of trace messages filtered by the source switch and event type filter.</summary>
-    </member>
-    <member name="F:System.Diagnostics.SourceLevels.ActivityTracing">
-      <summary>Allows the <see cref="F:System.Diagnostics.TraceEventType.Stop"></see>, <see cref="F:System.Diagnostics.TraceEventType.Start"></see>, <see cref="F:System.Diagnostics.TraceEventType.Suspend"></see>, <see cref="F:System.Diagnostics.TraceEventType.Transfer"></see>, and <see cref="F:System.Diagnostics.TraceEventType.Resume"></see> events through.</summary>
-      <returns></returns>
-    </member>
-    <member name="F:System.Diagnostics.SourceLevels.All">
-      <summary>Allows all events through.</summary>
-      <returns></returns>
-    </member>
-    <member name="F:System.Diagnostics.SourceLevels.Critical">
-      <summary>Allows only <see cref="F:System.Diagnostics.TraceEventType.Critical"></see> events through.</summary>
-      <returns></returns>
-    </member>
-    <member name="F:System.Diagnostics.SourceLevels.Error">
-      <summary>Allows <see cref="F:System.Diagnostics.TraceEventType.Critical"></see> and <see cref="F:System.Diagnostics.TraceEventType.Error"></see> events through.</summary>
-      <returns></returns>
-    </member>
-    <member name="F:System.Diagnostics.SourceLevels.Information">
-      <summary>Allows <see cref="F:System.Diagnostics.TraceEventType.Critical"></see>, <see cref="F:System.Diagnostics.TraceEventType.Error"></see>, <see cref="F:System.Diagnostics.TraceEventType.Warning"></see>, and <see cref="F:System.Diagnostics.TraceEventType.Information"></see> events through.</summary>
-      <returns></returns>
-    </member>
-    <member name="F:System.Diagnostics.SourceLevels.Off">
-      <summary>Does not allow any events through.</summary>
-      <returns></returns>
-    </member>
-    <member name="F:System.Diagnostics.SourceLevels.Verbose">
-      <summary>Allows <see cref="F:System.Diagnostics.TraceEventType.Critical"></see>, <see cref="F:System.Diagnostics.TraceEventType.Error"></see>, <see cref="F:System.Diagnostics.TraceEventType.Warning"></see>, <see cref="F:System.Diagnostics.TraceEventType.Information"></see>, and <see cref="F:System.Diagnostics.TraceEventType.Verbose"></see> events through.</summary>
-      <returns></returns>
-    </member>
-    <member name="F:System.Diagnostics.SourceLevels.Warning">
-      <summary>Allows <see cref="F:System.Diagnostics.TraceEventType.Critical"></see>, <see cref="F:System.Diagnostics.TraceEventType.Error"></see>, and <see cref="F:System.Diagnostics.TraceEventType.Warning"></see> events through.</summary>
-      <returns></returns>
-    </member>
-    <member name="T:System.Diagnostics.SourceSwitch">
-      <summary>Provides a multilevel switch to control tracing and debug output without recompiling your code.</summary>
-    </member>
-    <member name="M:System.Diagnostics.SourceSwitch.#ctor(System.String)">
-      <summary>Initializes a new instance of the <see cref="T:System.Diagnostics.SourceSwitch"></see> class, specifying the name of the source.</summary>
-      <param name="name">The name of the source.</param>
-    </member>
-    <member name="M:System.Diagnostics.SourceSwitch.#ctor(System.String,System.String)">
-      <summary>Initializes a new instance of the <see cref="T:System.Diagnostics.SourceSwitch"></see> class, specifying the display name and the default value for the source switch.</summary>
-      <param name="displayName">The name of the source switch.</param>
-      <param name="defaultSwitchValue">The default value for the switch.</param>
-    </member>
-    <member name="P:System.Diagnostics.SourceSwitch.Level">
-      <summary>Gets or sets the level of the switch.</summary>
-      <returns>One of the <see cref="T:System.Diagnostics.SourceLevels"></see> values that represents the event level of the switch.</returns>
-    </member>
-    <member name="M:System.Diagnostics.SourceSwitch.OnValueChanged">
-      <summary>Invoked when the value of the <see cref="P:System.Diagnostics.Switch.Value"></see> property changes.</summary>
-      <exception cref="T:System.ArgumentException">The new value of <see cref="P:System.Diagnostics.Switch.Value"></see> is not one of the <see cref="T:System.Diagnostics.SourceLevels"></see> values.</exception>
-    </member>
-    <member name="M:System.Diagnostics.SourceSwitch.ShouldTrace(System.Diagnostics.TraceEventType)">
-      <summary>Determines if trace listeners should be called, based on the trace event type.</summary>
-      <param name="eventType">One of the <see cref="T:System.Diagnostics.TraceEventType"></see> values.</param>
-      <returns>True if the trace listeners should be called; otherwise, false.</returns>
-    </member>
-    <member name="T:System.Diagnostics.Switch">
-      <summary>Provides an abstract base class to create new debugging and tracing switches.</summary>
-    </member>
-    <member name="M:System.Diagnostics.Switch.#ctor(System.String,System.String)">
-      <summary>Initializes a new instance of the <see cref="T:System.Diagnostics.Switch"></see> class.</summary>
-      <param name="displayName">The name of the switch.</param>
-      <param name="description">The description for the switch.</param>
-    </member>
-    <member name="M:System.Diagnostics.Switch.#ctor(System.String,System.String,System.String)">
-      <summary>Initializes a new instance of the <see cref="T:System.Diagnostics.Switch"></see> class, specifying the display name, description, and default value for the switch.</summary>
-      <param name="displayName">The name of the switch.</param>
-      <param name="description">The description of the switch.</param>
-      <param name="defaultSwitchValue">The default value for the switch.</param>
-    </member>
-    <member name="P:System.Diagnostics.Switch.Attributes">
-      <summary>Gets the custom switch attributes defined in the application configuration file.</summary>
-      <returns>A <see cref="T:System.Collections.Specialized.StringDictionary"></see> containing the case-insensitive custom attributes for the trace switch.</returns>
-    </member>
-    <member name="P:System.Diagnostics.Switch.Description">
-      <summary>Gets a description of the switch.</summary>
-      <returns>The description of the switch. The default value is an empty string (&quot;&quot;).</returns>
-    </member>
-    <member name="P:System.Diagnostics.Switch.DisplayName">
-      <summary>Gets a name used to identify the switch.</summary>
-      <returns>The name used to identify the switch. The default value is an empty string (&quot;&quot;).</returns>
-    </member>
-    <member name="M:System.Diagnostics.Switch.GetSupportedAttributes">
-      <summary>Gets the custom attributes supported by the switch.</summary>
-      <returns>A string array that contains the names of the custom attributes supported by the switch, or null if there no custom attributes are supported.</returns>
-    </member>
-    <member name="M:System.Diagnostics.Switch.OnSwitchSettingChanged">
-      <summary>Invoked when the <see cref="P:System.Diagnostics.Switch.SwitchSetting"></see> property is changed.</summary>
-    </member>
-    <member name="M:System.Diagnostics.Switch.OnValueChanged">
-      <summary>Invoked when the <see cref="P:System.Diagnostics.Switch.Value"></see> property is changed.</summary>
-    </member>
-    <member name="P:System.Diagnostics.Switch.SwitchSetting">
-      <summary>Gets or sets the current setting for this switch.</summary>
-      <returns>The current setting for this switch. The default is zero.</returns>
-    </member>
-    <member name="P:System.Diagnostics.Switch.Value">
-      <summary>Gets or sets the value of the switch.</summary>
-      <returns>A string representing the value of the switch.</returns>
-      <exception cref="T:System.Configuration.ConfigurationErrorsException">The value is null.   -or-   The value does not consist solely of an optional negative sign followed by a sequence of digits ranging from 0 to 9.   -or-   The value represents a number less than <see cref="F:System.Int32.MinValue"></see> or greater than <see cref="F:System.Int32.MaxValue"></see>.</exception>
-    </member>
-    <member name="T:System.Diagnostics.SwitchAttribute">
-      <summary>Identifies a switch used in an assembly, class, or member.</summary>
-    </member>
-    <member name="M:System.Diagnostics.SwitchAttribute.#ctor(System.String,System.Type)">
-      <summary>Initializes a new instance of the <see cref="T:System.Diagnostics.SwitchAttribute"></see> class, specifying the name and the type of the switch.</summary>
-      <param name="switchName">The display name of the switch.</param>
-      <param name="switchType">The type of the switch.</param>
-    </member>
-    <member name="M:System.Diagnostics.SwitchAttribute.GetAll(System.Reflection.Assembly)">
-      <summary>Returns all switch attributes for the specified assembly.</summary>
-      <param name="assembly">The assembly to check for switch attributes.</param>
-      <returns>An array that contains all the switch attributes for the assembly.</returns>
-      <exception cref="T:System.ArgumentNullException"><paramref name="assembly">assembly</paramref> is null.</exception>
-    </member>
-    <member name="P:System.Diagnostics.SwitchAttribute.SwitchDescription">
-      <summary>Gets or sets the description of the switch.</summary>
-      <returns>The description of the switch.</returns>
-    </member>
-    <member name="P:System.Diagnostics.SwitchAttribute.SwitchName">
-      <summary>Gets or sets the display name of the switch.</summary>
-      <returns>The display name of the switch.</returns>
-      <exception cref="T:System.ArgumentNullException"><see cref="P:System.Diagnostics.SwitchAttribute.SwitchName"></see> is set to null.</exception>
-      <exception cref="T:System.ArgumentException"><see cref="P:System.Diagnostics.SwitchAttribute.SwitchName"></see> is set to an empty string.</exception>
-    </member>
-    <member name="P:System.Diagnostics.SwitchAttribute.SwitchType">
-      <summary>Gets or sets the type of the switch.</summary>
-      <returns>The type of the switch.</returns>
-      <exception cref="T:System.ArgumentNullException"><see cref="P:System.Diagnostics.SwitchAttribute.SwitchType"></see> is set to null.</exception>
-    </member>
-    <member name="T:System.Diagnostics.SwitchLevelAttribute">
-      <summary>Identifies the level type for a switch.</summary>
-    </member>
-    <member name="M:System.Diagnostics.SwitchLevelAttribute.#ctor(System.Type)">
-      <summary>Initializes a new instance of the <see cref="T:System.Diagnostics.SwitchLevelAttribute"></see> class, specifying the type that determines whether a trace should be written.</summary>
-      <param name="switchLevelType">The <see cref="T:System.Type"></see> that determines whether a trace should be written.</param>
-    </member>
-    <member name="P:System.Diagnostics.SwitchLevelAttribute.SwitchLevelType">
-      <summary>Gets or sets the type that determines whether a trace should be written.</summary>
-      <returns>The <see cref="T:System.Type"></see> that determines whether a trace should be written.</returns>
-      <exception cref="T:System.ArgumentNullException">The set operation failed because the value is null.</exception>
+      <returns>true if the <see cref="System.Diagnostics.TraceSwitch.Level"></see> property is set to <see cref="System.Diagnostics.TraceLevel.Warning"></see>, <see cref="System.Diagnostics.TraceLevel.Info"></see>, or <see cref="System.Diagnostics.TraceLevel.Verbose"></see>; otherwise, false.</returns>
     </member>
   </members>
-</doc></span>
+</doc>

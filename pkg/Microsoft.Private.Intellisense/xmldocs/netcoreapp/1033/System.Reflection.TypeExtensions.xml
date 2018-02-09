@@ -1,24 +1,8 @@
-﻿<?xml version="1.0" encoding="utf-8"?><span>
-<doc>
+﻿<?xml version="1.0" encoding="utf-8"?><doc>
   <assembly>
     <name>System.Reflection.TypeExtensions</name>
   </assembly>
   <members>
-    <member name="T:System.Reflection.AssemblyExtensions">
-      
-    </member>
-    <member name="M:System.Reflection.AssemblyExtensions.GetExportedTypes(System.Reflection.Assembly)">
-      <param name="assembly"></param>
-      <returns></returns>
-    </member>
-    <member name="M:System.Reflection.AssemblyExtensions.GetModules(System.Reflection.Assembly)">
-      <param name="assembly"></param>
-      <returns></returns>
-    </member>
-    <member name="M:System.Reflection.AssemblyExtensions.GetTypes(System.Reflection.Assembly)">
-      <param name="assembly"></param>
-      <returns></returns>
-    </member>
     <member name="T:System.Reflection.EventInfoExtensions">
       
     </member>
@@ -58,6 +42,21 @@
     </member>
     <member name="M:System.Reflection.MemberInfoExtensions.HasMetadataToken(System.Reflection.MemberInfo)">
       <param name="member"></param>
+      <returns></returns>
+    </member>
+    <member name="T:System.Reflection.AssemblyExtensions">
+      
+    </member>
+    <member name="M:System.Reflection.AssemblyExtensions.GetExportedTypes(System.Reflection.Assembly)">
+      <param name="assembly"></param>
+      <returns></returns>
+    </member>
+    <member name="M:System.Reflection.AssemblyExtensions.GetModules(System.Reflection.Assembly)">
+      <param name="assembly"></param>
+      <returns></returns>
+    </member>
+    <member name="M:System.Reflection.AssemblyExtensions.GetTypes(System.Reflection.Assembly)">
+      <param name="assembly"></param>
       <returns></returns>
     </member>
     <member name="T:System.Reflection.MethodInfoExtensions">
@@ -278,4 +277,4 @@
       <returns></returns>
     </member>
   </members>
-</doc></span>
+</doc>

@@ -1,544 +1,8 @@
-﻿<?xml version="1.0" encoding="utf-8"?><span>
-<doc>
+﻿<?xml version="1.0" encoding="utf-8"?><doc>
   <assembly>
     <name>System.Security.Cryptography.Primitives</name>
   </assembly>
   <members>
-    <member name="T:System.Security.Cryptography.SymmetricAlgorithm">
-      <summary>Represents the abstract base class from which all implementations of symmetric algorithms must inherit.</summary>
-    </member>
-    <member name="M:System.Security.Cryptography.SymmetricAlgorithm.#ctor">
-      <summary>Initializes a new instance of the <see cref="T:System.Security.Cryptography.SymmetricAlgorithm"></see> class.</summary>
-      <exception cref="T:System.Security.Cryptography.CryptographicException">The implementation of the class derived from the symmetric algorithm is not valid.</exception>
-    </member>
-    <member name="P:System.Security.Cryptography.SymmetricAlgorithm.BlockSize">
-      <summary>Gets or sets the block size, in bits, of the cryptographic operation.</summary>
-      <returns>The block size, in bits.</returns>
-      <exception cref="T:System.Security.Cryptography.CryptographicException">The block size is invalid.</exception>
-    </member>
-    <member name="F:System.Security.Cryptography.SymmetricAlgorithm.BlockSizeValue">
-      <summary>Represents the block size, in bits, of the cryptographic operation.</summary>
-      <returns></returns>
-    </member>
-    <member name="M:System.Security.Cryptography.SymmetricAlgorithm.Clear">
-      <summary>Releases all resources used by the <see cref="T:System.Security.Cryptography.SymmetricAlgorithm"></see> class.</summary>
-    </member>
-    <member name="M:System.Security.Cryptography.SymmetricAlgorithm.Create">
-      <summary>Creates a default cryptographic object used to perform the symmetric algorithm.</summary>
-      <returns>A default cryptographic object used to perform the symmetric algorithm.</returns>
-    </member>
-    <member name="M:System.Security.Cryptography.SymmetricAlgorithm.Create(System.String)">
-      <summary>Creates the specified cryptographic object used to perform the symmetric algorithm.</summary>
-      <param name="algName">The name of the specific implementation of the <see cref="T:System.Security.Cryptography.SymmetricAlgorithm"></see> class to use.</param>
-      <returns>A cryptographic object used to perform the symmetric algorithm.</returns>
-    </member>
-    <member name="M:System.Security.Cryptography.SymmetricAlgorithm.CreateDecryptor">
-      <summary>Creates a symmetric decryptor object with the current <see cref="P:System.Security.Cryptography.SymmetricAlgorithm.Key"></see> property and initialization vector (<see cref="P:System.Security.Cryptography.SymmetricAlgorithm.IV"></see>).</summary>
-      <returns>A symmetric decryptor object.</returns>
-    </member>
-    <member name="M:System.Security.Cryptography.SymmetricAlgorithm.CreateDecryptor(System.Byte[],System.Byte[])">
-      <summary>When overridden in a derived class, creates a symmetric decryptor object with the specified <see cref="P:System.Security.Cryptography.SymmetricAlgorithm.Key"></see> property and initialization vector (<see cref="P:System.Security.Cryptography.SymmetricAlgorithm.IV"></see>).</summary>
-      <param name="rgbKey">The secret key to use for the symmetric algorithm.</param>
-      <param name="rgbIV">The initialization vector to use for the symmetric algorithm.</param>
-      <returns>A symmetric decryptor object.</returns>
-    </member>
-    <member name="M:System.Security.Cryptography.SymmetricAlgorithm.CreateEncryptor">
-      <summary>Creates a symmetric encryptor object with the current <see cref="P:System.Security.Cryptography.SymmetricAlgorithm.Key"></see> property and initialization vector (<see cref="P:System.Security.Cryptography.SymmetricAlgorithm.IV"></see>).</summary>
-      <returns>A symmetric encryptor object.</returns>
-    </member>
-    <member name="M:System.Security.Cryptography.SymmetricAlgorithm.CreateEncryptor(System.Byte[],System.Byte[])">
-      <summary>When overridden in a derived class, creates a symmetric encryptor object with the specified <see cref="P:System.Security.Cryptography.SymmetricAlgorithm.Key"></see> property and initialization vector (<see cref="P:System.Security.Cryptography.SymmetricAlgorithm.IV"></see>).</summary>
-      <param name="rgbKey">The secret key to use for the symmetric algorithm.</param>
-      <param name="rgbIV">The initialization vector to use for the symmetric algorithm.</param>
-      <returns>A symmetric encryptor object.</returns>
-    </member>
-    <member name="M:System.Security.Cryptography.SymmetricAlgorithm.Dispose">
-      <summary>Releases all resources used by the current instance of the <see cref="T:System.Security.Cryptography.SymmetricAlgorithm"></see> class.</summary>
-    </member>
-    <member name="M:System.Security.Cryptography.SymmetricAlgorithm.Dispose(System.Boolean)">
-      <summary>Releases the unmanaged resources used by the <see cref="T:System.Security.Cryptography.SymmetricAlgorithm"></see> and optionally releases the managed resources.</summary>
-      <param name="disposing">true to release both managed and unmanaged resources; false to release only unmanaged resources.</param>
-    </member>
-    <member name="P:System.Security.Cryptography.SymmetricAlgorithm.FeedbackSize">
-      <summary>Gets or sets the feedback size, in bits, of the cryptographic operation.</summary>
-      <returns>The feedback size in bits.</returns>
-      <exception cref="T:System.Security.Cryptography.CryptographicException">The feedback size is larger than the block size.</exception>
-    </member>
-    <member name="F:System.Security.Cryptography.SymmetricAlgorithm.FeedbackSizeValue">
-      <summary>Represents the feedback size, in bits, of the cryptographic operation.</summary>
-      <returns></returns>
-    </member>
-    <member name="M:System.Security.Cryptography.SymmetricAlgorithm.GenerateIV">
-      <summary>When overridden in a derived class, generates a random initialization vector (<see cref="P:System.Security.Cryptography.SymmetricAlgorithm.IV"></see>) to use for the algorithm.</summary>
-    </member>
-    <member name="M:System.Security.Cryptography.SymmetricAlgorithm.GenerateKey">
-      <summary>When overridden in a derived class, generates a random key (<see cref="P:System.Security.Cryptography.SymmetricAlgorithm.Key"></see>) to use for the algorithm.</summary>
-    </member>
-    <member name="P:System.Security.Cryptography.SymmetricAlgorithm.IV">
-      <summary>Gets or sets the initialization vector (<see cref="P:System.Security.Cryptography.SymmetricAlgorithm.IV"></see>) for the symmetric algorithm.</summary>
-      <returns>The initialization vector.</returns>
-      <exception cref="T:System.ArgumentNullException">An attempt was made to set the initialization vector to null.</exception>
-      <exception cref="T:System.Security.Cryptography.CryptographicException">An attempt was made to set the initialization vector to an invalid size.</exception>
-    </member>
-    <member name="F:System.Security.Cryptography.SymmetricAlgorithm.IVValue">
-      <summary>Represents the initialization vector (<see cref="P:System.Security.Cryptography.SymmetricAlgorithm.IV"></see>) for the symmetric algorithm.</summary>
-      <returns></returns>
-    </member>
-    <member name="P:System.Security.Cryptography.SymmetricAlgorithm.Key">
-      <summary>Gets or sets the secret key for the symmetric algorithm.</summary>
-      <returns>The secret key to use for the symmetric algorithm.</returns>
-      <exception cref="T:System.ArgumentNullException">An attempt was made to set the key to null.</exception>
-      <exception cref="T:System.Security.Cryptography.CryptographicException">The key size is invalid.</exception>
-    </member>
-    <member name="P:System.Security.Cryptography.SymmetricAlgorithm.KeySize">
-      <summary>Gets or sets the size, in bits, of the secret key used by the symmetric algorithm.</summary>
-      <returns>The size, in bits, of the secret key used by the symmetric algorithm.</returns>
-      <exception cref="T:System.Security.Cryptography.CryptographicException">The key size is not valid.</exception>
-    </member>
-    <member name="F:System.Security.Cryptography.SymmetricAlgorithm.KeySizeValue">
-      <summary>Represents the size, in bits, of the secret key used by the symmetric algorithm.</summary>
-      <returns></returns>
-    </member>
-    <member name="F:System.Security.Cryptography.SymmetricAlgorithm.KeyValue">
-      <summary>Represents the secret key for the symmetric algorithm.</summary>
-      <returns></returns>
-    </member>
-    <member name="P:System.Security.Cryptography.SymmetricAlgorithm.LegalBlockSizes">
-      <summary>Gets the block sizes, in bits, that are supported by the symmetric algorithm.</summary>
-      <returns>An array that contains the block sizes supported by the algorithm.</returns>
-    </member>
-    <member name="F:System.Security.Cryptography.SymmetricAlgorithm.LegalBlockSizesValue">
-      <summary>Specifies the block sizes, in bits, that are supported by the symmetric algorithm.</summary>
-      <returns></returns>
-    </member>
-    <member name="P:System.Security.Cryptography.SymmetricAlgorithm.LegalKeySizes">
-      <summary>Gets the key sizes, in bits, that are supported by the symmetric algorithm.</summary>
-      <returns>An array that contains the key sizes supported by the algorithm.</returns>
-    </member>
-    <member name="F:System.Security.Cryptography.SymmetricAlgorithm.LegalKeySizesValue">
-      <summary>Specifies the key sizes, in bits, that are supported by the symmetric algorithm.</summary>
-      <returns></returns>
-    </member>
-    <member name="P:System.Security.Cryptography.SymmetricAlgorithm.Mode">
-      <summary>Gets or sets the mode for operation of the symmetric algorithm.</summary>
-      <returns>The mode for operation of the symmetric algorithm. The default is <see cref="F:System.Security.Cryptography.CipherMode.CBC"></see>.</returns>
-      <exception cref="T:System.Security.Cryptography.CryptographicException">The cipher mode is not one of the <see cref="T:System.Security.Cryptography.CipherMode"></see> values.</exception>
-    </member>
-    <member name="F:System.Security.Cryptography.SymmetricAlgorithm.ModeValue">
-      <summary>Represents the cipher mode used in the symmetric algorithm.</summary>
-      <returns></returns>
-    </member>
-    <member name="P:System.Security.Cryptography.SymmetricAlgorithm.Padding">
-      <summary>Gets or sets the padding mode used in the symmetric algorithm.</summary>
-      <returns>The padding mode used in the symmetric algorithm. The default is <see cref="F:System.Security.Cryptography.PaddingMode.PKCS7"></see>.</returns>
-      <exception cref="T:System.Security.Cryptography.CryptographicException">The padding mode is not one of the <see cref="T:System.Security.Cryptography.PaddingMode"></see> values.</exception>
-    </member>
-    <member name="F:System.Security.Cryptography.SymmetricAlgorithm.PaddingValue">
-      <summary>Represents the padding mode used in the symmetric algorithm.</summary>
-      <returns></returns>
-    </member>
-    <member name="M:System.Security.Cryptography.SymmetricAlgorithm.ValidKeySize(System.Int32)">
-      <summary>Determines whether the specified key size is valid for the current algorithm.</summary>
-      <param name="bitLength">The length, in bits, to check for a valid key size.</param>
-      <returns>true if the specified key size is valid for the current algorithm; otherwise, false.</returns>
-    </member>
-    <member name="T:System.Security.Cryptography.HashAlgorithm">
-      <summary>Represents the base class from which all implementations of cryptographic hash algorithms must derive.</summary>
-    </member>
-    <member name="M:System.Security.Cryptography.HashAlgorithm.#ctor">
-      <summary>Initializes a new instance of the <see cref="T:System.Security.Cryptography.HashAlgorithm"></see> class.</summary>
-    </member>
-    <member name="P:System.Security.Cryptography.HashAlgorithm.CanReuseTransform">
-      <summary>Gets a value indicating whether the current transform can be reused.</summary>
-      <returns>Always true.</returns>
-    </member>
-    <member name="P:System.Security.Cryptography.HashAlgorithm.CanTransformMultipleBlocks">
-      <summary>When overridden in a derived class, gets a value indicating whether multiple blocks can be transformed.</summary>
-      <returns>true if multiple blocks can be transformed; otherwise, false.</returns>
-    </member>
-    <member name="M:System.Security.Cryptography.HashAlgorithm.Clear">
-      <summary>Releases all resources used by the <see cref="T:System.Security.Cryptography.HashAlgorithm"></see> class.</summary>
-    </member>
-    <member name="M:System.Security.Cryptography.HashAlgorithm.ComputeHash(System.Byte[])">
-      <summary>Computes the hash value for the specified byte array.</summary>
-      <param name="buffer">The input to compute the hash code for.</param>
-      <returns>The computed hash code.</returns>
-      <exception cref="T:System.ArgumentNullException"><paramref name="buffer">buffer</paramref> is null.</exception>
-      <exception cref="T:System.ObjectDisposedException">The object has already been disposed.</exception>
-    </member>
-    <member name="M:System.Security.Cryptography.HashAlgorithm.ComputeHash(System.IO.Stream)">
-      <summary>Computes the hash value for the specified <see cref="T:System.IO.Stream"></see> object.</summary>
-      <param name="inputStream">The input to compute the hash code for.</param>
-      <returns>The computed hash code.</returns>
-      <exception cref="T:System.ObjectDisposedException">The object has already been disposed.</exception>
-    </member>
-    <member name="M:System.Security.Cryptography.HashAlgorithm.ComputeHash(System.Byte[],System.Int32,System.Int32)">
-      <summary>Computes the hash value for the specified region of the specified byte array.</summary>
-      <param name="buffer">The input to compute the hash code for.</param>
-      <param name="offset">The offset into the byte array from which to begin using data.</param>
-      <param name="count">The number of bytes in the array to use as data.</param>
-      <returns>The computed hash code.</returns>
-      <exception cref="T:System.ArgumentException"><paramref name="count">count</paramref> is an invalid value.   -or-  <paramref name="buffer">buffer</paramref> length is invalid.</exception>
-      <exception cref="T:System.ArgumentNullException"><paramref name="buffer">buffer</paramref> is null.</exception>
-      <exception cref="T:System.ArgumentOutOfRangeException"><paramref name="offset">offset</paramref> is out of range. This parameter requires a non-negative number.</exception>
-      <exception cref="T:System.ObjectDisposedException">The object has already been disposed.</exception>
-    </member>
-    <member name="M:System.Security.Cryptography.HashAlgorithm.Create">
-      <summary>Creates an instance of the default implementation of a hash algorithm.</summary>
-      <returns>A new <see cref="T:System.Security.Cryptography.SHA1CryptoServiceProvider"></see> instance, unless the default settings have been changed using the .</returns>
-    </member>
-    <member name="M:System.Security.Cryptography.HashAlgorithm.Create(System.String)">
-      <summary>Creates an instance of the specified implementation of a hash algorithm.</summary>
-      <param name="hashName"><p sourcefile="System.Security.Cryptography.Primitives.yml" sourcestartlinenumber="1" sourceendlinenumber="2"><p sourcefile="System.Security.Cryptography.Primitives.yml" sourcestartlinenumber="1" sourceendlinenumber="1">The hash algorithm implementation to use. The following table shows the valid values for the <code>hashName</code> parameter and the algorithms they map to.  </p>
- <table><thead><tr><th> Parameter value  <p>
-<p sourcefile="System.Security.Cryptography.Primitives.yml" sourcestartlinenumber="4" sourceendlinenumber="4"> </th><th> Implements  <p>
-<p sourcefile="System.Security.Cryptography.Primitives.yml" sourcestartlinenumber="6" sourceendlinenumber="6"> </th></tr></thead><tbody><tr><td> SHA  <p>
-<p sourcefile="System.Security.Cryptography.Primitives.yml" sourcestartlinenumber="8" sourceendlinenumber="8"> </td><td><xref href="System.Security.Cryptography.SHA1CryptoServiceProvider"></xref></td></tr><tr><td> SHA1  <p>
-<p sourcefile="System.Security.Cryptography.Primitives.yml" sourcestartlinenumber="10" sourceendlinenumber="10"> </td><td><xref href="System.Security.Cryptography.SHA1CryptoServiceProvider"></xref></td></tr><tr><td> System.Security.Cryptography.SHA1  <p>
-<p sourcefile="System.Security.Cryptography.Primitives.yml" sourcestartlinenumber="12" sourceendlinenumber="12"> </td><td><xref href="System.Security.Cryptography.SHA1CryptoServiceProvider"></xref></td></tr><tr><td> System.Security.Cryptography.HashAlgorithm  <p>
-<p sourcefile="System.Security.Cryptography.Primitives.yml" sourcestartlinenumber="14" sourceendlinenumber="14"> </td><td><xref href="System.Security.Cryptography.SHA1CryptoServiceProvider"></xref></td></tr><tr><td> MD5  <p>
-<p sourcefile="System.Security.Cryptography.Primitives.yml" sourcestartlinenumber="16" sourceendlinenumber="16"> </td><td><xref href="System.Security.Cryptography.MD5CryptoServiceProvider"></xref></td></tr><tr><td> System.Security.Cryptography.MD5  <p>
-<p sourcefile="System.Security.Cryptography.Primitives.yml" sourcestartlinenumber="18" sourceendlinenumber="18"> </td><td><xref href="System.Security.Cryptography.MD5CryptoServiceProvider"></xref></td></tr><tr><td> SHA256  <p>
-<p sourcefile="System.Security.Cryptography.Primitives.yml" sourcestartlinenumber="20" sourceendlinenumber="20"> </td><td><xref href="System.Security.Cryptography.SHA256Managed"></xref></td></tr><tr><td> SHA-256  <p>
-<p sourcefile="System.Security.Cryptography.Primitives.yml" sourcestartlinenumber="22" sourceendlinenumber="22"> </td><td><xref href="System.Security.Cryptography.SHA256Managed"></xref></td></tr><tr><td> System.Security.Cryptography.SHA256  <p>
-<p sourcefile="System.Security.Cryptography.Primitives.yml" sourcestartlinenumber="24" sourceendlinenumber="24"> </td><td><xref href="System.Security.Cryptography.SHA256Managed"></xref></td></tr><tr><td> SHA384  <p>
-<p sourcefile="System.Security.Cryptography.Primitives.yml" sourcestartlinenumber="26" sourceendlinenumber="26"> </td><td><xref href="System.Security.Cryptography.SHA384Managed"></xref></td></tr><tr><td> SHA-384  <p>
-<p sourcefile="System.Security.Cryptography.Primitives.yml" sourcestartlinenumber="28" sourceendlinenumber="28"> </td><td><xref href="System.Security.Cryptography.SHA384Managed"></xref></td></tr><tr><td> System.Security.Cryptography.SHA384  <p>
-<p sourcefile="System.Security.Cryptography.Primitives.yml" sourcestartlinenumber="30" sourceendlinenumber="30"> </td><td><xref href="System.Security.Cryptography.SHA384Managed"></xref></td></tr><tr><td> SHA512  <p>
-<p sourcefile="System.Security.Cryptography.Primitives.yml" sourcestartlinenumber="32" sourceendlinenumber="32"> </td><td><xref href="System.Security.Cryptography.SHA512Managed"></xref></td></tr><tr><td> SHA-512  <p>
-<p sourcefile="System.Security.Cryptography.Primitives.yml" sourcestartlinenumber="34" sourceendlinenumber="34"> </td><td><xref href="System.Security.Cryptography.SHA512Managed"></xref></td></tr><tr><td> System.Security.Cryptography.SHA512  <p>
-<p sourcefile="System.Security.Cryptography.Primitives.yml" sourcestartlinenumber="36" sourceendlinenumber="36"> </td><td><xref href="System.Security.Cryptography.SHA512Managed"></xref></td></tr></tbody></table></p>
-</param>
-      <returns>A new instance of the specified hash algorithm, or null if <paramref name="hashName">hashName</paramref> is not a valid hash algorithm.</returns>
-    </member>
-    <member name="M:System.Security.Cryptography.HashAlgorithm.Dispose">
-      <summary>Releases all resources used by the current instance of the <see cref="T:System.Security.Cryptography.HashAlgorithm"></see> class.</summary>
-    </member>
-    <member name="M:System.Security.Cryptography.HashAlgorithm.Dispose(System.Boolean)">
-      <summary>Releases the unmanaged resources used by the <see cref="T:System.Security.Cryptography.HashAlgorithm"></see> and optionally releases the managed resources.</summary>
-      <param name="disposing">true to release both managed and unmanaged resources; false to release only unmanaged resources.</param>
-    </member>
-    <member name="P:System.Security.Cryptography.HashAlgorithm.Hash">
-      <summary>Gets the value of the computed hash code.</summary>
-      <returns>The current value of the computed hash code.</returns>
-      <exception cref="T:System.Security.Cryptography.CryptographicUnexpectedOperationException"><see cref="F:System.Security.Cryptography.HashAlgorithm.HashValue"></see> is null.</exception>
-      <exception cref="T:System.ObjectDisposedException">The object has already been disposed.</exception>
-    </member>
-    <member name="M:System.Security.Cryptography.HashAlgorithm.HashCore(System.Byte[],System.Int32,System.Int32)">
-      <summary>When overridden in a derived class, routes data written to the object into the hash algorithm for computing the hash.</summary>
-      <param name="array">The input to compute the hash code for.</param>
-      <param name="ibStart">The offset into the byte array from which to begin using data.</param>
-      <param name="cbSize">The number of bytes in the byte array to use as data.</param>
-    </member>
-    <member name="M:System.Security.Cryptography.HashAlgorithm.HashFinal">
-      <summary>When overridden in a derived class, finalizes the hash computation after the last data is processed by the cryptographic stream object.</summary>
-      <returns>The computed hash code.</returns>
-    </member>
-    <member name="P:System.Security.Cryptography.HashAlgorithm.HashSize">
-      <summary>Gets the size, in bits, of the computed hash code.</summary>
-      <returns>The size, in bits, of the computed hash code.</returns>
-    </member>
-    <member name="F:System.Security.Cryptography.HashAlgorithm.HashSizeValue">
-      <summary>Represents the size, in bits, of the computed hash code.</summary>
-      <returns></returns>
-    </member>
-    <member name="F:System.Security.Cryptography.HashAlgorithm.HashValue">
-      <summary>Represents the value of the computed hash code.</summary>
-      <returns></returns>
-    </member>
-    <member name="M:System.Security.Cryptography.HashAlgorithm.Initialize">
-      <summary>Initializes an implementation of the <see cref="T:System.Security.Cryptography.HashAlgorithm"></see> class.</summary>
-    </member>
-    <member name="P:System.Security.Cryptography.HashAlgorithm.InputBlockSize">
-      <summary>When overridden in a derived class, gets the input block size.</summary>
-      <returns>The input block size.</returns>
-    </member>
-    <member name="P:System.Security.Cryptography.HashAlgorithm.OutputBlockSize">
-      <summary>When overridden in a derived class, gets the output block size.</summary>
-      <returns>The output block size.</returns>
-    </member>
-    <member name="F:System.Security.Cryptography.HashAlgorithm.State">
-      <summary>Represents the state of the hash computation.</summary>
-      <returns></returns>
-    </member>
-    <member name="M:System.Security.Cryptography.HashAlgorithm.TransformBlock(System.Byte[],System.Int32,System.Int32,System.Byte[],System.Int32)">
-      <summary>Computes the hash value for the specified region of the input byte array and copies the specified region of the input byte array to the specified region of the output byte array.</summary>
-      <param name="inputBuffer">The input to compute the hash code for.</param>
-      <param name="inputOffset">The offset into the input byte array from which to begin using data.</param>
-      <param name="inputCount">The number of bytes in the input byte array to use as data.</param>
-      <param name="outputBuffer">A copy of the part of the input array used to compute the hash code.</param>
-      <param name="outputOffset">The offset into the output byte array from which to begin writing data.</param>
-      <returns>The number of bytes written.</returns>
-      <exception cref="T:System.ArgumentException"><paramref name="inputCount">inputCount</paramref> uses an invalid value.   -or-  <paramref name="inputBuffer">inputBuffer</paramref> has an invalid length.</exception>
-      <exception cref="T:System.ArgumentNullException"><paramref name="inputBuffer">inputBuffer</paramref> is null.</exception>
-      <exception cref="T:System.ArgumentOutOfRangeException"><paramref name="inputOffset">inputOffset</paramref> is out of range. This parameter requires a non-negative number.</exception>
-      <exception cref="T:System.ObjectDisposedException">The object has already been disposed.</exception>
-    </member>
-    <member name="M:System.Security.Cryptography.HashAlgorithm.TransformFinalBlock(System.Byte[],System.Int32,System.Int32)">
-      <summary>Computes the hash value for the specified region of the specified byte array.</summary>
-      <param name="inputBuffer">The input to compute the hash code for.</param>
-      <param name="inputOffset">The offset into the byte array from which to begin using data.</param>
-      <param name="inputCount">The number of bytes in the byte array to use as data.</param>
-      <returns>An array that is a copy of the part of the input that is hashed.</returns>
-      <exception cref="T:System.ArgumentException"><paramref name="inputCount">inputCount</paramref> uses an invalid value.   -or-  <paramref name="inputBuffer">inputBuffer</paramref> has an invalid offset length.</exception>
-      <exception cref="T:System.ArgumentNullException"><paramref name="inputBuffer">inputBuffer</paramref> is null.</exception>
-      <exception cref="T:System.ArgumentOutOfRangeException"><paramref name="inputOffset">inputOffset</paramref> is out of range. This parameter requires a non-negative number.</exception>
-      <exception cref="T:System.ObjectDisposedException">The object has already been disposed.</exception>
-    </member>
-    <member name="T:System.Security.Cryptography.HashAlgorithmName">
-      <summary>Specifies the name of a cryptographic hash algorithm.</summary>
-    </member>
-    <member name="M:System.Security.Cryptography.HashAlgorithmName.#ctor(System.String)">
-      <summary>Initializes a new instance of the <see cref="T:System.Security.Cryptography.HashAlgorithmName"></see> structure with a custom name.</summary>
-      <param name="name">The custom hash algorithm name.</param>
-    </member>
-    <member name="M:System.Security.Cryptography.HashAlgorithmName.Equals(System.Object)">
-      <summary>Returns a value that indicates whether the current instance and a specified object are equal.</summary>
-      <param name="obj">The object to compare with the current instance.</param>
-      <returns>true if <paramref name="obj">obj</paramref> is a <see cref="T:System.Security.Cryptography.HashAlgorithmName"></see> object and its <see cref="P:System.Security.Cryptography.HashAlgorithmName.Name"></see> property is equal to that of the current instance. The comparison is ordinal and case-sensitive.</returns>
-    </member>
-    <member name="M:System.Security.Cryptography.HashAlgorithmName.Equals(System.Security.Cryptography.HashAlgorithmName)">
-      <summary>Returns a value that indicates whether two <see cref="T:System.Security.Cryptography.HashAlgorithmName"></see> instances are equal.</summary>
-      <param name="other">The object to compare with the current instance.</param>
-      <returns>true if the <see cref="P:System.Security.Cryptography.HashAlgorithmName.Name"></see> property of <paramref name="other">other</paramref> is equal to that of the current instance. The comparison is ordinal and case-sensitive.</returns>
-    </member>
-    <member name="M:System.Security.Cryptography.HashAlgorithmName.GetHashCode">
-      <summary>Returns the hash code for the current instance.</summary>
-      <returns>The hash code for the current instance, or 0 if no <paramref name="name">name</paramref> value was supplied to the <see cref="T:System.Security.Cryptography.HashAlgorithmName"></see> constructor.</returns>
-    </member>
-    <member name="P:System.Security.Cryptography.HashAlgorithmName.MD5">
-      <summary>Gets a hash algorithm name that represents &quot;MD5&quot;.</summary>
-      <returns>A hash algorithm name that represents &quot;MD5&quot;.</returns>
-    </member>
-    <member name="P:System.Security.Cryptography.HashAlgorithmName.Name">
-      <summary>Gets the underlying string representation of the algorithm name.</summary>
-      <returns>The string representation of the algorithm name, or null or <see cref="F:System.String.Empty"></see> if no hash algorithm is available.</returns>
-    </member>
-    <member name="M:System.Security.Cryptography.HashAlgorithmName.op_Equality(System.Security.Cryptography.HashAlgorithmName,System.Security.Cryptography.HashAlgorithmName)">
-      <summary>Determines whether two specified <see cref="T:System.Security.Cryptography.HashAlgorithmName"></see> objects are equal.</summary>
-      <param name="left">The first object to compare.</param>
-      <param name="right">The second object to compare.</param>
-      <returns>true if both <paramref name="left">left</paramref> and <paramref name="right">right</paramref> have the same <see cref="P:System.Security.Cryptography.HashAlgorithmName.Name"></see> value; otherwise, false.</returns>
-    </member>
-    <member name="M:System.Security.Cryptography.HashAlgorithmName.op_Inequality(System.Security.Cryptography.HashAlgorithmName,System.Security.Cryptography.HashAlgorithmName)">
-      <summary>Determines whether two specified <see cref="T:System.Security.Cryptography.HashAlgorithmName"></see> objects are not equal.</summary>
-      <param name="left">The first object to compare.</param>
-      <param name="right">The second object to compare.</param>
-      <returns>true if both <paramref name="left">left</paramref> and <paramref name="right">right</paramref> do not have the same <see cref="P:System.Security.Cryptography.HashAlgorithmName.Name"></see> value; otherwise, false.</returns>
-    </member>
-    <member name="P:System.Security.Cryptography.HashAlgorithmName.SHA1">
-      <summary>Gets a hash algorithm name that represents &quot;SHA1&quot;.</summary>
-      <returns>A hash algorithm name that represents &quot;SHA1&quot;.</returns>
-    </member>
-    <member name="P:System.Security.Cryptography.HashAlgorithmName.SHA256">
-      <summary>Gets a hash algorithm name that represents &quot;SHA256&quot;.</summary>
-      <returns>A hash algorithm name that represents &quot;SHA256&quot;.</returns>
-    </member>
-    <member name="P:System.Security.Cryptography.HashAlgorithmName.SHA384">
-      <summary>Gets a hash algorithm name that represents &quot;SHA384&quot;.</summary>
-      <returns>A hash algorithm name that represents &quot;SHA384&quot;.</returns>
-    </member>
-    <member name="P:System.Security.Cryptography.HashAlgorithmName.SHA512">
-      <summary>Gets a hash algorithm name that represents &quot;SHA512&quot;.</summary>
-      <returns>A hash algorithm name that represents &quot;SHA512&quot;.</returns>
-    </member>
-    <member name="M:System.Security.Cryptography.HashAlgorithmName.ToString">
-      <summary>Returns the string representation of the current <see cref="T:System.Security.Cryptography.HashAlgorithmName"></see> instance.</summary>
-      <returns>The string representation of the current <see cref="T:System.Security.Cryptography.HashAlgorithmName"></see> instance.</returns>
-    </member>
-    <member name="T:System.Security.Cryptography.HMAC">
-      <summary>Represents the abstract class from which all implementations of Hash-based Message Authentication Code (HMAC) must derive.</summary>
-    </member>
-    <member name="M:System.Security.Cryptography.HMAC.#ctor">
-      <summary>Initializes a new instance of the <see cref="T:System.Security.Cryptography.HMAC"></see> class.</summary>
-    </member>
-    <member name="P:System.Security.Cryptography.HMAC.BlockSizeValue">
-      <summary>Gets or sets the block size to use in the hash value.</summary>
-      <returns>The block size to use in the hash value.</returns>
-    </member>
-    <member name="M:System.Security.Cryptography.HMAC.Create">
-      <summary>Creates an instance of the default implementation of a Hash-based Message Authentication Code (HMAC).</summary>
-      <returns>A new SHA-1 instance, unless the default settings have been changed by using the <see cref="~/docs/framework/configure-apps/file-schema/cryptography/cryptoclass-element.md"> element</see>.</returns>
-    </member>
-    <member name="M:System.Security.Cryptography.HMAC.Create(System.String)">
-      <summary>Creates an instance of the specified implementation of a Hash-based Message Authentication Code (HMAC).</summary>
-      <param name="algorithmName"><p sourcefile="System.Security.Cryptography.Primitives.yml" sourcestartlinenumber="1" sourceendlinenumber="2"><p sourcefile="System.Security.Cryptography.Primitives.yml" sourcestartlinenumber="1" sourceendlinenumber="1">The HMAC implementation to use. The following table shows the valid values for the <code>algorithmName</code> parameter and the algorithms they map to.  </p>
- <table><thead><tr><th> Parameter value  <p>
-<p sourcefile="System.Security.Cryptography.Primitives.yml" sourcestartlinenumber="4" sourceendlinenumber="4"> </th><th> Implements  <p>
-<p sourcefile="System.Security.Cryptography.Primitives.yml" sourcestartlinenumber="6" sourceendlinenumber="6"> </th></tr></thead><tbody><tr><td> System.Security.Cryptography.HMAC  <p>
-<p sourcefile="System.Security.Cryptography.Primitives.yml" sourcestartlinenumber="8" sourceendlinenumber="8"> </td><td><xref href="System.Security.Cryptography.HMACSHA1"></xref></td></tr><tr><td> System.Security.Cryptography.KeyedHashAlgorithm  <p>
-<p sourcefile="System.Security.Cryptography.Primitives.yml" sourcestartlinenumber="10" sourceendlinenumber="10"> </td><td><xref href="System.Security.Cryptography.HMACSHA1"></xref></td></tr><tr><td> HMACMD5  <p>
-<p sourcefile="System.Security.Cryptography.Primitives.yml" sourcestartlinenumber="12" sourceendlinenumber="12"> </td><td><xref href="System.Security.Cryptography.HMACMD5"></xref></td></tr><tr><td> System.Security.Cryptography.HMACMD5  <p>
-<p sourcefile="System.Security.Cryptography.Primitives.yml" sourcestartlinenumber="14" sourceendlinenumber="14"> </td><td><xref href="System.Security.Cryptography.HMACMD5"></xref></td></tr><tr><td> HMACRIPEMD160  <p>
-<p sourcefile="System.Security.Cryptography.Primitives.yml" sourcestartlinenumber="16" sourceendlinenumber="16"> </td><td><xref href="System.Security.Cryptography.HMACRIPEMD160"></xref></td></tr><tr><td> System.Security.Cryptography.HMACRIPEMD160  <p>
-<p sourcefile="System.Security.Cryptography.Primitives.yml" sourcestartlinenumber="18" sourceendlinenumber="18"> </td><td><xref href="System.Security.Cryptography.HMACRIPEMD160"></xref></td></tr><tr><td> HMACSHA1  <p>
-<p sourcefile="System.Security.Cryptography.Primitives.yml" sourcestartlinenumber="20" sourceendlinenumber="20"> </td><td><xref href="System.Security.Cryptography.HMACSHA1"></xref></td></tr><tr><td> System.Security.Cryptography.HMACSHA1  <p>
-<p sourcefile="System.Security.Cryptography.Primitives.yml" sourcestartlinenumber="22" sourceendlinenumber="22"> </td><td><xref href="System.Security.Cryptography.HMACSHA1"></xref></td></tr><tr><td> HMACSHA256  <p>
-<p sourcefile="System.Security.Cryptography.Primitives.yml" sourcestartlinenumber="24" sourceendlinenumber="24"> </td><td><xref href="System.Security.Cryptography.HMACSHA256"></xref></td></tr><tr><td> System.Security.Cryptography.HMACSHA256  <p>
-<p sourcefile="System.Security.Cryptography.Primitives.yml" sourcestartlinenumber="26" sourceendlinenumber="26"> </td><td><xref href="System.Security.Cryptography.HMACSHA256"></xref></td></tr><tr><td> HMACSHA384  <p>
-<p sourcefile="System.Security.Cryptography.Primitives.yml" sourcestartlinenumber="28" sourceendlinenumber="28"> </td><td><xref href="System.Security.Cryptography.HMACSHA384"></xref></td></tr><tr><td> System.Security.Cryptography.HMACSHA384  <p>
-<p sourcefile="System.Security.Cryptography.Primitives.yml" sourcestartlinenumber="30" sourceendlinenumber="30"> </td><td><xref href="System.Security.Cryptography.HMACSHA384"></xref></td></tr><tr><td> HMACSHA512  <p>
-<p sourcefile="System.Security.Cryptography.Primitives.yml" sourcestartlinenumber="32" sourceendlinenumber="32"> </td><td><xref href="System.Security.Cryptography.HMACSHA512"></xref></td></tr><tr><td> System.Security.Cryptography.HMACSHA512  <p>
-<p sourcefile="System.Security.Cryptography.Primitives.yml" sourcestartlinenumber="34" sourceendlinenumber="34"> </td><td><xref href="System.Security.Cryptography.HMACSHA512"></xref></td></tr><tr><td> MACTripleDES  <p>
-<p sourcefile="System.Security.Cryptography.Primitives.yml" sourcestartlinenumber="36" sourceendlinenumber="36"> </td><td><xref href="System.Security.Cryptography.MACTripleDES"></xref></td></tr><tr><td> System.Security.Cryptography.MACTripleDES  <p>
-<p sourcefile="System.Security.Cryptography.Primitives.yml" sourcestartlinenumber="38" sourceendlinenumber="38"> </td><td><xref href="System.Security.Cryptography.MACTripleDES"></xref></td></tr></tbody></table></p>
-</param>
-      <returns>A new instance of the specified HMAC implementation.</returns>
-    </member>
-    <member name="M:System.Security.Cryptography.HMAC.Dispose(System.Boolean)">
-      <summary>Releases the unmanaged resources used by the <see cref="T:System.Security.Cryptography.HMAC"></see> class when a key change is legitimate and optionally releases the managed resources.</summary>
-      <param name="disposing">true to release both managed and unmanaged resources; false to release only unmanaged resources.</param>
-    </member>
-    <member name="M:System.Security.Cryptography.HMAC.HashCore(System.Byte[],System.Int32,System.Int32)">
-      <summary>When overridden in a derived class, routes data written to the object into the default <see cref="T:System.Security.Cryptography.HMAC"></see> hash algorithm for computing the hash value.</summary>
-      <param name="rgb">The input data.</param>
-      <param name="ib">The offset into the byte array from which to begin using data.</param>
-      <param name="cb">The number of bytes in the array to use as data.</param>
-    </member>
-    <member name="M:System.Security.Cryptography.HMAC.HashFinal">
-      <summary>When overridden in a derived class, finalizes the hash computation after the last data is processed by the cryptographic stream object.</summary>
-      <returns>The computed hash code in a byte array.</returns>
-    </member>
-    <member name="P:System.Security.Cryptography.HMAC.HashName">
-      <summary>Gets or sets the name of the hash algorithm to use for hashing.</summary>
-      <returns>The name of the hash algorithm.</returns>
-      <exception cref="T:System.Security.Cryptography.CryptographicException">The current hash algorithm cannot be changed.</exception>
-    </member>
-    <member name="M:System.Security.Cryptography.HMAC.Initialize">
-      <summary>Initializes an instance of the default implementation of <see cref="T:System.Security.Cryptography.HMAC"></see>.</summary>
-    </member>
-    <member name="P:System.Security.Cryptography.HMAC.Key">
-      <summary>Gets or sets the key to use in the hash algorithm.</summary>
-      <returns>The key to use in the hash algorithm.</returns>
-      <exception cref="T:System.Security.Cryptography.CryptographicException">An attempt is made to change the <see cref="P:System.Security.Cryptography.HMAC.Key"></see> property after hashing has begun.</exception>
-    </member>
-    <member name="T:System.Security.Cryptography.ICryptoTransform">
-      <summary>Defines the basic operations of cryptographic transformations.</summary>
-    </member>
-    <member name="P:System.Security.Cryptography.ICryptoTransform.CanReuseTransform">
-      <summary>Gets a value indicating whether the current transform can be reused.</summary>
-      <returns>true if the current transform can be reused; otherwise, false.</returns>
-    </member>
-    <member name="P:System.Security.Cryptography.ICryptoTransform.CanTransformMultipleBlocks">
-      <summary>Gets a value indicating whether multiple blocks can be transformed.</summary>
-      <returns>true if multiple blocks can be transformed; otherwise, false.</returns>
-    </member>
-    <member name="P:System.Security.Cryptography.ICryptoTransform.InputBlockSize">
-      <summary>Gets the input block size.</summary>
-      <returns>The size of the input data blocks in bytes.</returns>
-    </member>
-    <member name="P:System.Security.Cryptography.ICryptoTransform.OutputBlockSize">
-      <summary>Gets the output block size.</summary>
-      <returns>The size of the output data blocks in bytes.</returns>
-    </member>
-    <member name="M:System.Security.Cryptography.ICryptoTransform.TransformBlock(System.Byte[],System.Int32,System.Int32,System.Byte[],System.Int32)">
-      <summary>Transforms the specified region of the input byte array and copies the resulting transform to the specified region of the output byte array.</summary>
-      <param name="inputBuffer">The input for which to compute the transform.</param>
-      <param name="inputOffset">The offset into the input byte array from which to begin using data.</param>
-      <param name="inputCount">The number of bytes in the input byte array to use as data.</param>
-      <param name="outputBuffer">The output to which to write the transform.</param>
-      <param name="outputOffset">The offset into the output byte array from which to begin writing data.</param>
-      <returns>The number of bytes written.</returns>
-    </member>
-    <member name="M:System.Security.Cryptography.ICryptoTransform.TransformFinalBlock(System.Byte[],System.Int32,System.Int32)">
-      <summary>Transforms the specified region of the specified byte array.</summary>
-      <param name="inputBuffer">The input for which to compute the transform.</param>
-      <param name="inputOffset">The offset into the byte array from which to begin using data.</param>
-      <param name="inputCount">The number of bytes in the byte array to use as data.</param>
-      <returns>The computed transform.</returns>
-    </member>
-    <member name="T:System.Security.Cryptography.KeyedHashAlgorithm">
-      <summary>Represents the abstract class from which all implementations of keyed hash algorithms must derive.</summary>
-    </member>
-    <member name="M:System.Security.Cryptography.KeyedHashAlgorithm.#ctor">
-      <summary>Initializes a new instance of the <see cref="T:System.Security.Cryptography.KeyedHashAlgorithm"></see> class.</summary>
-    </member>
-    <member name="M:System.Security.Cryptography.KeyedHashAlgorithm.Create">
-      <summary>Creates an instance of the default implementation of a keyed hash algorithm.</summary>
-      <returns>A new <see cref="T:System.Security.Cryptography.HMACSHA1"></see> instance, unless the default settings have been changed.</returns>
-    </member>
-    <member name="M:System.Security.Cryptography.KeyedHashAlgorithm.Create(System.String)">
-      <summary>Creates an instance of the specified implementation of a keyed hash algorithm.</summary>
-      <param name="algName"><p sourcefile="System.Security.Cryptography.Primitives.yml" sourcestartlinenumber="1" sourceendlinenumber="2"><p sourcefile="System.Security.Cryptography.Primitives.yml" sourcestartlinenumber="1" sourceendlinenumber="1">The keyed hash algorithm implementation to use. The following table shows the valid values for the <code>algName</code> parameter and the algorithms they map to.  </p>
- <table><thead><tr><th> Parameter value  <p>
-<p sourcefile="System.Security.Cryptography.Primitives.yml" sourcestartlinenumber="4" sourceendlinenumber="4"> </th><th> Implements  <p>
-<p sourcefile="System.Security.Cryptography.Primitives.yml" sourcestartlinenumber="6" sourceendlinenumber="6"> </th></tr></thead><tbody><tr><td> System.Security.Cryptography.HMAC  <p>
-<p sourcefile="System.Security.Cryptography.Primitives.yml" sourcestartlinenumber="8" sourceendlinenumber="8"> </td><td><xref href="System.Security.Cryptography.HMACSHA1"></xref></td></tr><tr><td> System.Security.Cryptography.KeyedHashAlgorithm  <p>
-<p sourcefile="System.Security.Cryptography.Primitives.yml" sourcestartlinenumber="10" sourceendlinenumber="10"> </td><td><xref href="System.Security.Cryptography.HMACSHA1"></xref></td></tr><tr><td> HMACMD5  <p>
-<p sourcefile="System.Security.Cryptography.Primitives.yml" sourcestartlinenumber="12" sourceendlinenumber="12"> </td><td><xref href="System.Security.Cryptography.HMACMD5"></xref></td></tr><tr><td> System.Security.Cryptography.HMACMD5  <p>
-<p sourcefile="System.Security.Cryptography.Primitives.yml" sourcestartlinenumber="14" sourceendlinenumber="14"> </td><td><xref href="System.Security.Cryptography.HMACMD5"></xref></td></tr><tr><td> HMACRIPEMD160  <p>
-<p sourcefile="System.Security.Cryptography.Primitives.yml" sourcestartlinenumber="16" sourceendlinenumber="16"> </td><td><xref href="System.Security.Cryptography.HMACRIPEMD160"></xref></td></tr><tr><td> System.Security.Cryptography.HMACRIPEMD160  <p>
-<p sourcefile="System.Security.Cryptography.Primitives.yml" sourcestartlinenumber="18" sourceendlinenumber="18"> </td><td><xref href="System.Security.Cryptography.HMACRIPEMD160"></xref></td></tr><tr><td> HMACSHA1  <p>
-<p sourcefile="System.Security.Cryptography.Primitives.yml" sourcestartlinenumber="20" sourceendlinenumber="20"> </td><td><xref href="System.Security.Cryptography.HMACSHA1"></xref></td></tr><tr><td> System.Security.Cryptography.HMACSHA1  <p>
-<p sourcefile="System.Security.Cryptography.Primitives.yml" sourcestartlinenumber="22" sourceendlinenumber="22"> </td><td><xref href="System.Security.Cryptography.HMACSHA1"></xref></td></tr><tr><td> HMACSHA256  <p>
-<p sourcefile="System.Security.Cryptography.Primitives.yml" sourcestartlinenumber="24" sourceendlinenumber="24"> </td><td><xref href="System.Security.Cryptography.HMACSHA256"></xref></td></tr><tr><td> System.Security.Cryptography.HMACSHA256  <p>
-<p sourcefile="System.Security.Cryptography.Primitives.yml" sourcestartlinenumber="26" sourceendlinenumber="26"> </td><td><xref href="System.Security.Cryptography.HMACSHA256"></xref></td></tr><tr><td> HMACSHA384  <p>
-<p sourcefile="System.Security.Cryptography.Primitives.yml" sourcestartlinenumber="28" sourceendlinenumber="28"> </td><td><xref href="System.Security.Cryptography.HMACSHA384"></xref></td></tr><tr><td> System.Security.Cryptography.HMACSHA384  <p>
-<p sourcefile="System.Security.Cryptography.Primitives.yml" sourcestartlinenumber="30" sourceendlinenumber="30"> </td><td><xref href="System.Security.Cryptography.HMACSHA384"></xref></td></tr><tr><td> HMACSHA512  <p>
-<p sourcefile="System.Security.Cryptography.Primitives.yml" sourcestartlinenumber="32" sourceendlinenumber="32"> </td><td><xref href="System.Security.Cryptography.HMACSHA512"></xref></td></tr><tr><td> System.Security.Cryptography.HMACSHA512  <p>
-<p sourcefile="System.Security.Cryptography.Primitives.yml" sourcestartlinenumber="34" sourceendlinenumber="34"> </td><td><xref href="System.Security.Cryptography.HMACSHA512"></xref></td></tr><tr><td> MACTripleDES  <p>
-<p sourcefile="System.Security.Cryptography.Primitives.yml" sourcestartlinenumber="36" sourceendlinenumber="36"> </td><td><xref href="System.Security.Cryptography.MACTripleDES"></xref></td></tr><tr><td> System.Security.Cryptography.MACTripleDES  <p>
-<p sourcefile="System.Security.Cryptography.Primitives.yml" sourcestartlinenumber="38" sourceendlinenumber="38"> </td><td><xref href="System.Security.Cryptography.MACTripleDES"></xref></td></tr></tbody></table></p>
-</param>
-      <returns>A new instance of the specified keyed hash algorithm.</returns>
-    </member>
-    <member name="M:System.Security.Cryptography.KeyedHashAlgorithm.Dispose(System.Boolean)">
-      <summary>Releases the unmanaged resources used by the <see cref="T:System.Security.Cryptography.KeyedHashAlgorithm"></see> and optionally releases the managed resources.</summary>
-      <param name="disposing">true to release both managed and unmanaged resources; false to release only unmanaged resources.</param>
-    </member>
-    <member name="P:System.Security.Cryptography.KeyedHashAlgorithm.Key">
-      <summary>Gets or sets the key to use in the hash algorithm.</summary>
-      <returns>The key to use in the hash algorithm.</returns>
-      <exception cref="T:System.Security.Cryptography.CryptographicException">An attempt was made to change the <see cref="P:System.Security.Cryptography.KeyedHashAlgorithm.Key"></see> property after hashing has begun.</exception>
-    </member>
-    <member name="F:System.Security.Cryptography.KeyedHashAlgorithm.KeyValue">
-      <summary>The key to use in the hash algorithm.</summary>
-      <returns></returns>
-    </member>
-    <member name="T:System.Security.Cryptography.KeySizes">
-      <summary>Determines the set of valid key sizes for the symmetric cryptographic algorithms.</summary>
-    </member>
-    <member name="M:System.Security.Cryptography.KeySizes.#ctor(System.Int32,System.Int32,System.Int32)">
-      <summary>Initializes a new instance of the <see cref="T:System.Security.Cryptography.KeySizes"></see> class with the specified key values.</summary>
-      <param name="minSize">The minimum valid key size.</param>
-      <param name="maxSize">The maximum valid key size.</param>
-      <param name="skipSize">The interval between valid key sizes.</param>
-    </member>
-    <member name="P:System.Security.Cryptography.KeySizes.MaxSize">
-      <summary>Specifies the maximum key size in bits.</summary>
-      <returns>The maximum key size in bits.</returns>
-    </member>
-    <member name="P:System.Security.Cryptography.KeySizes.MinSize">
-      <summary>Specifies the minimum key size in bits.</summary>
-      <returns>The minimum key size in bits.</returns>
-    </member>
-    <member name="P:System.Security.Cryptography.KeySizes.SkipSize">
-      <summary>Specifies the interval between valid key sizes in bits.</summary>
-      <returns>The interval between valid key sizes in bits.</returns>
-    </member>
-    <member name="T:System.Security.Cryptography.PaddingMode">
-      <summary>Specifies the type of padding to apply when the message data block is shorter than the full number of bytes needed for a cryptographic operation.</summary>
-    </member>
-    <member name="F:System.Security.Cryptography.PaddingMode.ANSIX923">
-      <summary>The ANSIX923 padding string consists of a sequence of bytes filled with zeros before the length.</summary>
-      <returns></returns>
-    </member>
-    <member name="F:System.Security.Cryptography.PaddingMode.ISO10126">
-      <summary>The ISO10126 padding string consists of random data before the length.</summary>
-      <returns></returns>
-    </member>
-    <member name="F:System.Security.Cryptography.PaddingMode.None">
-      <summary>No padding is done.</summary>
-      <returns></returns>
-    </member>
-    <member name="F:System.Security.Cryptography.PaddingMode.PKCS7">
-      <summary>The PKCS #7 padding string consists of a sequence of bytes, each of which is equal to the total number of padding bytes added.</summary>
-      <returns></returns>
-    </member>
-    <member name="F:System.Security.Cryptography.PaddingMode.Zeros">
-      <summary>The padding string consists of bytes set to zero.</summary>
-      <returns></returns>
-    </member>
     <member name="T:System.Security.Cryptography.AsymmetricAlgorithm">
       <summary>Represents the abstract base class from which all implementations of asymmetric algorithms must inherit.</summary>
     </member>
@@ -551,27 +15,40 @@
     </member>
     <member name="M:System.Security.Cryptography.AsymmetricAlgorithm.Create">
       <summary>Creates a default cryptographic object used to perform the asymmetric algorithm.</summary>
-      <returns>A new <see cref="T:System.Security.Cryptography.RSACryptoServiceProvider"></see> instance, unless the default settings have been changed with the <see cref="~/docs/framework/configure-apps/file-schema/cryptography/cryptoclass-element.md"> element</see>.</returns>
+      <returns>A new <see cref="System.Security.Cryptography.RSACryptoServiceProvider"></see> instance, unless the default settings have been changed with the &amp;lt;cryptoClass&amp;gt; element.</returns>
     </member>
     <member name="M:System.Security.Cryptography.AsymmetricAlgorithm.Create(System.String)">
       <summary>Creates an instance of the specified implementation of an asymmetric algorithm.</summary>
-      <param name="algName"><p sourcefile="System.Security.Cryptography.Primitives.yml" sourcestartlinenumber="1" sourceendlinenumber="2"><p sourcefile="System.Security.Cryptography.Primitives.yml" sourcestartlinenumber="1" sourceendlinenumber="1">The asymmetric algorithm implementation to use. The following table shows the valid values for the <code>algName</code> parameter and the algorithms they map to.  </p>
- <table><thead><tr><th> Parameter value  <p>
-<p sourcefile="System.Security.Cryptography.Primitives.yml" sourcestartlinenumber="4" sourceendlinenumber="4"> </th><th> Implements  <p>
-<p sourcefile="System.Security.Cryptography.Primitives.yml" sourcestartlinenumber="6" sourceendlinenumber="6"> </th></tr></thead><tbody><tr><td> System.Security.Cryptography.AsymmetricAlgorithm  <p>
-<p sourcefile="System.Security.Cryptography.Primitives.yml" sourcestartlinenumber="8" sourceendlinenumber="8"> </td><td><xref href="System.Security.Cryptography.AsymmetricAlgorithm"></xref></td></tr><tr><td> RSA  <p>
-<p sourcefile="System.Security.Cryptography.Primitives.yml" sourcestartlinenumber="10" sourceendlinenumber="10"> </td><td><xref href="System.Security.Cryptography.RSA"></xref></td></tr><tr><td> System.Security.Cryptography.RSA  <p>
-<p sourcefile="System.Security.Cryptography.Primitives.yml" sourcestartlinenumber="12" sourceendlinenumber="12"> </td><td><xref href="System.Security.Cryptography.RSA"></xref></td></tr><tr><td> DSA  <p>
-<p sourcefile="System.Security.Cryptography.Primitives.yml" sourcestartlinenumber="14" sourceendlinenumber="14"> </td><td><xref href="System.Security.Cryptography.DSA"></xref></td></tr><tr><td> System.Security.Cryptography.DSA  <p>
-<p sourcefile="System.Security.Cryptography.Primitives.yml" sourcestartlinenumber="16" sourceendlinenumber="16"> </td><td><xref href="System.Security.Cryptography.DSA"></xref></td></tr><tr><td> ECDsa  <p>
-<p sourcefile="System.Security.Cryptography.Primitives.yml" sourcestartlinenumber="18" sourceendlinenumber="18"> </td><td><xref href="System.Security.Cryptography.ECDsa"></xref></td></tr><tr><td> ECDsaCng  <p>
-<p sourcefile="System.Security.Cryptography.Primitives.yml" sourcestartlinenumber="20" sourceendlinenumber="20"> </td><td><xref href="System.Security.Cryptography.ECDsaCng"></xref></td></tr><tr><td> System.Security.Cryptography.ECDsaCng  <p>
-<p sourcefile="System.Security.Cryptography.Primitives.yml" sourcestartlinenumber="22" sourceendlinenumber="22"> </td><td><xref href="System.Security.Cryptography.ECDsaCng"></xref></td></tr><tr><td> ECDH  <p>
-<p sourcefile="System.Security.Cryptography.Primitives.yml" sourcestartlinenumber="24" sourceendlinenumber="24"> </td><td><xref href="System.Security.Cryptography.ECDiffieHellman"></xref></td></tr><tr><td> ECDiffieHellman  <p>
-<p sourcefile="System.Security.Cryptography.Primitives.yml" sourcestartlinenumber="26" sourceendlinenumber="26"> </td><td><xref href="System.Security.Cryptography.ECDiffieHellman"></xref></td></tr><tr><td> ECDiffieHellmanCng  <p>
-<p sourcefile="System.Security.Cryptography.Primitives.yml" sourcestartlinenumber="28" sourceendlinenumber="28"> </td><td><xref href="System.Security.Cryptography.ECDiffieHellmanCng"></xref></td></tr><tr><td> System.Security.Cryptography.ECDiffieHellmanCng  <p>
-<p sourcefile="System.Security.Cryptography.Primitives.yml" sourcestartlinenumber="30" sourceendlinenumber="30"> </td><td><xref href="System.Security.Cryptography.ECDiffieHellmanCng"></xref></td></tr></tbody></table></p>
-</param>
+      <param name="algName">The asymmetric algorithm implementation to use. The following table shows the valid values for the algName parameter and the algorithms they map to.  
+  Parameter value  
+
+  Implements  
+
+  System.Security.Cryptography.AsymmetricAlgorithm  
+
+ <see cref="T:System.Security.Cryptography.AsymmetricAlgorithm"></see> RSA  
+
+ <see cref="T:System.Security.Cryptography.RSA"></see> System.Security.Cryptography.RSA  
+
+ <see cref="T:System.Security.Cryptography.RSA"></see> DSA  
+
+ <see cref="T:System.Security.Cryptography.DSA"></see> System.Security.Cryptography.DSA  
+
+ <see cref="T:System.Security.Cryptography.DSA"></see> ECDsa  
+
+ <see cref="T:System.Security.Cryptography.ECDsa"></see> ECDsaCng  
+
+ <see cref="T:System.Security.Cryptography.ECDsaCng"></see> System.Security.Cryptography.ECDsaCng  
+
+ <see cref="T:System.Security.Cryptography.ECDsaCng"></see> ECDH  
+
+ <see cref="T:System.Security.Cryptography.ECDiffieHellman"></see> ECDiffieHellman  
+
+ <see cref="T:System.Security.Cryptography.ECDiffieHellman"></see> ECDiffieHellmanCng  
+
+ <see cref="T:System.Security.Cryptography.ECDiffieHellmanCng"></see> System.Security.Cryptography.ECDiffieHellmanCng  
+
+ <see cref="T:System.Security.Cryptography.ECDiffieHellmanCng"></see></param>
       <returns>A new instance of the specified asymmetric algorithm implementation.</returns>
     </member>
     <member name="M:System.Security.Cryptography.AsymmetricAlgorithm.Dispose">
@@ -613,7 +90,7 @@
     <member name="M:System.Security.Cryptography.AsymmetricAlgorithm.ToXmlString(System.Boolean)">
       <summary>When overridden in a derived class, creates and returns an XML string representation of the current <see cref="T:System.Security.Cryptography.AsymmetricAlgorithm"></see> object. Otherwise, throws a <see cref="T:System.NotImplementedException"></see>.</summary>
       <param name="includePrivateParameters">true to include private parameters; otherwise, false.</param>
-      <returns>An XML string encoding of the current <see cref="T:System.Security.Cryptography.AsymmetricAlgorithm"></see> object.</returns>
+      <returns>An XML string encoding of the current <see cref="System.Security.Cryptography.AsymmetricAlgorithm"></see> object.</returns>
     </member>
     <member name="T:System.Security.Cryptography.CipherMode">
       <summary>Specifies the block cipher mode to use for encryption.</summary>
@@ -734,7 +211,9 @@
     <member name="M:System.Security.Cryptography.CryptoStream.FlushFinalBlock">
       <summary>Updates the underlying data source or repository with the current state of the buffer, then clears the buffer.</summary>
       <exception cref="T:System.Security.Cryptography.CryptographicException">The key is corrupt which can cause invalid padding to the stream.</exception>
-      <exception cref="T:System.NotSupportedException">The current stream is not writable.   -or-   The final block has already been transformed.</exception>
+      <exception cref="T:System.NotSupportedException">The current stream is not writable.  
+ -or-  
+ The final block has already been transformed.</exception>
     </member>
     <member name="P:System.Security.Cryptography.CryptoStream.HasFlushedFinalBlock">
       <summary>Gets a value indicating whether the final buffer block has been written to the underlying stream.</summary>
@@ -756,8 +235,10 @@
       <param name="offset">The byte offset in buffer at which to begin storing the data read from the current stream.</param>
       <param name="count">The maximum number of bytes to be read from the current stream.</param>
       <returns>The total number of bytes read into the buffer. This can be less than the number of bytes requested if that many bytes are not currently available, or zero if the end of the stream has been reached.</returns>
-      <exception cref="T:System.NotSupportedException">The <see cref="T:System.Security.Cryptography.CryptoStreamMode"></see> associated with current <see cref="T:System.Security.Cryptography.CryptoStream"></see> object does not match the underlying stream.  For example, this exception is thrown when using <see cref="F:System.Security.Cryptography.CryptoStreamMode.Read"></see> with an underlying stream that is write only.</exception>
-      <exception cref="T:System.ArgumentOutOfRangeException">The <paramref name="offset">offset</paramref> parameter is less than zero.   -or-   The <paramref name="count">count</paramref> parameter is less than zero.</exception>
+      <exception cref="T:System.NotSupportedException">The <see cref="System.Security.Cryptography.CryptoStreamMode"></see> associated with current <see cref="System.Security.Cryptography.CryptoStream"></see> object does not match the underlying stream.  For example, this exception is thrown when using <see cref="System.Security.Cryptography.CryptoStreamMode.Read"></see> with an underlying stream that is write only.</exception>
+      <exception cref="T:System.ArgumentOutOfRangeException">The <paramref name="offset">offset</paramref> parameter is less than zero.  
+ -or-  
+ The <paramref name="count">count</paramref> parameter is less than zero.</exception>
       <exception cref="T:System.ArgumentException">Thesum of the <paramref name="count">count</paramref> and <paramref name="offset">offset</paramref> parameters is longer than the length of the buffer.</exception>
     </member>
     <member name="M:System.Security.Cryptography.CryptoStream.ReadAsync(System.Byte[],System.Int32,System.Int32,System.Threading.CancellationToken)">
@@ -766,7 +247,7 @@
       <param name="offset">The byte offset in buffer at which to begin writing data from the stream.</param>
       <param name="count">The maximum number of bytes to read.</param>
       <param name="cancellationToken">The token to monitor for cancellation requests. The default value is <see cref="P:System.Threading.CancellationToken.None"></see>.</param>
-      <returns>A task that represents the asynchronous read operation. The value of the task object's <paramref name="TResult">TResult</paramref> parameter contains the total number of bytes read into the buffer. The result can be less than the number of bytes requested if the number of bytes currently available is less than the requested number, or it can be 0 (zero) if the end of the stream has been reached.</returns>
+      <returns>A task that represents the asynchronous read operation. The value of the task object&amp;#39;s <paramref name="TResult">TResult</paramref> parameter contains the total number of bytes read into the buffer. The result can be less than the number of bytes requested if the number of bytes currently available is less than the requested number, or it can be 0 (zero) if the end of the stream has been reached.</returns>
       <exception cref="T:System.ArgumentNullException"><paramref name="buffer">buffer</paramref> is null.</exception>
       <exception cref="T:System.ArgumentOutOfRangeException"><paramref name="offset">offset</paramref> or <paramref name="count">count</paramref> is negative.</exception>
       <exception cref="T:System.ArgumentException">The sum of <paramref name="offset">offset</paramref> and <paramref name="count">count</paramref> is larger than the buffer length.</exception>
@@ -787,15 +268,17 @@
     <member name="M:System.Security.Cryptography.CryptoStream.SetLength(System.Int64)">
       <summary>Sets the length of the current stream.</summary>
       <param name="value">The desired length of the current stream in bytes.</param>
-      <exception cref="T:System.NotSupportedException">This property exists only to support inheritance from <see cref="T:System.IO.Stream"></see>, and cannot be used.</exception>
+      <exception cref="T:System.NotSupportedException">This property exists only to support inheritance from <see cref="System.IO.Stream"></see>, and cannot be used.</exception>
     </member>
     <member name="M:System.Security.Cryptography.CryptoStream.Write(System.Byte[],System.Int32,System.Int32)">
       <summary>Writes a sequence of bytes to the current <see cref="T:System.Security.Cryptography.CryptoStream"></see> and advances the current position within the stream by the number of bytes written.</summary>
       <param name="buffer">An array of bytes. This method copies count bytes from buffer to the current stream.</param>
       <param name="offset">The byte offset in buffer at which to begin copying bytes to the current stream.</param>
       <param name="count">The number of bytes to be written to the current stream.</param>
-      <exception cref="T:System.NotSupportedException">The <see cref="T:System.Security.Cryptography.CryptoStreamMode"></see> associated with current <see cref="T:System.Security.Cryptography.CryptoStream"></see> object does not match the underlying stream.  For example, this exception is thrown when using <see cref="F:System.Security.Cryptography.CryptoStreamMode.Write"></see> with an underlying stream that is read only.</exception>
-      <exception cref="T:System.ArgumentOutOfRangeException">The <paramref name="offset">offset</paramref> parameter is less than zero.   -or-   The <paramref name="count">count</paramref> parameter is less than zero.</exception>
+      <exception cref="T:System.NotSupportedException">The <see cref="System.Security.Cryptography.CryptoStreamMode"></see> associated with current <see cref="System.Security.Cryptography.CryptoStream"></see> object does not match the underlying stream.  For example, this exception is thrown when using <see cref="System.Security.Cryptography.CryptoStreamMode.Write"></see> with an underlying stream that is read only.</exception>
+      <exception cref="T:System.ArgumentOutOfRangeException">The <paramref name="offset">offset</paramref> parameter is less than zero.  
+ -or-  
+ The <paramref name="count">count</paramref> parameter is less than zero.</exception>
       <exception cref="T:System.ArgumentException">The sum of the <paramref name="count">count</paramref> and <paramref name="offset">offset</paramref> parameters is longer than the length of the buffer.</exception>
     </member>
     <member name="M:System.Security.Cryptography.CryptoStream.WriteAsync(System.Byte[],System.Int32,System.Int32,System.Threading.CancellationToken)">
@@ -826,5 +309,596 @@
       <summary>Write access to a cryptographic stream.</summary>
       <returns></returns>
     </member>
+    <member name="T:System.Security.Cryptography.HashAlgorithm">
+      <summary>Represents the base class from which all implementations of cryptographic hash algorithms must derive.</summary>
+    </member>
+    <member name="M:System.Security.Cryptography.HashAlgorithm.#ctor">
+      <summary>Initializes a new instance of the <see cref="T:System.Security.Cryptography.HashAlgorithm"></see> class.</summary>
+    </member>
+    <member name="P:System.Security.Cryptography.HashAlgorithm.CanReuseTransform">
+      <summary>Gets a value indicating whether the current transform can be reused.</summary>
+      <returns>Always true.</returns>
+    </member>
+    <member name="P:System.Security.Cryptography.HashAlgorithm.CanTransformMultipleBlocks">
+      <summary>When overridden in a derived class, gets a value indicating whether multiple blocks can be transformed.</summary>
+      <returns>true if multiple blocks can be transformed; otherwise, false.</returns>
+    </member>
+    <member name="M:System.Security.Cryptography.HashAlgorithm.Clear">
+      <summary>Releases all resources used by the <see cref="T:System.Security.Cryptography.HashAlgorithm"></see> class.</summary>
+    </member>
+    <member name="M:System.Security.Cryptography.HashAlgorithm.ComputeHash(System.Byte[])">
+      <summary>Computes the hash value for the specified byte array.</summary>
+      <param name="buffer">The input to compute the hash code for.</param>
+      <returns>The computed hash code.</returns>
+      <exception cref="T:System.ArgumentNullException"><paramref name="buffer">buffer</paramref> is null.</exception>
+      <exception cref="T:System.ObjectDisposedException">The object has already been disposed.</exception>
+    </member>
+    <member name="M:System.Security.Cryptography.HashAlgorithm.ComputeHash(System.IO.Stream)">
+      <summary>Computes the hash value for the specified <see cref="T:System.IO.Stream"></see> object.</summary>
+      <param name="inputStream">The input to compute the hash code for.</param>
+      <returns>The computed hash code.</returns>
+      <exception cref="T:System.ObjectDisposedException">The object has already been disposed.</exception>
+    </member>
+    <member name="M:System.Security.Cryptography.HashAlgorithm.ComputeHash(System.Byte[],System.Int32,System.Int32)">
+      <summary>Computes the hash value for the specified region of the specified byte array.</summary>
+      <param name="buffer">The input to compute the hash code for.</param>
+      <param name="offset">The offset into the byte array from which to begin using data.</param>
+      <param name="count">The number of bytes in the array to use as data.</param>
+      <returns>The computed hash code.</returns>
+      <exception cref="T:System.ArgumentException"><paramref name="count">count</paramref> is an invalid value.  
+ -or-  
+ <paramref name="buffer">buffer</paramref> length is invalid.</exception>
+      <exception cref="T:System.ArgumentNullException"><paramref name="buffer">buffer</paramref> is null.</exception>
+      <exception cref="T:System.ArgumentOutOfRangeException"><paramref name="offset">offset</paramref> is out of range. This parameter requires a non-negative number.</exception>
+      <exception cref="T:System.ObjectDisposedException">The object has already been disposed.</exception>
+    </member>
+    <member name="M:System.Security.Cryptography.HashAlgorithm.Create">
+      <summary>Creates an instance of the default implementation of a hash algorithm.</summary>
+      <returns>A new <see cref="System.Security.Cryptography.SHA1CryptoServiceProvider"></see> instance, unless the default settings have been changed using the .</returns>
+    </member>
+    <member name="M:System.Security.Cryptography.HashAlgorithm.Create(System.String)">
+      <summary>Creates an instance of the specified implementation of a hash algorithm.</summary>
+      <param name="hashName">The hash algorithm implementation to use. The following table shows the valid values for the hashName parameter and the algorithms they map to.  
+  Parameter value  
+
+  Implements  
+
+  SHA  
+
+ <see cref="T:System.Security.Cryptography.SHA1CryptoServiceProvider"></see> SHA1  
+
+ <see cref="T:System.Security.Cryptography.SHA1CryptoServiceProvider"></see> System.Security.Cryptography.SHA1  
+
+ <see cref="T:System.Security.Cryptography.SHA1CryptoServiceProvider"></see> System.Security.Cryptography.HashAlgorithm  
+
+ <see cref="T:System.Security.Cryptography.SHA1CryptoServiceProvider"></see> MD5  
+
+ <see cref="T:System.Security.Cryptography.MD5CryptoServiceProvider"></see> System.Security.Cryptography.MD5  
+
+ <see cref="T:System.Security.Cryptography.MD5CryptoServiceProvider"></see> SHA256  
+
+ <see cref="T:System.Security.Cryptography.SHA256Managed"></see> SHA-256  
+
+ <see cref="T:System.Security.Cryptography.SHA256Managed"></see> System.Security.Cryptography.SHA256  
+
+ <see cref="T:System.Security.Cryptography.SHA256Managed"></see> SHA384  
+
+ <see cref="T:System.Security.Cryptography.SHA384Managed"></see> SHA-384  
+
+ <see cref="T:System.Security.Cryptography.SHA384Managed"></see> System.Security.Cryptography.SHA384  
+
+ <see cref="T:System.Security.Cryptography.SHA384Managed"></see> SHA512  
+
+ <see cref="T:System.Security.Cryptography.SHA512Managed"></see> SHA-512  
+
+ <see cref="T:System.Security.Cryptography.SHA512Managed"></see> System.Security.Cryptography.SHA512  
+
+ <see cref="T:System.Security.Cryptography.SHA512Managed"></see></param>
+      <returns>A new instance of the specified hash algorithm, or null if <paramref name="hashName">hashName</paramref> is not a valid hash algorithm.</returns>
+    </member>
+    <member name="M:System.Security.Cryptography.HashAlgorithm.Dispose">
+      <summary>Releases all resources used by the current instance of the <see cref="T:System.Security.Cryptography.HashAlgorithm"></see> class.</summary>
+    </member>
+    <member name="M:System.Security.Cryptography.HashAlgorithm.Dispose(System.Boolean)">
+      <summary>Releases the unmanaged resources used by the <see cref="T:System.Security.Cryptography.HashAlgorithm"></see> and optionally releases the managed resources.</summary>
+      <param name="disposing">true to release both managed and unmanaged resources; false to release only unmanaged resources.</param>
+    </member>
+    <member name="P:System.Security.Cryptography.HashAlgorithm.Hash">
+      <summary>Gets the value of the computed hash code.</summary>
+      <returns>The current value of the computed hash code.</returns>
+      <exception cref="T:System.Security.Cryptography.CryptographicUnexpectedOperationException"><see cref="System.Security.Cryptography.HashAlgorithm.HashValue"></see> is null.</exception>
+      <exception cref="T:System.ObjectDisposedException">The object has already been disposed.</exception>
+    </member>
+    <member name="M:System.Security.Cryptography.HashAlgorithm.HashCore(System.Byte[],System.Int32,System.Int32)">
+      <summary>When overridden in a derived class, routes data written to the object into the hash algorithm for computing the hash.</summary>
+      <param name="array">The input to compute the hash code for.</param>
+      <param name="ibStart">The offset into the byte array from which to begin using data.</param>
+      <param name="cbSize">The number of bytes in the byte array to use as data.</param>
+    </member>
+    <member name="M:System.Security.Cryptography.HashAlgorithm.HashFinal">
+      <summary>When overridden in a derived class, finalizes the hash computation after the last data is processed by the cryptographic stream object.</summary>
+      <returns>The computed hash code.</returns>
+    </member>
+    <member name="P:System.Security.Cryptography.HashAlgorithm.HashSize">
+      <summary>Gets the size, in bits, of the computed hash code.</summary>
+      <returns>The size, in bits, of the computed hash code.</returns>
+    </member>
+    <member name="F:System.Security.Cryptography.HashAlgorithm.HashSizeValue">
+      <summary>Represents the size, in bits, of the computed hash code.</summary>
+      <returns></returns>
+    </member>
+    <member name="F:System.Security.Cryptography.HashAlgorithm.HashValue">
+      <summary>Represents the value of the computed hash code.</summary>
+      <returns></returns>
+    </member>
+    <member name="M:System.Security.Cryptography.HashAlgorithm.Initialize">
+      <summary>Initializes an implementation of the <see cref="T:System.Security.Cryptography.HashAlgorithm"></see> class.</summary>
+    </member>
+    <member name="P:System.Security.Cryptography.HashAlgorithm.InputBlockSize">
+      <summary>When overridden in a derived class, gets the input block size.</summary>
+      <returns>The input block size.</returns>
+    </member>
+    <member name="P:System.Security.Cryptography.HashAlgorithm.OutputBlockSize">
+      <summary>When overridden in a derived class, gets the output block size.</summary>
+      <returns>The output block size.</returns>
+    </member>
+    <member name="F:System.Security.Cryptography.HashAlgorithm.State">
+      <summary>Represents the state of the hash computation.</summary>
+      <returns></returns>
+    </member>
+    <member name="M:System.Security.Cryptography.HashAlgorithm.TransformBlock(System.Byte[],System.Int32,System.Int32,System.Byte[],System.Int32)">
+      <summary>Computes the hash value for the specified region of the input byte array and copies the specified region of the input byte array to the specified region of the output byte array.</summary>
+      <param name="inputBuffer">The input to compute the hash code for.</param>
+      <param name="inputOffset">The offset into the input byte array from which to begin using data.</param>
+      <param name="inputCount">The number of bytes in the input byte array to use as data.</param>
+      <param name="outputBuffer">A copy of the part of the input array used to compute the hash code.</param>
+      <param name="outputOffset">The offset into the output byte array from which to begin writing data.</param>
+      <returns>The number of bytes written.</returns>
+      <exception cref="T:System.ArgumentException"><paramref name="inputCount">inputCount</paramref> uses an invalid value.  
+ -or-  
+ <paramref name="inputBuffer">inputBuffer</paramref> has an invalid length.</exception>
+      <exception cref="T:System.ArgumentNullException"><paramref name="inputBuffer">inputBuffer</paramref> is null.</exception>
+      <exception cref="T:System.ArgumentOutOfRangeException"><paramref name="inputOffset">inputOffset</paramref> is out of range. This parameter requires a non-negative number.</exception>
+      <exception cref="T:System.ObjectDisposedException">The object has already been disposed.</exception>
+    </member>
+    <member name="M:System.Security.Cryptography.HashAlgorithm.TransformFinalBlock(System.Byte[],System.Int32,System.Int32)">
+      <summary>Computes the hash value for the specified region of the specified byte array.</summary>
+      <param name="inputBuffer">The input to compute the hash code for.</param>
+      <param name="inputOffset">The offset into the byte array from which to begin using data.</param>
+      <param name="inputCount">The number of bytes in the byte array to use as data.</param>
+      <returns>An array that is a copy of the part of the input that is hashed.</returns>
+      <exception cref="T:System.ArgumentException"><paramref name="inputCount">inputCount</paramref> uses an invalid value.  
+ -or-  
+ <paramref name="inputBuffer">inputBuffer</paramref> has an invalid offset length.</exception>
+      <exception cref="T:System.ArgumentNullException"><paramref name="inputBuffer">inputBuffer</paramref> is null.</exception>
+      <exception cref="T:System.ArgumentOutOfRangeException"><paramref name="inputOffset">inputOffset</paramref> is out of range. This parameter requires a non-negative number.</exception>
+      <exception cref="T:System.ObjectDisposedException">The object has already been disposed.</exception>
+    </member>
+    <member name="T:System.Security.Cryptography.HashAlgorithmName">
+      <summary>Specifies the name of a cryptographic hash algorithm.</summary>
+    </member>
+    <member name="M:System.Security.Cryptography.HashAlgorithmName.#ctor(System.String)">
+      <summary>Initializes a new instance of the <see cref="T:System.Security.Cryptography.HashAlgorithmName"></see> structure with a custom name.</summary>
+      <param name="name">The custom hash algorithm name.</param>
+    </member>
+    <member name="M:System.Security.Cryptography.HashAlgorithmName.Equals(System.Object)">
+      <summary>Returns a value that indicates whether the current instance and a specified object are equal.</summary>
+      <param name="obj">The object to compare with the current instance.</param>
+      <returns>true if <paramref name="obj">obj</paramref> is a <see cref="System.Security.Cryptography.HashAlgorithmName"></see> object and its <see cref="System.Security.Cryptography.HashAlgorithmName.Name"></see> property is equal to that of the current instance. The comparison is ordinal and case-sensitive.</returns>
+    </member>
+    <member name="M:System.Security.Cryptography.HashAlgorithmName.Equals(System.Security.Cryptography.HashAlgorithmName)">
+      <summary>Returns a value that indicates whether two <see cref="T:System.Security.Cryptography.HashAlgorithmName"></see> instances are equal.</summary>
+      <param name="other">The object to compare with the current instance.</param>
+      <returns>true if the <see cref="System.Security.Cryptography.HashAlgorithmName.Name"></see> property of <paramref name="other">other</paramref> is equal to that of the current instance. The comparison is ordinal and case-sensitive.</returns>
+    </member>
+    <member name="M:System.Security.Cryptography.HashAlgorithmName.GetHashCode">
+      <summary>Returns the hash code for the current instance.</summary>
+      <returns>The hash code for the current instance, or 0 if no <paramref name="name">name</paramref> value was supplied to the <see cref="System.Security.Cryptography.HashAlgorithmName"></see> constructor.</returns>
+    </member>
+    <member name="P:System.Security.Cryptography.HashAlgorithmName.MD5">
+      <summary>Gets a hash algorithm name that represents &amp;quot;MD5&amp;quot;.</summary>
+      <returns>A hash algorithm name that represents &amp;quot;MD5&amp;quot;.</returns>
+    </member>
+    <member name="P:System.Security.Cryptography.HashAlgorithmName.Name">
+      <summary>Gets the underlying string representation of the algorithm name.</summary>
+      <returns>The string representation of the algorithm name, or null or <see cref="System.String.Empty"></see> if no hash algorithm is available.</returns>
+    </member>
+    <member name="M:System.Security.Cryptography.HashAlgorithmName.op_Equality(System.Security.Cryptography.HashAlgorithmName,System.Security.Cryptography.HashAlgorithmName)">
+      <summary>Determines whether two specified <see cref="T:System.Security.Cryptography.HashAlgorithmName"></see> objects are equal.</summary>
+      <param name="left">The first object to compare.</param>
+      <param name="right">The second object to compare.</param>
+      <returns>true if both <paramref name="left">left</paramref> and <paramref name="right">right</paramref> have the same <see cref="System.Security.Cryptography.HashAlgorithmName.Name"></see> value; otherwise, false.</returns>
+    </member>
+    <member name="M:System.Security.Cryptography.HashAlgorithmName.op_Inequality(System.Security.Cryptography.HashAlgorithmName,System.Security.Cryptography.HashAlgorithmName)">
+      <summary>Determines whether two specified <see cref="T:System.Security.Cryptography.HashAlgorithmName"></see> objects are not equal.</summary>
+      <param name="left">The first object to compare.</param>
+      <param name="right">The second object to compare.</param>
+      <returns>true if both <paramref name="left">left</paramref> and <paramref name="right">right</paramref> do not have the same <see cref="System.Security.Cryptography.HashAlgorithmName.Name"></see> value; otherwise, false.</returns>
+    </member>
+    <member name="P:System.Security.Cryptography.HashAlgorithmName.SHA1">
+      <summary>Gets a hash algorithm name that represents &amp;quot;SHA1&amp;quot;.</summary>
+      <returns>A hash algorithm name that represents &amp;quot;SHA1&amp;quot;.</returns>
+    </member>
+    <member name="P:System.Security.Cryptography.HashAlgorithmName.SHA256">
+      <summary>Gets a hash algorithm name that represents &amp;quot;SHA256&amp;quot;.</summary>
+      <returns>A hash algorithm name that represents &amp;quot;SHA256&amp;quot;.</returns>
+    </member>
+    <member name="P:System.Security.Cryptography.HashAlgorithmName.SHA384">
+      <summary>Gets a hash algorithm name that represents &amp;quot;SHA384&amp;quot;.</summary>
+      <returns>A hash algorithm name that represents &amp;quot;SHA384&amp;quot;.</returns>
+    </member>
+    <member name="P:System.Security.Cryptography.HashAlgorithmName.SHA512">
+      <summary>Gets a hash algorithm name that represents &amp;quot;SHA512&amp;quot;.</summary>
+      <returns>A hash algorithm name that represents &amp;quot;SHA512&amp;quot;.</returns>
+    </member>
+    <member name="M:System.Security.Cryptography.HashAlgorithmName.ToString">
+      <summary>Returns the string representation of the current <see cref="T:System.Security.Cryptography.HashAlgorithmName"></see> instance.</summary>
+      <returns>The string representation of the current <see cref="System.Security.Cryptography.HashAlgorithmName"></see> instance.</returns>
+    </member>
+    <member name="T:System.Security.Cryptography.HMAC">
+      <summary>Represents the abstract class from which all implementations of Hash-based Message Authentication Code (HMAC) must derive.</summary>
+    </member>
+    <member name="M:System.Security.Cryptography.HMAC.#ctor">
+      <summary>Initializes a new instance of the <see cref="T:System.Security.Cryptography.HMAC"></see> class.</summary>
+    </member>
+    <member name="P:System.Security.Cryptography.HMAC.BlockSizeValue">
+      <summary>Gets or sets the block size to use in the hash value.</summary>
+      <returns>The block size to use in the hash value.</returns>
+    </member>
+    <member name="M:System.Security.Cryptography.HMAC.Create">
+      <summary>Creates an instance of the default implementation of a Hash-based Message Authentication Code (HMAC).</summary>
+      <returns>A new SHA-1 instance, unless the default settings have been changed by using the &amp;lt;cryptoClass&amp;gt; element.</returns>
+    </member>
+    <member name="M:System.Security.Cryptography.HMAC.Create(System.String)">
+      <summary>Creates an instance of the specified implementation of a Hash-based Message Authentication Code (HMAC).</summary>
+      <param name="algorithmName">The HMAC implementation to use. The following table shows the valid values for the algorithmName parameter and the algorithms they map to.  
+  Parameter value  
+
+  Implements  
+
+  System.Security.Cryptography.HMAC  
+
+ <see cref="T:System.Security.Cryptography.HMACSHA1"></see> System.Security.Cryptography.KeyedHashAlgorithm  
+
+ <see cref="T:System.Security.Cryptography.HMACSHA1"></see> HMACMD5  
+
+ <see cref="T:System.Security.Cryptography.HMACMD5"></see> System.Security.Cryptography.HMACMD5  
+
+ <see cref="T:System.Security.Cryptography.HMACMD5"></see> HMACRIPEMD160  
+
+ <see cref="T:System.Security.Cryptography.HMACRIPEMD160"></see> System.Security.Cryptography.HMACRIPEMD160  
+
+ <see cref="T:System.Security.Cryptography.HMACRIPEMD160"></see> HMACSHA1  
+
+ <see cref="T:System.Security.Cryptography.HMACSHA1"></see> System.Security.Cryptography.HMACSHA1  
+
+ <see cref="T:System.Security.Cryptography.HMACSHA1"></see> HMACSHA256  
+
+ <see cref="T:System.Security.Cryptography.HMACSHA256"></see> System.Security.Cryptography.HMACSHA256  
+
+ <see cref="T:System.Security.Cryptography.HMACSHA256"></see> HMACSHA384  
+
+ <see cref="T:System.Security.Cryptography.HMACSHA384"></see> System.Security.Cryptography.HMACSHA384  
+
+ <see cref="T:System.Security.Cryptography.HMACSHA384"></see> HMACSHA512  
+
+ <see cref="T:System.Security.Cryptography.HMACSHA512"></see> System.Security.Cryptography.HMACSHA512  
+
+ <see cref="T:System.Security.Cryptography.HMACSHA512"></see> MACTripleDES  
+
+ <see cref="T:System.Security.Cryptography.MACTripleDES"></see> System.Security.Cryptography.MACTripleDES  
+
+ <see cref="T:System.Security.Cryptography.MACTripleDES"></see></param>
+      <returns>A new instance of the specified HMAC implementation.</returns>
+    </member>
+    <member name="M:System.Security.Cryptography.HMAC.Dispose(System.Boolean)">
+      <summary>Releases the unmanaged resources used by the <see cref="T:System.Security.Cryptography.HMAC"></see> class when a key change is legitimate and optionally releases the managed resources.</summary>
+      <param name="disposing">true to release both managed and unmanaged resources; false to release only unmanaged resources.</param>
+    </member>
+    <member name="M:System.Security.Cryptography.HMAC.HashCore(System.Byte[],System.Int32,System.Int32)">
+      <summary>When overridden in a derived class, routes data written to the object into the default <see cref="T:System.Security.Cryptography.HMAC"></see> hash algorithm for computing the hash value.</summary>
+      <param name="rgb">The input data.</param>
+      <param name="ib">The offset into the byte array from which to begin using data.</param>
+      <param name="cb">The number of bytes in the array to use as data.</param>
+    </member>
+    <member name="M:System.Security.Cryptography.HMAC.HashFinal">
+      <summary>When overridden in a derived class, finalizes the hash computation after the last data is processed by the cryptographic stream object.</summary>
+      <returns>The computed hash code in a byte array.</returns>
+    </member>
+    <member name="P:System.Security.Cryptography.HMAC.HashName">
+      <summary>Gets or sets the name of the hash algorithm to use for hashing.</summary>
+      <returns>The name of the hash algorithm.</returns>
+      <exception cref="T:System.Security.Cryptography.CryptographicException">The current hash algorithm cannot be changed.</exception>
+    </member>
+    <member name="M:System.Security.Cryptography.HMAC.Initialize">
+      <summary>Initializes an instance of the default implementation of <see cref="T:System.Security.Cryptography.HMAC"></see>.</summary>
+    </member>
+    <member name="P:System.Security.Cryptography.HMAC.Key">
+      <summary>Gets or sets the key to use in the hash algorithm.</summary>
+      <returns>The key to use in the hash algorithm.</returns>
+      <exception cref="T:System.Security.Cryptography.CryptographicException">An attempt is made to change the <see cref="System.Security.Cryptography.HMAC.Key"></see> property after hashing has begun.</exception>
+    </member>
+    <member name="T:System.Security.Cryptography.ICryptoTransform">
+      <summary>Defines the basic operations of cryptographic transformations.</summary>
+    </member>
+    <member name="P:System.Security.Cryptography.ICryptoTransform.CanReuseTransform">
+      <summary>Gets a value indicating whether the current transform can be reused.</summary>
+      <returns>true if the current transform can be reused; otherwise, false.</returns>
+    </member>
+    <member name="P:System.Security.Cryptography.ICryptoTransform.CanTransformMultipleBlocks">
+      <summary>Gets a value indicating whether multiple blocks can be transformed.</summary>
+      <returns>true if multiple blocks can be transformed; otherwise, false.</returns>
+    </member>
+    <member name="P:System.Security.Cryptography.ICryptoTransform.InputBlockSize">
+      <summary>Gets the input block size.</summary>
+      <returns>The size of the input data blocks in bytes.</returns>
+    </member>
+    <member name="P:System.Security.Cryptography.ICryptoTransform.OutputBlockSize">
+      <summary>Gets the output block size.</summary>
+      <returns>The size of the output data blocks in bytes.</returns>
+    </member>
+    <member name="M:System.Security.Cryptography.ICryptoTransform.TransformBlock(System.Byte[],System.Int32,System.Int32,System.Byte[],System.Int32)">
+      <summary>Transforms the specified region of the input byte array and copies the resulting transform to the specified region of the output byte array.</summary>
+      <param name="inputBuffer">The input for which to compute the transform.</param>
+      <param name="inputOffset">The offset into the input byte array from which to begin using data.</param>
+      <param name="inputCount">The number of bytes in the input byte array to use as data.</param>
+      <param name="outputBuffer">The output to which to write the transform.</param>
+      <param name="outputOffset">The offset into the output byte array from which to begin writing data.</param>
+      <returns>The number of bytes written.</returns>
+    </member>
+    <member name="M:System.Security.Cryptography.ICryptoTransform.TransformFinalBlock(System.Byte[],System.Int32,System.Int32)">
+      <summary>Transforms the specified region of the specified byte array.</summary>
+      <param name="inputBuffer">The input for which to compute the transform.</param>
+      <param name="inputOffset">The offset into the byte array from which to begin using data.</param>
+      <param name="inputCount">The number of bytes in the byte array to use as data.</param>
+      <returns>The computed transform.</returns>
+    </member>
+    <member name="T:System.Security.Cryptography.KeyedHashAlgorithm">
+      <summary>Represents the abstract class from which all implementations of keyed hash algorithms must derive.</summary>
+    </member>
+    <member name="M:System.Security.Cryptography.KeyedHashAlgorithm.#ctor">
+      <summary>Initializes a new instance of the <see cref="T:System.Security.Cryptography.KeyedHashAlgorithm"></see> class.</summary>
+    </member>
+    <member name="M:System.Security.Cryptography.KeyedHashAlgorithm.Create">
+      <summary>Creates an instance of the default implementation of a keyed hash algorithm.</summary>
+      <returns>A new <see cref="System.Security.Cryptography.HMACSHA1"></see> instance, unless the default settings have been changed.</returns>
+    </member>
+    <member name="M:System.Security.Cryptography.KeyedHashAlgorithm.Create(System.String)">
+      <summary>Creates an instance of the specified implementation of a keyed hash algorithm.</summary>
+      <param name="algName">The keyed hash algorithm implementation to use. The following table shows the valid values for the algName parameter and the algorithms they map to.  
+  Parameter value  
+
+  Implements  
+
+  System.Security.Cryptography.HMAC  
+
+ <see cref="T:System.Security.Cryptography.HMACSHA1"></see> System.Security.Cryptography.KeyedHashAlgorithm  
+
+ <see cref="T:System.Security.Cryptography.HMACSHA1"></see> HMACMD5  
+
+ <see cref="T:System.Security.Cryptography.HMACMD5"></see> System.Security.Cryptography.HMACMD5  
+
+ <see cref="T:System.Security.Cryptography.HMACMD5"></see> HMACRIPEMD160  
+
+ <see cref="T:System.Security.Cryptography.HMACRIPEMD160"></see> System.Security.Cryptography.HMACRIPEMD160  
+
+ <see cref="T:System.Security.Cryptography.HMACRIPEMD160"></see> HMACSHA1  
+
+ <see cref="T:System.Security.Cryptography.HMACSHA1"></see> System.Security.Cryptography.HMACSHA1  
+
+ <see cref="T:System.Security.Cryptography.HMACSHA1"></see> HMACSHA256  
+
+ <see cref="T:System.Security.Cryptography.HMACSHA256"></see> System.Security.Cryptography.HMACSHA256  
+
+ <see cref="T:System.Security.Cryptography.HMACSHA256"></see> HMACSHA384  
+
+ <see cref="T:System.Security.Cryptography.HMACSHA384"></see> System.Security.Cryptography.HMACSHA384  
+
+ <see cref="T:System.Security.Cryptography.HMACSHA384"></see> HMACSHA512  
+
+ <see cref="T:System.Security.Cryptography.HMACSHA512"></see> System.Security.Cryptography.HMACSHA512  
+
+ <see cref="T:System.Security.Cryptography.HMACSHA512"></see> MACTripleDES  
+
+ <see cref="T:System.Security.Cryptography.MACTripleDES"></see> System.Security.Cryptography.MACTripleDES  
+
+ <see cref="T:System.Security.Cryptography.MACTripleDES"></see></param>
+      <returns>A new instance of the specified keyed hash algorithm.</returns>
+    </member>
+    <member name="M:System.Security.Cryptography.KeyedHashAlgorithm.Dispose(System.Boolean)">
+      <summary>Releases the unmanaged resources used by the <see cref="T:System.Security.Cryptography.KeyedHashAlgorithm"></see> and optionally releases the managed resources.</summary>
+      <param name="disposing">true to release both managed and unmanaged resources; false to release only unmanaged resources.</param>
+    </member>
+    <member name="P:System.Security.Cryptography.KeyedHashAlgorithm.Key">
+      <summary>Gets or sets the key to use in the hash algorithm.</summary>
+      <returns>The key to use in the hash algorithm.</returns>
+      <exception cref="T:System.Security.Cryptography.CryptographicException">An attempt was made to change the <see cref="System.Security.Cryptography.KeyedHashAlgorithm.Key"></see> property after hashing has begun.</exception>
+    </member>
+    <member name="F:System.Security.Cryptography.KeyedHashAlgorithm.KeyValue">
+      <summary>The key to use in the hash algorithm.</summary>
+      <returns></returns>
+    </member>
+    <member name="T:System.Security.Cryptography.KeySizes">
+      <summary>Determines the set of valid key sizes for the symmetric cryptographic algorithms.</summary>
+    </member>
+    <member name="M:System.Security.Cryptography.KeySizes.#ctor(System.Int32,System.Int32,System.Int32)">
+      <summary>Initializes a new instance of the <see cref="T:System.Security.Cryptography.KeySizes"></see> class with the specified key values.</summary>
+      <param name="minSize">The minimum valid key size.</param>
+      <param name="maxSize">The maximum valid key size.</param>
+      <param name="skipSize">The interval between valid key sizes.</param>
+    </member>
+    <member name="P:System.Security.Cryptography.KeySizes.MaxSize">
+      <summary>Specifies the maximum key size in bits.</summary>
+      <returns>The maximum key size in bits.</returns>
+    </member>
+    <member name="P:System.Security.Cryptography.KeySizes.MinSize">
+      <summary>Specifies the minimum key size in bits.</summary>
+      <returns>The minimum key size in bits.</returns>
+    </member>
+    <member name="P:System.Security.Cryptography.KeySizes.SkipSize">
+      <summary>Specifies the interval between valid key sizes in bits.</summary>
+      <returns>The interval between valid key sizes in bits.</returns>
+    </member>
+    <member name="T:System.Security.Cryptography.PaddingMode">
+      <summary>Specifies the type of padding to apply when the message data block is shorter than the full number of bytes needed for a cryptographic operation.</summary>
+    </member>
+    <member name="F:System.Security.Cryptography.PaddingMode.ANSIX923">
+      <summary>The ANSIX923 padding string consists of a sequence of bytes filled with zeros before the length.</summary>
+      <returns></returns>
+    </member>
+    <member name="F:System.Security.Cryptography.PaddingMode.ISO10126">
+      <summary>The ISO10126 padding string consists of random data before the length.</summary>
+      <returns></returns>
+    </member>
+    <member name="F:System.Security.Cryptography.PaddingMode.None">
+      <summary>No padding is done.</summary>
+      <returns></returns>
+    </member>
+    <member name="F:System.Security.Cryptography.PaddingMode.PKCS7">
+      <summary>The PKCS #7 padding string consists of a sequence of bytes, each of which is equal to the total number of padding bytes added.</summary>
+      <returns></returns>
+    </member>
+    <member name="F:System.Security.Cryptography.PaddingMode.Zeros">
+      <summary>The padding string consists of bytes set to zero.</summary>
+      <returns></returns>
+    </member>
+    <member name="T:System.Security.Cryptography.SymmetricAlgorithm">
+      <summary>Represents the abstract base class from which all implementations of symmetric algorithms must inherit.</summary>
+    </member>
+    <member name="M:System.Security.Cryptography.SymmetricAlgorithm.#ctor">
+      <summary>Initializes a new instance of the <see cref="T:System.Security.Cryptography.SymmetricAlgorithm"></see> class.</summary>
+      <exception cref="T:System.Security.Cryptography.CryptographicException">The implementation of the class derived from the symmetric algorithm is not valid.</exception>
+    </member>
+    <member name="P:System.Security.Cryptography.SymmetricAlgorithm.BlockSize">
+      <summary>Gets or sets the block size, in bits, of the cryptographic operation.</summary>
+      <returns>The block size, in bits.</returns>
+      <exception cref="T:System.Security.Cryptography.CryptographicException">The block size is invalid.</exception>
+    </member>
+    <member name="F:System.Security.Cryptography.SymmetricAlgorithm.BlockSizeValue">
+      <summary>Represents the block size, in bits, of the cryptographic operation.</summary>
+      <returns></returns>
+    </member>
+    <member name="M:System.Security.Cryptography.SymmetricAlgorithm.Clear">
+      <summary>Releases all resources used by the <see cref="T:System.Security.Cryptography.SymmetricAlgorithm"></see> class.</summary>
+    </member>
+    <member name="M:System.Security.Cryptography.SymmetricAlgorithm.Create">
+      <summary>Creates a default cryptographic object used to perform the symmetric algorithm.</summary>
+      <returns>A default cryptographic object used to perform the symmetric algorithm.</returns>
+    </member>
+    <member name="M:System.Security.Cryptography.SymmetricAlgorithm.Create(System.String)">
+      <summary>Creates the specified cryptographic object used to perform the symmetric algorithm.</summary>
+      <param name="algName">The name of the specific implementation of the <see cref="T:System.Security.Cryptography.SymmetricAlgorithm"></see> class to use.</param>
+      <returns>A cryptographic object used to perform the symmetric algorithm.</returns>
+    </member>
+    <member name="M:System.Security.Cryptography.SymmetricAlgorithm.CreateDecryptor">
+      <summary>Creates a symmetric decryptor object with the current <see cref="P:System.Security.Cryptography.SymmetricAlgorithm.Key"></see> property and initialization vector (<see cref="P:System.Security.Cryptography.SymmetricAlgorithm.IV"></see>).</summary>
+      <returns>A symmetric decryptor object.</returns>
+    </member>
+    <member name="M:System.Security.Cryptography.SymmetricAlgorithm.CreateDecryptor(System.Byte[],System.Byte[])">
+      <summary>When overridden in a derived class, creates a symmetric decryptor object with the specified <see cref="P:System.Security.Cryptography.SymmetricAlgorithm.Key"></see> property and initialization vector (<see cref="P:System.Security.Cryptography.SymmetricAlgorithm.IV"></see>).</summary>
+      <param name="rgbKey">The secret key to use for the symmetric algorithm.</param>
+      <param name="rgbIV">The initialization vector to use for the symmetric algorithm.</param>
+      <returns>A symmetric decryptor object.</returns>
+    </member>
+    <member name="M:System.Security.Cryptography.SymmetricAlgorithm.CreateEncryptor">
+      <summary>Creates a symmetric encryptor object with the current <see cref="P:System.Security.Cryptography.SymmetricAlgorithm.Key"></see> property and initialization vector (<see cref="P:System.Security.Cryptography.SymmetricAlgorithm.IV"></see>).</summary>
+      <returns>A symmetric encryptor object.</returns>
+    </member>
+    <member name="M:System.Security.Cryptography.SymmetricAlgorithm.CreateEncryptor(System.Byte[],System.Byte[])">
+      <summary>When overridden in a derived class, creates a symmetric encryptor object with the specified <see cref="P:System.Security.Cryptography.SymmetricAlgorithm.Key"></see> property and initialization vector (<see cref="P:System.Security.Cryptography.SymmetricAlgorithm.IV"></see>).</summary>
+      <param name="rgbKey">The secret key to use for the symmetric algorithm.</param>
+      <param name="rgbIV">The initialization vector to use for the symmetric algorithm.</param>
+      <returns>A symmetric encryptor object.</returns>
+    </member>
+    <member name="M:System.Security.Cryptography.SymmetricAlgorithm.Dispose">
+      <summary>Releases all resources used by the current instance of the <see cref="T:System.Security.Cryptography.SymmetricAlgorithm"></see> class.</summary>
+    </member>
+    <member name="M:System.Security.Cryptography.SymmetricAlgorithm.Dispose(System.Boolean)">
+      <summary>Releases the unmanaged resources used by the <see cref="T:System.Security.Cryptography.SymmetricAlgorithm"></see> and optionally releases the managed resources.</summary>
+      <param name="disposing">true to release both managed and unmanaged resources; false to release only unmanaged resources.</param>
+    </member>
+    <member name="P:System.Security.Cryptography.SymmetricAlgorithm.FeedbackSize">
+      <summary>Gets or sets the feedback size, in bits, of the cryptographic operation.</summary>
+      <returns>The feedback size in bits.</returns>
+      <exception cref="T:System.Security.Cryptography.CryptographicException">The feedback size is larger than the block size.</exception>
+    </member>
+    <member name="F:System.Security.Cryptography.SymmetricAlgorithm.FeedbackSizeValue">
+      <summary>Represents the feedback size, in bits, of the cryptographic operation.</summary>
+      <returns></returns>
+    </member>
+    <member name="M:System.Security.Cryptography.SymmetricAlgorithm.GenerateIV">
+      <summary>When overridden in a derived class, generates a random initialization vector (<see cref="P:System.Security.Cryptography.SymmetricAlgorithm.IV"></see>) to use for the algorithm.</summary>
+    </member>
+    <member name="M:System.Security.Cryptography.SymmetricAlgorithm.GenerateKey">
+      <summary>When overridden in a derived class, generates a random key (<see cref="P:System.Security.Cryptography.SymmetricAlgorithm.Key"></see>) to use for the algorithm.</summary>
+    </member>
+    <member name="P:System.Security.Cryptography.SymmetricAlgorithm.IV">
+      <summary>Gets or sets the initialization vector (<see cref="P:System.Security.Cryptography.SymmetricAlgorithm.IV"></see>) for the symmetric algorithm.</summary>
+      <returns>The initialization vector.</returns>
+      <exception cref="T:System.ArgumentNullException">An attempt was made to set the initialization vector to null.</exception>
+      <exception cref="T:System.Security.Cryptography.CryptographicException">An attempt was made to set the initialization vector to an invalid size.</exception>
+    </member>
+    <member name="F:System.Security.Cryptography.SymmetricAlgorithm.IVValue">
+      <summary>Represents the initialization vector (<see cref="P:System.Security.Cryptography.SymmetricAlgorithm.IV"></see>) for the symmetric algorithm.</summary>
+      <returns></returns>
+    </member>
+    <member name="P:System.Security.Cryptography.SymmetricAlgorithm.Key">
+      <summary>Gets or sets the secret key for the symmetric algorithm.</summary>
+      <returns>The secret key to use for the symmetric algorithm.</returns>
+      <exception cref="T:System.ArgumentNullException">An attempt was made to set the key to null.</exception>
+      <exception cref="T:System.Security.Cryptography.CryptographicException">The key size is invalid.</exception>
+    </member>
+    <member name="P:System.Security.Cryptography.SymmetricAlgorithm.KeySize">
+      <summary>Gets or sets the size, in bits, of the secret key used by the symmetric algorithm.</summary>
+      <returns>The size, in bits, of the secret key used by the symmetric algorithm.</returns>
+      <exception cref="T:System.Security.Cryptography.CryptographicException">The key size is not valid.</exception>
+    </member>
+    <member name="F:System.Security.Cryptography.SymmetricAlgorithm.KeySizeValue">
+      <summary>Represents the size, in bits, of the secret key used by the symmetric algorithm.</summary>
+      <returns></returns>
+    </member>
+    <member name="F:System.Security.Cryptography.SymmetricAlgorithm.KeyValue">
+      <summary>Represents the secret key for the symmetric algorithm.</summary>
+      <returns></returns>
+    </member>
+    <member name="P:System.Security.Cryptography.SymmetricAlgorithm.LegalBlockSizes">
+      <summary>Gets the block sizes, in bits, that are supported by the symmetric algorithm.</summary>
+      <returns>An array that contains the block sizes supported by the algorithm.</returns>
+    </member>
+    <member name="F:System.Security.Cryptography.SymmetricAlgorithm.LegalBlockSizesValue">
+      <summary>Specifies the block sizes, in bits, that are supported by the symmetric algorithm.</summary>
+      <returns></returns>
+    </member>
+    <member name="P:System.Security.Cryptography.SymmetricAlgorithm.LegalKeySizes">
+      <summary>Gets the key sizes, in bits, that are supported by the symmetric algorithm.</summary>
+      <returns>An array that contains the key sizes supported by the algorithm.</returns>
+    </member>
+    <member name="F:System.Security.Cryptography.SymmetricAlgorithm.LegalKeySizesValue">
+      <summary>Specifies the key sizes, in bits, that are supported by the symmetric algorithm.</summary>
+      <returns></returns>
+    </member>
+    <member name="P:System.Security.Cryptography.SymmetricAlgorithm.Mode">
+      <summary>Gets or sets the mode for operation of the symmetric algorithm.</summary>
+      <returns>The mode for operation of the symmetric algorithm. The default is <see cref="System.Security.Cryptography.CipherMode.CBC"></see>.</returns>
+      <exception cref="T:System.Security.Cryptography.CryptographicException">The cipher mode is not one of the <see cref="System.Security.Cryptography.CipherMode"></see> values.</exception>
+    </member>
+    <member name="F:System.Security.Cryptography.SymmetricAlgorithm.ModeValue">
+      <summary>Represents the cipher mode used in the symmetric algorithm.</summary>
+      <returns></returns>
+    </member>
+    <member name="P:System.Security.Cryptography.SymmetricAlgorithm.Padding">
+      <summary>Gets or sets the padding mode used in the symmetric algorithm.</summary>
+      <returns>The padding mode used in the symmetric algorithm. The default is <see cref="System.Security.Cryptography.PaddingMode.PKCS7"></see>.</returns>
+      <exception cref="T:System.Security.Cryptography.CryptographicException">The padding mode is not one of the <see cref="System.Security.Cryptography.PaddingMode"></see> values.</exception>
+    </member>
+    <member name="F:System.Security.Cryptography.SymmetricAlgorithm.PaddingValue">
+      <summary>Represents the padding mode used in the symmetric algorithm.</summary>
+      <returns></returns>
+    </member>
+    <member name="M:System.Security.Cryptography.SymmetricAlgorithm.ValidKeySize(System.Int32)">
+      <summary>Determines whether the specified key size is valid for the current algorithm.</summary>
+      <param name="bitLength">The length, in bits, to check for a valid key size.</param>
+      <returns>true if the specified key size is valid for the current algorithm; otherwise, false.</returns>
+    </member>
   </members>
-</doc></span>
+</doc>

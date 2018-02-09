@@ -1,5 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?><span>
-<doc>
+﻿<?xml version="1.0" encoding="utf-8"?><doc>
   <assembly>
     <name>System.Text.Encoding.CodePages</name>
   </assembly>
@@ -12,4 +11,4 @@
       <returns>An encoding provider that allows access to encodings not supported on the current .NET Framework platform.</returns>
     </member>
   </members>
-</doc></span>
+</doc>

@@ -1,5 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?><span>
-<doc>
+﻿<?xml version="1.0" encoding="utf-8"?><doc>
   <assembly>
     <name>System.Runtime.Loader</name>
   </assembly>
@@ -65,7 +64,7 @@
       <returns></returns>
     </member>
     <member name="E:System.Runtime.Loader.AssemblyLoadContext.Resolving">
-      <returns></returns>
+      
     </member>
     <member name="M:System.Runtime.Loader.AssemblyLoadContext.SetProfileOptimizationRoot(System.String)">
       <param name="directoryPath"></param>
@@ -74,7 +73,7 @@
       <param name="profile"></param>
     </member>
     <member name="E:System.Runtime.Loader.AssemblyLoadContext.Unloading">
-      <returns></returns>
+      
     </member>
   </members>
-</doc></span>
+</doc>

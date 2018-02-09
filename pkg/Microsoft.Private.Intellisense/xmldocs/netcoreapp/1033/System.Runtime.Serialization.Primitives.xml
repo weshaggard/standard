@@ -1,50 +1,8 @@
-﻿<?xml version="1.0" encoding="utf-8"?><span>
-<doc>
+﻿<?xml version="1.0" encoding="utf-8"?><doc>
   <assembly>
     <name>System.Runtime.Serialization.Primitives</name>
   </assembly>
   <members>
-    <member name="T:System.Runtime.Serialization.DataMemberAttribute">
-      <summary>When applied to the member of a type, specifies that the member is part of a data contract and is serializable by the <see cref="T:System.Runtime.Serialization.DataContractSerializer"></see>.</summary>
-    </member>
-    <member name="M:System.Runtime.Serialization.DataMemberAttribute.#ctor">
-      <summary>Initializes a new instance of the <see cref="T:System.Runtime.Serialization.DataMemberAttribute"></see> class.</summary>
-    </member>
-    <member name="P:System.Runtime.Serialization.DataMemberAttribute.EmitDefaultValue">
-      <summary>Gets or sets a value that specifies whether to serialize the default value for a field or property being serialized.</summary>
-      <returns>true if the default value for a member should be generated in the serialization stream; otherwise, false. The default is true.</returns>
-    </member>
-    <member name="P:System.Runtime.Serialization.DataMemberAttribute.IsNameSetExplicitly">
-      <summary>Gets whether <see cref="P:System.Runtime.Serialization.DataMemberAttribute.Name"></see> has been explicitly set.</summary>
-      <returns>Returns true if the name has been explicitly set; otherwise, false.</returns>
-    </member>
-    <member name="P:System.Runtime.Serialization.DataMemberAttribute.IsRequired">
-      <summary>Gets or sets a value that instructs the serialization engine that the member must be present when reading or deserializing.</summary>
-      <returns>true, if the member is required; otherwise, false.</returns>
-      <exception cref="T:System.Runtime.Serialization.SerializationException">the member is not present.</exception>
-    </member>
-    <member name="P:System.Runtime.Serialization.DataMemberAttribute.Name">
-      <summary>Gets or sets a data member name.</summary>
-      <returns>The name of the data member. The default is the name of the target that the attribute is applied to.</returns>
-    </member>
-    <member name="P:System.Runtime.Serialization.DataMemberAttribute.Order">
-      <summary>Gets or sets the order of serialization and deserialization of a member.</summary>
-      <returns>The numeric order of serialization or deserialization.</returns>
-    </member>
-    <member name="T:System.Runtime.Serialization.EnumMemberAttribute">
-      <summary>Specifies that the field is an enumeration member and should be serialized.</summary>
-    </member>
-    <member name="M:System.Runtime.Serialization.EnumMemberAttribute.#ctor">
-      <summary>Initializes a new instance of the <see cref="T:System.Runtime.Serialization.EnumMemberAttribute"></see> class.</summary>
-    </member>
-    <member name="P:System.Runtime.Serialization.EnumMemberAttribute.IsValueSetExplicitly">
-      <summary>Gets whether the <see cref="P:System.Runtime.Serialization.EnumMemberAttribute.Value"></see> has been explicitly set.</summary>
-      <returns>true if the value has been explicitly set; otherwise, false.</returns>
-    </member>
-    <member name="P:System.Runtime.Serialization.EnumMemberAttribute.Value">
-      <summary>Gets or sets the value associated with the enumeration member the attribute is applied to.</summary>
-      <returns>The value associated with the enumeration member.</returns>
-    </member>
     <member name="T:System.Runtime.Serialization.IgnoreDataMemberAttribute">
       <summary>When applied to the member of a type, specifies that the member is not part of a data contract and is not serialized.</summary>
     </member>
@@ -72,21 +30,24 @@
       <param name="innerException">The original <see cref="T:System.Exception"></see>.</param>
     </member>
     <member name="T:System.Runtime.Serialization.ISerializationSurrogateProvider">
-      
+      <summary>Provides the methods needed to construct a serialization surrogate that extends the <see cref="T:System.Runtime.Serialization.DataContractSerializer"></see>. A serialization surrogate is used during serialization and deserialization to substitute one type for another.</summary>
     </member>
     <member name="M:System.Runtime.Serialization.ISerializationSurrogateProvider.GetDeserializedObject(System.Object,System.Type)">
-      <param name="obj"></param>
-      <param name="targetType"></param>
-      <returns></returns>
+      <summary>During deserialization, returns an object that is a substitute for the specified object.</summary>
+      <param name="obj">The deserialized object to be substituted.</param>
+      <param name="targetType">The <see cref="T:System.Type"></see> that the substituted object should be assigned to.</param>
+      <returns>The substituted deserialized object.</returns>
     </member>
     <member name="M:System.Runtime.Serialization.ISerializationSurrogateProvider.GetObjectToSerialize(System.Object,System.Type)">
-      <param name="obj"></param>
-      <param name="targetType"></param>
-      <returns></returns>
+      <summary>During serialization, returns an object that substitutes the specified object.</summary>
+      <param name="obj">The object to substitute.</param>
+      <param name="targetType">The <see cref="T:System.Type"></see> that the substituted object should be assigned to.</param>
+      <returns>The substituted object that will be serialized.</returns>
     </member>
     <member name="M:System.Runtime.Serialization.ISerializationSurrogateProvider.GetSurrogateType(System.Type)">
-      <param name="type"></param>
-      <returns></returns>
+      <summary>During serialization, deserialization, and schema import and export, returns a data contract type that substitutes the specified type.</summary>
+      <param name="type">The type to substitute.</param>
+      <returns>The <see cref="System.Type"></see> to substitute for the <paramref name="type">type</paramref> value.</returns>
     </member>
     <member name="T:System.Runtime.Serialization.KnownTypeAttribute">
       <summary>Specifies types that should be recognized by the <see cref="T:System.Runtime.Serialization.DataContractSerializer"></see> when serializing or deserializing a given type.</summary>
@@ -101,11 +62,11 @@
     </member>
     <member name="P:System.Runtime.Serialization.KnownTypeAttribute.MethodName">
       <summary>Gets the name of a method that will return a list of types that should be recognized during serialization or deserialization.</summary>
-      <returns>A <see cref="T:System.String"></see> that contains the name of the method on the type defined by the <see cref="T:System.Runtime.Serialization.KnownTypeAttribute"></see> class.</returns>
+      <returns>A <see cref="System.String"></see> that contains the name of the method on the type defined by the <see cref="System.Runtime.Serialization.KnownTypeAttribute"></see> class.</returns>
     </member>
     <member name="P:System.Runtime.Serialization.KnownTypeAttribute.Type">
       <summary>Gets the type that should be recognized during serialization or deserialization by the <see cref="T:System.Runtime.Serialization.DataContractSerializer"></see>.</summary>
-      <returns>The <see cref="T:System.Type"></see> that is used during serialization or deserialization.</returns>
+      <returns>The <see cref="System.Type"></see> that is used during serialization or deserialization.</returns>
     </member>
     <member name="T:System.Runtime.Serialization.OnDeserializedAttribute">
       <summary>When applied to a method, specifies that the method is called immediately after deserialization of an object in an object graph. The order of deserialization relative to other objects in the graph is non-deterministic.</summary>
@@ -152,11 +113,11 @@
     <member name="M:System.Runtime.Serialization.StreamingContext.Equals(System.Object)">
       <summary>Determines whether two <see cref="T:System.Runtime.Serialization.StreamingContext"></see> instances contain the same values.</summary>
       <param name="obj">An object to compare with the current instance.</param>
-      <returns>true if the specified object is an instance of <see cref="T:System.Runtime.Serialization.StreamingContext"></see> and equals the value of the current instance; otherwise, false.</returns>
+      <returns>true if the specified object is an instance of <see cref="System.Runtime.Serialization.StreamingContext"></see> and equals the value of the current instance; otherwise, false.</returns>
     </member>
     <member name="M:System.Runtime.Serialization.StreamingContext.GetHashCode">
       <summary>Returns a hash code of this object.</summary>
-      <returns>The <see cref="T:System.Runtime.Serialization.StreamingContextStates"></see> value that contains the source or destination of the serialization for this <see cref="T:System.Runtime.Serialization.StreamingContext"></see>.</returns>
+      <returns>The <see cref="System.Runtime.Serialization.StreamingContextStates"></see> value that contains the source or destination of the serialization for this <see cref="System.Runtime.Serialization.StreamingContext"></see>.</returns>
     </member>
     <member name="T:System.Runtime.Serialization.CollectionDataContractAttribute">
       <summary>When applied to a collection type, enables custom specification of the collection item elements. This attribute can be applied only to types that are recognized by the <see cref="T:System.Runtime.Serialization.DataContractSerializer"></see> as valid, serializable collections.</summary>
@@ -257,5 +218,46 @@
       <summary>Gets or sets the namespace for the data contract for the type.</summary>
       <returns>The namespace of the contract.</returns>
     </member>
+    <member name="T:System.Runtime.Serialization.DataMemberAttribute">
+      <summary>When applied to the member of a type, specifies that the member is part of a data contract and is serializable by the <see cref="T:System.Runtime.Serialization.DataContractSerializer"></see>.</summary>
+    </member>
+    <member name="M:System.Runtime.Serialization.DataMemberAttribute.#ctor">
+      <summary>Initializes a new instance of the <see cref="T:System.Runtime.Serialization.DataMemberAttribute"></see> class.</summary>
+    </member>
+    <member name="P:System.Runtime.Serialization.DataMemberAttribute.EmitDefaultValue">
+      <summary>Gets or sets a value that specifies whether to serialize the default value for a field or property being serialized.</summary>
+      <returns>true if the default value for a member should be generated in the serialization stream; otherwise, false. The default is true.</returns>
+    </member>
+    <member name="P:System.Runtime.Serialization.DataMemberAttribute.IsNameSetExplicitly">
+      <summary>Gets whether <see cref="P:System.Runtime.Serialization.DataMemberAttribute.Name"></see> has been explicitly set.</summary>
+      <returns>Returns true if the name has been explicitly set; otherwise, false.</returns>
+    </member>
+    <member name="P:System.Runtime.Serialization.DataMemberAttribute.IsRequired">
+      <summary>Gets or sets a value that instructs the serialization engine that the member must be present when reading or deserializing.</summary>
+      <returns>true, if the member is required; otherwise, false.</returns>
+      <exception cref="T:System.Runtime.Serialization.SerializationException">the member is not present.</exception>
+    </member>
+    <member name="P:System.Runtime.Serialization.DataMemberAttribute.Name">
+      <summary>Gets or sets a data member name.</summary>
+      <returns>The name of the data member. The default is the name of the target that the attribute is applied to.</returns>
+    </member>
+    <member name="P:System.Runtime.Serialization.DataMemberAttribute.Order">
+      <summary>Gets or sets the order of serialization and deserialization of a member.</summary>
+      <returns>The numeric order of serialization or deserialization.</returns>
+    </member>
+    <member name="T:System.Runtime.Serialization.EnumMemberAttribute">
+      <summary>Specifies that the field is an enumeration member and should be serialized.</summary>
+    </member>
+    <member name="M:System.Runtime.Serialization.EnumMemberAttribute.#ctor">
+      <summary>Initializes a new instance of the <see cref="T:System.Runtime.Serialization.EnumMemberAttribute"></see> class.</summary>
+    </member>
+    <member name="P:System.Runtime.Serialization.EnumMemberAttribute.IsValueSetExplicitly">
+      <summary>Gets whether the <see cref="P:System.Runtime.Serialization.EnumMemberAttribute.Value"></see> has been explicitly set.</summary>
+      <returns>true if the value has been explicitly set; otherwise, false.</returns>
+    </member>
+    <member name="P:System.Runtime.Serialization.EnumMemberAttribute.Value">
+      <summary>Gets or sets the value associated with the enumeration member the attribute is applied to.</summary>
+      <returns>The value associated with the enumeration member.</returns>
+    </member>
   </members>
-</doc></span>
+</doc>

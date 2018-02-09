@@ -1,5 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?><span>
-<doc>
+﻿<?xml version="1.0" encoding="utf-8"?><doc>
   <assembly>
     <name>System.IO.FileSystem.DriveInfo</name>
   </assembly>
@@ -9,9 +8,11 @@
     </member>
     <member name="M:System.IO.DriveInfo.#ctor(System.String)">
       <summary>Provides access to information on the specified drive.</summary>
-      <param name="driveName">A valid drive path or drive letter. This can be either uppercase or lowercase, 'a' to 'z'. A null value is not valid.</param>
+      <param name="driveName">A valid drive path or drive letter. This can be either uppercase or lowercase, &amp;#39;a&amp;#39; to &amp;#39;z&amp;#39;. A null value is not valid.</param>
       <exception cref="T:System.ArgumentNullException">The drive letter cannot be null.</exception>
-      <exception cref="T:System.ArgumentException">The first letter of <paramref name="driveName">driveName</paramref> is not an uppercase or lowercase letter from 'a' to 'z'.   -or-  <paramref name="driveName">driveName</paramref> does not refer to a valid drive.</exception>
+      <exception cref="T:System.ArgumentException">The first letter of <paramref name="driveName">driveName</paramref> is not an uppercase or lowercase letter from &amp;#39;a&amp;#39; to &amp;#39;z&amp;#39;.  
+ -or-  
+ <paramref name="driveName">driveName</paramref> does not refer to a valid drive.</exception>
     </member>
     <member name="P:System.IO.DriveInfo.AvailableFreeSpace">
       <summary>Indicates the amount of available free space on a drive, in bytes.</summary>
@@ -32,7 +33,7 @@
     </member>
     <member name="M:System.IO.DriveInfo.GetDrives">
       <summary>Retrieves the drive names of all logical drives on a computer.</summary>
-      <returns>An array of type <see cref="T:System.IO.DriveInfo"></see> that represents the logical drives on a computer.</returns>
+      <returns>An array of type <see cref="System.IO.DriveInfo"></see> that represents the logical drives on a computer.</returns>
       <exception cref="T:System.IO.IOException">An I/O error occurred (for example, a disk error or a drive was not ready).</exception>
       <exception cref="T:System.UnauthorizedAccessException">The caller does not have the required permission.</exception>
     </member>
@@ -72,7 +73,9 @@
       <exception cref="T:System.IO.IOException">An I/O error occurred (for example, a disk error or a drive was not ready).</exception>
       <exception cref="T:System.IO.DriveNotFoundException">The drive is not mapped or does not exist.</exception>
       <exception cref="T:System.Security.SecurityException">The caller does not have the required permission.</exception>
-      <exception cref="T:System.UnauthorizedAccessException">The volume label is being set on a network or CD-ROM drive.   -or-   Access to the drive information is denied.</exception>
+      <exception cref="T:System.UnauthorizedAccessException">The volume label is being set on a network or CD-ROM drive.  
+ -or-  
+ Access to the drive information is denied.</exception>
     </member>
     <member name="M:System.IO.DriveInfo.System#Runtime#Serialization#ISerializable#GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
       <summary>Populates a <see cref="T:System.Runtime.Serialization.SerializationInfo"></see> object with the data needed to serialize the target object.</summary>
@@ -131,4 +134,4 @@
       <returns></returns>
     </member>
   </members>
-</doc></span>
+</doc>

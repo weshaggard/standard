@@ -1,48 +1,8 @@
-﻿<?xml version="1.0" encoding="utf-8"?><span>
-<doc>
+﻿<?xml version="1.0" encoding="utf-8"?><doc>
   <assembly>
     <name>System.IO.Packaging</name>
   </assembly>
   <members>
-    <member name="T:System.IO.FileFormatException">
-      <summary>The exception that is thrown when an input file or a data stream that is supposed to conform to a certain file format specification is malformed.</summary>
-    </member>
-    <member name="M:System.IO.FileFormatException.#ctor">
-      <summary>Creates a new instance of the <see cref="T:System.IO.FileFormatException"></see> class.</summary>
-    </member>
-    <member name="M:System.IO.FileFormatException.#ctor(System.String)">
-      <summary>Creates a new instance of the <see cref="T:System.IO.FileFormatException"></see> class with a specified error message.</summary>
-      <param name="message">A <see cref="T:System.String"></see> value that represents the error message.</param>
-    </member>
-    <member name="M:System.IO.FileFormatException.#ctor(System.Uri)">
-      <summary>Creates a new instance of the <see cref="T:System.IO.FileFormatException"></see> class with a source URI value.</summary>
-      <param name="sourceUri">The <see cref="T:System.Uri"></see> value of the file that caused this error.</param>
-    </member>
-    <member name="M:System.IO.FileFormatException.#ctor(System.String,System.Exception)">
-      <summary>Creates a new instance of the <see cref="T:System.IO.FileFormatException"></see> class with a specified error message and exception type.</summary>
-      <param name="message">A <see cref="T:System.String"></see> value that represents the error message.</param>
-      <param name="innerException">The value of the <see cref="P:System.Exception.InnerException"></see> property, which represents the cause of the current exception.</param>
-    </member>
-    <member name="M:System.IO.FileFormatException.#ctor(System.Uri,System.Exception)">
-      <summary>Creates a new instance of the <see cref="T:System.IO.FileFormatException"></see> class with a source URI value and an exception type.</summary>
-      <param name="sourceUri">The <see cref="T:System.Uri"></see> value of the file that caused this error.</param>
-      <param name="innerException">The value of the <see cref="P:System.Exception.InnerException"></see> property, which represents the cause of the current exception.</param>
-    </member>
-    <member name="M:System.IO.FileFormatException.#ctor(System.Uri,System.String)">
-      <summary>Creates a new instance of the <see cref="T:System.IO.FileFormatException"></see> class with a source URI value and a specified error message.</summary>
-      <param name="sourceUri">The <see cref="T:System.Uri"></see> value of the file that caused this error.</param>
-      <param name="message">A <see cref="T:System.String"></see> value that represents the error message.</param>
-    </member>
-    <member name="M:System.IO.FileFormatException.#ctor(System.Uri,System.String,System.Exception)">
-      <summary>Creates a new instance of the <see cref="T:System.IO.FileFormatException"></see> class with a source URI value, a specified error message, and an exception type.</summary>
-      <param name="sourceUri">The <see cref="T:System.Uri"></see> value of the file that caused this error.</param>
-      <param name="message">A <see cref="T:System.String"></see> value that represents the error message.</param>
-      <param name="innerException">The value of the <see cref="P:System.Exception.InnerException"></see> property, which represents the cause of the current exception.</param>
-    </member>
-    <member name="P:System.IO.FileFormatException.SourceUri">
-      <summary>Gets the name of a file that caused the <see cref="T:System.IO.FileFormatException"></see>.</summary>
-      <returns>A <see cref="T:System.Uri"></see> that represents the name the file that caused the exception.</returns>
-    </member>
     <member name="T:System.IO.Packaging.CompressionOption">
       <summary>Specifies the compression level for content that is stored in a <see cref="T:System.IO.Packaging.PackagePart"></see>.</summary>
     </member>
@@ -94,9 +54,9 @@
       <param name="contentType">The content type of the data stream.</param>
       <returns>The new created part.</returns>
       <exception cref="T:System.ArgumentNullException"><paramref name="partUri">partUri</paramref> or <paramref name="contentType">contentType</paramref> is null.</exception>
-      <exception cref="T:System.ArgumentException"><paramref name="partUri">partUri</paramref> is not a valid <see cref="T:System.IO.Packaging.PackagePart"></see> URI.</exception>
+      <exception cref="T:System.ArgumentException"><paramref name="partUri">partUri</paramref> is not a valid <see cref="System.IO.Packaging.PackagePart"></see> URI.</exception>
       <exception cref="T:System.InvalidOperationException">A part with the specified <paramref name="partUri">partUri</paramref> is already present in the package.</exception>
-      <exception cref="T:System.ObjectDisposedException">The package is not open (<see cref="M:System.IO.Packaging.Package.Dispose(System.Boolean)"></see> or <see cref="M:System.IO.Packaging.Package.Close"></see> has been called).</exception>
+      <exception cref="T:System.ObjectDisposedException">The package is not open (<see cref="System.IO.Packaging.Package.Dispose(System.Boolean)"></see> or <see cref="System.IO.Packaging.Package.Close"></see> has been called).</exception>
       <exception cref="T:System.IO.IOException">The package is read-only (a new part cannot be added).</exception>
     </member>
     <member name="M:System.IO.Packaging.Package.CreatePart(System.Uri,System.String,System.IO.Packaging.CompressionOption)">
@@ -106,10 +66,10 @@
       <param name="compressionOption">The compression option for the data stream, <see cref="F:System.IO.Packaging.CompressionOption.NotCompressed"></see> or <see cref="F:System.IO.Packaging.CompressionOption.Normal"></see> compression.</param>
       <returns>The new created part.</returns>
       <exception cref="T:System.ArgumentNullException"><paramref name="partUri">partUri</paramref> or <paramref name="contentType">contentType</paramref> is null.</exception>
-      <exception cref="T:System.ArgumentException"><paramref name="partUri">partUri</paramref> is not a valid <see cref="T:System.IO.Packaging.PackagePart"></see> uniform resource identifier (URI).</exception>
+      <exception cref="T:System.ArgumentException"><paramref name="partUri">partUri</paramref> is not a valid <see cref="System.IO.Packaging.PackagePart"></see> uniform resource identifier (URI).</exception>
       <exception cref="T:System.InvalidOperationException">A part with the specified <paramref name="partUri">partUri</paramref> is already present in the package.</exception>
       <exception cref="T:System.ArgumentOutOfRangeException">The <paramref name="compressionOption">compressionOption</paramref> value is not valid.</exception>
-      <exception cref="T:System.ObjectDisposedException">The package is not open (<see cref="M:System.IO.Packaging.Package.Dispose(System.Boolean)"></see> or <see cref="M:System.IO.Packaging.Package.Close"></see> has been called).</exception>
+      <exception cref="T:System.ObjectDisposedException">The package is not open (<see cref="System.IO.Packaging.Package.Dispose(System.Boolean)"></see> or <see cref="System.IO.Packaging.Package.Close"></see> has been called).</exception>
       <exception cref="T:System.IO.IOException">The package is read-only (a new part cannot be added).</exception>
     </member>
     <member name="M:System.IO.Packaging.Package.CreatePartCore(System.Uri,System.String,System.IO.Packaging.CompressionOption)">
@@ -126,9 +86,9 @@
       <param name="relationshipType">A URI that uniquely defines the role of the relationship.</param>
       <returns>The package-level relationship to the specified part.</returns>
       <exception cref="T:System.ArgumentNullException"><paramref name="targetUri">targetUri</paramref> or <paramref name="relationshipType">relationshipType</paramref> is null.</exception>
-      <exception cref="T:System.ArgumentException">The <paramref name="targetUri">targetUri</paramref> part is a <see cref="T:System.IO.Packaging.PackageRelationship"></see>, or <paramref name="targetMode">targetMode</paramref> is <see cref="F:System.IO.Packaging.TargetMode.Internal"></see> and <paramref name="targetUri">targetUri</paramref> is an absolute URI.</exception>
+      <exception cref="T:System.ArgumentException">The <paramref name="targetUri">targetUri</paramref> part is a <see cref="System.IO.Packaging.PackageRelationship"></see>, or <paramref name="targetMode">targetMode</paramref> is <see cref="System.IO.Packaging.TargetMode.Internal"></see> and <paramref name="targetUri">targetUri</paramref> is an absolute URI.</exception>
       <exception cref="T:System.ArgumentOutOfRangeException">The value for <paramref name="targetMode">targetMode</paramref> is not valid.</exception>
-      <exception cref="T:System.ObjectDisposedException">The package is not open (<see cref="M:System.IO.Packaging.Package.Dispose(System.Boolean)"></see> or <see cref="M:System.IO.Packaging.Package.Close"></see> has been called).</exception>
+      <exception cref="T:System.ObjectDisposedException">The package is not open (<see cref="System.IO.Packaging.Package.Dispose(System.Boolean)"></see> or <see cref="System.IO.Packaging.Package.Close"></see> has been called).</exception>
       <exception cref="T:System.IO.IOException">The package is read-only.</exception>
     </member>
     <member name="M:System.IO.Packaging.Package.CreateRelationship(System.Uri,System.IO.Packaging.TargetMode,System.String,System.String)">
@@ -139,9 +99,9 @@
       <param name="id">A unique XML identifier.</param>
       <returns>The package-level relationship to the specified part.</returns>
       <exception cref="T:System.ArgumentNullException"><paramref name="targetUri">targetUri</paramref> or <paramref name="relationshipType">relationshipType</paramref> is null.</exception>
-      <exception cref="T:System.ArgumentException">The <paramref name="targetUri">targetUri</paramref> part is a <see cref="T:System.IO.Packaging.PackageRelationship"></see>, or <paramref name="targetMode">targetMode</paramref> is <see cref="F:System.IO.Packaging.TargetMode.Internal"></see> and <paramref name="targetUri">targetUri</paramref> is an absolute URI.</exception>
+      <exception cref="T:System.ArgumentException">The <paramref name="targetUri">targetUri</paramref> part is a <see cref="System.IO.Packaging.PackageRelationship"></see>, or <paramref name="targetMode">targetMode</paramref> is <see cref="System.IO.Packaging.TargetMode.Internal"></see> and <paramref name="targetUri">targetUri</paramref> is an absolute URI.</exception>
       <exception cref="T:System.ArgumentOutOfRangeException">The value for <paramref name="targetMode">targetMode</paramref> is not valid.</exception>
-      <exception cref="T:System.ObjectDisposedException">The package is not open (<see cref="M:System.IO.Packaging.Package.Dispose(System.Boolean)"></see> or <see cref="M:System.IO.Packaging.Package.Close"></see> has been called).</exception>
+      <exception cref="T:System.ObjectDisposedException">The package is not open (<see cref="System.IO.Packaging.Package.Dispose(System.Boolean)"></see> or <see cref="System.IO.Packaging.Package.Close"></see> has been called).</exception>
       <exception cref="T:System.IO.IOException">The package is read-only.</exception>
       <exception cref="T:System.Xml.XmlException"><paramref name="id">id</paramref> is not a valid XML identifier; or a part with the specified <paramref name="id">id</paramref> already occurs in the package.</exception>
     </member>
@@ -149,8 +109,8 @@
       <summary>Deletes a part with a given URI from the package.</summary>
       <param name="partUri">The URI of the part to delete.</param>
       <exception cref="T:System.ArgumentNullException"><paramref name="partUri">partUri</paramref> is null.</exception>
-      <exception cref="T:System.ArgumentException"><paramref name="partUri">partUri</paramref> is not a valid <see cref="T:System.IO.Packaging.PackagePart"></see> URI.</exception>
-      <exception cref="T:System.ObjectDisposedException">The package is not open (<see cref="M:System.IO.Packaging.Package.Dispose(System.Boolean)"></see> or <see cref="M:System.IO.Packaging.Package.Close"></see> has been called).</exception>
+      <exception cref="T:System.ArgumentException"><paramref name="partUri">partUri</paramref> is not a valid <see cref="System.IO.Packaging.PackagePart"></see> URI.</exception>
+      <exception cref="T:System.ObjectDisposedException">The package is not open (<see cref="System.IO.Packaging.Package.Dispose(System.Boolean)"></see> or <see cref="System.IO.Packaging.Package.Close"></see> has been called).</exception>
       <exception cref="T:System.IO.IOException">The package is read-only.</exception>
     </member>
     <member name="M:System.IO.Packaging.Package.DeletePartCore(System.Uri)">
@@ -161,7 +121,7 @@
       <summary>Deletes a package-level relationship.</summary>
       <param name="id">The <see cref="P:System.IO.Packaging.PackageRelationship.Id"></see> of the <see cref="T:System.IO.Packaging.PackageRelationship"></see> to delete.</param>
       <exception cref="T:System.ArgumentNullException"><paramref name="id">id</paramref> is null.</exception>
-      <exception cref="T:System.ObjectDisposedException">The package is not open (<see cref="M:System.IO.Packaging.Package.Dispose(System.Boolean)"></see> or <see cref="M:System.IO.Packaging.Package.Close"></see> has been called).</exception>
+      <exception cref="T:System.ObjectDisposedException">The package is not open (<see cref="System.IO.Packaging.Package.Dispose(System.Boolean)"></see> or <see cref="System.IO.Packaging.Package.Close"></see> has been called).</exception>
       <exception cref="T:System.IO.IOException">The package is read-only.</exception>
       <exception cref="T:System.Xml.XmlException"><paramref name="id">id</paramref> is not a valid XML identifier.</exception>
     </member>
@@ -171,12 +131,12 @@
     </member>
     <member name="P:System.IO.Packaging.Package.FileOpenAccess">
       <summary>Gets the file access setting for the package.</summary>
-      <returns>One of the <see cref="T:System.IO.FileAccess"></see> values: <see cref="F:System.IO.FileAccess.Read"></see>, <see cref="F:System.IO.FileAccess.Write"></see>, or <see cref="F:System.IO.FileAccess.ReadWrite"></see>.</returns>
-      <exception cref="T:System.ObjectDisposedException">The package is not open (<see cref="M:System.IO.Packaging.Package.Dispose(System.Boolean)"></see> or <see cref="M:System.IO.Packaging.Package.Close"></see> has been called).</exception>
+      <returns>One of the <see cref="System.IO.FileAccess"></see> values: <see cref="System.IO.FileAccess.Read"></see>, <see cref="System.IO.FileAccess.Write"></see>, or <see cref="System.IO.FileAccess.ReadWrite"></see>.</returns>
+      <exception cref="T:System.ObjectDisposedException">The package is not open (<see cref="System.IO.Packaging.Package.Dispose(System.Boolean)"></see> or <see cref="System.IO.Packaging.Package.Close"></see> has been called).</exception>
     </member>
     <member name="M:System.IO.Packaging.Package.Flush">
       <summary>Saves the contents of all parts and relationships that are contained in the package.</summary>
-      <exception cref="T:System.ObjectDisposedException">The package is not open (<see cref="M:System.IO.Packaging.Package.Dispose(System.Boolean)"></see> or <see cref="M:System.IO.Packaging.Package.Close"></see> has been called).</exception>
+      <exception cref="T:System.ObjectDisposedException">The package is not open (<see cref="System.IO.Packaging.Package.Dispose(System.Boolean)"></see> or <see cref="System.IO.Packaging.Package.Close"></see> has been called).</exception>
       <exception cref="T:System.IO.IOException">The package is read-only and cannot be modified.</exception>
     </member>
     <member name="M:System.IO.Packaging.Package.FlushCore">
@@ -187,9 +147,9 @@
       <param name="partUri">The uniform resource identifier (URI) of the part to return.</param>
       <returns>The part with the specified <paramref name="partUri">partUri</paramref>.</returns>
       <exception cref="T:System.ArgumentNullException"><paramref name="partUri">partUri</paramref> is null.</exception>
-      <exception cref="T:System.ArgumentException"><paramref name="partUri">partUri</paramref> is not a valid <see cref="T:System.IO.Packaging.PackagePart"></see> uniform resource identifier (URI).</exception>
+      <exception cref="T:System.ArgumentException"><paramref name="partUri">partUri</paramref> is not a valid <see cref="System.IO.Packaging.PackagePart"></see> uniform resource identifier (URI).</exception>
       <exception cref="T:System.InvalidOperationException">A part with the specified <paramref name="partUri">partUri</paramref> is not in the package.</exception>
-      <exception cref="T:System.ObjectDisposedException">The package is not open (<see cref="M:System.IO.Packaging.Package.Dispose(System.Boolean)"></see> or <see cref="M:System.IO.Packaging.Package.Close"></see> has been called).</exception>
+      <exception cref="T:System.ObjectDisposedException">The package is not open (<see cref="System.IO.Packaging.Package.Dispose(System.Boolean)"></see> or <see cref="System.IO.Packaging.Package.Close"></see> has been called).</exception>
       <exception cref="T:System.IO.IOException">The package is write-only.</exception>
     </member>
     <member name="M:System.IO.Packaging.Package.GetPartCore(System.Uri)">
@@ -199,8 +159,8 @@
     </member>
     <member name="M:System.IO.Packaging.Package.GetParts">
       <summary>Returns a collection of all the parts in the package.</summary>
-      <returns>A collection of all the <see cref="T:System.IO.Packaging.PackagePart"></see> elements that are contained in the package.</returns>
-      <exception cref="T:System.ObjectDisposedException">The package is not open (<see cref="M:System.IO.Packaging.Package.Dispose(System.Boolean)"></see> or <see cref="M:System.IO.Packaging.Package.Close"></see> has been called).</exception>
+      <returns>A collection of all the <see cref="System.IO.Packaging.PackagePart"></see> elements that are contained in the package.</returns>
+      <exception cref="T:System.ObjectDisposedException">The package is not open (<see cref="System.IO.Packaging.Package.Dispose(System.Boolean)"></see> or <see cref="System.IO.Packaging.Package.Close"></see> has been called).</exception>
       <exception cref="T:System.IO.IOException">The package is write-only.</exception>
     </member>
     <member name="M:System.IO.Packaging.Package.GetPartsCore">
@@ -214,13 +174,13 @@
       <exception cref="T:System.ArgumentNullException"><paramref name="id">id</paramref> is null.</exception>
       <exception cref="T:System.Xml.XmlException"><paramref name="id">id</paramref> is not a valid XML identifier.</exception>
       <exception cref="T:System.InvalidOperationException">A relationship with the specified <paramref name="id">id</paramref> is not in the package.</exception>
-      <exception cref="T:System.ObjectDisposedException">The package is not open (<see cref="M:System.IO.Packaging.Package.Dispose(System.Boolean)"></see> or <see cref="M:System.IO.Packaging.Package.Close"></see> has been called).</exception>
+      <exception cref="T:System.ObjectDisposedException">The package is not open (<see cref="System.IO.Packaging.Package.Dispose(System.Boolean)"></see> or <see cref="System.IO.Packaging.Package.Close"></see> has been called).</exception>
       <exception cref="T:System.IO.IOException">The package is write-only.</exception>
     </member>
     <member name="M:System.IO.Packaging.Package.GetRelationships">
       <summary>Returns a collection of all the package-level relationships.</summary>
       <returns>A collection of all the package-level relationships that are contained in the package.</returns>
-      <exception cref="T:System.ObjectDisposedException">The package is not open (<see cref="M:System.IO.Packaging.Package.Dispose(System.Boolean)"></see> or <see cref="M:System.IO.Packaging.Package.Close"></see> has been called).</exception>
+      <exception cref="T:System.ObjectDisposedException">The package is not open (<see cref="System.IO.Packaging.Package.Dispose(System.Boolean)"></see> or <see cref="System.IO.Packaging.Package.Close"></see> has been called).</exception>
       <exception cref="T:System.IO.IOException">The package is write-only.</exception>
     </member>
     <member name="M:System.IO.Packaging.Package.GetRelationshipsByType(System.String)">
@@ -229,7 +189,7 @@
       <returns>A collection of package-level relationships that match the specified <paramref name="relationshipType">relationshipType</paramref>.</returns>
       <exception cref="T:System.ArgumentNullException"><paramref name="relationshipType">relationshipType</paramref> is null.</exception>
       <exception cref="T:System.ArgumentException"><paramref name="relationshipType">relationshipType</paramref> is an empty string.</exception>
-      <exception cref="T:System.ObjectDisposedException">The package is not open (<see cref="M:System.IO.Packaging.Package.Dispose(System.Boolean)"></see> or <see cref="M:System.IO.Packaging.Package.Close"></see> has been called).</exception>
+      <exception cref="T:System.ObjectDisposedException">The package is not open (<see cref="System.IO.Packaging.Package.Dispose(System.Boolean)"></see> or <see cref="System.IO.Packaging.Package.Close"></see> has been called).</exception>
       <exception cref="T:System.IO.IOException">The package is write-only.</exception>
     </member>
     <member name="M:System.IO.Packaging.Package.Open(System.IO.Stream)">
@@ -294,15 +254,15 @@
     <member name="P:System.IO.Packaging.Package.PackageProperties">
       <summary>Gets the core properties of the package.</summary>
       <returns>The core properties of the package.</returns>
-      <exception cref="T:System.ObjectDisposedException">The package is not open (<see cref="M:System.IO.Packaging.Package.Dispose(System.Boolean)"></see> or <see cref="M:System.IO.Packaging.Package.Close"></see> has been called).</exception>
+      <exception cref="T:System.ObjectDisposedException">The package is not open (<see cref="System.IO.Packaging.Package.Dispose(System.Boolean)"></see> or <see cref="System.IO.Packaging.Package.Close"></see> has been called).</exception>
     </member>
     <member name="M:System.IO.Packaging.Package.PartExists(System.Uri)">
       <summary>Indicates whether a part with a given URI is in the package.</summary>
       <param name="partUri">The <see cref="T:System.Uri"></see> of the part to check for.</param>
       <returns>true if a part with the specified <paramref name="partUri">partUri</paramref> is in the package; otherwise, false.</returns>
       <exception cref="T:System.ArgumentNullException"><paramref name="partUri">partUri</paramref> is null.</exception>
-      <exception cref="T:System.ArgumentException"><paramref name="partUri">partUri</paramref> is not a valid <see cref="T:System.IO.Packaging.PackagePart"></see> uniform resource identifier (URI).</exception>
-      <exception cref="T:System.ObjectDisposedException">The package is not open (<see cref="M:System.IO.Packaging.Package.Dispose(System.Boolean)"></see> or <see cref="M:System.IO.Packaging.Package.Close"></see> has been called).</exception>
+      <exception cref="T:System.ArgumentException"><paramref name="partUri">partUri</paramref> is not a valid <see cref="System.IO.Packaging.PackagePart"></see> uniform resource identifier (URI).</exception>
+      <exception cref="T:System.ObjectDisposedException">The package is not open (<see cref="System.IO.Packaging.Package.Dispose(System.Boolean)"></see> or <see cref="System.IO.Packaging.Package.Close"></see> has been called).</exception>
       <exception cref="T:System.IO.IOException">The package is write-only (information cannot be read).</exception>
     </member>
     <member name="M:System.IO.Packaging.Package.RelationshipExists(System.String)">
@@ -311,7 +271,7 @@
       <returns>true if a package-level relationship with the specified <paramref name="id">id</paramref> is in the package; otherwise, false.</returns>
       <exception cref="T:System.ArgumentNullException"><paramref name="id">id</paramref> is null.</exception>
       <exception cref="T:System.Xml.XmlException"><paramref name="id">id</paramref> is not a valid XML identifier.</exception>
-      <exception cref="T:System.ObjectDisposedException">The package is not open (<see cref="M:System.IO.Packaging.Package.Dispose(System.Boolean)"></see> or <see cref="M:System.IO.Packaging.Package.Close"></see> has been called).</exception>
+      <exception cref="T:System.ObjectDisposedException">The package is not open (<see cref="System.IO.Packaging.Package.Dispose(System.Boolean)"></see> or <see cref="System.IO.Packaging.Package.Close"></see> has been called).</exception>
       <exception cref="T:System.IO.IOException">The package is write-only.</exception>
     </member>
     <member name="M:System.IO.Packaging.Package.System#IDisposable#Dispose">
@@ -332,38 +292,48 @@
       <param name="partUri">The URI of the part, relative to the parent <see cref="T:System.IO.Packaging.Package"></see> root.</param>
       <param name="contentType">The MIME content type of the part data stream.</param>
       <exception cref="T:System.ArgumentNullException"><paramref name="package">package</paramref> or <paramref name="partUri">partUri</paramref> is null.</exception>
-      <exception cref="T:System.ArgumentException"><paramref name="partUri">partUri</paramref> is not a valid <see cref="T:System.IO.Packaging.PackagePart"></see> URI.</exception>
+      <exception cref="T:System.ArgumentException"><paramref name="partUri">partUri</paramref> is not a valid <see cref="System.IO.Packaging.PackagePart"></see> URI.</exception>
     </member>
     <member name="M:System.IO.Packaging.PackagePart.#ctor(System.IO.Packaging.Package,System.Uri,System.String,System.IO.Packaging.CompressionOption)">
       <summary>Initializes a new instance of the <see cref="T:System.IO.Packaging.PackagePart"></see> class with a specified parent <see cref="P:System.IO.Packaging.PackagePart.Package"></see>, part URI, MIME content type, and <see cref="T:System.IO.Packaging.CompressionOption"></see>.</summary>
       <param name="package">The parent <see cref="T:System.IO.Packaging.Package"></see> of the part.</param>
       <param name="partUri">The URI of the part, relative to the parent <see cref="T:System.IO.Packaging.Package"></see> root.</param>
-      <param name="contentType">The MIME content type of the part's data stream.</param>
+      <param name="contentType">The MIME content type of the part&amp;#39;s data stream.</param>
       <param name="compressionOption">The compression option of the part data stream.</param>
       <exception cref="T:System.ArgumentNullException"><paramref name="package">package</paramref> or <paramref name="partUri">partUri</paramref> is null.</exception>
-      <exception cref="T:System.ArgumentException"><paramref name="partUri">partUri</paramref> is not a valid <see cref="T:System.IO.Packaging.PackagePart"></see> URI.</exception>
+      <exception cref="T:System.ArgumentException"><paramref name="partUri">partUri</paramref> is not a valid <see cref="System.IO.Packaging.PackagePart"></see> URI.</exception>
       <exception cref="T:System.ArgumentOutOfRangeException">The <paramref name="compressionOption">compressionOption</paramref> value is not valid.</exception>
     </member>
     <member name="P:System.IO.Packaging.PackagePart.CompressionOption">
       <summary>Gets the compression option of the part content stream.</summary>
       <returns>The compression option of the part content stream.</returns>
-      <exception cref="T:System.InvalidOperationException">The part has been deleted.   -or-   The <see cref="P:System.IO.Packaging.PackagePart.Package"></see> is not open (<see cref="M:System.IO.Packaging.Package.Dispose(System.Boolean)"></see> or <see cref="M:System.IO.Packaging.Package.Close"></see> has been called).</exception>
+      <exception cref="T:System.InvalidOperationException">The part has been deleted.  
+ -or-  
+ The <see cref="System.IO.Packaging.PackagePart.Package"></see> is not open (<see cref="System.IO.Packaging.Package.Dispose(System.Boolean)"></see> or <see cref="System.IO.Packaging.Package.Close"></see> has been called).</exception>
     </member>
     <member name="P:System.IO.Packaging.PackagePart.ContentType">
       <summary>Gets the MIME type of the content stream.</summary>
       <returns>The MIME type of the content data stream for the part.</returns>
-      <exception cref="T:System.InvalidOperationException">The part has been deleted.   -or-   The <see cref="P:System.IO.Packaging.PackagePart.Package"></see> is not open (<see cref="M:System.IO.Packaging.Package.Dispose(System.Boolean)"></see> or <see cref="M:System.IO.Packaging.Package.Close"></see> has been called).   -or-   The string returned by the derived class <see cref="M:System.IO.Packaging.PackagePart.GetContentTypeCore"></see> method is empty.</exception>
+      <exception cref="T:System.InvalidOperationException">The part has been deleted.  
+ -or-  
+ The <see cref="System.IO.Packaging.PackagePart.Package"></see> is not open (<see cref="System.IO.Packaging.Package.Dispose(System.Boolean)"></see> or <see cref="System.IO.Packaging.Package.Close"></see> has been called).  
+ -or-  
+ The string returned by the derived class <see cref="System.IO.Packaging.PackagePart.GetContentTypeCore"></see> method is empty.</exception>
     </member>
     <member name="M:System.IO.Packaging.PackagePart.CreateRelationship(System.Uri,System.IO.Packaging.TargetMode,System.String)">
       <summary>Creates a part-level relationship between this <see cref="T:System.IO.Packaging.PackagePart"></see> to a specified target <see cref="T:System.IO.Packaging.PackagePart"></see> or external resource.</summary>
       <param name="targetUri">The URI of the target part.</param>
       <param name="targetMode">One of the enumeration values. For example, <see cref="F:System.IO.Packaging.TargetMode.Internal"></see> if the target part is inside the <see cref="T:System.IO.Packaging.Package"></see>; or <see cref="F:System.IO.Packaging.TargetMode.External"></see> if the target is a resource outside the <see cref="T:System.IO.Packaging.Package"></see>.</param>
       <param name="relationshipType">The role of the relationship.</param>
-      <returns>The part-level relationship between this <see cref="T:System.IO.Packaging.PackagePart"></see> to the target <see cref="T:System.IO.Packaging.PackagePart"></see> or external resource.</returns>
-      <exception cref="T:System.InvalidOperationException">The part has been deleted.   -or-   The <see cref="P:System.IO.Packaging.PackagePart.Package"></see> is not open (<see cref="M:System.IO.Packaging.Package.Dispose(System.Boolean)"></see> or <see cref="M:System.IO.Packaging.Package.Close"></see> has been called).</exception>
+      <returns>The part-level relationship between this <see cref="System.IO.Packaging.PackagePart"></see> to the target <see cref="System.IO.Packaging.PackagePart"></see> or external resource.</returns>
+      <exception cref="T:System.InvalidOperationException">The part has been deleted.  
+ -or-  
+ The <see cref="System.IO.Packaging.PackagePart.Package"></see> is not open (<see cref="System.IO.Packaging.Package.Dispose(System.Boolean)"></see> or <see cref="System.IO.Packaging.Package.Close"></see> has been called).</exception>
       <exception cref="T:System.ArgumentNullException"><paramref name="targetUri">targetUri</paramref> or <paramref name="relationshipType">relationshipType</paramref> is null.</exception>
-      <exception cref="T:System.ArgumentOutOfRangeException">The <paramref name="targetMode">targetMode</paramref> parameter is not a valid <see cref="T:System.IO.Packaging.TargetMode"></see> enumeration value.</exception>
-      <exception cref="T:System.ArgumentException">The part identified by the <paramref name="targetUri">targetUri</paramref> is a relationship (the target of a relationship cannot be another relationship).   -or-  <paramref name="targetMode">targetMode</paramref> is specified as <see cref="F:System.IO.Packaging.TargetMode.Internal"></see> but <paramref name="targetUri">targetUri</paramref> is an absolute external URI.</exception>
+      <exception cref="T:System.ArgumentOutOfRangeException">The <paramref name="targetMode">targetMode</paramref> parameter is not a valid <see cref="System.IO.Packaging.TargetMode"></see> enumeration value.</exception>
+      <exception cref="T:System.ArgumentException">The part identified by the <paramref name="targetUri">targetUri</paramref> is a relationship (the target of a relationship cannot be another relationship).  
+ -or-  
+ <paramref name="targetMode">targetMode</paramref> is specified as <see cref="System.IO.Packaging.TargetMode.Internal"></see> but <paramref name="targetUri">targetUri</paramref> is an absolute external URI.</exception>
       <exception cref="T:System.IO.IOException">The package is read-only (a new relationship cannot be added).</exception>
     </member>
     <member name="M:System.IO.Packaging.PackagePart.CreateRelationship(System.Uri,System.IO.Packaging.TargetMode,System.String,System.String)">
@@ -372,18 +342,26 @@
       <param name="targetMode">One of the enumeration values. For example, <see cref="F:System.IO.Packaging.TargetMode.Internal"></see> if the target part is inside the <see cref="T:System.IO.Packaging.Package"></see>; or <see cref="F:System.IO.Packaging.TargetMode.External"></see> if the target is a resource outside the <see cref="T:System.IO.Packaging.Package"></see>.</param>
       <param name="relationshipType">The role of the relationship.</param>
       <param name="id">A unique ID for the relationship.</param>
-      <returns>The part-level relationship between this <see cref="T:System.IO.Packaging.PackagePart"></see> to the target <see cref="T:System.IO.Packaging.PackagePart"></see> or external resource.</returns>
-      <exception cref="T:System.InvalidOperationException">The part has been deleted.   -or-   The <see cref="P:System.IO.Packaging.PackagePart.Package"></see> is not open (<see cref="M:System.IO.Packaging.Package.Dispose(System.Boolean)"></see> or <see cref="M:System.IO.Packaging.Package.Close"></see> has been called).</exception>
+      <returns>The part-level relationship between this <see cref="System.IO.Packaging.PackagePart"></see> to the target <see cref="System.IO.Packaging.PackagePart"></see> or external resource.</returns>
+      <exception cref="T:System.InvalidOperationException">The part has been deleted.  
+ -or-  
+ The <see cref="System.IO.Packaging.PackagePart.Package"></see> is not open (<see cref="System.IO.Packaging.Package.Dispose(System.Boolean)"></see> or <see cref="System.IO.Packaging.Package.Close"></see> has been called).</exception>
       <exception cref="T:System.ArgumentNullException"><paramref name="targetUri">targetUri</paramref> or <paramref name="relationshipType">relationshipType</paramref> is null.</exception>
-      <exception cref="T:System.ArgumentOutOfRangeException">The <paramref name="targetMode">targetMode</paramref> parameter is not a valid <see cref="T:System.IO.Packaging.TargetMode"></see> enumeration value.</exception>
-      <exception cref="T:System.ArgumentException">The part identified by the <paramref name="targetUri">targetUri</paramref> is a relationship (the target of a relationship cannot be another relationship).   -or-  <paramref name="targetMode">targetMode</paramref> is specified as <see cref="F:System.IO.Packaging.TargetMode.Internal"></see> but <paramref name="targetUri">targetUri</paramref> is an absolute external URI.</exception>
+      <exception cref="T:System.ArgumentOutOfRangeException">The <paramref name="targetMode">targetMode</paramref> parameter is not a valid <see cref="System.IO.Packaging.TargetMode"></see> enumeration value.</exception>
+      <exception cref="T:System.ArgumentException">The part identified by the <paramref name="targetUri">targetUri</paramref> is a relationship (the target of a relationship cannot be another relationship).  
+ -or-  
+ <paramref name="targetMode">targetMode</paramref> is specified as <see cref="System.IO.Packaging.TargetMode.Internal"></see> but <paramref name="targetUri">targetUri</paramref> is an absolute external URI.</exception>
       <exception cref="T:System.IO.IOException">The package is read-only (a new relationship cannot be added).</exception>
-      <exception cref="T:System.Xml.XmlException"><paramref name="id">id</paramref> is not a valid XML identifier.   -or-   A part with the specified <paramref name="id">id</paramref> already exists.</exception>
+      <exception cref="T:System.Xml.XmlException"><paramref name="id">id</paramref> is not a valid XML identifier.  
+ -or-  
+ A part with the specified <paramref name="id">id</paramref> already exists.</exception>
     </member>
     <member name="M:System.IO.Packaging.PackagePart.DeleteRelationship(System.String)">
       <summary>Deletes a specified part-level <see cref="T:System.IO.Packaging.PackageRelationship"></see>.</summary>
       <param name="id">The <see cref="P:System.IO.Packaging.PackageRelationship.Id"></see> of the relationship to delete.</param>
-      <exception cref="T:System.InvalidOperationException">The part has been deleted.   -or-   The <see cref="P:System.IO.Packaging.PackagePart.Package"></see> is not open (<see cref="M:System.IO.Packaging.Package.Dispose(System.Boolean)"></see> or <see cref="M:System.IO.Packaging.Package.Close"></see> has been called).</exception>
+      <exception cref="T:System.InvalidOperationException">The part has been deleted.  
+ -or-  
+ The <see cref="System.IO.Packaging.PackagePart.Package"></see> is not open (<see cref="System.IO.Packaging.Package.Dispose(System.Boolean)"></see> or <see cref="System.IO.Packaging.Package.Close"></see> has been called).</exception>
       <exception cref="T:System.ArgumentNullException"><paramref name="id">id</paramref> is null.</exception>
       <exception cref="T:System.IO.IOException">The package is read-only (relationships cannot be deleted).</exception>
       <exception cref="T:System.Xml.XmlException"><paramref name="id">id</paramref> is not a valid XML identifier.</exception>
@@ -391,7 +369,7 @@
     <member name="M:System.IO.Packaging.PackagePart.GetContentTypeCore">
       <summary>When overridden in a derived class, returns the MIME type of the part content.</summary>
       <returns>The MIME type of the part content.</returns>
-      <exception cref="T:System.NotSupportedException">The derived class does not provide an override implementation required for the <see cref="M:System.IO.Packaging.PackagePart.GetContentTypeCore"></see> method.</exception>
+      <exception cref="T:System.NotSupportedException">The derived class does not provide an override implementation required for the <see cref="System.IO.Packaging.PackagePart.GetContentTypeCore"></see> method.</exception>
     </member>
     <member name="M:System.IO.Packaging.PackagePart.GetRelationship(System.String)">
       <summary>Returns the relationship that has a specified <see cref="P:System.IO.Packaging.PackageRelationship.Id"></see>.</summary>
@@ -400,13 +378,19 @@
       <exception cref="T:System.ArgumentNullException"><paramref name="id">id</paramref> is null.</exception>
       <exception cref="T:System.Xml.XmlException"><paramref name="id">id</paramref> is not a valid XML identifier.</exception>
       <exception cref="T:System.ArgumentException"><paramref name="relationshipType">relationshipType</paramref> is an empty string.</exception>
-      <exception cref="T:System.InvalidOperationException">The part has been deleted.   -or-   The <see cref="P:System.IO.Packaging.PackagePart.Package"></see> is not open (<see cref="M:System.IO.Packaging.Package.Dispose(System.Boolean)"></see> or <see cref="M:System.IO.Packaging.Package.Close"></see> has been called).   -or-   A relationship with the specified <paramref name="id">id</paramref> does not exist in the package.</exception>
+      <exception cref="T:System.InvalidOperationException">The part has been deleted.  
+ -or-  
+ The <see cref="System.IO.Packaging.PackagePart.Package"></see> is not open (<see cref="System.IO.Packaging.Package.Dispose(System.Boolean)"></see> or <see cref="System.IO.Packaging.Package.Close"></see> has been called).  
+ -or-  
+ A relationship with the specified <paramref name="id">id</paramref> does not exist in the package.</exception>
       <exception cref="T:System.IO.IOException">The package is write-only (relationship information cannot be read).</exception>
     </member>
     <member name="M:System.IO.Packaging.PackagePart.GetRelationships">
       <summary>Returns a collection of all the relationships that are owned by this part.</summary>
       <returns>A collection of all the relationships that are owned by the part.</returns>
-      <exception cref="T:System.InvalidOperationException">The part has been deleted.   -or-   The <see cref="P:System.IO.Packaging.PackagePart.Package"></see> is not open (<see cref="M:System.IO.Packaging.Package.Dispose(System.Boolean)"></see> or <see cref="M:System.IO.Packaging.Package.Close"></see> has been called).</exception>
+      <exception cref="T:System.InvalidOperationException">The part has been deleted.  
+ -or-  
+ The <see cref="System.IO.Packaging.PackagePart.Package"></see> is not open (<see cref="System.IO.Packaging.Package.Dispose(System.Boolean)"></see> or <see cref="System.IO.Packaging.Package.Close"></see> has been called).</exception>
       <exception cref="T:System.IO.IOException">The package is write-only (relationship information cannot be read).</exception>
     </member>
     <member name="M:System.IO.Packaging.PackagePart.GetRelationshipsByType(System.String)">
@@ -415,31 +399,47 @@
       <returns>A collection of the relationships that match the specified <paramref name="relationshipType">relationshipType</paramref>.</returns>
       <exception cref="T:System.ArgumentNullException"><paramref name="relationshipType">relationshipType</paramref> is null.</exception>
       <exception cref="T:System.ArgumentException"><paramref name="relationshipType">relationshipType</paramref> is an empty string.</exception>
-      <exception cref="T:System.InvalidOperationException">The part has been deleted.   -or-   The <see cref="P:System.IO.Packaging.PackagePart.Package"></see> is not open (<see cref="M:System.IO.Packaging.Package.Dispose(System.Boolean)"></see> or <see cref="M:System.IO.Packaging.Package.Close"></see> has been called).</exception>
+      <exception cref="T:System.InvalidOperationException">The part has been deleted.  
+ -or-  
+ The <see cref="System.IO.Packaging.PackagePart.Package"></see> is not open (<see cref="System.IO.Packaging.Package.Dispose(System.Boolean)"></see> or <see cref="System.IO.Packaging.Package.Close"></see> has been called).</exception>
       <exception cref="T:System.IO.IOException">The package is write-only (relationship information cannot be read).</exception>
     </member>
     <member name="M:System.IO.Packaging.PackagePart.GetStream">
       <summary>Returns the part content data stream.</summary>
       <returns>The content data stream for the part.</returns>
-      <exception cref="T:System.InvalidOperationException">The part has been deleted.   -or-   The <see cref="P:System.IO.Packaging.PackagePart.Package"></see> is not open (<see cref="M:System.IO.Packaging.Package.Dispose(System.Boolean)"></see> or <see cref="M:System.IO.Packaging.Package.Close"></see> has been called).</exception>
-      <exception cref="T:System.IO.IOException">The stream object returned by the <see cref="M:System.IO.Packaging.PackagePart.GetStreamCore(System.IO.FileMode,System.IO.FileAccess)"></see> method of the derived subclass is null.</exception>
+      <exception cref="T:System.InvalidOperationException">The part has been deleted.  
+ -or-  
+ The <see cref="System.IO.Packaging.PackagePart.Package"></see> is not open (<see cref="System.IO.Packaging.Package.Dispose(System.Boolean)"></see> or <see cref="System.IO.Packaging.Package.Close"></see> has been called).</exception>
+      <exception cref="T:System.IO.IOException">The stream object returned by the <see cref="System.IO.Packaging.PackagePart.GetStreamCore(System.IO.FileMode,System.IO.FileAccess)"></see> method of the derived subclass is null.</exception>
     </member>
     <member name="M:System.IO.Packaging.PackagePart.GetStream(System.IO.FileMode)">
       <summary>Returns the content stream opened in a specified I/O <see cref="T:System.IO.FileMode"></see>.</summary>
       <param name="mode">The I/O mode in which to open the content stream.</param>
       <returns>The content stream of the part.</returns>
-      <exception cref="T:System.InvalidOperationException">The part has been deleted.   -or-   The <see cref="P:System.IO.Packaging.PackagePart.Package"></see> is not open (<see cref="M:System.IO.Packaging.Package.Dispose(System.Boolean)"></see> or <see cref="M:System.IO.Packaging.Package.Close"></see> has been called).</exception>
-      <exception cref="T:System.ArgumentOutOfRangeException">The <paramref name="mode">mode</paramref> parameter is not a valid <see cref="T:System.IO.FileMode"></see> enumeration value.</exception>
-      <exception cref="T:System.IO.IOException">The <paramref name="mode">mode</paramref> parameter is not compatible with the package and part stream.   -or-   The stream object returned by the <see cref="M:System.IO.Packaging.PackagePart.GetStreamCore(System.IO.FileMode,System.IO.FileAccess)"></see> method of the derived subclass is null.</exception>
+      <exception cref="T:System.InvalidOperationException">The part has been deleted.  
+ -or-  
+ The <see cref="System.IO.Packaging.PackagePart.Package"></see> is not open (<see cref="System.IO.Packaging.Package.Dispose(System.Boolean)"></see> or <see cref="System.IO.Packaging.Package.Close"></see> has been called).</exception>
+      <exception cref="T:System.ArgumentOutOfRangeException">The <paramref name="mode">mode</paramref> parameter is not a valid <see cref="System.IO.FileMode"></see> enumeration value.</exception>
+      <exception cref="T:System.IO.IOException">The <paramref name="mode">mode</paramref> parameter is not compatible with the package and part stream.  
+ -or-  
+ The stream object returned by the <see cref="System.IO.Packaging.PackagePart.GetStreamCore(System.IO.FileMode,System.IO.FileAccess)"></see> method of the derived subclass is null.</exception>
     </member>
     <member name="M:System.IO.Packaging.PackagePart.GetStream(System.IO.FileMode,System.IO.FileAccess)">
       <summary>Returns the part content stream opened with a specified <see cref="T:System.IO.FileMode"></see> and <see cref="T:System.IO.FileAccess"></see>.</summary>
       <param name="mode">The I/O mode in which to open the content stream.</param>
       <param name="access">The access permissions to use in opening the content stream.</param>
       <returns>The content stream for the part.</returns>
-      <exception cref="T:System.InvalidOperationException">The part has been deleted.   -or-   The <see cref="P:System.IO.Packaging.PackagePart.Package"></see> is not open (<see cref="M:System.IO.Packaging.Package.Dispose(System.Boolean)"></see> or <see cref="M:System.IO.Packaging.Package.Close"></see> has been called).</exception>
-      <exception cref="T:System.ArgumentOutOfRangeException">The <paramref name="mode">mode</paramref> parameter is not a valid <see cref="T:System.IO.FileMode"></see> enumeration value.   -or-   The <paramref name="access">access</paramref> parameter is not a valid <see cref="T:System.IO.FileAccess"></see> enumeration value.</exception>
-      <exception cref="T:System.IO.IOException"><paramref name="mode">mode</paramref> or <paramref name="access">access</paramref> is not compatible with the package and part stream.   -or-   The <paramref name="access">access</paramref> parameter is specified as <see cref="F:System.IO.FileAccess.Read"></see> but the <paramref name="mode">mode</paramref> parameter requires write access.  (<see cref="T:System.IO.FileMode"></see> values of <see cref="F:System.IO.FileMode.Create"></see>, <see cref="F:System.IO.FileMode.CreateNew"></see>, <see cref="F:System.IO.FileMode.Truncate"></see>, and <see cref="F:System.IO.FileMode.Append"></see> require <see cref="F:System.IO.FileAccess.Write"></see> or <see cref="F:System.IO.FileAccess.ReadWrite"></see> access.)   -or-   The stream object returned by the <see cref="M:System.IO.Packaging.PackagePart.GetStreamCore(System.IO.FileMode,System.IO.FileAccess)"></see> method of the derived subclass is null.</exception>
+      <exception cref="T:System.InvalidOperationException">The part has been deleted.  
+ -or-  
+ The <see cref="System.IO.Packaging.PackagePart.Package"></see> is not open (<see cref="System.IO.Packaging.Package.Dispose(System.Boolean)"></see> or <see cref="System.IO.Packaging.Package.Close"></see> has been called).</exception>
+      <exception cref="T:System.ArgumentOutOfRangeException">The <paramref name="mode">mode</paramref> parameter is not a valid <see cref="System.IO.FileMode"></see> enumeration value.  
+ -or-  
+ The <paramref name="access">access</paramref> parameter is not a valid <see cref="System.IO.FileAccess"></see> enumeration value.</exception>
+      <exception cref="T:System.IO.IOException"><paramref name="mode">mode</paramref> or <paramref name="access">access</paramref> is not compatible with the package and part stream.  
+ -or-  
+ The <paramref name="access">access</paramref> parameter is specified as <see cref="System.IO.FileAccess.Read"></see> but the <paramref name="mode">mode</paramref> parameter requires write access.  (<see cref="System.IO.FileMode"></see> values of <see cref="System.IO.FileMode.Create"></see>, <see cref="System.IO.FileMode.CreateNew"></see>, <see cref="System.IO.FileMode.Truncate"></see>, and <see cref="System.IO.FileMode.Append"></see> require <see cref="System.IO.FileAccess.Write"></see> or <see cref="System.IO.FileAccess.ReadWrite"></see> access.)  
+ -or-  
+ The stream object returned by the <see cref="System.IO.Packaging.PackagePart.GetStreamCore(System.IO.FileMode,System.IO.FileAccess)"></see> method of the derived subclass is null.</exception>
     </member>
     <member name="M:System.IO.Packaging.PackagePart.GetStreamCore(System.IO.FileMode,System.IO.FileAccess)">
       <summary>When overridden in a derived class, returns the part content stream opened with a specified <see cref="T:System.IO.FileMode"></see> and <see cref="T:System.IO.FileAccess"></see>.</summary>
@@ -450,7 +450,9 @@
     <member name="P:System.IO.Packaging.PackagePart.Package">
       <summary>Gets the parent <see cref="T:System.IO.Packaging.Package"></see> of the part.</summary>
       <returns>The parent package of the part.</returns>
-      <exception cref="T:System.InvalidOperationException">The part has been deleted.   -or-   The <see cref="P:System.IO.Packaging.PackagePart.Package"></see> is not open (<see cref="M:System.IO.Packaging.Package.Dispose(System.Boolean)"></see> or <see cref="M:System.IO.Packaging.Package.Close"></see> has been called).</exception>
+      <exception cref="T:System.InvalidOperationException">The part has been deleted.  
+ -or-  
+ The <see cref="System.IO.Packaging.PackagePart.Package"></see> is not open (<see cref="System.IO.Packaging.Package.Dispose(System.Boolean)"></see> or <see cref="System.IO.Packaging.Package.Close"></see> has been called).</exception>
     </member>
     <member name="M:System.IO.Packaging.PackagePart.RelationshipExists(System.String)">
       <summary>Returns a value that indicates whether this part owns a relationship with a specified <see cref="P:System.IO.Packaging.PackageRelationship.Id"></see>.</summary>
@@ -458,28 +460,32 @@
       <returns>true if this part owns a relationship with the specified <paramref name="id">id</paramref>; otherwise, false.</returns>
       <exception cref="T:System.ArgumentNullException"><paramref name="id">id</paramref> is null.</exception>
       <exception cref="T:System.Xml.XmlException"><paramref name="id">id</paramref> is not a valid XML identifier.</exception>
-      <exception cref="T:System.InvalidOperationException">The part has been deleted.   -or-   The <see cref="P:System.IO.Packaging.PackagePart.Package"></see> is not open (<see cref="M:System.IO.Packaging.Package.Dispose(System.Boolean)"></see> or <see cref="M:System.IO.Packaging.Package.Close"></see> has been called).</exception>
+      <exception cref="T:System.InvalidOperationException">The part has been deleted.  
+ -or-  
+ The <see cref="System.IO.Packaging.PackagePart.Package"></see> is not open (<see cref="System.IO.Packaging.Package.Dispose(System.Boolean)"></see> or <see cref="System.IO.Packaging.Package.Close"></see> has been called).</exception>
       <exception cref="T:System.IO.IOException">The package is write-only (relationship information cannot be read).</exception>
     </member>
     <member name="P:System.IO.Packaging.PackagePart.Uri">
       <summary>Gets the URI of the part.</summary>
       <returns>The URI of the part relative to the package root.</returns>
-      <exception cref="T:System.InvalidOperationException">The part has been deleted.   -or-   The <see cref="P:System.IO.Packaging.PackagePart.Package"></see> is not open (<see cref="M:System.IO.Packaging.Package.Dispose(System.Boolean)"></see> or <see cref="M:System.IO.Packaging.Package.Close"></see> has been called).</exception>
+      <exception cref="T:System.InvalidOperationException">The part has been deleted.  
+ -or-  
+ The <see cref="System.IO.Packaging.PackagePart.Package"></see> is not open (<see cref="System.IO.Packaging.Package.Dispose(System.Boolean)"></see> or <see cref="System.IO.Packaging.Package.Close"></see> has been called).</exception>
     </member>
     <member name="T:System.IO.Packaging.PackagePartCollection">
       <summary>Represents a collection of <see cref="T:System.IO.Packaging.PackagePart"></see> objects.</summary>
     </member>
     <member name="M:System.IO.Packaging.PackagePartCollection.GetEnumerator">
       <summary>Returns an enumerator for iterating through the parts in the collection.</summary>
-      <returns>An enumerator for iterating through the <see cref="T:System.IO.Packaging.PackagePart"></see> elements in the collection.</returns>
+      <returns>An enumerator for iterating through the <see cref="System.IO.Packaging.PackagePart"></see> elements in the collection.</returns>
     </member>
     <member name="M:System.IO.Packaging.PackagePartCollection.System#Collections#Generic#IEnumerable{System#IO#Packaging#PackagePart}#GetEnumerator">
       <summary>Returns an enumerator that iterates through the collection.</summary>
-      <returns>An <see cref="T:System.Collections.Generic.IEnumerator`1"></see> object that can be used to iterate through the collection.</returns>
+      <returns>An <see cref="System.Collections.Generic.IEnumerator`1"></see> object that can be used to iterate through the collection.</returns>
     </member>
     <member name="M:System.IO.Packaging.PackagePartCollection.System#Collections#IEnumerable#GetEnumerator">
       <summary>For a description of this member, see <see cref="M:System.Collections.IEnumerable.GetEnumerator"></see>.</summary>
-      <returns>An <see cref="T:System.Collections.IEnumerator"></see> object that can be used to iterate through the collection.</returns>
+      <returns>An <see cref="System.Collections.IEnumerator"></see> object that can be used to iterate through the collection.</returns>
     </member>
     <member name="T:System.IO.Packaging.PackageProperties">
       <summary>Represents the core properties of a <see cref="T:System.IO.Packaging.Package"></see>.</summary>
@@ -489,27 +495,27 @@
     </member>
     <member name="P:System.IO.Packaging.PackageProperties.Category">
       <summary>When overridden in a derived class, gets or sets the category of the <see cref="T:System.IO.Packaging.Package"></see>.</summary>
-      <returns>The category of the content that is contained in the <see cref="T:System.IO.Packaging.Package"></see>.</returns>
+      <returns>The category of the content that is contained in the <see cref="System.IO.Packaging.Package"></see>.</returns>
     </member>
     <member name="P:System.IO.Packaging.PackageProperties.ContentStatus">
       <summary>When overridden in a derived class, gets or sets a value that represents the status of the <see cref="T:System.IO.Packaging.Package"></see>.</summary>
-      <returns>The status of the <see cref="T:System.IO.Packaging.Package"></see> content.</returns>
+      <returns>The status of the <see cref="System.IO.Packaging.Package"></see> content.</returns>
     </member>
     <member name="P:System.IO.Packaging.PackageProperties.ContentType">
       <summary>When overridden in a derived class, gets or sets a value that represents the type of content that is contained in the <see cref="T:System.IO.Packaging.Package"></see>.</summary>
-      <returns>The type of content that is contained in the <see cref="T:System.IO.Packaging.Package"></see>.</returns>
+      <returns>The type of content that is contained in the <see cref="System.IO.Packaging.Package"></see>.</returns>
     </member>
     <member name="P:System.IO.Packaging.PackageProperties.Created">
       <summary>When overridden in a derived class, gets or sets the date and time the <see cref="T:System.IO.Packaging.Package"></see> was created.</summary>
-      <returns>The date and time the <see cref="T:System.IO.Packaging.Package"></see> was initially created.</returns>
+      <returns>The date and time the <see cref="System.IO.Packaging.Package"></see> was initially created.</returns>
     </member>
     <member name="P:System.IO.Packaging.PackageProperties.Creator">
       <summary>When overridden in a derived class, gets or sets a value that identifies the individual or entity that created the <see cref="T:System.IO.Packaging.Package"></see> and its content.</summary>
-      <returns>The individual or entity that created the <see cref="T:System.IO.Packaging.Package"></see> and its content.</returns>
+      <returns>The individual or entity that created the <see cref="System.IO.Packaging.Package"></see> and its content.</returns>
     </member>
     <member name="P:System.IO.Packaging.PackageProperties.Description">
       <summary>When overridden in a derived class, gets or sets a description of the content contained in the <see cref="T:System.IO.Packaging.Package"></see>.</summary>
-      <returns>A description of the content contained in the <see cref="T:System.IO.Packaging.Package"></see>.</returns>
+      <returns>A description of the content contained in the <see cref="System.IO.Packaging.Package"></see>.</returns>
     </member>
     <member name="M:System.IO.Packaging.PackageProperties.Dispose">
       <summary>Releases all resources used by the <see cref="T:System.IO.Packaging.PackageProperties"></see> instance.</summary>
@@ -520,43 +526,43 @@
     </member>
     <member name="P:System.IO.Packaging.PackageProperties.Identifier">
       <summary>When overridden in a derived class, gets or sets a value that unambiguously identifies the <see cref="T:System.IO.Packaging.Package"></see> and its content.</summary>
-      <returns>A value that unambiguously identifies the <see cref="T:System.IO.Packaging.Package"></see> and its content.</returns>
+      <returns>A value that unambiguously identifies the <see cref="System.IO.Packaging.Package"></see> and its content.</returns>
     </member>
     <member name="P:System.IO.Packaging.PackageProperties.Keywords">
       <summary>When overridden in a derived class, gets or sets a value that define a delimited set of keywords to support searching and indexing the <see cref="T:System.IO.Packaging.Package"></see> and its content.</summary>
-      <returns>A delimited set of keywords to support searching and indexing the <see cref="T:System.IO.Packaging.Package"></see> and content.</returns>
+      <returns>A delimited set of keywords to support searching and indexing the <see cref="System.IO.Packaging.Package"></see> and content.</returns>
     </member>
     <member name="P:System.IO.Packaging.PackageProperties.Language">
       <summary>When overridden in a derived class, gets or sets a value that identifies the language of the <see cref="T:System.IO.Packaging.Package"></see> content.</summary>
-      <returns>A value that identifies the <see cref="T:System.IO.Packaging.Package"></see> content language.</returns>
+      <returns>A value that identifies the <see cref="System.IO.Packaging.Package"></see> content language.</returns>
     </member>
     <member name="P:System.IO.Packaging.PackageProperties.LastModifiedBy">
       <summary>When overridden in a derived class, gets or sets a value that identifies the user who last modified the <see cref="T:System.IO.Packaging.Package"></see> content.</summary>
-      <returns>The user who last modified the <see cref="T:System.IO.Packaging.Package"></see> content.</returns>
+      <returns>The user who last modified the <see cref="System.IO.Packaging.Package"></see> content.</returns>
     </member>
     <member name="P:System.IO.Packaging.PackageProperties.LastPrinted">
       <summary>When overridden in a derived class, gets or sets the date and time the <see cref="T:System.IO.Packaging.Package"></see> content was last printed.</summary>
-      <returns>The date and time the <see cref="T:System.IO.Packaging.Package"></see> content was last printed.</returns>
+      <returns>The date and time the <see cref="System.IO.Packaging.Package"></see> content was last printed.</returns>
     </member>
     <member name="P:System.IO.Packaging.PackageProperties.Modified">
       <summary>When overridden in a derived class, gets or sets the date and time the <see cref="T:System.IO.Packaging.Package"></see> was last changed.</summary>
-      <returns>The date and time the <see cref="T:System.IO.Packaging.Package"></see> was last changed.</returns>
+      <returns>The date and time the <see cref="System.IO.Packaging.Package"></see> was last changed.</returns>
     </member>
     <member name="P:System.IO.Packaging.PackageProperties.Revision">
       <summary>When overridden in a derived class, gets or sets the revision number of the <see cref="T:System.IO.Packaging.Package"></see>.</summary>
-      <returns>The revision number of the <see cref="T:System.IO.Packaging.Package"></see>.</returns>
+      <returns>The revision number of the <see cref="System.IO.Packaging.Package"></see>.</returns>
     </member>
     <member name="P:System.IO.Packaging.PackageProperties.Subject">
       <summary>When overridden in a derived class, gets or sets the topic of the <see cref="T:System.IO.Packaging.Package"></see> content.</summary>
-      <returns>The topic of the <see cref="T:System.IO.Packaging.Package"></see> content.</returns>
+      <returns>The topic of the <see cref="System.IO.Packaging.Package"></see> content.</returns>
     </member>
     <member name="P:System.IO.Packaging.PackageProperties.Title">
       <summary>When overridden in a derived class, gets or sets the name given to the <see cref="T:System.IO.Packaging.Package"></see> and its content.</summary>
-      <returns>The name given to the <see cref="T:System.IO.Packaging.Package"></see> and its content.</returns>
+      <returns>The name given to the <see cref="System.IO.Packaging.Package"></see> and its content.</returns>
     </member>
     <member name="P:System.IO.Packaging.PackageProperties.Version">
       <summary>When overridden in a derived class, gets or sets the version number of the <see cref="T:System.IO.Packaging.Package"></see>.</summary>
-      <returns>The version number of the <see cref="T:System.IO.Packaging.Package"></see>.</returns>
+      <returns>The version number of the <see cref="System.IO.Packaging.Package"></see>.</returns>
     </member>
     <member name="T:System.IO.Packaging.PackageRelationship">
       <summary>Represents an association between a source <see cref="T:System.IO.Packaging.Package"></see> or <see cref="T:System.IO.Packaging.PackagePart"></see>, and a target object which can be a <see cref="T:System.IO.Packaging.PackagePart"></see> or external resource.</summary>
@@ -575,11 +581,11 @@
     </member>
     <member name="P:System.IO.Packaging.PackageRelationship.SourceUri">
       <summary>Gets the URI of the package or part that owns the relationship.</summary>
-      <returns>The URI of the <see cref="T:System.IO.Packaging.Package"></see> or <see cref="T:System.IO.Packaging.PackagePart"></see> that owns the relationship.</returns>
+      <returns>The URI of the <see cref="System.IO.Packaging.Package"></see> or <see cref="System.IO.Packaging.PackagePart"></see> that owns the relationship.</returns>
     </member>
     <member name="P:System.IO.Packaging.PackageRelationship.TargetMode">
       <summary>Gets a value that indicates whether the target of the relationship is <see cref="F:System.IO.Packaging.TargetMode.Internal"></see> or <see cref="F:System.IO.Packaging.TargetMode.External"></see> to the <see cref="T:System.IO.Packaging.Package"></see>.</summary>
-      <returns>An enumeration value that indicates whether <see cref="P:System.IO.Packaging.PackageRelationship.TargetUri"></see> references a resource <see cref="F:System.IO.Packaging.TargetMode.Internal"></see> or <see cref="F:System.IO.Packaging.TargetMode.External"></see> to the <see cref="T:System.IO.Packaging.Package"></see>.</returns>
+      <returns>An enumeration value that indicates whether <see cref="System.IO.Packaging.PackageRelationship.TargetUri"></see> references a resource <see cref="System.IO.Packaging.TargetMode.Internal"></see> or <see cref="System.IO.Packaging.TargetMode.External"></see> to the <see cref="System.IO.Packaging.Package"></see>.</returns>
     </member>
     <member name="P:System.IO.Packaging.PackageRelationship.TargetUri">
       <summary>Gets the URI of the target resource of the relationship.</summary>
@@ -590,41 +596,41 @@
     </member>
     <member name="M:System.IO.Packaging.PackageRelationshipCollection.GetEnumerator">
       <summary>Returns an enumerator for iterating through the relationships in the collection.</summary>
-      <returns>An enumerator for iterating through the <see cref="T:System.IO.Packaging.PackageRelationship"></see> elements in the collection.</returns>
+      <returns>An enumerator for iterating through the <see cref="System.IO.Packaging.PackageRelationship"></see> elements in the collection.</returns>
     </member>
     <member name="M:System.IO.Packaging.PackageRelationshipCollection.System#Collections#IEnumerable#GetEnumerator">
       <summary>This type or member supports the Windows Presentation Foundation (WPF) infrastructure and is not intended to be used directly from your code.</summary>
-      <returns>Do not use—use <see cref="M:System.IO.Packaging.PackageRelationshipCollection.GetEnumerator"></see>.</returns>
+      <returns>Do not use—use <see cref="System.IO.Packaging.PackageRelationshipCollection.GetEnumerator"></see>.</returns>
     </member>
     <member name="T:System.IO.Packaging.PackageRelationshipSelector">
       <summary>Defines <see cref="T:System.IO.Packaging.PackageRelationship"></see> criteria to select part-level or package-level relationships.</summary>
     </member>
     <member name="M:System.IO.Packaging.PackageRelationshipSelector.#ctor(System.Uri,System.IO.Packaging.PackageRelationshipSelectorType,System.String)">
       <summary>Initializes a new instance of the <see cref="T:System.IO.Packaging.PackageRelationshipSelector"></see> class.</summary>
-      <param name="sourceUri">The uniform resource identifier (URI) of the <see cref="T:System.IO.Packaging.PackagePart"></see> or the <see cref="T:System.IO.Packaging.Package"></see> (SourceUri=&quot;/&quot;) that owns the relationship.</param>
+      <param name="sourceUri">The uniform resource identifier (URI) of the <see cref="T:System.IO.Packaging.PackagePart"></see> or the <see cref="T:System.IO.Packaging.Package"></see> (SourceUri=&amp;quot;/&amp;quot;) that owns the relationship.</param>
       <param name="selectorType">The type of the selectionCriteria, either by relationship <see cref="F:System.IO.Packaging.PackageRelationshipSelectorType.Id"></see> or relationship <see cref="F:System.IO.Packaging.PackageRelationshipSelectorType.Type"></see>.</param>
       <param name="selectionCriteria">The qualification string that is used to select the relationships based on the selectorType.</param>
       <exception cref="T:System.ArgumentNullException"><paramref name="sourceUri">sourceUri</paramref> or <paramref name="selectionCriteria">selectionCriteria</paramref> is null.</exception>
       <exception cref="T:System.ArgumentOutOfRangeException">The <paramref name="selectorType">selectorType</paramref> parameter is not valid.</exception>
-      <exception cref="T:System.Xml.XmlException">The <paramref name="selectorType">selectorType</paramref> parameter is <see cref="F:System.IO.Packaging.PackageRelationshipSelectorType.Id"></see> but <paramref name="selectionCriteria">selectionCriteria</paramref> is not a valid XML Schema Definition (XSD) identifier (ID).</exception>
-      <exception cref="T:System.ArgumentException">The <paramref name="sourceUri">sourceUri</paramref> is not the <see cref="T:System.IO.Packaging.Package"></see> root (&quot;/&quot;) and is also not a valid <see cref="T:System.IO.Packaging.PackagePart"></see> URI.</exception>
+      <exception cref="T:System.Xml.XmlException">The <paramref name="selectorType">selectorType</paramref> parameter is <see cref="System.IO.Packaging.PackageRelationshipSelectorType.Id"></see> but <paramref name="selectionCriteria">selectionCriteria</paramref> is not a valid XML Schema Definition (XSD) identifier (ID).</exception>
+      <exception cref="T:System.ArgumentException">The <paramref name="sourceUri">sourceUri</paramref> is not the <see cref="System.IO.Packaging.Package"></see> root (&amp;quot;/&amp;quot;) and is also not a valid <see cref="System.IO.Packaging.PackagePart"></see> URI.</exception>
     </member>
     <member name="M:System.IO.Packaging.PackageRelationshipSelector.Select(System.IO.Packaging.Package)">
       <summary>Returns a list of <see cref="T:System.IO.Packaging.PackageRelationship"></see> objects that match the defined <see cref="P:System.IO.Packaging.PackageRelationshipSelector.SourceUri"></see>, <see cref="P:System.IO.Packaging.PackageRelationshipSelector.SelectorType"></see>, and <see cref="P:System.IO.Packaging.PackageRelationshipSelector.SelectionCriteria"></see>.</summary>
       <param name="package">The package from which to select the relationships based on the selection criteria.</param>
-      <returns>A list of relationships that match the selection parameters specified to the <see cref="M:System.IO.Packaging.PackageRelationshipSelector.#ctor(System.Uri,System.IO.Packaging.PackageRelationshipSelectorType,System.String)"></see> constructor.</returns>
+      <returns>A list of relationships that match the selection parameters specified to the <see cref="System.IO.Packaging.PackageRelationshipSelector.#ctor(System.Uri,System.IO.Packaging.PackageRelationshipSelectorType,System.String)"></see> constructor.</returns>
     </member>
     <member name="P:System.IO.Packaging.PackageRelationshipSelector.SelectionCriteria">
       <summary>Gets the selection criteria specified to the <see cref="M:System.IO.Packaging.PackageRelationshipSelector.#ctor(System.Uri,System.IO.Packaging.PackageRelationshipSelectorType,System.String)"></see> constructor.</summary>
-      <returns>The selection criteria based on the <see cref="P:System.IO.Packaging.PackageRelationshipSelector.SelectorType"></see> of <see cref="F:System.IO.Packaging.PackageRelationshipSelectorType.Id"></see> or <see cref="F:System.IO.Packaging.PackageRelationshipSelectorType.Type"></see> specified to the <see cref="M:System.IO.Packaging.PackageRelationshipSelector.#ctor(System.Uri,System.IO.Packaging.PackageRelationshipSelectorType,System.String)"></see> constructor.</returns>
+      <returns>The selection criteria based on the <see cref="System.IO.Packaging.PackageRelationshipSelector.SelectorType"></see> of <see cref="System.IO.Packaging.PackageRelationshipSelectorType.Id"></see> or <see cref="System.IO.Packaging.PackageRelationshipSelectorType.Type"></see> specified to the <see cref="System.IO.Packaging.PackageRelationshipSelector.#ctor(System.Uri,System.IO.Packaging.PackageRelationshipSelectorType,System.String)"></see> constructor.</returns>
     </member>
     <member name="P:System.IO.Packaging.PackageRelationshipSelector.SelectorType">
       <summary>Gets the <see cref="T:System.IO.Packaging.PackageRelationshipSelectorType"></see> specified to the <see cref="M:System.IO.Packaging.PackageRelationshipSelector.#ctor(System.Uri,System.IO.Packaging.PackageRelationshipSelectorType,System.String)"></see> constructor.</summary>
-      <returns>The selector type of <see cref="F:System.IO.Packaging.PackageRelationshipSelectorType.Id"></see> or <see cref="F:System.IO.Packaging.PackageRelationshipSelectorType.Type"></see> specified to the <see cref="M:System.IO.Packaging.PackageRelationshipSelector.#ctor(System.Uri,System.IO.Packaging.PackageRelationshipSelectorType,System.String)"></see> constructor.</returns>
+      <returns>The selector type of <see cref="System.IO.Packaging.PackageRelationshipSelectorType.Id"></see> or <see cref="System.IO.Packaging.PackageRelationshipSelectorType.Type"></see> specified to the <see cref="System.IO.Packaging.PackageRelationshipSelector.#ctor(System.Uri,System.IO.Packaging.PackageRelationshipSelectorType,System.String)"></see> constructor.</returns>
     </member>
     <member name="P:System.IO.Packaging.PackageRelationshipSelector.SourceUri">
-      <summary>Gets the root package URI (&quot;/&quot;) or part <see cref="P:System.IO.Packaging.PackagePart.Uri"></see> specified to the <see cref="M:System.IO.Packaging.PackageRelationshipSelector.#ctor(System.Uri,System.IO.Packaging.PackageRelationshipSelectorType,System.String)"></see> constructor as the owner of the relationship.</summary>
-      <returns>The root package URI (&quot;/&quot;) or part <see cref="P:System.IO.Packaging.PackagePart.Uri"></see> specified to the <see cref="M:System.IO.Packaging.PackageRelationshipSelector.#ctor(System.Uri,System.IO.Packaging.PackageRelationshipSelectorType,System.String)"></see> constructor as the owner of the relationship.</returns>
+      <summary>Gets the root package URI (&amp;quot;/&amp;quot;) or part <see cref="P:System.IO.Packaging.PackagePart.Uri"></see> specified to the <see cref="M:System.IO.Packaging.PackageRelationshipSelector.#ctor(System.Uri,System.IO.Packaging.PackageRelationshipSelectorType,System.String)"></see> constructor as the owner of the relationship.</summary>
+      <returns>The root package URI (&amp;quot;/&amp;quot;) or part <see cref="System.IO.Packaging.PackagePart.Uri"></see> specified to the <see cref="System.IO.Packaging.PackageRelationshipSelector.#ctor(System.Uri,System.IO.Packaging.PackageRelationshipSelectorType,System.String)"></see> constructor as the owner of the relationship.</returns>
     </member>
     <member name="T:System.IO.Packaging.PackageRelationshipSelectorType">
       <summary>Specifies the type of selection criteria that is used to match and return <see cref="T:System.IO.Packaging.PackageRelationship"></see> selections through a <see cref="T:System.IO.Packaging.PackageRelationshipSelector"></see>.</summary>
@@ -644,23 +650,30 @@
       <summary>Returns a value that indicates whether two package part URIs are equivalent.</summary>
       <param name="firstPartUri">The URI of the first <see cref="T:System.IO.Packaging.PackagePart"></see>.</param>
       <param name="secondPartUri">The URI of the second <see cref="T:System.IO.Packaging.PackagePart"></see>.</param>
-      <returns><p sourcefile="System.IO.Packaging.yml" sourcestartlinenumber="1" sourceendlinenumber="2"><p sourcefile="System.IO.Packaging.yml" sourcestartlinenumber="1" sourceendlinenumber="1">A value that indicates the relationship between <code data-dev-comment-type="paramref">firstPartUri</code> and <code data-dev-comment-type="paramref">secondPartUri</code>.  </p>
- <table><thead><tr><th> Value  <p>
-<p sourcefile="System.IO.Packaging.yml" sourcestartlinenumber="4" sourceendlinenumber="4"> </th><th> Meaning  <p>
-<p sourcefile="System.IO.Packaging.yml" sourcestartlinenumber="6" sourceendlinenumber="6"> </th></tr></thead><tbody><tr><td> Less than 0  <p>
-<p sourcefile="System.IO.Packaging.yml" sourcestartlinenumber="8" sourceendlinenumber="8"> </td><td><code data-dev-comment-type="paramref">firstPartUri</code> is less than <code data-dev-comment-type="paramref">secondPartUri</code>.  <p>
-<p sourcefile="System.IO.Packaging.yml" sourcestartlinenumber="10" sourceendlinenumber="10"> </td></tr><tr><td> 0  <p>
-<p sourcefile="System.IO.Packaging.yml" sourcestartlinenumber="12" sourceendlinenumber="12"> </td><td><code data-dev-comment-type="paramref">firstPartUri</code> is equivalent to <code data-dev-comment-type="paramref">secondPartUri</code>.  <p>
-<p sourcefile="System.IO.Packaging.yml" sourcestartlinenumber="14" sourceendlinenumber="14"> </td></tr><tr><td> Greater than 0  <p>
-<p sourcefile="System.IO.Packaging.yml" sourcestartlinenumber="16" sourceendlinenumber="16"> </td><td><code data-dev-comment-type="paramref">firstPartUri</code> is greater than <code data-dev-comment-type="paramref">secondPartUri</code>.  <p>
-<p sourcefile="System.IO.Packaging.yml" sourcestartlinenumber="18" sourceendlinenumber="18"> </td></tr></tbody></table></p>
-</returns>
+      <returns>A value that indicates the relationship between <paramref name="firstPartUri">firstPartUri</paramref> and <paramref name="secondPartUri">secondPartUri</paramref>.  
+  Value  
+
+  Meaning  
+
+  Less than 0  
+
+ <paramref name="firstPartUri">firstPartUri</paramref> is less than <paramref name="secondPartUri">secondPartUri</paramref>.  
+
+  0  
+
+ <paramref name="firstPartUri">firstPartUri</paramref> is equivalent to <paramref name="secondPartUri">secondPartUri</paramref>.  
+
+  Greater than 0  
+
+ <paramref name="firstPartUri">firstPartUri</paramref> is greater than <paramref name="secondPartUri">secondPartUri</paramref>.  
+
+ </returns>
       <exception cref="T:System.ArgumentException"><paramref name="firstPartUri">firstPartUri</paramref> or <paramref name="secondPartUri">secondPartUri</paramref> is not a valid part URI syntax.</exception>
     </member>
     <member name="M:System.IO.Packaging.PackUriHelper.CreatePartUri(System.Uri)">
       <summary>Creates a formatted <see cref="T:System.IO.Packaging.PackagePart"></see> URI.</summary>
       <param name="partUri">The URI of the <see cref="T:System.IO.Packaging.PackagePart"></see> within the package.</param>
-      <returns>A formatted <see cref="T:System.IO.Packaging.PackagePart"></see> URI.</returns>
+      <returns>A formatted <see cref="System.IO.Packaging.PackagePart"></see> URI.</returns>
     </member>
     <member name="M:System.IO.Packaging.PackUriHelper.GetNormalizedPartUri(System.Uri)">
       <summary>Returns the normalized form of a specified <see cref="T:System.IO.Packaging.PackagePart"></see> URI.</summary>
@@ -671,9 +684,13 @@
     <member name="M:System.IO.Packaging.PackUriHelper.GetRelationshipPartUri(System.Uri)">
       <summary>Returns the URI of the relationship part associated with a specified <see cref="T:System.IO.Packaging.PackagePart"></see>.</summary>
       <param name="partUri">The <see cref="P:System.IO.Packaging.PackagePart.Uri"></see> of the <see cref="T:System.IO.Packaging.PackagePart"></see> to return the URI for the associated <see cref="T:System.IO.Packaging.PackageRelationship"></see>.</param>
-      <returns>The URI of the <see cref="T:System.IO.Packaging.PackageRelationship"></see> part associated with the <see cref="T:System.IO.Packaging.PackagePart"></see> identified by <paramref name="partUri">partUri</paramref>.</returns>
+      <returns>The URI of the <see cref="System.IO.Packaging.PackageRelationship"></see> part associated with the <see cref="System.IO.Packaging.PackagePart"></see> identified by <paramref name="partUri">partUri</paramref>.</returns>
       <exception cref="T:System.ArgumentNullException"><paramref name="partUri">partUri</paramref> is null.</exception>
-      <exception cref="T:System.ArgumentException"><paramref name="partUri">partUri</paramref> syntax is not valid for a package part URI.   -or-  <paramref name="partUri">partUri</paramref> is an absolute URI.   -or-  <paramref name="partUri">partUri</paramref> references a relationship part.</exception>
+      <exception cref="T:System.ArgumentException"><paramref name="partUri">partUri</paramref> syntax is not valid for a package part URI.  
+ -or-  
+ <paramref name="partUri">partUri</paramref> is an absolute URI.  
+ -or-  
+ <paramref name="partUri">partUri</paramref> references a relationship part.</exception>
     </member>
     <member name="M:System.IO.Packaging.PackUriHelper.GetRelativeUri(System.Uri,System.Uri)">
       <summary>Returns the relative URI between two specified <see cref="T:System.IO.Packaging.PackagePart"></see> URIs.</summary>
@@ -685,27 +702,37 @@
     <member name="M:System.IO.Packaging.PackUriHelper.GetSourcePartUriFromRelationshipPartUri(System.Uri)">
       <summary>Returns the <see cref="P:System.IO.Packaging.PackageRelationship.SourceUri"></see> from the <see cref="T:System.IO.Packaging.PackageRelationship"></see> with a specified URI.</summary>
       <param name="relationshipPartUri">The URI of the relationship part to return the <see cref="P:System.IO.Packaging.PackageRelationship.SourceUri"></see> from.</param>
-      <returns>The <see cref="P:System.IO.Packaging.PackageRelationship.SourceUri"></see> of the <see cref="T:System.IO.Packaging.PackagePart"></see> from the relationship with the specified <paramref name="relationshipPartUri">relationshipPartUri</paramref>.</returns>
+      <returns>The <see cref="System.IO.Packaging.PackageRelationship.SourceUri"></see> of the <see cref="System.IO.Packaging.PackagePart"></see> from the relationship with the specified <paramref name="relationshipPartUri">relationshipPartUri</paramref>.</returns>
       <exception cref="T:System.ArgumentNullException"><paramref name="relationshipPartUri">relationshipPartUri</paramref> is null.</exception>
-      <exception cref="T:System.ArgumentException"><paramref name="relationshipPartUri">relationshipPartUri</paramref> is an absolute URI.   -or-  <paramref name="relationshipPartUri">relationshipPartUri</paramref> syntax is not valid for a <see cref="T:System.IO.Packaging.PackagePart"></see>.   -or-  <paramref name="relationshipPartUri">relationshipPartUri</paramref> does not reference a relationship part.   -or-   The <see cref="P:System.IO.Packaging.PackageRelationship.SourceUri"></see> of the relationship part references another relationship part (not valid).</exception>
+      <exception cref="T:System.ArgumentException"><paramref name="relationshipPartUri">relationshipPartUri</paramref> is an absolute URI.  
+ -or-  
+ <paramref name="relationshipPartUri">relationshipPartUri</paramref> syntax is not valid for a <see cref="System.IO.Packaging.PackagePart"></see>.  
+ -or-  
+ <paramref name="relationshipPartUri">relationshipPartUri</paramref> does not reference a relationship part.  
+ -or-  
+ The <see cref="System.IO.Packaging.PackageRelationship.SourceUri"></see> of the relationship part references another relationship part (not valid).</exception>
     </member>
     <member name="M:System.IO.Packaging.PackUriHelper.IsRelationshipPartUri(System.Uri)">
       <summary>Returns a value that indicates whether a specified URI is the URI of a <see cref="T:System.IO.Packaging.PackageRelationship"></see> part.</summary>
       <param name="partUri">The URI to check for a <see cref="T:System.IO.Packaging.PackageRelationship"></see> part.</param>
-      <returns>true if <paramref name="partUri">partUri</paramref> identifies a <see cref="T:System.IO.Packaging.PackageRelationship"></see> part; otherwise, false.</returns>
+      <returns>true if <paramref name="partUri">partUri</paramref> identifies a <see cref="System.IO.Packaging.PackageRelationship"></see> part; otherwise, false.</returns>
       <exception cref="T:System.ArgumentNullException"><paramref name="partUri">partUri</paramref> is null.</exception>
-      <exception cref="T:System.ArgumentException"><paramref name="partUri">partUri</paramref> is an absolute URI.   -or-  <paramref name="partUri">partUri</paramref> is an invalid <see cref="T:System.IO.Packaging.PackagePart"></see> syntax.</exception>
+      <exception cref="T:System.ArgumentException"><paramref name="partUri">partUri</paramref> is an absolute URI.  
+ -or-  
+ <paramref name="partUri">partUri</paramref> is an invalid <see cref="System.IO.Packaging.PackagePart"></see> syntax.</exception>
     </member>
     <member name="M:System.IO.Packaging.PackUriHelper.ResolvePartUri(System.Uri,System.Uri)">
       <summary>Returns a part URI given a source part URI and a URI with a relative path to a target part.</summary>
-      <param name="sourcePartUri">The URI of the source part, or &quot;/&quot; to designate the <see cref="T:System.IO.Packaging.Package"></see> root.</param>
+      <param name="sourcePartUri">The URI of the source part, or &amp;quot;/&amp;quot; to designate the <see cref="T:System.IO.Packaging.Package"></see> root.</param>
       <param name="targetUri">The relative URI to the target part.</param>
       <returns>The URI of the target part resolved between the specified <paramref name="SourcePartUri">SourcePartUri</paramref> and the <paramref name="targetUri">targetUri</paramref> parameters.</returns>
       <exception cref="T:System.ArgumentNullException"><paramref name="sourcePartUri">sourcePartUri</paramref> or <paramref name="targetUri">targetUri</paramref> is null.</exception>
-      <exception cref="T:System.ArgumentException"><paramref name="sourcePartUri">sourcePartUri</paramref> is not a valid part URI.   -or-  <paramref name="targetUri">targetUri</paramref> is not a valid relative URI.</exception>
+      <exception cref="T:System.ArgumentException"><paramref name="sourcePartUri">sourcePartUri</paramref> is not a valid part URI.  
+ -or-  
+ <paramref name="targetUri">targetUri</paramref> is not a valid relative URI.</exception>
     </member>
     <member name="F:System.IO.Packaging.PackUriHelper.UriSchemePack">
-      <summary>Defines the pack URI scheme name &quot;pack&quot;.</summary>
+      <summary>Defines the pack URI scheme name &amp;quot;pack&amp;quot;.</summary>
       <returns></returns>
     </member>
     <member name="T:System.IO.Packaging.TargetMode">
@@ -719,6 +746,45 @@
       <summary>The relationship references a part that is inside the package.</summary>
       <returns></returns>
     </member>
+    <member name="T:System.IO.FileFormatException">
+      <summary>The exception that is thrown when an input file or a data stream that is supposed to conform to a certain file format specification is malformed.</summary>
+    </member>
+    <member name="M:System.IO.FileFormatException.#ctor">
+      <summary>Creates a new instance of the <see cref="T:System.IO.FileFormatException"></see> class.</summary>
+    </member>
+    <member name="M:System.IO.FileFormatException.#ctor(System.String)">
+      <summary>Creates a new instance of the <see cref="T:System.IO.FileFormatException"></see> class with a specified error message.</summary>
+      <param name="message">A <see cref="T:System.String"></see> value that represents the error message.</param>
+    </member>
+    <member name="M:System.IO.FileFormatException.#ctor(System.Uri)">
+      <summary>Creates a new instance of the <see cref="T:System.IO.FileFormatException"></see> class with a source URI value.</summary>
+      <param name="sourceUri">The <see cref="T:System.Uri"></see> value of the file that caused this error.</param>
+    </member>
+    <member name="M:System.IO.FileFormatException.#ctor(System.String,System.Exception)">
+      <summary>Creates a new instance of the <see cref="T:System.IO.FileFormatException"></see> class with a specified error message and exception type.</summary>
+      <param name="message">A <see cref="T:System.String"></see> value that represents the error message.</param>
+      <param name="innerException">The value of the <see cref="P:System.Exception.InnerException"></see> property, which represents the cause of the current exception.</param>
+    </member>
+    <member name="M:System.IO.FileFormatException.#ctor(System.Uri,System.Exception)">
+      <summary>Creates a new instance of the <see cref="T:System.IO.FileFormatException"></see> class with a source URI value and an exception type.</summary>
+      <param name="sourceUri">The <see cref="T:System.Uri"></see> value of the file that caused this error.</param>
+      <param name="innerException">The value of the <see cref="P:System.Exception.InnerException"></see> property, which represents the cause of the current exception.</param>
+    </member>
+    <member name="M:System.IO.FileFormatException.#ctor(System.Uri,System.String)">
+      <summary>Creates a new instance of the <see cref="T:System.IO.FileFormatException"></see> class with a source URI value and a specified error message.</summary>
+      <param name="sourceUri">The <see cref="T:System.Uri"></see> value of the file that caused this error.</param>
+      <param name="message">A <see cref="T:System.String"></see> value that represents the error message.</param>
+    </member>
+    <member name="M:System.IO.FileFormatException.#ctor(System.Uri,System.String,System.Exception)">
+      <summary>Creates a new instance of the <see cref="T:System.IO.FileFormatException"></see> class with a source URI value, a specified error message, and an exception type.</summary>
+      <param name="sourceUri">The <see cref="T:System.Uri"></see> value of the file that caused this error.</param>
+      <param name="message">A <see cref="T:System.String"></see> value that represents the error message.</param>
+      <param name="innerException">The value of the <see cref="P:System.Exception.InnerException"></see> property, which represents the cause of the current exception.</param>
+    </member>
+    <member name="P:System.IO.FileFormatException.SourceUri">
+      <summary>Gets the name of a file that caused the <see cref="T:System.IO.FileFormatException"></see>.</summary>
+      <returns>A <see cref="System.Uri"></see> that represents the name the file that caused the exception.</returns>
+    </member>
     <member name="T:System.IO.Packaging.ZipPackage">
       <summary>Implements a derived subclass of the abstract <see cref="T:System.IO.Packaging.Package"></see> base class—the <see cref="T:System.IO.Packaging.ZipPackage"></see> class uses a ZIP archive as the container store. This class cannot be inherited.</summary>
     </member>
@@ -726,4 +792,4 @@
       <summary>Represents a part that is stored in a <see cref="T:System.IO.Packaging.ZipPackage"></see>.</summary>
     </member>
   </members>
-</doc></span>
+</doc>

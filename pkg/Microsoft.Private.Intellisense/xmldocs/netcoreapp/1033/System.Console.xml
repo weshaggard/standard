@@ -1,5 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?><span>
-<doc>
+﻿<?xml version="1.0" encoding="utf-8"?><doc>
   <assembly>
     <name>System.Console</name>
   </assembly>
@@ -10,7 +9,7 @@
     <member name="P:System.Console.BackgroundColor">
       <summary>Gets or sets the background color of the console.</summary>
       <returns>A value that specifies the background color of the console; that is, the color that appears behind each character. The default is black.</returns>
-      <exception cref="T:System.ArgumentException">The color specified in a set operation is not a valid member of <see cref="T:System.ConsoleColor"></see>.</exception>
+      <exception cref="T:System.ArgumentException">The color specified in a set operation is not a valid member of <see cref="System.ConsoleColor"></see>.</exception>
       <exception cref="T:System.Security.SecurityException">The user does not have permission to perform this action.</exception>
       <exception cref="T:System.IO.IOException">An I/O error occurred.</exception>
     </member>
@@ -22,26 +21,35 @@
       <summary>Plays the sound of a beep of a specified frequency and duration through the console speaker.</summary>
       <param name="frequency">The frequency of the beep, ranging from 37 to 32767 hertz.</param>
       <param name="duration">The duration of the beep measured in milliseconds.</param>
-      <exception cref="T:System.ArgumentOutOfRangeException"><paramref name="frequency">frequency</paramref> is less than 37 or more than 32767 hertz.   -or-  <paramref name="duration">duration</paramref> is less than or equal to zero.</exception>
+      <exception cref="T:System.ArgumentOutOfRangeException"><paramref name="frequency">frequency</paramref> is less than 37 or more than 32767 hertz.  
+ -or-  
+ <paramref name="duration">duration</paramref> is less than or equal to zero.</exception>
       <exception cref="T:System.Security.HostProtectionException">This method was executed on a server, such as SQL Server, that does not permit access to the console.</exception>
     </member>
     <member name="P:System.Console.BufferHeight">
       <summary>Gets or sets the height of the buffer area.</summary>
       <returns>The current height, in rows, of the buffer area.</returns>
-      <exception cref="T:System.ArgumentOutOfRangeException">The value in a set operation is less than or equal to zero.   -or-   The value in a set operation is greater than or equal to <see cref="F:System.Int16.MaxValue"></see>.   -or-   The value in a set operation is less than <see cref="P:System.Console.WindowTop"></see> + <see cref="P:System.Console.WindowHeight"></see>.</exception>
+      <exception cref="T:System.ArgumentOutOfRangeException">The value in a set operation is less than or equal to zero.  
+ -or-  
+ The value in a set operation is greater than or equal to <see cref="System.Int16.MaxValue"></see>.  
+ -or-  
+ The value in a set operation is less than <see cref="System.Console.WindowTop"></see> + <see cref="System.Console.WindowHeight"></see>.</exception>
       <exception cref="T:System.Security.SecurityException">The user does not have permission to perform this action.</exception>
       <exception cref="T:System.IO.IOException">An I/O error occurred.</exception>
     </member>
     <member name="P:System.Console.BufferWidth">
       <summary>Gets or sets the width of the buffer area.</summary>
       <returns>The current width, in columns, of the buffer area.</returns>
-      <exception cref="T:System.ArgumentOutOfRangeException">The value in a set operation is less than or equal to zero.   -or-   The value in a set operation is greater than or equal to <see cref="F:System.Int16.MaxValue"></see>.   -or-   The value in a set operation is less than <see cref="P:System.Console.WindowLeft"></see> + <see cref="P:System.Console.WindowWidth"></see>.</exception>
+      <exception cref="T:System.ArgumentOutOfRangeException">The value in a set operation is less than or equal to zero.  
+ -or-  
+ The value in a set operation is greater than or equal to <see cref="System.Int16.MaxValue"></see>.  
+ -or-  
+ The value in a set operation is less than <see cref="System.Console.WindowLeft"></see> + <see cref="System.Console.WindowWidth"></see>.</exception>
       <exception cref="T:System.Security.SecurityException">The user does not have permission to perform this action.</exception>
       <exception cref="T:System.IO.IOException">An I/O error occurred.</exception>
     </member>
     <member name="E:System.Console.CancelKeyPress">
       <summary>Occurs when the <see cref="F:System.ConsoleModifiers.Control"></see> modifier key (Ctrl) and either the <see cref="F:System.ConsoleKey.C"></see> console key (C) or the Break key are pressed simultaneously (Ctrl+C or Ctrl+Break).</summary>
-      <returns></returns>
     </member>
     <member name="P:System.Console.CapsLock">
       <summary>Gets a value indicating whether the CAPS LOCK keyboard toggle is turned on or turned off.</summary>
@@ -54,7 +62,9 @@
     <member name="P:System.Console.CursorLeft">
       <summary>Gets or sets the column position of the cursor within the buffer area.</summary>
       <returns>The current position, in columns, of the cursor.</returns>
-      <exception cref="T:System.ArgumentOutOfRangeException">The value in a set operation is less than zero.   -or-   The value in a set operation is greater than or equal to <see cref="P:System.Console.BufferWidth"></see>.</exception>
+      <exception cref="T:System.ArgumentOutOfRangeException">The value in a set operation is less than zero.  
+ -or-  
+ The value in a set operation is greater than or equal to <see cref="System.Console.BufferWidth"></see>.</exception>
       <exception cref="T:System.Security.SecurityException">The user does not have permission to perform this action.</exception>
       <exception cref="T:System.IO.IOException">An I/O error occurred.</exception>
     </member>
@@ -68,7 +78,9 @@
     <member name="P:System.Console.CursorTop">
       <summary>Gets or sets the row position of the cursor within the buffer area.</summary>
       <returns>The current position, in rows, of the cursor.</returns>
-      <exception cref="T:System.ArgumentOutOfRangeException">The value in a set operation is less than zero.   -or-   The value in a set operation is greater than or equal to <see cref="P:System.Console.BufferHeight"></see>.</exception>
+      <exception cref="T:System.ArgumentOutOfRangeException">The value in a set operation is less than zero.  
+ -or-  
+ The value in a set operation is greater than or equal to <see cref="System.Console.BufferHeight"></see>.</exception>
       <exception cref="T:System.Security.SecurityException">The user does not have permission to perform this action.</exception>
       <exception cref="T:System.IO.IOException">An I/O error occurred.</exception>
     </member>
@@ -80,18 +92,18 @@
     </member>
     <member name="P:System.Console.Error">
       <summary>Gets the standard error output stream.</summary>
-      <returns>A <see cref="T:System.IO.TextWriter"></see> that represents the standard error output stream.</returns>
+      <returns>A <see cref="System.IO.TextWriter"></see> that represents the standard error output stream.</returns>
     </member>
     <member name="P:System.Console.ForegroundColor">
       <summary>Gets or sets the foreground color of the console.</summary>
-      <returns>A <see cref="T:System.ConsoleColor"></see> that specifies the foreground color of the console; that is, the color of each character that is displayed. The default is gray.</returns>
-      <exception cref="T:System.ArgumentException">The color specified in a set operation is not a valid member of <see cref="T:System.ConsoleColor"></see>.</exception>
+      <returns>A <see cref="System.ConsoleColor"></see> that specifies the foreground color of the console; that is, the color of each character that is displayed. The default is gray.</returns>
+      <exception cref="T:System.ArgumentException">The color specified in a set operation is not a valid member of <see cref="System.ConsoleColor"></see>.</exception>
       <exception cref="T:System.Security.SecurityException">The user does not have permission to perform this action.</exception>
       <exception cref="T:System.IO.IOException">An I/O error occurred.</exception>
     </member>
     <member name="P:System.Console.In">
       <summary>Gets the standard input stream.</summary>
-      <returns>A <see cref="T:System.IO.TextReader"></see> that represents the standard input stream.</returns>
+      <returns>A <see cref="System.IO.TextReader"></see> that represents the standard input stream.</returns>
     </member>
     <member name="P:System.Console.InputEncoding">
       <summary>Gets or sets the encoding the console uses to read input.</summary>
@@ -134,7 +146,15 @@
       <param name="sourceHeight">The number of rows in the source area.</param>
       <param name="targetLeft">The leftmost column of the destination area.</param>
       <param name="targetTop">The topmost row of the destination area.</param>
-      <exception cref="T:System.ArgumentOutOfRangeException">One or more of the parameters is less than zero.   -or-  <paramref name="sourceLeft">sourceLeft</paramref> or <paramref name="targetLeft">targetLeft</paramref> is greater than or equal to <see cref="P:System.Console.BufferWidth"></see>.   -or-  <paramref name="sourceTop">sourceTop</paramref> or <paramref name="targetTop">targetTop</paramref> is greater than or equal to <see cref="P:System.Console.BufferHeight"></see>.   -or-  <paramref name="sourceTop">sourceTop</paramref> + <paramref name="sourceHeight">sourceHeight</paramref> is greater than or equal to <see cref="P:System.Console.BufferHeight"></see>.   -or-  <paramref name="sourceLeft">sourceLeft</paramref> + <paramref name="sourceWidth">sourceWidth</paramref> is greater than or equal to <see cref="P:System.Console.BufferWidth"></see>.</exception>
+      <exception cref="T:System.ArgumentOutOfRangeException">One or more of the parameters is less than zero.  
+ -or-  
+ <paramref name="sourceLeft">sourceLeft</paramref> or <paramref name="targetLeft">targetLeft</paramref> is greater than or equal to <see cref="System.Console.BufferWidth"></see>.  
+ -or-  
+ <paramref name="sourceTop">sourceTop</paramref> or <paramref name="targetTop">targetTop</paramref> is greater than or equal to <see cref="System.Console.BufferHeight"></see>.  
+ -or-  
+ <paramref name="sourceTop">sourceTop</paramref> + <paramref name="sourceHeight">sourceHeight</paramref> is greater than or equal to <see cref="System.Console.BufferHeight"></see>.  
+ -or-  
+ <paramref name="sourceLeft">sourceLeft</paramref> + <paramref name="sourceWidth">sourceWidth</paramref> is greater than or equal to <see cref="System.Console.BufferWidth"></see>.</exception>
       <exception cref="T:System.Security.SecurityException">The user does not have permission to perform this action.</exception>
       <exception cref="T:System.IO.IOException">An I/O error occurred.</exception>
     </member>
@@ -149,8 +169,16 @@
       <param name="sourceChar">The character used to fill the source area.</param>
       <param name="sourceForeColor">The foreground color used to fill the source area.</param>
       <param name="sourceBackColor">The background color used to fill the source area.</param>
-      <exception cref="T:System.ArgumentOutOfRangeException">One or more of the parameters is less than zero.   -or-  <paramref name="sourceLeft">sourceLeft</paramref> or <paramref name="targetLeft">targetLeft</paramref> is greater than or equal to <see cref="P:System.Console.BufferWidth"></see>.   -or-  <paramref name="sourceTop">sourceTop</paramref> or <paramref name="targetTop">targetTop</paramref> is greater than or equal to <see cref="P:System.Console.BufferHeight"></see>.   -or-  <paramref name="sourceTop">sourceTop</paramref> + <paramref name="sourceHeight">sourceHeight</paramref> is greater than or equal to <see cref="P:System.Console.BufferHeight"></see>.   -or-  <paramref name="sourceLeft">sourceLeft</paramref> + <paramref name="sourceWidth">sourceWidth</paramref> is greater than or equal to <see cref="P:System.Console.BufferWidth"></see>.</exception>
-      <exception cref="T:System.ArgumentException">One or both of the color parameters is not a member of the <see cref="T:System.ConsoleColor"></see> enumeration.</exception>
+      <exception cref="T:System.ArgumentOutOfRangeException">One or more of the parameters is less than zero.  
+ -or-  
+ <paramref name="sourceLeft">sourceLeft</paramref> or <paramref name="targetLeft">targetLeft</paramref> is greater than or equal to <see cref="System.Console.BufferWidth"></see>.  
+ -or-  
+ <paramref name="sourceTop">sourceTop</paramref> or <paramref name="targetTop">targetTop</paramref> is greater than or equal to <see cref="System.Console.BufferHeight"></see>.  
+ -or-  
+ <paramref name="sourceTop">sourceTop</paramref> + <paramref name="sourceHeight">sourceHeight</paramref> is greater than or equal to <see cref="System.Console.BufferHeight"></see>.  
+ -or-  
+ <paramref name="sourceLeft">sourceLeft</paramref> + <paramref name="sourceWidth">sourceWidth</paramref> is greater than or equal to <see cref="System.Console.BufferWidth"></see>.</exception>
+      <exception cref="T:System.ArgumentException">One or both of the color parameters is not a member of the <see cref="System.ConsoleColor"></see> enumeration.</exception>
       <exception cref="T:System.Security.SecurityException">The user does not have permission to perform this action.</exception>
       <exception cref="T:System.IO.IOException">An I/O error occurred.</exception>
     </member>
@@ -190,7 +218,7 @@
     </member>
     <member name="P:System.Console.Out">
       <summary>Gets the standard output stream.</summary>
-      <returns>A <see cref="T:System.IO.TextWriter"></see> that represents the standard output stream.</returns>
+      <returns>A <see cref="System.IO.TextWriter"></see> that represents the standard output stream.</returns>
     </member>
     <member name="P:System.Console.OutputEncoding">
       <summary>Gets or sets the encoding the console uses to write output.</summary>
@@ -206,21 +234,21 @@
     </member>
     <member name="M:System.Console.ReadKey">
       <summary>Obtains the next character or function key pressed by the user. The pressed key is displayed in the console window.</summary>
-      <returns>An object that describes the <see cref="T:System.ConsoleKey"></see> constant and Unicode character, if any, that correspond to the pressed console key. The <see cref="T:System.ConsoleKeyInfo"></see> object also describes, in a bitwise combination of <see cref="T:System.ConsoleModifiers"></see> values, whether one or more Shift, Alt, or Ctrl modifier keys was pressed simultaneously with the console key.</returns>
-      <exception cref="T:System.InvalidOperationException">The <see cref="P:System.Console.In"></see> property is redirected from some stream other than the console.</exception>
+      <returns>An object that describes the <see cref="System.ConsoleKey"></see> constant and Unicode character, if any, that correspond to the pressed console key. The <see cref="System.ConsoleKeyInfo"></see> object also describes, in a bitwise combination of <see cref="System.ConsoleModifiers"></see> values, whether one or more Shift, Alt, or Ctrl modifier keys was pressed simultaneously with the console key.</returns>
+      <exception cref="T:System.InvalidOperationException">The <see cref="System.Console.In"></see> property is redirected from some stream other than the console.</exception>
     </member>
     <member name="M:System.Console.ReadKey(System.Boolean)">
       <summary>Obtains the next character or function key pressed by the user. The pressed key is optionally displayed in the console window.</summary>
       <param name="intercept">Determines whether to display the pressed key in the console window. true to not display the pressed key; otherwise, false.</param>
-      <returns>An object that describes the <see cref="T:System.ConsoleKey"></see> constant and Unicode character, if any, that correspond to the pressed console key. The <see cref="T:System.ConsoleKeyInfo"></see> object also describes, in a bitwise combination of <see cref="T:System.ConsoleModifiers"></see> values, whether one or more Shift, Alt, or Ctrl modifier keys was pressed simultaneously with the console key.</returns>
-      <exception cref="T:System.InvalidOperationException">The <see cref="P:System.Console.In"></see> property is redirected from some stream other than the console.</exception>
+      <returns>An object that describes the <see cref="System.ConsoleKey"></see> constant and Unicode character, if any, that correspond to the pressed console key. The <see cref="System.ConsoleKeyInfo"></see> object also describes, in a bitwise combination of <see cref="System.ConsoleModifiers"></see> values, whether one or more Shift, Alt, or Ctrl modifier keys was pressed simultaneously with the console key.</returns>
+      <exception cref="T:System.InvalidOperationException">The <see cref="System.Console.In"></see> property is redirected from some stream other than the console.</exception>
     </member>
     <member name="M:System.Console.ReadLine">
       <summary>Reads the next line of characters from the standard input stream.</summary>
       <returns>The next line of characters from the input stream, or null if no more lines are available.</returns>
       <exception cref="T:System.IO.IOException">An I/O error occurred.</exception>
       <exception cref="T:System.OutOfMemoryException">There is insufficient memory to allocate a buffer for the returned string.</exception>
-      <exception cref="T:System.ArgumentOutOfRangeException">The number of characters in the next line of characters is greater than <see cref="F:System.Int32.MaxValue"></see>.</exception>
+      <exception cref="T:System.ArgumentOutOfRangeException">The number of characters in the next line of characters is greater than <see cref="System.Int32.MaxValue"></see>.</exception>
     </member>
     <member name="M:System.Console.ResetColor">
       <summary>Sets the foreground and background console colors to their defaults.</summary>
@@ -231,7 +259,13 @@
       <summary>Sets the height and width of the screen buffer area to the specified values.</summary>
       <param name="width">The width of the buffer area measured in columns.</param>
       <param name="height">The height of the buffer area measured in rows.</param>
-      <exception cref="T:System.ArgumentOutOfRangeException"><paramref name="height">height</paramref> or <paramref name="width">width</paramref> is less than or equal to zero.   -or-  <paramref name="height">height</paramref> or <paramref name="width">width</paramref> is greater than or equal to <see cref="F:System.Int16.MaxValue"></see>.   -or-  <paramref name="width">width</paramref> is less than <see cref="P:System.Console.WindowLeft"></see> + <see cref="P:System.Console.WindowWidth"></see>.   -or-  <paramref name="height">height</paramref> is less than <see cref="P:System.Console.WindowTop"></see> + <see cref="P:System.Console.WindowHeight"></see>.</exception>
+      <exception cref="T:System.ArgumentOutOfRangeException"><paramref name="height">height</paramref> or <paramref name="width">width</paramref> is less than or equal to zero.  
+ -or-  
+ <paramref name="height">height</paramref> or <paramref name="width">width</paramref> is greater than or equal to <see cref="System.Int16.MaxValue"></see>.  
+ -or-  
+ <paramref name="width">width</paramref> is less than <see cref="System.Console.WindowLeft"></see> + <see cref="System.Console.WindowWidth"></see>.  
+ -or-  
+ <paramref name="height">height</paramref> is less than <see cref="System.Console.WindowTop"></see> + <see cref="System.Console.WindowHeight"></see>.</exception>
       <exception cref="T:System.Security.SecurityException">The user does not have permission to perform this action.</exception>
       <exception cref="T:System.IO.IOException">An I/O error occurred.</exception>
     </member>
@@ -239,7 +273,11 @@
       <summary>Sets the position of the cursor.</summary>
       <param name="left">The column position of the cursor. Columns are numbered from left to right starting at 0.</param>
       <param name="top">The row position of the cursor. Rows are numbered from top to bottom starting at 0.</param>
-      <exception cref="T:System.ArgumentOutOfRangeException"><paramref name="left">left</paramref> or <paramref name="top">top</paramref> is less than zero.   -or-  <paramref name="left">left</paramref> is greater than or equal to <see cref="P:System.Console.BufferWidth"></see>.   -or-  <paramref name="top">top</paramref> is greater than or equal to <see cref="P:System.Console.BufferHeight"></see>.</exception>
+      <exception cref="T:System.ArgumentOutOfRangeException"><paramref name="left">left</paramref> or <paramref name="top">top</paramref> is less than zero.  
+ -or-  
+ <paramref name="left">left</paramref> is greater than or equal to <see cref="System.Console.BufferWidth"></see>.  
+ -or-  
+ <paramref name="top">top</paramref> is greater than or equal to <see cref="System.Console.BufferHeight"></see>.</exception>
       <exception cref="T:System.Security.SecurityException">The user does not have permission to perform this action.</exception>
       <exception cref="T:System.IO.IOException">An I/O error occurred.</exception>
     </member>
@@ -265,7 +303,11 @@
       <summary>Sets the position of the console window relative to the screen buffer.</summary>
       <param name="left">The column position of the upper left  corner of the console window.</param>
       <param name="top">The row position of the upper left corner of the console window.</param>
-      <exception cref="T:System.ArgumentOutOfRangeException"><paramref name="left">left</paramref> or <paramref name="top">top</paramref> is less than zero.   -or-  <paramref name="left">left</paramref> + <see cref="P:System.Console.WindowWidth"></see> is greater than <see cref="P:System.Console.BufferWidth"></see>.   -or-  <paramref name="top">top</paramref> + <see cref="P:System.Console.WindowHeight"></see> is greater than <see cref="P:System.Console.BufferHeight"></see>.</exception>
+      <exception cref="T:System.ArgumentOutOfRangeException"><paramref name="left">left</paramref> or <paramref name="top">top</paramref> is less than zero.  
+ -or-  
+ <paramref name="left">left</paramref> + <see cref="System.Console.WindowWidth"></see> is greater than <see cref="System.Console.BufferWidth"></see>.  
+ -or-  
+ <paramref name="top">top</paramref> + <see cref="System.Console.WindowHeight"></see> is greater than <see cref="System.Console.BufferHeight"></see>.</exception>
       <exception cref="T:System.Security.SecurityException">The user does not have permission to perform this action.</exception>
       <exception cref="T:System.IO.IOException">An I/O error occurred.</exception>
     </member>
@@ -273,7 +315,11 @@
       <summary>Sets the height and width of the console window to the specified values.</summary>
       <param name="width">The width of the console window measured in columns.</param>
       <param name="height">The height of the console window measured in rows.</param>
-      <exception cref="T:System.ArgumentOutOfRangeException"><paramref name="width">width</paramref> or <paramref name="height">height</paramref> is less than or equal to zero.   -or-  <paramref name="width">width</paramref> plus <see cref="P:System.Console.WindowLeft"></see> or <paramref name="height">height</paramref> plus <see cref="P:System.Console.WindowTop"></see> is greater than or equal to <see cref="F:System.Int16.MaxValue"></see>.   -or-  <paramref name="width">width</paramref> or <paramref name="height">height</paramref> is greater than the largest possible window width or height for the current screen resolution and console font.</exception>
+      <exception cref="T:System.ArgumentOutOfRangeException"><paramref name="width">width</paramref> or <paramref name="height">height</paramref> is less than or equal to zero.  
+ -or-  
+ <paramref name="width">width</paramref> plus <see cref="System.Console.WindowLeft"></see> or <paramref name="height">height</paramref> plus <see cref="System.Console.WindowTop"></see> is greater than or equal to <see cref="System.Int16.MaxValue"></see>.  
+ -or-  
+ <paramref name="width">width</paramref> or <paramref name="height">height</paramref> is greater than the largest possible window width or height for the current screen resolution and console font.</exception>
       <exception cref="T:System.Security.SecurityException">The user does not have permission to perform this action.</exception>
       <exception cref="T:System.IO.IOException">An I/O error occurred.</exception>
     </member>
@@ -293,25 +339,37 @@
     <member name="P:System.Console.WindowHeight">
       <summary>Gets or sets the height of the console window area.</summary>
       <returns>The height of the console window measured in rows.</returns>
-      <exception cref="T:System.ArgumentOutOfRangeException">The value of the <see cref="P:System.Console.WindowWidth"></see> property or the value of the <see cref="P:System.Console.WindowHeight"></see> property is less than or equal to 0.   -or-   The value of the <see cref="P:System.Console.WindowHeight"></see> property plus the value of the <see cref="P:System.Console.WindowTop"></see> property is greater than or equal to <see cref="F:System.Int16.MaxValue"></see>.   -or-   The value of the <see cref="P:System.Console.WindowWidth"></see> property or the value of the <see cref="P:System.Console.WindowHeight"></see> property is greater than the largest possible window width or height for the current screen resolution and console font.</exception>
+      <exception cref="T:System.ArgumentOutOfRangeException">The value of the <see cref="System.Console.WindowWidth"></see> property or the value of the <see cref="System.Console.WindowHeight"></see> property is less than or equal to 0.  
+ -or-  
+ The value of the <see cref="System.Console.WindowHeight"></see> property plus the value of the <see cref="System.Console.WindowTop"></see> property is greater than or equal to <see cref="System.Int16.MaxValue"></see>.  
+ -or-  
+ The value of the <see cref="System.Console.WindowWidth"></see> property or the value of the <see cref="System.Console.WindowHeight"></see> property is greater than the largest possible window width or height for the current screen resolution and console font.</exception>
       <exception cref="T:System.IO.IOException">Error reading or writing information.</exception>
     </member>
     <member name="P:System.Console.WindowLeft">
       <summary>Gets or sets the leftmost position of the console window area relative to the screen buffer.</summary>
       <returns>The leftmost console window position measured in columns.</returns>
-      <exception cref="T:System.ArgumentOutOfRangeException">In a set operation, the value to be assigned is less than zero.   -or-   As a result of the assignment, <see cref="P:System.Console.WindowLeft"></see> plus <see cref="P:System.Console.WindowWidth"></see> would exceed <see cref="P:System.Console.BufferWidth"></see>.</exception>
+      <exception cref="T:System.ArgumentOutOfRangeException">In a set operation, the value to be assigned is less than zero.  
+ -or-  
+ As a result of the assignment, <see cref="System.Console.WindowLeft"></see> plus <see cref="System.Console.WindowWidth"></see> would exceed <see cref="System.Console.BufferWidth"></see>.</exception>
       <exception cref="T:System.IO.IOException">Error reading or writing information.</exception>
     </member>
     <member name="P:System.Console.WindowTop">
       <summary>Gets or sets the top position of the console window area relative to the screen buffer.</summary>
       <returns>The uppermost console window position measured in rows.</returns>
-      <exception cref="T:System.ArgumentOutOfRangeException">In a set operation, the value to be assigned is less than zero.   -or-   As a result of the assignment, <see cref="P:System.Console.WindowTop"></see> plus <see cref="P:System.Console.WindowHeight"></see> would exceed <see cref="P:System.Console.BufferHeight"></see>.</exception>
+      <exception cref="T:System.ArgumentOutOfRangeException">In a set operation, the value to be assigned is less than zero.  
+ -or-  
+ As a result of the assignment, <see cref="System.Console.WindowTop"></see> plus <see cref="System.Console.WindowHeight"></see> would exceed <see cref="System.Console.BufferHeight"></see>.</exception>
       <exception cref="T:System.IO.IOException">Error reading or writing information.</exception>
     </member>
     <member name="P:System.Console.WindowWidth">
       <summary>Gets or sets the width of the console window.</summary>
       <returns>The width of the console window measured in columns.</returns>
-      <exception cref="T:System.ArgumentOutOfRangeException">The value of the <see cref="P:System.Console.WindowWidth"></see> property or the value of the <see cref="P:System.Console.WindowHeight"></see> property is less than or equal to 0.   -or-   The value of the <see cref="P:System.Console.WindowHeight"></see> property plus the value of the <see cref="P:System.Console.WindowTop"></see> property is greater than or equal to <see cref="F:System.Int16.MaxValue"></see>.   -or-   The value of the <see cref="P:System.Console.WindowWidth"></see> property or the value of the <see cref="P:System.Console.WindowHeight"></see> property is greater than the largest possible window width or height for the current screen resolution and console font.</exception>
+      <exception cref="T:System.ArgumentOutOfRangeException">The value of the <see cref="System.Console.WindowWidth"></see> property or the value of the <see cref="System.Console.WindowHeight"></see> property is less than or equal to 0.  
+ -or-  
+ The value of the <see cref="System.Console.WindowHeight"></see> property plus the value of the <see cref="System.Console.WindowTop"></see> property is greater than or equal to <see cref="System.Int16.MaxValue"></see>.  
+ -or-  
+ The value of the <see cref="System.Console.WindowWidth"></see> property or the value of the <see cref="System.Console.WindowHeight"></see> property is greater than the largest possible window width or height for the current screen resolution and console font.</exception>
       <exception cref="T:System.IO.IOException">Error reading or writing information.</exception>
     </member>
     <member name="M:System.Console.Write(System.String,System.Object,System.Object,System.Object)">
@@ -1205,12 +1263,12 @@
     <member name="M:System.ConsoleKeyInfo.Equals(System.ConsoleKeyInfo)">
       <summary>Gets a value indicating whether the specified <see cref="T:System.ConsoleKeyInfo"></see> object is equal to the current <see cref="T:System.ConsoleKeyInfo"></see> object.</summary>
       <param name="obj">An object to compare to the current <see cref="T:System.ConsoleKeyInfo"></see> object.</param>
-      <returns>true if <paramref name="obj">obj</paramref> is equal to the current <see cref="T:System.ConsoleKeyInfo"></see> object; otherwise, false.</returns>
+      <returns>true if <paramref name="obj">obj</paramref> is equal to the current <see cref="System.ConsoleKeyInfo"></see> object; otherwise, false.</returns>
     </member>
     <member name="M:System.ConsoleKeyInfo.Equals(System.Object)">
       <summary>Gets a value indicating whether the specified object is equal to the current <see cref="T:System.ConsoleKeyInfo"></see> object.</summary>
       <param name="value">An object to compare to the current <see cref="T:System.ConsoleKeyInfo"></see> object.</param>
-      <returns>true if <paramref name="value">value</paramref> is a <see cref="T:System.ConsoleKeyInfo"></see> object and is equal to the current <see cref="T:System.ConsoleKeyInfo"></see> object; otherwise, false.</returns>
+      <returns>true if <paramref name="value">value</paramref> is a <see cref="System.ConsoleKeyInfo"></see> object and is equal to the current <see cref="System.ConsoleKeyInfo"></see> object; otherwise, false.</returns>
     </member>
     <member name="M:System.ConsoleKeyInfo.GetHashCode">
       <summary>Returns the hash code for the current <see cref="T:System.ConsoleKeyInfo"></see> object.</summary>
@@ -1222,7 +1280,7 @@
     </member>
     <member name="P:System.ConsoleKeyInfo.KeyChar">
       <summary>Gets the Unicode character represented by the current <see cref="T:System.ConsoleKeyInfo"></see> object.</summary>
-      <returns>An object that corresponds to the console key represented by the current <see cref="T:System.ConsoleKeyInfo"></see> object.</returns>
+      <returns>An object that corresponds to the console key represented by the current <see cref="System.ConsoleKeyInfo"></see> object.</returns>
     </member>
     <member name="P:System.ConsoleKeyInfo.Modifiers">
       <summary>Gets a bitwise combination of <see cref="T:System.ConsoleModifiers"></see> values that specifies one or more modifier keys pressed simultaneously with the console key.</summary>
@@ -1267,4 +1325,4 @@
       <returns></returns>
     </member>
   </members>
-</doc></span>
+</doc>

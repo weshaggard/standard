@@ -1,5 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?><span>
-<doc>
+﻿<?xml version="1.0" encoding="utf-8"?><doc>
   <assembly>
     <name>System.Diagnostics.Debug</name>
   </assembly>
@@ -31,7 +30,7 @@
     </member>
     <member name="P:System.Diagnostics.Debug.AutoFlush">
       <summary>Gets or sets a value indicating whether <see cref="M:System.Diagnostics.Debug.Flush"></see> should be called on the <see cref="P:System.Diagnostics.Debug.Listeners"></see> after every write.</summary>
-      <returns>true if <see cref="M:System.Diagnostics.Debug.Flush"></see> is called on the <see cref="P:System.Diagnostics.Debug.Listeners"></see> after every write; otherwise, false.</returns>
+      <returns>true if <see cref="System.Diagnostics.Debug.Flush"></see> is called on the <see cref="System.Diagnostics.Debug.Listeners"></see> after every write; otherwise, false.</returns>
     </member>
     <member name="M:System.Diagnostics.Debug.Close">
       <summary>Flushes the output buffer and then calls the Close method on each of the <see cref="P:System.Diagnostics.Debug.Listeners"></see>.</summary>
@@ -68,7 +67,9 @@
       <param name="format">A composite format string that contains text intermixed with zero or more format items, which correspond to objects in the args array.</param>
       <param name="args">An object array containing zero or more objects to format.</param>
       <exception cref="T:System.ArgumentNullException"><paramref name="format">format</paramref> is null.</exception>
-      <exception cref="T:System.FormatException"><paramref name="format">format</paramref> is invalid.   -or-   The number that indicates an argument to format is less than zero, or greater than or equal to the number of specified objects to format.</exception>
+      <exception cref="T:System.FormatException"><paramref name="format">format</paramref> is invalid.  
+ -or-  
+ The number that indicates an argument to format is less than zero, or greater than or equal to the number of specified objects to format.</exception>
     </member>
     <member name="M:System.Diagnostics.Debug.Unindent">
       <summary>Decreases the current <see cref="P:System.Diagnostics.Debug.IndentLevel"></see> by one.</summary>
@@ -79,12 +80,12 @@
       <param name="category">A category name used to organize the output.</param>
     </member>
     <member name="M:System.Diagnostics.Debug.Write(System.Object,System.String)">
-      <summary>Writes a category name and the value of the object's <see cref="M:System.Object.ToString"></see> method to the trace listeners in the <see cref="P:System.Diagnostics.Debug.Listeners"></see> collection.</summary>
+      <summary>Writes a category name and the value of the object&amp;#39;s <see cref="M:System.Object.ToString"></see> method to the trace listeners in the <see cref="P:System.Diagnostics.Debug.Listeners"></see> collection.</summary>
       <param name="value">An object whose name is sent to the <see cref="P:System.Diagnostics.Debug.Listeners"></see>.</param>
       <param name="category">A category name used to organize the output.</param>
     </member>
     <member name="M:System.Diagnostics.Debug.Write(System.Object)">
-      <summary>Writes the value of the object's <see cref="M:System.Object.ToString"></see> method to the trace listeners in the <see cref="P:System.Diagnostics.Debug.Listeners"></see> collection.</summary>
+      <summary>Writes the value of the object&amp;#39;s <see cref="M:System.Object.ToString"></see> method to the trace listeners in the <see cref="P:System.Diagnostics.Debug.Listeners"></see> collection.</summary>
       <param name="value">An object whose name is sent to the <see cref="P:System.Diagnostics.Debug.Listeners"></see>.</param>
     </member>
     <member name="M:System.Diagnostics.Debug.Write(System.String)">
@@ -92,7 +93,7 @@
       <param name="message">A message to write.</param>
     </member>
     <member name="M:System.Diagnostics.Debug.WriteIf(System.Boolean,System.Object)">
-      <summary>Writes the value of the object's <see cref="M:System.Object.ToString"></see> method to the trace listeners in the <see cref="P:System.Diagnostics.Debug.Listeners"></see> collection if a condition is true.</summary>
+      <summary>Writes the value of the object&amp;#39;s <see cref="M:System.Object.ToString"></see> method to the trace listeners in the <see cref="P:System.Diagnostics.Debug.Listeners"></see> collection if a condition is true.</summary>
       <param name="condition">The conditional expression to evaluate. If the condition is true, the value is written to the trace listeners in the collection.</param>
       <param name="value">An object whose name is sent to the <see cref="P:System.Diagnostics.Debug.Listeners"></see>.</param>
     </member>
@@ -102,7 +103,7 @@
       <param name="message">A message to write.</param>
     </member>
     <member name="M:System.Diagnostics.Debug.WriteIf(System.Boolean,System.Object,System.String)">
-      <summary>Writes a category name and the value of the object's <see cref="M:System.Object.ToString"></see> method to the trace listeners in the <see cref="P:System.Diagnostics.Debug.Listeners"></see> collection if a condition is true.</summary>
+      <summary>Writes a category name and the value of the object&amp;#39;s <see cref="M:System.Object.ToString"></see> method to the trace listeners in the <see cref="P:System.Diagnostics.Debug.Listeners"></see> collection if a condition is true.</summary>
       <param name="condition">The conditional expression to evaluate. If the condition is true, the category name and value are written to the trace listeners in the collection.</param>
       <param name="value">An object whose name is sent to the <see cref="P:System.Diagnostics.Debug.Listeners"></see>.</param>
       <param name="category">A category name used to organize the output.</param>
@@ -114,7 +115,7 @@
       <param name="category">A category name used to organize the output.</param>
     </member>
     <member name="M:System.Diagnostics.Debug.WriteLine(System.Object)">
-      <summary>Writes the value of the object's <see cref="M:System.Object.ToString"></see> method to the trace listeners in the <see cref="P:System.Diagnostics.Debug.Listeners"></see> collection.</summary>
+      <summary>Writes the value of the object&amp;#39;s <see cref="M:System.Object.ToString"></see> method to the trace listeners in the <see cref="P:System.Diagnostics.Debug.Listeners"></see> collection.</summary>
       <param name="value">An object whose name is sent to the <see cref="P:System.Diagnostics.Debug.Listeners"></see>.</param>
     </member>
     <member name="M:System.Diagnostics.Debug.WriteLine(System.String)">
@@ -122,7 +123,7 @@
       <param name="message">A message to write.</param>
     </member>
     <member name="M:System.Diagnostics.Debug.WriteLine(System.Object,System.String)">
-      <summary>Writes a category name and the value of the object's <see cref="M:System.Object.ToString"></see> method to the trace listeners in the <see cref="P:System.Diagnostics.Debug.Listeners"></see> collection.</summary>
+      <summary>Writes a category name and the value of the object&amp;#39;s <see cref="M:System.Object.ToString"></see> method to the trace listeners in the <see cref="P:System.Diagnostics.Debug.Listeners"></see> collection.</summary>
       <param name="value">An object whose name is sent to the <see cref="P:System.Diagnostics.Debug.Listeners"></see>.</param>
       <param name="category">A category name used to organize the output.</param>
     </member>
@@ -137,13 +138,13 @@
       <param name="category">A category name used to organize the output.</param>
     </member>
     <member name="M:System.Diagnostics.Debug.WriteLineIf(System.Boolean,System.Object,System.String)">
-      <summary>Writes a category name and the value of the object's <see cref="M:System.Object.ToString"></see> method to the trace listeners in the <see cref="P:System.Diagnostics.Debug.Listeners"></see> collection if a condition is true.</summary>
+      <summary>Writes a category name and the value of the object&amp;#39;s <see cref="M:System.Object.ToString"></see> method to the trace listeners in the <see cref="P:System.Diagnostics.Debug.Listeners"></see> collection if a condition is true.</summary>
       <param name="condition">The conditional expression to evaluate. If the condition is true, the category name and value are written to the trace listeners in the collection.</param>
       <param name="value">An object whose name is sent to the <see cref="P:System.Diagnostics.Debug.Listeners"></see>.</param>
       <param name="category">A category name used to organize the output.</param>
     </member>
     <member name="M:System.Diagnostics.Debug.WriteLineIf(System.Boolean,System.Object)">
-      <summary>Writes the value of the object's <see cref="M:System.Object.ToString"></see> method to the trace listeners in the <see cref="P:System.Diagnostics.Debug.Listeners"></see> collection if a condition is true.</summary>
+      <summary>Writes the value of the object&amp;#39;s <see cref="M:System.Object.ToString"></see> method to the trace listeners in the <see cref="P:System.Diagnostics.Debug.Listeners"></see> collection if a condition is true.</summary>
       <param name="condition">The conditional expression to evaluate. If the condition is true, the value is written to the trace listeners in the collection.</param>
       <param name="value">An object whose name is sent to the <see cref="P:System.Diagnostics.Debug.Listeners"></see>.</param>
     </member>
@@ -163,7 +164,7 @@
     </member>
     <member name="M:System.Diagnostics.Debugger.Break">
       <summary>Signals a breakpoint to an attached debugger.</summary>
-      <exception cref="T:System.Security.SecurityException">The <see cref="T:System.Security.Permissions.UIPermission"></see> is not set to break into the debugger.</exception>
+      <exception cref="T:System.Security.SecurityException">The <see cref="System.Security.Permissions.UIPermission"></see> is not set to break into the debugger.</exception>
     </member>
     <member name="F:System.Diagnostics.Debugger.DefaultCategory">
       <summary>Represents the default category of message with a constant.</summary>
@@ -175,12 +176,12 @@
     </member>
     <member name="M:System.Diagnostics.Debugger.IsLogging">
       <summary>Checks to see if logging is enabled by an attached debugger.</summary>
-      <returns>true if a debugger is attached and logging is enabled; otherwise, false. The attached debugger is the registered managed debugger in the DbgManagedDebugger registry key. For more information on this key, see <see cref="~/docs/framework/debug-trace-profile/enabling-jit-attach-debugging.md">Enabling JIT-Attach Debugging</see>.</returns>
+      <returns>true if a debugger is attached and logging is enabled; otherwise, false. The attached debugger is the registered managed debugger in the DbgManagedDebugger registry key. For more information on this key, see Enabling JIT-Attach Debugging.</returns>
     </member>
     <member name="M:System.Diagnostics.Debugger.Launch">
       <summary>Launches and attaches a debugger to the process.</summary>
       <returns>true if the startup is successful or if the debugger is already attached; otherwise, false.</returns>
-      <exception cref="T:System.Security.SecurityException">The <see cref="T:System.Security.Permissions.UIPermission"></see> is not set to start the debugger.</exception>
+      <exception cref="T:System.Security.SecurityException">The <see cref="System.Security.Permissions.UIPermission"></see> is not set to start the debugger.</exception>
     </member>
     <member name="M:System.Diagnostics.Debugger.Log(System.Int32,System.String,System.String)">
       <summary>Posts a message for the attached debugger.</summary>
@@ -197,11 +198,11 @@
     <member name="M:System.Diagnostics.DebuggerBrowsableAttribute.#ctor(System.Diagnostics.DebuggerBrowsableState)">
       <summary>Initializes a new instance of the <see cref="T:System.Diagnostics.DebuggerBrowsableAttribute"></see> class.</summary>
       <param name="state">One of the <see cref="T:System.Diagnostics.DebuggerBrowsableState"></see> values that specifies how to display the member.</param>
-      <exception cref="T:System.ArgumentOutOfRangeException"><paramref name="state">state</paramref> is not one of the <see cref="T:System.Diagnostics.DebuggerBrowsableState"></see> values.</exception>
+      <exception cref="T:System.ArgumentOutOfRangeException"><paramref name="state">state</paramref> is not one of the <see cref="System.Diagnostics.DebuggerBrowsableState"></see> values.</exception>
     </member>
     <member name="P:System.Diagnostics.DebuggerBrowsableAttribute.State">
       <summary>Gets the display state for the attribute.</summary>
-      <returns>One of the <see cref="T:System.Diagnostics.DebuggerBrowsableState"></see> values.</returns>
+      <returns>One of the <see cref="System.Diagnostics.DebuggerBrowsableState"></see> values.</returns>
     </member>
     <member name="T:System.Diagnostics.DebuggerBrowsableState">
       <summary>Provides display instructions for the debugger.</summary>
@@ -223,20 +224,20 @@
     </member>
     <member name="M:System.Diagnostics.DebuggerDisplayAttribute.#ctor(System.String)">
       <summary>Initializes a new instance of the <see cref="T:System.Diagnostics.DebuggerDisplayAttribute"></see> class.</summary>
-      <param name="value">The string to be displayed in the value column for instances of the type; an empty string (&quot;&quot;) causes the value column to be hidden.</param>
+      <param name="value">The string to be displayed in the value column for instances of the type; an empty string (&amp;quot;&amp;quot;) causes the value column to be hidden.</param>
     </member>
     <member name="P:System.Diagnostics.DebuggerDisplayAttribute.Name">
       <summary>Gets or sets the name to display in the debugger variable windows.</summary>
       <returns>The name to display in the debugger variable windows.</returns>
     </member>
     <member name="P:System.Diagnostics.DebuggerDisplayAttribute.Target">
-      <summary>Gets or sets the type of the attribute's target.</summary>
-      <returns>The attribute's target type.</returns>
-      <exception cref="T:System.ArgumentNullException"><see cref="P:System.Diagnostics.DebuggerDisplayAttribute.Target"></see> is set to null.</exception>
+      <summary>Gets or sets the type of the attribute&amp;#39;s target.</summary>
+      <returns>The attribute&amp;#39;s target type.</returns>
+      <exception cref="T:System.ArgumentNullException"><see cref="System.Diagnostics.DebuggerDisplayAttribute.Target"></see> is set to null.</exception>
     </member>
     <member name="P:System.Diagnostics.DebuggerDisplayAttribute.TargetTypeName">
-      <summary>Gets or sets the type name of the attribute's target.</summary>
-      <returns>The name of the attribute's target type.</returns>
+      <summary>Gets or sets the type name of the attribute&amp;#39;s target.</summary>
+      <returns>The name of the attribute&amp;#39;s target type.</returns>
     </member>
     <member name="P:System.Diagnostics.DebuggerDisplayAttribute.Type">
       <summary>Gets or sets the string to display in the type column of the debugger variable windows.</summary>
@@ -289,7 +290,7 @@
     <member name="P:System.Diagnostics.DebuggerTypeProxyAttribute.Target">
       <summary>Gets or sets the target type for the attribute.</summary>
       <returns>The target type for the attribute.</returns>
-      <exception cref="T:System.ArgumentNullException"><see cref="P:System.Diagnostics.DebuggerTypeProxyAttribute.Target"></see> is set to null.</exception>
+      <exception cref="T:System.ArgumentNullException"><see cref="System.Diagnostics.DebuggerTypeProxyAttribute.Target"></see> is set to null.</exception>
     </member>
     <member name="P:System.Diagnostics.DebuggerTypeProxyAttribute.TargetTypeName">
       <summary>Gets or sets the name of the target type.</summary>
@@ -352,4 +353,4 @@
       <returns>The fully qualified visualizer type name.</returns>
     </member>
   </members>
-</doc></span>
+</doc>

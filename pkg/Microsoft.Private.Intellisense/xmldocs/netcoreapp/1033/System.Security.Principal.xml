@@ -1,5 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?><span>
-<doc>
+﻿<?xml version="1.0" encoding="utf-8"?><doc>
   <assembly>
     <name>System.Security.Principal</name>
   </assembly>
@@ -24,7 +23,7 @@
     </member>
     <member name="P:System.Security.Principal.IPrincipal.Identity">
       <summary>Gets the identity of the current principal.</summary>
-      <returns>The <see cref="T:System.Security.Principal.IIdentity"></see> object associated with the current principal.</returns>
+      <returns>The <see cref="System.Security.Principal.IIdentity"></see> object associated with the current principal.</returns>
     </member>
     <member name="M:System.Security.Principal.IPrincipal.IsInRole(System.String)">
       <summary>Determines whether the current principal belongs to the specified role.</summary>
@@ -39,7 +38,7 @@
       <returns></returns>
     </member>
     <member name="F:System.Security.Principal.PrincipalPolicy.UnauthenticatedPrincipal">
-      <summary>Principal and identity objects for the unauthenticated entity should be created. An unauthenticated entity has <see cref="P:System.Security.Principal.GenericIdentity.Name"></see> set to the empty string (&quot;&quot;) and <see cref="P:System.Security.Principal.GenericIdentity.IsAuthenticated"></see> set to false.</summary>
+      <summary>Principal and identity objects for the unauthenticated entity should be created. An unauthenticated entity has <see cref="P:System.Security.Principal.GenericIdentity.Name"></see> set to the empty string (&amp;quot;&amp;quot;) and <see cref="P:System.Security.Principal.GenericIdentity.IsAuthenticated"></see> set to false.</summary>
       <returns></returns>
     </member>
     <member name="F:System.Security.Principal.PrincipalPolicy.WindowsPrincipal">
@@ -54,15 +53,15 @@
       <returns></returns>
     </member>
     <member name="F:System.Security.Principal.TokenImpersonationLevel.Delegation">
-      <summary>The server process can impersonate the client's security context on remote systems.</summary>
+      <summary>The server process can impersonate the client&amp;#39;s security context on remote systems.</summary>
       <returns></returns>
     </member>
     <member name="F:System.Security.Principal.TokenImpersonationLevel.Identification">
-      <summary>The server process can obtain information about the client, such as security identifiers and privileges, but it cannot impersonate the client. This is useful for servers that export their own objects, for example, database products that export tables and views. Using the retrieved client-security information, the server can make access-validation decisions without being able to use other services that are using the client's security context.</summary>
+      <summary>The server process can obtain information about the client, such as security identifiers and privileges, but it cannot impersonate the client. This is useful for servers that export their own objects, for example, database products that export tables and views. Using the retrieved client-security information, the server can make access-validation decisions without being able to use other services that are using the client&amp;#39;s security context.</summary>
       <returns></returns>
     </member>
     <member name="F:System.Security.Principal.TokenImpersonationLevel.Impersonation">
-      <summary>The server process can impersonate the client's security context on its local system. The server cannot impersonate the client on remote systems.</summary>
+      <summary>The server process can impersonate the client&amp;#39;s security context on its local system. The server cannot impersonate the client on remote systems.</summary>
       <returns></returns>
     </member>
     <member name="F:System.Security.Principal.TokenImpersonationLevel.None">
@@ -70,4 +69,4 @@
       <returns></returns>
     </member>
   </members>
-</doc></span>
+</doc>

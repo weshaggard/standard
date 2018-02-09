@@ -1,9 +1,252 @@
-﻿<?xml version="1.0" encoding="utf-8"?><span>
-<doc>
+﻿<?xml version="1.0" encoding="utf-8"?><doc>
   <assembly>
     <name>System.Reflection.Primitives</name>
   </assembly>
   <members>
+    <member name="T:System.Reflection.Emit.StackBehaviour">
+      <summary>Describes how values are pushed onto a stack or popped off a stack.</summary>
+    </member>
+    <member name="F:System.Reflection.Emit.StackBehaviour.Pop0">
+      <summary>No values are popped off the stack.</summary>
+      <returns></returns>
+    </member>
+    <member name="F:System.Reflection.Emit.StackBehaviour.Pop1">
+      <summary>Pops one value off the stack.</summary>
+      <returns></returns>
+    </member>
+    <member name="F:System.Reflection.Emit.StackBehaviour.Pop1_pop1">
+      <summary>Pops 1 value off the stack for the first operand, and 1 value of the stack for the second operand.</summary>
+      <returns></returns>
+    </member>
+    <member name="F:System.Reflection.Emit.StackBehaviour.Popi">
+      <summary>Pops a 32-bit integer off the stack.</summary>
+      <returns></returns>
+    </member>
+    <member name="F:System.Reflection.Emit.StackBehaviour.Popi_pop1">
+      <summary>Pops a 32-bit integer off the stack for the first operand, and a value off the stack for the second operand.</summary>
+      <returns></returns>
+    </member>
+    <member name="F:System.Reflection.Emit.StackBehaviour.Popi_popi">
+      <summary>Pops a 32-bit integer off the stack for the first operand, and a 32-bit integer off the stack for the second operand.</summary>
+      <returns></returns>
+    </member>
+    <member name="F:System.Reflection.Emit.StackBehaviour.Popi_popi_popi">
+      <summary>Pops a 32-bit integer off the stack for the first operand, a 32-bit integer off the stack for the second operand, and a 32-bit integer off the stack for the third operand.</summary>
+      <returns></returns>
+    </member>
+    <member name="F:System.Reflection.Emit.StackBehaviour.Popi_popi8">
+      <summary>Pops a 32-bit integer off the stack for the first operand, and a 64-bit integer off the stack for the second operand.</summary>
+      <returns></returns>
+    </member>
+    <member name="F:System.Reflection.Emit.StackBehaviour.Popi_popr4">
+      <summary>Pops a 32-bit integer off the stack for the first operand, and a 32-bit floating point number off the stack for the second operand.</summary>
+      <returns></returns>
+    </member>
+    <member name="F:System.Reflection.Emit.StackBehaviour.Popi_popr8">
+      <summary>Pops a 32-bit integer off the stack for the first operand, and a 64-bit floating point number off the stack for the second operand.</summary>
+      <returns></returns>
+    </member>
+    <member name="F:System.Reflection.Emit.StackBehaviour.Popref">
+      <summary>Pops a reference off the stack.</summary>
+      <returns></returns>
+    </member>
+    <member name="F:System.Reflection.Emit.StackBehaviour.Popref_pop1">
+      <summary>Pops a reference off the stack for the first operand, and a value off the stack for the second operand.</summary>
+      <returns></returns>
+    </member>
+    <member name="F:System.Reflection.Emit.StackBehaviour.Popref_popi">
+      <summary>Pops a reference off the stack for the first operand, and a 32-bit integer off the stack for the second operand.</summary>
+      <returns></returns>
+    </member>
+    <member name="F:System.Reflection.Emit.StackBehaviour.Popref_popi_pop1">
+      <summary>Pops a reference off the stack for the first operand, a value off the stack for the second operand, and a 32-bit integer off the stack for the third operand.</summary>
+      <returns></returns>
+    </member>
+    <member name="F:System.Reflection.Emit.StackBehaviour.Popref_popi_popi">
+      <summary>Pops a reference off the stack for the first operand, a value off the stack for the second operand, and a value off the stack for the third operand.</summary>
+      <returns></returns>
+    </member>
+    <member name="F:System.Reflection.Emit.StackBehaviour.Popref_popi_popi8">
+      <summary>Pops a reference off the stack for the first operand, a value off the stack for the second operand, and a 64-bit integer off the stack for the third operand.</summary>
+      <returns></returns>
+    </member>
+    <member name="F:System.Reflection.Emit.StackBehaviour.Popref_popi_popr4">
+      <summary>Pops a reference off the stack for the first operand, a value off the stack for the second operand, and a 32-bit integer off the stack for the third operand.</summary>
+      <returns></returns>
+    </member>
+    <member name="F:System.Reflection.Emit.StackBehaviour.Popref_popi_popr8">
+      <summary>Pops a reference off the stack for the first operand, a value off the stack for the second operand, and a 64-bit floating point number off the stack for the third operand.</summary>
+      <returns></returns>
+    </member>
+    <member name="F:System.Reflection.Emit.StackBehaviour.Popref_popi_popref">
+      <summary>Pops a reference off the stack for the first operand, a value off the stack for the second operand, and a reference off the stack for the third operand.</summary>
+      <returns></returns>
+    </member>
+    <member name="F:System.Reflection.Emit.StackBehaviour.Push0">
+      <summary>No values are pushed onto the stack.</summary>
+      <returns></returns>
+    </member>
+    <member name="F:System.Reflection.Emit.StackBehaviour.Push1">
+      <summary>Pushes one value onto the stack.</summary>
+      <returns></returns>
+    </member>
+    <member name="F:System.Reflection.Emit.StackBehaviour.Push1_push1">
+      <summary>Pushes 1 value onto the stack for the first operand, and 1 value onto the stack for the second operand.</summary>
+      <returns></returns>
+    </member>
+    <member name="F:System.Reflection.Emit.StackBehaviour.Pushi">
+      <summary>Pushes a 32-bit integer onto the stack.</summary>
+      <returns></returns>
+    </member>
+    <member name="F:System.Reflection.Emit.StackBehaviour.Pushi8">
+      <summary>Pushes a 64-bit integer onto the stack.</summary>
+      <returns></returns>
+    </member>
+    <member name="F:System.Reflection.Emit.StackBehaviour.Pushr4">
+      <summary>Pushes a 32-bit floating point number onto the stack.</summary>
+      <returns></returns>
+    </member>
+    <member name="F:System.Reflection.Emit.StackBehaviour.Pushr8">
+      <summary>Pushes a 64-bit floating point number onto the stack.</summary>
+      <returns></returns>
+    </member>
+    <member name="F:System.Reflection.Emit.StackBehaviour.Pushref">
+      <summary>Pushes a reference onto the stack.</summary>
+      <returns></returns>
+    </member>
+    <member name="F:System.Reflection.Emit.StackBehaviour.Varpop">
+      <summary>Pops a variable off the stack.</summary>
+      <returns></returns>
+    </member>
+    <member name="F:System.Reflection.Emit.StackBehaviour.Varpush">
+      <summary>Pushes a variable onto the stack.</summary>
+      <returns></returns>
+    </member>
+    <member name="T:System.Reflection.EventAttributes">
+      <summary>Specifies the attributes of an event.</summary>
+    </member>
+    <member name="F:System.Reflection.EventAttributes.None">
+      <summary>Specifies that the event has no attributes.</summary>
+      <returns></returns>
+    </member>
+    <member name="F:System.Reflection.EventAttributes.RTSpecialName">
+      <summary>Specifies that the common language runtime should check name encoding.</summary>
+      <returns></returns>
+    </member>
+    <member name="F:System.Reflection.EventAttributes.SpecialName">
+      <summary>Specifies that the event is special in a way described by the name.</summary>
+      <returns></returns>
+    </member>
+    <member name="T:System.Reflection.FieldAttributes">
+      <summary>Specifies flags that describe the attributes of a field.</summary>
+    </member>
+    <member name="F:System.Reflection.FieldAttributes.Assembly">
+      <summary>Specifies that the field is accessible throughout the assembly.</summary>
+      <returns></returns>
+    </member>
+    <member name="F:System.Reflection.FieldAttributes.FamANDAssem">
+      <summary>Specifies that the field is accessible only by subtypes in this assembly.</summary>
+      <returns></returns>
+    </member>
+    <member name="F:System.Reflection.FieldAttributes.Family">
+      <summary>Specifies that the field is accessible only by type and subtypes.</summary>
+      <returns></returns>
+    </member>
+    <member name="F:System.Reflection.FieldAttributes.FamORAssem">
+      <summary>Specifies that the field is accessible by subtypes anywhere, as well as throughout this assembly.</summary>
+      <returns></returns>
+    </member>
+    <member name="F:System.Reflection.FieldAttributes.FieldAccessMask">
+      <summary>Specifies the access level of a given field.</summary>
+      <returns></returns>
+    </member>
+    <member name="F:System.Reflection.FieldAttributes.HasDefault">
+      <summary>Specifies that the field has a default value.</summary>
+      <returns></returns>
+    </member>
+    <member name="F:System.Reflection.FieldAttributes.HasFieldMarshal">
+      <summary>Specifies that the field has marshaling information.</summary>
+      <returns></returns>
+    </member>
+    <member name="F:System.Reflection.FieldAttributes.HasFieldRVA">
+      <summary>Specifies that the field has a relative virtual address (RVA). The RVA is the location of the method body in the current image, as an address relative to the start of the image file in which it is located.</summary>
+      <returns></returns>
+    </member>
+    <member name="F:System.Reflection.FieldAttributes.InitOnly">
+      <summary>Specifies that the field is initialized only, and can be set only in the body of a constructor.</summary>
+      <returns></returns>
+    </member>
+    <member name="F:System.Reflection.FieldAttributes.Literal">
+      <summary>Specifies that the field&amp;#39;s value is a compile-time (static or early bound) constant. Any attempt to set it throws a <see cref="T:System.FieldAccessException"></see>.</summary>
+      <returns></returns>
+    </member>
+    <member name="F:System.Reflection.FieldAttributes.NotSerialized">
+      <summary>Specifies that the field does not have to be serialized when the type is remoted.</summary>
+      <returns></returns>
+    </member>
+    <member name="F:System.Reflection.FieldAttributes.PinvokeImpl">
+      <summary>Reserved for future use.</summary>
+      <returns></returns>
+    </member>
+    <member name="F:System.Reflection.FieldAttributes.Private">
+      <summary>Specifies that the field is accessible only by the parent type.</summary>
+      <returns></returns>
+    </member>
+    <member name="F:System.Reflection.FieldAttributes.PrivateScope">
+      <summary>Specifies that the field cannot be referenced.</summary>
+      <returns></returns>
+    </member>
+    <member name="F:System.Reflection.FieldAttributes.Public">
+      <summary>Specifies that the field is accessible by any member for whom this scope is visible.</summary>
+      <returns></returns>
+    </member>
+    <member name="F:System.Reflection.FieldAttributes.RTSpecialName">
+      <summary>Specifies that the common language runtime (metadata internal APIs) should check the name encoding.</summary>
+      <returns></returns>
+    </member>
+    <member name="F:System.Reflection.FieldAttributes.SpecialName">
+      <summary>Specifies a special method, with the name describing how the method is special.</summary>
+      <returns></returns>
+    </member>
+    <member name="F:System.Reflection.FieldAttributes.Static">
+      <summary>Specifies that the field represents the defined type, or else it is per-instance.</summary>
+      <returns></returns>
+    </member>
+    <member name="T:System.Reflection.GenericParameterAttributes">
+      <summary>Describes the constraints on a generic type parameter of a generic type or method.</summary>
+    </member>
+    <member name="F:System.Reflection.GenericParameterAttributes.Contravariant">
+      <summary>The generic type parameter is contravariant. A contravariant type parameter can appear as a parameter type in method signatures.</summary>
+      <returns></returns>
+    </member>
+    <member name="F:System.Reflection.GenericParameterAttributes.Covariant">
+      <summary>The generic type parameter is covariant. A covariant type parameter can appear as the result type of a method, the type of a read-only field, a declared base type, or an implemented interface.</summary>
+      <returns></returns>
+    </member>
+    <member name="F:System.Reflection.GenericParameterAttributes.DefaultConstructorConstraint">
+      <summary>A type can be substituted for the generic type parameter only if it has a parameterless constructor.</summary>
+      <returns></returns>
+    </member>
+    <member name="F:System.Reflection.GenericParameterAttributes.None">
+      <summary>There are no special flags.</summary>
+      <returns></returns>
+    </member>
+    <member name="F:System.Reflection.GenericParameterAttributes.NotNullableValueTypeConstraint">
+      <summary>A type can be substituted for the generic type parameter only if it is a value type and is not nullable.</summary>
+      <returns></returns>
+    </member>
+    <member name="F:System.Reflection.GenericParameterAttributes.ReferenceTypeConstraint">
+      <summary>A type can be substituted for the generic type parameter only if it is a reference type.</summary>
+      <returns></returns>
+    </member>
+    <member name="F:System.Reflection.GenericParameterAttributes.SpecialConstraintMask">
+      <summary>Selects the combination of all special constraint flags. This value is the result of using logical OR to combine the following flags: <see cref="F:System.Reflection.GenericParameterAttributes.DefaultConstructorConstraint"></see>, <see cref="F:System.Reflection.GenericParameterAttributes.ReferenceTypeConstraint"></see>, and <see cref="F:System.Reflection.GenericParameterAttributes.NotNullableValueTypeConstraint"></see>.</summary>
+      <returns></returns>
+    </member>
+    <member name="F:System.Reflection.GenericParameterAttributes.VarianceMask">
+      <summary>Selects the combination of all variance flags. This value is the result of using logical OR to combine the following flags: <see cref="F:System.Reflection.GenericParameterAttributes.Contravariant"></see> and <see cref="F:System.Reflection.GenericParameterAttributes.Covariant"></see>.</summary>
+      <returns></returns>
+    </member>
     <member name="T:System.Reflection.CallingConventions">
       <summary>Defines the valid calling conventions for a method.</summary>
     </member>
@@ -125,7 +368,7 @@
     </member>
     <member name="M:System.Reflection.Emit.OpCode.ToString">
       <summary>Returns this Opcode as a <see cref="T:System.String"></see>.</summary>
-      <returns>Returns a <see cref="T:System.String"></see> containing the name of this Opcode.</returns>
+      <returns>Returns a <see cref="System.String"></see> containing the name of this Opcode.</returns>
     </member>
     <member name="P:System.Reflection.Emit.OpCode.Value">
       <summary>Gets the numeric value of the intermediate language (IL) instruction.</summary>
@@ -447,7 +690,7 @@
       <returns></returns>
     </member>
     <member name="F:System.Reflection.Emit.OpCodes.Cpobj">
-      <summary>Copies the value type located at the address of an object (type &amp;, * or native int) to the address of the destination object (type &amp;, * or native int).</summary>
+      <summary>Copies the value type located at the address of an object (type &amp;amp;,  or native int) to the address of the destination object (type &amp;amp;,  or native int).</summary>
       <returns></returns>
     </member>
     <member name="F:System.Reflection.Emit.OpCodes.Div">
@@ -627,7 +870,7 @@
       <returns></returns>
     </member>
     <member name="F:System.Reflection.Emit.OpCodes.Ldelema">
-      <summary>Loads the address of the array element at a specified array index onto the top of the evaluation stack as type &amp; (managed pointer).</summary>
+      <summary>Loads the address of the array element at a specified array index onto the top of the evaluation stack as type &amp;amp; (managed pointer).</summary>
       <returns></returns>
     </member>
     <member name="F:System.Reflection.Emit.OpCodes.Ldfld">
@@ -847,7 +1090,7 @@
       <returns></returns>
     </member>
     <member name="F:System.Reflection.Emit.OpCodes.Refanyval">
-      <summary>Retrieves the address (type &amp;) embedded in a typed reference.</summary>
+      <summary>Retrieves the address (type &amp;amp;) embedded in a typed reference.</summary>
       <returns></returns>
     </member>
     <member name="F:System.Reflection.Emit.OpCodes.Rem">
@@ -859,7 +1102,7 @@
       <returns></returns>
     </member>
     <member name="F:System.Reflection.Emit.OpCodes.Ret">
-      <summary>Returns from the current method, pushing a return value (if present) from the callee's evaluation stack onto the caller's evaluation stack.</summary>
+      <summary>Returns from the current method, pushing a return value (if present) from the callee&amp;#39;s evaluation stack onto the caller&amp;#39;s evaluation stack.</summary>
       <returns></returns>
     </member>
     <member name="F:System.Reflection.Emit.OpCodes.Rethrow">
@@ -1011,7 +1254,7 @@
       <returns></returns>
     </member>
     <member name="F:System.Reflection.Emit.OpCodes.Tailcall">
-      <summary>Performs a postfixed method call instruction such that the current method's stack frame is removed before the actual call instruction is executed.</summary>
+      <summary>Performs a postfixed method call instruction such that the current method&amp;#39;s stack frame is removed before the actual call instruction is executed.</summary>
       <returns></returns>
     </member>
     <member name="M:System.Reflection.Emit.OpCodes.TakesSingleByteArgument(System.Reflection.Emit.OpCode)">
@@ -1184,250 +1427,6 @@
       <summary>The packing size is not specified.</summary>
       <returns></returns>
     </member>
-    <member name="T:System.Reflection.Emit.StackBehaviour">
-      <summary>Describes how values are pushed onto a stack or popped off a stack.</summary>
-    </member>
-    <member name="F:System.Reflection.Emit.StackBehaviour.Pop0">
-      <summary>No values are popped off the stack.</summary>
-      <returns></returns>
-    </member>
-    <member name="F:System.Reflection.Emit.StackBehaviour.Pop1">
-      <summary>Pops one value off the stack.</summary>
-      <returns></returns>
-    </member>
-    <member name="F:System.Reflection.Emit.StackBehaviour.Pop1_pop1">
-      <summary>Pops 1 value off the stack for the first operand, and 1 value of the stack for the second operand.</summary>
-      <returns></returns>
-    </member>
-    <member name="F:System.Reflection.Emit.StackBehaviour.Popi">
-      <summary>Pops a 32-bit integer off the stack.</summary>
-      <returns></returns>
-    </member>
-    <member name="F:System.Reflection.Emit.StackBehaviour.Popi_pop1">
-      <summary>Pops a 32-bit integer off the stack for the first operand, and a value off the stack for the second operand.</summary>
-      <returns></returns>
-    </member>
-    <member name="F:System.Reflection.Emit.StackBehaviour.Popi_popi">
-      <summary>Pops a 32-bit integer off the stack for the first operand, and a 32-bit integer off the stack for the second operand.</summary>
-      <returns></returns>
-    </member>
-    <member name="F:System.Reflection.Emit.StackBehaviour.Popi_popi_popi">
-      <summary>Pops a 32-bit integer off the stack for the first operand, a 32-bit integer off the stack for the second operand, and a 32-bit integer off the stack for the third operand.</summary>
-      <returns></returns>
-    </member>
-    <member name="F:System.Reflection.Emit.StackBehaviour.Popi_popi8">
-      <summary>Pops a 32-bit integer off the stack for the first operand, and a 64-bit integer off the stack for the second operand.</summary>
-      <returns></returns>
-    </member>
-    <member name="F:System.Reflection.Emit.StackBehaviour.Popi_popr4">
-      <summary>Pops a 32-bit integer off the stack for the first operand, and a 32-bit floating point number off the stack for the second operand.</summary>
-      <returns></returns>
-    </member>
-    <member name="F:System.Reflection.Emit.StackBehaviour.Popi_popr8">
-      <summary>Pops a 32-bit integer off the stack for the first operand, and a 64-bit floating point number off the stack for the second operand.</summary>
-      <returns></returns>
-    </member>
-    <member name="F:System.Reflection.Emit.StackBehaviour.Popref">
-      <summary>Pops a reference off the stack.</summary>
-      <returns></returns>
-    </member>
-    <member name="F:System.Reflection.Emit.StackBehaviour.Popref_pop1">
-      <summary>Pops a reference off the stack for the first operand, and a value off the stack for the second operand.</summary>
-      <returns></returns>
-    </member>
-    <member name="F:System.Reflection.Emit.StackBehaviour.Popref_popi">
-      <summary>Pops a reference off the stack for the first operand, and a 32-bit integer off the stack for the second operand.</summary>
-      <returns></returns>
-    </member>
-    <member name="F:System.Reflection.Emit.StackBehaviour.Popref_popi_pop1">
-      <summary>Pops a reference off the stack for the first operand, a value off the stack for the second operand, and a 32-bit integer off the stack for the third operand.</summary>
-      <returns></returns>
-    </member>
-    <member name="F:System.Reflection.Emit.StackBehaviour.Popref_popi_popi">
-      <summary>Pops a reference off the stack for the first operand, a value off the stack for the second operand, and a value off the stack for the third operand.</summary>
-      <returns></returns>
-    </member>
-    <member name="F:System.Reflection.Emit.StackBehaviour.Popref_popi_popi8">
-      <summary>Pops a reference off the stack for the first operand, a value off the stack for the second operand, and a 64-bit integer off the stack for the third operand.</summary>
-      <returns></returns>
-    </member>
-    <member name="F:System.Reflection.Emit.StackBehaviour.Popref_popi_popr4">
-      <summary>Pops a reference off the stack for the first operand, a value off the stack for the second operand, and a 32-bit integer off the stack for the third operand.</summary>
-      <returns></returns>
-    </member>
-    <member name="F:System.Reflection.Emit.StackBehaviour.Popref_popi_popr8">
-      <summary>Pops a reference off the stack for the first operand, a value off the stack for the second operand, and a 64-bit floating point number off the stack for the third operand.</summary>
-      <returns></returns>
-    </member>
-    <member name="F:System.Reflection.Emit.StackBehaviour.Popref_popi_popref">
-      <summary>Pops a reference off the stack for the first operand, a value off the stack for the second operand, and a reference off the stack for the third operand.</summary>
-      <returns></returns>
-    </member>
-    <member name="F:System.Reflection.Emit.StackBehaviour.Push0">
-      <summary>No values are pushed onto the stack.</summary>
-      <returns></returns>
-    </member>
-    <member name="F:System.Reflection.Emit.StackBehaviour.Push1">
-      <summary>Pushes one value onto the stack.</summary>
-      <returns></returns>
-    </member>
-    <member name="F:System.Reflection.Emit.StackBehaviour.Push1_push1">
-      <summary>Pushes 1 value onto the stack for the first operand, and 1 value onto the stack for the second operand.</summary>
-      <returns></returns>
-    </member>
-    <member name="F:System.Reflection.Emit.StackBehaviour.Pushi">
-      <summary>Pushes a 32-bit integer onto the stack.</summary>
-      <returns></returns>
-    </member>
-    <member name="F:System.Reflection.Emit.StackBehaviour.Pushi8">
-      <summary>Pushes a 64-bit integer onto the stack.</summary>
-      <returns></returns>
-    </member>
-    <member name="F:System.Reflection.Emit.StackBehaviour.Pushr4">
-      <summary>Pushes a 32-bit floating point number onto the stack.</summary>
-      <returns></returns>
-    </member>
-    <member name="F:System.Reflection.Emit.StackBehaviour.Pushr8">
-      <summary>Pushes a 64-bit floating point number onto the stack.</summary>
-      <returns></returns>
-    </member>
-    <member name="F:System.Reflection.Emit.StackBehaviour.Pushref">
-      <summary>Pushes a reference onto the stack.</summary>
-      <returns></returns>
-    </member>
-    <member name="F:System.Reflection.Emit.StackBehaviour.Varpop">
-      <summary>Pops a variable off the stack.</summary>
-      <returns></returns>
-    </member>
-    <member name="F:System.Reflection.Emit.StackBehaviour.Varpush">
-      <summary>Pushes a variable onto the stack.</summary>
-      <returns></returns>
-    </member>
-    <member name="T:System.Reflection.EventAttributes">
-      <summary>Specifies the attributes of an event.</summary>
-    </member>
-    <member name="F:System.Reflection.EventAttributes.None">
-      <summary>Specifies that the event has no attributes.</summary>
-      <returns></returns>
-    </member>
-    <member name="F:System.Reflection.EventAttributes.RTSpecialName">
-      <summary>Specifies that the common language runtime should check name encoding.</summary>
-      <returns></returns>
-    </member>
-    <member name="F:System.Reflection.EventAttributes.SpecialName">
-      <summary>Specifies that the event is special in a way described by the name.</summary>
-      <returns></returns>
-    </member>
-    <member name="T:System.Reflection.FieldAttributes">
-      <summary>Specifies flags that describe the attributes of a field.</summary>
-    </member>
-    <member name="F:System.Reflection.FieldAttributes.Assembly">
-      <summary>Specifies that the field is accessible throughout the assembly.</summary>
-      <returns></returns>
-    </member>
-    <member name="F:System.Reflection.FieldAttributes.FamANDAssem">
-      <summary>Specifies that the field is accessible only by subtypes in this assembly.</summary>
-      <returns></returns>
-    </member>
-    <member name="F:System.Reflection.FieldAttributes.Family">
-      <summary>Specifies that the field is accessible only by type and subtypes.</summary>
-      <returns></returns>
-    </member>
-    <member name="F:System.Reflection.FieldAttributes.FamORAssem">
-      <summary>Specifies that the field is accessible by subtypes anywhere, as well as throughout this assembly.</summary>
-      <returns></returns>
-    </member>
-    <member name="F:System.Reflection.FieldAttributes.FieldAccessMask">
-      <summary>Specifies the access level of a given field.</summary>
-      <returns></returns>
-    </member>
-    <member name="F:System.Reflection.FieldAttributes.HasDefault">
-      <summary>Specifies that the field has a default value.</summary>
-      <returns></returns>
-    </member>
-    <member name="F:System.Reflection.FieldAttributes.HasFieldMarshal">
-      <summary>Specifies that the field has marshaling information.</summary>
-      <returns></returns>
-    </member>
-    <member name="F:System.Reflection.FieldAttributes.HasFieldRVA">
-      <summary>Specifies that the field has a relative virtual address (RVA). The RVA is the location of the method body in the current image, as an address relative to the start of the image file in which it is located.</summary>
-      <returns></returns>
-    </member>
-    <member name="F:System.Reflection.FieldAttributes.InitOnly">
-      <summary>Specifies that the field is initialized only, and can be set only in the body of a constructor.</summary>
-      <returns></returns>
-    </member>
-    <member name="F:System.Reflection.FieldAttributes.Literal">
-      <summary>Specifies that the field's value is a compile-time (static or early bound) constant. Any attempt to set it throws a <see cref="T:System.FieldAccessException"></see>.</summary>
-      <returns></returns>
-    </member>
-    <member name="F:System.Reflection.FieldAttributes.NotSerialized">
-      <summary>Specifies that the field does not have to be serialized when the type is remoted.</summary>
-      <returns></returns>
-    </member>
-    <member name="F:System.Reflection.FieldAttributes.PinvokeImpl">
-      <summary>Reserved for future use.</summary>
-      <returns></returns>
-    </member>
-    <member name="F:System.Reflection.FieldAttributes.Private">
-      <summary>Specifies that the field is accessible only by the parent type.</summary>
-      <returns></returns>
-    </member>
-    <member name="F:System.Reflection.FieldAttributes.PrivateScope">
-      <summary>Specifies that the field cannot be referenced.</summary>
-      <returns></returns>
-    </member>
-    <member name="F:System.Reflection.FieldAttributes.Public">
-      <summary>Specifies that the field is accessible by any member for whom this scope is visible.</summary>
-      <returns></returns>
-    </member>
-    <member name="F:System.Reflection.FieldAttributes.RTSpecialName">
-      <summary>Specifies that the common language runtime (metadata internal APIs) should check the name encoding.</summary>
-      <returns></returns>
-    </member>
-    <member name="F:System.Reflection.FieldAttributes.SpecialName">
-      <summary>Specifies a special method, with the name describing how the method is special.</summary>
-      <returns></returns>
-    </member>
-    <member name="F:System.Reflection.FieldAttributes.Static">
-      <summary>Specifies that the field represents the defined type, or else it is per-instance.</summary>
-      <returns></returns>
-    </member>
-    <member name="T:System.Reflection.GenericParameterAttributes">
-      <summary>Describes the constraints on a generic type parameter of a generic type or method.</summary>
-    </member>
-    <member name="F:System.Reflection.GenericParameterAttributes.Contravariant">
-      <summary>The generic type parameter is contravariant. A contravariant type parameter can appear as a parameter type in method signatures.</summary>
-      <returns></returns>
-    </member>
-    <member name="F:System.Reflection.GenericParameterAttributes.Covariant">
-      <summary>The generic type parameter is covariant. A covariant type parameter can appear as the result type of a method, the type of a read-only field, a declared base type, or an implemented interface.</summary>
-      <returns></returns>
-    </member>
-    <member name="F:System.Reflection.GenericParameterAttributes.DefaultConstructorConstraint">
-      <summary>A type can be substituted for the generic type parameter only if it has a parameterless constructor.</summary>
-      <returns></returns>
-    </member>
-    <member name="F:System.Reflection.GenericParameterAttributes.None">
-      <summary>There are no special flags.</summary>
-      <returns></returns>
-    </member>
-    <member name="F:System.Reflection.GenericParameterAttributes.NotNullableValueTypeConstraint">
-      <summary>A type can be substituted for the generic type parameter only if it is a value type and is not nullable.</summary>
-      <returns></returns>
-    </member>
-    <member name="F:System.Reflection.GenericParameterAttributes.ReferenceTypeConstraint">
-      <summary>A type can be substituted for the generic type parameter only if it is a reference type.</summary>
-      <returns></returns>
-    </member>
-    <member name="F:System.Reflection.GenericParameterAttributes.SpecialConstraintMask">
-      <summary>Selects the combination of all special constraint flags. This value is the result of using logical OR to combine the following flags: <see cref="F:System.Reflection.GenericParameterAttributes.DefaultConstructorConstraint"></see>, <see cref="F:System.Reflection.GenericParameterAttributes.ReferenceTypeConstraint"></see>, and <see cref="F:System.Reflection.GenericParameterAttributes.NotNullableValueTypeConstraint"></see>.</summary>
-      <returns></returns>
-    </member>
-    <member name="F:System.Reflection.GenericParameterAttributes.VarianceMask">
-      <summary>Selects the combination of all variance flags. This value is the result of using logical OR to combine the following flags: <see cref="F:System.Reflection.GenericParameterAttributes.Contravariant"></see> and <see cref="F:System.Reflection.GenericParameterAttributes.Covariant"></see>.</summary>
-      <returns></returns>
-    </member>
     <member name="T:System.Reflection.MethodAttributes">
       <summary>Specifies flags for method attributes. These flags are defined in the corhdr.h file.</summary>
     </member>
@@ -1563,7 +1562,7 @@
       <returns></returns>
     </member>
     <member name="F:System.Reflection.MethodImplAttributes.NoOptimization">
-      <summary>Specifies that the method is not optimized by the just-in-time (JIT) compiler or by native code generation (see <see cref="~/docs/framework/tools/ngen-exe-native-image-generator.md">Ngen.exe</see>) when debugging possible code generation problems.</summary>
+      <summary>Specifies that the method is not optimized by the just-in-time (JIT) compiler or by native code generation (see Ngen.exe) when debugging possible code generation problems.</summary>
       <returns></returns>
     </member>
     <member name="F:System.Reflection.MethodImplAttributes.OPTIL">
@@ -1579,7 +1578,7 @@
       <returns></returns>
     </member>
     <member name="F:System.Reflection.MethodImplAttributes.Synchronized">
-      <summary>Specifies that the method is single-threaded through the body. Static methods (Shared in Visual Basic) lock on the type, whereas instance methods lock on the instance. You can also use the C# <see cref="~/docs/csharp/language-reference/keywords/lock-statement.md">lock statement</see> or the Visual Basic <see cref="~/docs/visual-basic/language-reference/statements/synclock-statement.md">SyncLock statement</see> for this purpose.</summary>
+      <summary>Specifies that the method is single-threaded through the body. Static methods (Shared in Visual Basic) lock on the type, whereas instance methods lock on the instance. You can also use the C# lock statement or the Visual Basic SyncLock statement for this purpose.</summary>
       <returns></returns>
     </member>
     <member name="F:System.Reflection.MethodImplAttributes.Unmanaged">
@@ -1768,4 +1767,4 @@
       <returns></returns>
     </member>
   </members>
-</doc></span>
+</doc>
