@@ -11,6 +11,51 @@
       <summary>Returns an enumerator that iterates through the sequence.</summary>
       <returns>An enumerator that iterates through the sequence.</returns>
     </member>
+    <member name="T:System.Linq.ParallelQuery">
+      <summary>Represents a parallel sequence.</summary>
+    </member>
+    <member name="M:System.Linq.ParallelQuery.System#Collections#IEnumerable#GetEnumerator">
+      <summary>Returns an enumerator that iterates through the sequence.</summary>
+      <returns>An enumerator that iterates through the sequence.</returns>
+    </member>
+    <member name="T:System.Linq.ParallelQuery`1">
+      <summary>Represents a parallel sequence.</summary>
+      <typeparam name="TSource">The type of element in the source sequence.</typeparam>
+    </member>
+    <member name="M:System.Linq.ParallelQuery`1.GetEnumerator">
+      <summary>Returns an enumerator that iterates through the sequence.</summary>
+      <returns>An enumerator that iterates through the sequence.</returns>
+    </member>
+    <member name="T:System.Linq.ParallelMergeOptions">
+      <summary>Specifies the preferred type of output merge to use in a query. In other words, it indicates how PLINQ should merge the results from the various partitions back into a single result sequence. This is a hint only, and may not be respected by the system when parallelizing all queries.</summary>
+    </member>
+    <member name="F:System.Linq.ParallelMergeOptions.AutoBuffered">
+      <summary>Use a merge with output buffers of a size chosen by the system. Results will accumulate into an output buffer before they are available to the consumer of the query.</summary>
+      <returns></returns>
+    </member>
+    <member name="F:System.Linq.ParallelMergeOptions.Default">
+      <summary>Use the default merge type, which is AutoBuffered.</summary>
+      <returns></returns>
+    </member>
+    <member name="F:System.Linq.ParallelMergeOptions.FullyBuffered">
+      <summary>Use a merge with full output buffers. The system will accumulate all of the results before making any of them available to the consumer of the query.</summary>
+      <returns></returns>
+    </member>
+    <member name="F:System.Linq.ParallelMergeOptions.NotBuffered">
+      <summary>Use a merge without output buffers. As soon as result elements have been computed, make that element available to the consumer of the query.</summary>
+      <returns></returns>
+    </member>
+    <member name="T:System.Linq.ParallelExecutionMode">
+      <summary>The query execution mode is a hint that specifies how the system should handle performance trade-offs when parallelizing queries.</summary>
+    </member>
+    <member name="F:System.Linq.ParallelExecutionMode.Default">
+      <summary>This is the default setting. PLINQ will examine the query&amp;#39;s structure and will only parallelize the query if will likely result in speedup. If the query structure indicates that speedup is not likely to be obtained, then PLINQ will execute the query as an ordinary LINQ to Objects query.</summary>
+      <returns></returns>
+    </member>
+    <member name="F:System.Linq.ParallelExecutionMode.ForceParallelism">
+      <summary>Parallelize the entire query, even if that means using high-overhead algorithms. Use this flag in cases where you know that parallel execution of the query will result in speedup, but PLINQ in the Default mode would execute it as sequential.</summary>
+      <returns></returns>
+    </member>
     <member name="T:System.Linq.ParallelEnumerable">
       <summary>Provides a set of methods for querying objects that implement ParallelQuery{TSource}. This is the parallel equivalent of <see cref="T:System.Linq.Enumerable"></see>.</summary>
     </member>
@@ -118,7 +163,7 @@
       <summary>Converts a <see cref="T:System.Linq.ParallelQuery`1"></see> into an <see cref="T:System.Collections.Generic.IEnumerable`1"></see> to force sequential evaluation of the query.</summary>
       <param name="source">The sequence to cast as <see cref="T:System.Collections.Generic.IEnumerable`1"></see>.</param>
       <typeparam name="TSource">The type of the elements of source.</typeparam>
-      <returns>The input sequence typed as <see cref="System.Collections.Generic.IEnumerable`1"></see>.</returns>
+      <returns>The input sequence typed as <see cref="T:System.Collections.Generic.IEnumerable`1"></see>.</returns>
       <exception cref="T:System.ArgumentNullException"><paramref name="source">source</paramref> is a null reference (Nothing in Visual Basic).</exception>
     </member>
     <member name="M:System.Linq.ParallelEnumerable.AsOrdered(System.Linq.ParallelQuery)">
@@ -157,14 +202,14 @@
       <summary>Enables parallelization of a query.</summary>
       <param name="source">An <see cref="T:System.Collections.Generic.IEnumerable`1"></see> to convert to a <see cref="T:System.Linq.ParallelQuery`1"></see>.</param>
       <typeparam name="TSource">The type of elements of source.</typeparam>
-      <returns>The source as a <see cref="System.Linq.ParallelQuery`1"></see> to bind to ParallelEnumerable extension methods.</returns>
+      <returns>The source as a <see cref="T:System.Linq.ParallelQuery`1"></see> to bind to ParallelEnumerable extension methods.</returns>
       <exception cref="T:System.ArgumentNullException"><paramref name="source">source</paramref> is a null reference (Nothing in Visual Basic).</exception>
     </member>
     <member name="M:System.Linq.ParallelEnumerable.AsSequential``1(System.Linq.ParallelQuery{``0})">
       <summary>Converts a <see cref="T:System.Linq.ParallelQuery`1"></see> into an <see cref="T:System.Collections.Generic.IEnumerable`1"></see> to force sequential evaluation of the query.</summary>
       <param name="source">A <see cref="T:System.Linq.ParallelQuery`1"></see> to convert to an <see cref="T:System.Collections.Generic.IEnumerable`1"></see>.</param>
       <typeparam name="TSource">The type of elements of source.</typeparam>
-      <returns>The source as an <see cref="System.Collections.Generic.IEnumerable`1"></see> to bind to sequential extension methods.</returns>
+      <returns>The source as an <see cref="T:System.Collections.Generic.IEnumerable`1"></see> to bind to sequential extension methods.</returns>
       <exception cref="T:System.ArgumentNullException"><paramref name="source">source</paramref> is a null reference (Nothing in Visual Basic).</exception>
     </member>
     <member name="M:System.Linq.ParallelEnumerable.AsUnordered``1(System.Linq.ParallelQuery{``0})">
@@ -397,7 +442,7 @@
       <param name="first">This parameter is not used.</param>
       <param name="second">This parameter is not used.</param>
       <typeparam name="TSource">This type parameter is not used.</typeparam>
-      <returns>This overload always throws a <see cref="System.NotSupportedException"></see>.</returns>
+      <returns>This overload always throws a <see cref="T:System.NotSupportedException"></see>.</returns>
       <exception cref="T:System.NotSupportedException">The exception that occurs when this method is called.</exception>
     </member>
     <member name="M:System.Linq.ParallelEnumerable.Concat``1(System.Linq.ParallelQuery{``0},System.Linq.ParallelQuery{``0})">
@@ -516,7 +561,7 @@
       <param name="first">This parameter is not used.</param>
       <param name="second">This parameter is not used.</param>
       <typeparam name="TSource">This type parameter is not used.</typeparam>
-      <returns>This overload always throws a <see cref="System.NotSupportedException"></see>.</returns>
+      <returns>This overload always throws a <see cref="T:System.NotSupportedException"></see>.</returns>
       <exception cref="T:System.NotSupportedException">The exception that occurs when this method is called.</exception>
     </member>
     <member name="M:System.Linq.ParallelEnumerable.Except``1(System.Linq.ParallelQuery{``0},System.Linq.ParallelQuery{``0})">
@@ -535,7 +580,7 @@
       <param name="second">This parameter is not used.</param>
       <param name="comparer">This parameter is not used.</param>
       <typeparam name="TSource">This type parameter is not used.</typeparam>
-      <returns>This overload always throws a <see cref="System.NotSupportedException"></see>.</returns>
+      <returns>This overload always throws a <see cref="T:System.NotSupportedException"></see>.</returns>
       <exception cref="T:System.NotSupportedException">The exception that occurs when this method is called.</exception>
     </member>
     <member name="M:System.Linq.ParallelEnumerable.Except``1(System.Linq.ParallelQuery{``0},System.Linq.ParallelQuery{``0},System.Collections.Generic.IEqualityComparer{``0})">
@@ -717,7 +762,7 @@
       <typeparam name="TInner">This type parameter is not used.</typeparam>
       <typeparam name="TKey">This type parameter is not used.</typeparam>
       <typeparam name="TResult">This type parameter is not used.</typeparam>
-      <returns>This overload always throws a <see cref="System.NotSupportedException"></see>.</returns>
+      <returns>This overload always throws a <see cref="T:System.NotSupportedException"></see>.</returns>
       <exception cref="T:System.OperationCanceledException">The query was canceled with the token passed in through <paramref name="WithCancellation">WithCancellation</paramref>.</exception>
       <exception cref="T:System.ArgumentNullException"><paramref name="source">source</paramref> or <paramref name="action">action</paramref> is a null reference (Nothing in Visual Basic).</exception>
       <exception cref="T:System.AggregateException">One or more exceptions occurred during the evaluation of the query.</exception>
@@ -750,7 +795,7 @@
       <typeparam name="TInner">This type parameter is not used.</typeparam>
       <typeparam name="TKey">This type parameter is not used.</typeparam>
       <typeparam name="TResult">This type parameter is not used.</typeparam>
-      <returns>This overload always throws a <see cref="System.NotSupportedException"></see>.</returns>
+      <returns>This overload always throws a <see cref="T:System.NotSupportedException"></see>.</returns>
       <exception cref="T:System.NotSupportedException">The exception that occurs when this method is called.</exception>
     </member>
     <member name="M:System.Linq.ParallelEnumerable.GroupJoin``4(System.Linq.ParallelQuery{``0},System.Linq.ParallelQuery{``1},System.Func{``0,``2},System.Func{``1,``2},System.Func{``0,System.Collections.Generic.IEnumerable{``1},``3},System.Collections.Generic.IEqualityComparer{``2})">
@@ -776,7 +821,7 @@
       <param name="second">This parameter is not used.</param>
       <param name="comparer">This parameter is not used.</param>
       <typeparam name="TSource">This type parameter is not used.</typeparam>
-      <returns>This overload always throws a <see cref="System.NotSupportedException"></see>.</returns>
+      <returns>This overload always throws a <see cref="T:System.NotSupportedException"></see>.</returns>
       <exception cref="T:System.NotSupportedException">The exception that occurs when this method is called.</exception>
     </member>
     <member name="M:System.Linq.ParallelEnumerable.Intersect``1(System.Linq.ParallelQuery{``0},System.Linq.ParallelQuery{``0},System.Collections.Generic.IEqualityComparer{``0})">
@@ -795,7 +840,7 @@
       <param name="first">This parameter is not used.</param>
       <param name="second">This parameter is not used.</param>
       <typeparam name="TSource">This type parameter is not used.</typeparam>
-      <returns>This overload always throws a <see cref="System.NotSupportedException"></see>.</returns>
+      <returns>This overload always throws a <see cref="T:System.NotSupportedException"></see>.</returns>
       <exception cref="T:System.NotSupportedException">The exception that occurs when this method is called.</exception>
     </member>
     <member name="M:System.Linq.ParallelEnumerable.Intersect``1(System.Linq.ParallelQuery{``0},System.Linq.ParallelQuery{``0})">
@@ -819,7 +864,7 @@
       <typeparam name="TInner">This type parameter is not used.</typeparam>
       <typeparam name="TKey">This type parameter is not used.</typeparam>
       <typeparam name="TResult">This type parameter is not used.</typeparam>
-      <returns>This overload always throws a <see cref="System.NotSupportedException"></see>.</returns>
+      <returns>This overload always throws a <see cref="T:System.NotSupportedException"></see>.</returns>
       <exception cref="T:System.OperationCanceledException">The query was canceled with the token passed in through <paramref name="WithCancellation">WithCancellation</paramref>.</exception>
       <exception cref="T:System.ArgumentNullException"><paramref name="source">source</paramref> or <paramref name="action">action</paramref> is a null reference (Nothing in Visual Basic).</exception>
       <exception cref="T:System.AggregateException">One or more exceptions occurred during the evaluation of the query.</exception>
@@ -852,7 +897,7 @@
       <typeparam name="TInner">This type parameter is not used.</typeparam>
       <typeparam name="TKey">This type parameter is not used.</typeparam>
       <typeparam name="TResult">This type parameter is not used.</typeparam>
-      <returns>This overload always throws a <see cref="System.NotSupportedException"></see>.</returns>
+      <returns>This overload always throws a <see cref="T:System.NotSupportedException"></see>.</returns>
       <exception cref="T:System.NotSupportedException">The exception that occurs when this method is called.</exception>
     </member>
     <member name="M:System.Linq.ParallelEnumerable.Join``4(System.Linq.ParallelQuery{``0},System.Linq.ParallelQuery{``1},System.Func{``0,``2},System.Func{``1,``2},System.Func{``0,``1,``3},System.Collections.Generic.IEqualityComparer{``2})">
@@ -1535,7 +1580,7 @@
       <param name="first">This parameter is not used.</param>
       <param name="second">This parameter is not used.</param>
       <typeparam name="TSource">This type parameter is not used.</typeparam>
-      <returns>This overload always throws a <see cref="System.NotSupportedException"></see>.</returns>
+      <returns>This overload always throws a <see cref="T:System.NotSupportedException"></see>.</returns>
       <exception cref="T:System.NotSupportedException">Thrown every time this method is called.</exception>
     </member>
     <member name="M:System.Linq.ParallelEnumerable.SequenceEqual``1(System.Linq.ParallelQuery{``0},System.Linq.ParallelQuery{``0})">
@@ -1554,7 +1599,7 @@
       <param name="second">This parameter is not used.</param>
       <param name="comparer">This parameter is not used.</param>
       <typeparam name="TSource">This type parameter is not used.</typeparam>
-      <returns>This overload always throws a <see cref="System.NotSupportedException"></see>.</returns>
+      <returns>This overload always throws a <see cref="T:System.NotSupportedException"></see>.</returns>
       <exception cref="T:System.NotSupportedException">Thrown every time this method is called.</exception>
     </member>
     <member name="M:System.Linq.ParallelEnumerable.SequenceEqual``1(System.Linq.ParallelQuery{``0},System.Linq.ParallelQuery{``0},System.Collections.Generic.IEqualityComparer{``0})">
@@ -1596,6 +1641,7 @@
       <returns>The single element of the input sequence, or default() if the sequence contains no elements.</returns>
       <exception cref="T:System.OperationCanceledException">The query was canceled with the token passed in through <paramref name="WithCancellation">WithCancellation</paramref>.</exception>
       <exception cref="T:System.ArgumentNullException"><paramref name="source">source</paramref> is a null reference (Nothing in Visual Basic).</exception>
+      <exception cref="T:System.InvalidOperationException"><paramref name="source">source</paramref> has more than one element.</exception>
       <exception cref="T:System.AggregateException">One or more exceptions occurred during the evaluation of the query.</exception>
     </member>
     <member name="M:System.Linq.ParallelEnumerable.SingleOrDefault``1(System.Linq.ParallelQuery{``0},System.Func{``0,System.Boolean})">
@@ -1915,7 +1961,7 @@
       <typeparam name="TSource">The type of the elements of source.</typeparam>
       <typeparam name="TKey">The type of the key returned by keySelector.</typeparam>
       <typeparam name="TElement">The type of the value returned by elementSelector.</typeparam>
-      <returns>A <see cref="System.Collections.Generic.Dictionary`2"></see> that contains values of type <paramref name="TElement">TElement</paramref> selected from the input sequence</returns>
+      <returns>A <see cref="T:System.Collections.Generic.Dictionary`2"></see> that contains values of type <paramref name="TElement">TElement</paramref> selected from the input sequence</returns>
       <exception cref="T:System.OperationCanceledException">The query was canceled with the token passed in through <paramref name="WithCancellation">WithCancellation</paramref>.</exception>
       <exception cref="T:System.ArgumentNullException"><paramref name="source">source</paramref> or <paramref name="keySelector">keySelector</paramref> or <paramref name="elementSelector">elementSelector</paramref> is a null reference (Nothing in Visual Basic).</exception>
       <exception cref="T:System.AggregateException"><paramref name="keySelector">keySelector</paramref> produces a key that is a null reference (Nothing in Visual Basic). -or- <paramref name="keySelector">keySelector</paramref> produces duplicate keys for two elements. -or- One or more exceptions occurred during the evaluation of the query.</exception>
@@ -1929,7 +1975,7 @@
       <typeparam name="TSource">The type of the elements of source.</typeparam>
       <typeparam name="TKey">The type of the key returned by keySelector.</typeparam>
       <typeparam name="TElement">The type of the value returned by elementSelector.</typeparam>
-      <returns>A <see cref="System.Collections.Generic.Dictionary`2"></see> that contains values of type <paramref name="TElement">TElement</paramref> selected from the input sequence</returns>
+      <returns>A <see cref="T:System.Collections.Generic.Dictionary`2"></see> that contains values of type <paramref name="TElement">TElement</paramref> selected from the input sequence</returns>
       <exception cref="T:System.OperationCanceledException">The query was canceled with the token passed in through <paramref name="WithCancellation">WithCancellation</paramref>.</exception>
       <exception cref="T:System.ArgumentNullException"><paramref name="source">source</paramref> or <paramref name="keySelector">keySelector</paramref> or <paramref name="elementSelector">elementSelector</paramref> is a null reference (Nothing in Visual Basic).</exception>
       <exception cref="T:System.AggregateException"><paramref name="keySelector">keySelector</paramref> produces a key that is a null reference (Nothing in Visual Basic). -or- <paramref name="keySelector">keySelector</paramref> produces duplicate keys for two elements. -or- One or more exceptions occurred during the evaluation of the query.</exception>
@@ -1940,7 +1986,7 @@
       <param name="keySelector">A function to extract a key from each element.</param>
       <typeparam name="TSource">The type of the elements of source.</typeparam>
       <typeparam name="TKey">The type of the key returned by keySelector.</typeparam>
-      <returns>A <see cref="System.Collections.Generic.Dictionary`2"></see> that contains keys and values.</returns>
+      <returns>A <see cref="T:System.Collections.Generic.Dictionary`2"></see> that contains keys and values.</returns>
       <exception cref="T:System.OperationCanceledException">The query was canceled with the token passed in through <paramref name="WithCancellation">WithCancellation</paramref>.</exception>
       <exception cref="T:System.ArgumentNullException"><paramref name="source">source</paramref> or <paramref name="keySelector">keySelector</paramref> is a null reference (Nothing in Visual Basic).</exception>
       <exception cref="T:System.AggregateException"><paramref name="keySelector">keySelector</paramref> produces a key that is a null reference (Nothing in Visual Basic). -or- <paramref name="keySelector">keySelector</paramref> produces duplicate keys for two elements. -or- One or more exceptions occurred during the evaluation of the query.</exception>
@@ -1952,7 +1998,7 @@
       <param name="comparer">An <see cref="T:System.Collections.Generic.IEqualityComparer`1"></see> to compare keys.</param>
       <typeparam name="TSource">The type of the elements of source.</typeparam>
       <typeparam name="TKey">The type of the key returned by keySelector.</typeparam>
-      <returns>A <see cref="System.Collections.Generic.Dictionary`2"></see> that contains keys and values.</returns>
+      <returns>A <see cref="T:System.Collections.Generic.Dictionary`2"></see> that contains keys and values.</returns>
       <exception cref="T:System.OperationCanceledException">The query was canceled with the token passed in through <paramref name="WithCancellation">WithCancellation</paramref>.</exception>
       <exception cref="T:System.ArgumentNullException"><paramref name="source">source</paramref> or <paramref name="keySelector">keySelector</paramref> is a null reference (Nothing in Visual Basic).</exception>
       <exception cref="T:System.AggregateException"><paramref name="keySelector">keySelector</paramref> produces a key that is a null reference (Nothing in Visual Basic). -or- <paramref name="keySelector">keySelector</paramref> produces duplicate keys for two elements. -or- One or more exceptions occurred during the evaluation of the query.</exception>
@@ -1961,7 +2007,7 @@
       <summary>Creates a <see cref="T:System.Collections.Generic.List`1"></see> from an <see cref="T:System.Linq.ParallelQuery`1"></see>.</summary>
       <param name="source">A sequence to create a <see cref="T:System.Collections.Generic.List`1"></see> from.</param>
       <typeparam name="TSource">The type of the elements of source.</typeparam>
-      <returns>A <see cref="System.Collections.Generic.List`1"></see> that contains elements from the input sequence.</returns>
+      <returns>A <see cref="T:System.Collections.Generic.List`1"></see> that contains elements from the input sequence.</returns>
       <exception cref="T:System.OperationCanceledException">The query was canceled with the token passed in through <paramref name="WithCancellation">WithCancellation</paramref>.</exception>
       <exception cref="T:System.ArgumentNullException"><paramref name="source">source</paramref> is a null reference (Nothing in Visual Basic).</exception>
       <exception cref="T:System.AggregateException">One or more exceptions occurred during the evaluation of the query.</exception>
@@ -1988,7 +2034,7 @@
       <typeparam name="TSource">The type of elements of source.</typeparam>
       <typeparam name="TKey">The type of the key returned by keySelector.</typeparam>
       <typeparam name="TElement">The type of the value returned by elementSelector.</typeparam>
-      <returns>A <see cref="System.Linq.ILookup`2"></see> that contains values of type <paramref name="TElement">TElement</paramref> selected from the input sequence.</returns>
+      <returns>A <see cref="T:System.Linq.ILookup`2"></see> that contains values of type <paramref name="TElement">TElement</paramref> selected from the input sequence.</returns>
       <exception cref="T:System.OperationCanceledException">The query was canceled with the token passed in through <paramref name="WithCancellation">WithCancellation</paramref>.</exception>
       <exception cref="T:System.ArgumentNullException"><paramref name="source">source</paramref> or <paramref name="keySelector">keySelector</paramref> or <paramref name="elementSelector">elementSelector</paramref> is a null reference (Nothing in Visual Basic).</exception>
       <exception cref="T:System.AggregateException">One or more exceptions occurred during the evaluation of the query.</exception>
@@ -2000,7 +2046,7 @@
       <param name="comparer">An <see cref="T:System.Collections.Generic.IEqualityComparer`1"></see> to compare keys.</param>
       <typeparam name="TSource">The type of elements of source.</typeparam>
       <typeparam name="TKey">The type of the key returned by keySelector.</typeparam>
-      <returns>A <see cref="System.Linq.ILookup`2"></see> that contains keys and values.</returns>
+      <returns>A <see cref="T:System.Linq.ILookup`2"></see> that contains keys and values.</returns>
       <exception cref="T:System.OperationCanceledException">The query was canceled with the token passed in through <paramref name="WithCancellation">WithCancellation</paramref>.</exception>
       <exception cref="T:System.ArgumentNullException"><paramref name="source">source</paramref> or <paramref name="keySelector">keySelector</paramref> or is a null reference (Nothing in Visual Basic).</exception>
       <exception cref="T:System.AggregateException">One or more exceptions occurred during the evaluation of the query.</exception>
@@ -2011,7 +2057,7 @@
       <param name="keySelector">A function to extract a key from each element.</param>
       <typeparam name="TSource">The type of elements of source.</typeparam>
       <typeparam name="TKey">The type of the key returned by keySelector.</typeparam>
-      <returns>A <see cref="System.Linq.ILookup`2"></see> that contains keys and values.</returns>
+      <returns>A <see cref="T:System.Linq.ILookup`2"></see> that contains keys and values.</returns>
       <exception cref="T:System.OperationCanceledException">The query was canceled with the token passed in through <paramref name="WithCancellation">WithCancellation</paramref>.</exception>
       <exception cref="T:System.ArgumentNullException"><paramref name="source">source</paramref> or <paramref name="keySelector">keySelector</paramref> is a null reference (Nothing in Visual Basic).</exception>
       <exception cref="T:System.AggregateException">One or more exceptions occurred during the evaluation of the query.</exception>
@@ -2021,7 +2067,7 @@
       <param name="first">This parameter is not used.</param>
       <param name="second">This parameter is not used.</param>
       <typeparam name="TSource">This type parameter is not used.</typeparam>
-      <returns>This overload always throws a <see cref="System.NotSupportedException"></see>.</returns>
+      <returns>This overload always throws a <see cref="T:System.NotSupportedException"></see>.</returns>
       <exception cref="T:System.NotSupportedException">The exception that occurs when this method is called.</exception>
       <exception cref="T:System.OperationCanceledException">The query was canceled with the token passed in through <paramref name="WithCancellation">WithCancellation</paramref>.</exception>
       <exception cref="T:System.AggregateException">One or more exceptions occurred during the evaluation of the query.</exception>
@@ -2042,7 +2088,7 @@
       <param name="second">This parameter is not used.</param>
       <param name="comparer">This parameter is not used.</param>
       <typeparam name="TSource">This type parameter is not used.</typeparam>
-      <returns>This overload always throws a <see cref="System.NotSupportedException"></see>.</returns>
+      <returns>This overload always throws a <see cref="T:System.NotSupportedException"></see>.</returns>
       <exception cref="T:System.NotSupportedException">The exception that occurs when this method is called.</exception>
       <exception cref="T:System.OperationCanceledException">The query was canceled with the token passed in through <paramref name="WithCancellation">WithCancellation</paramref>.</exception>
       <exception cref="T:System.AggregateException">One or more exceptions occurred during the evaluation of the query.</exception>
@@ -2092,7 +2138,7 @@
     <member name="M:System.Linq.ParallelEnumerable.WithDegreeOfParallelism``1(System.Linq.ParallelQuery{``0},System.Int32)">
       <summary>Sets the degree of parallelism to use in a query. Degree of parallelism is the maximum number of concurrently executing tasks that will be used to process the query.</summary>
       <param name="source">A ParallelQuery on which to set the limit on the degrees of parallelism.</param>
-      <param name="degreeOfParallelism">The degree of parallelism for the query. The default value is Math.Min(<see cref="P:System.Environment.ProcessorCount"></see>, MAX_SUPPORTED_DOP) where MAX_SUPPORTED_DOP is 512.</param>
+      <param name="degreeOfParallelism">The degree of parallelism for the query. The default value is Math.Min(<see cref="P:System.Environment.ProcessorCount"></see>, <see langword="MAX_SUPPORTED_DOP"></see>) where <see langword="MAX_SUPPORTED_DOP"></see> is 512.</param>
       <typeparam name="TSource">The type of elements of source.</typeparam>
       <returns>ParallelQuery representing the same query as source, with the limit on the degrees of parallelism set.</returns>
       <exception cref="T:System.ArgumentNullException"><paramref name="source">source</paramref> is a null reference (Nothing in Visual Basic).</exception>
@@ -2127,7 +2173,7 @@
       <typeparam name="TFirst">This type parameter is not used.</typeparam>
       <typeparam name="TSecond">This type parameter is not used.</typeparam>
       <typeparam name="TResult">This type parameter is not used.</typeparam>
-      <returns>This overload always throws a <see cref="System.NotSupportedException"></see>.</returns>
+      <returns>This overload always throws a <see cref="T:System.NotSupportedException"></see>.</returns>
       <exception cref="T:System.NotSupportedException">The exception that occurs when this method is called.</exception>
     </member>
     <member name="M:System.Linq.ParallelEnumerable.Zip``3(System.Linq.ParallelQuery{``0},System.Linq.ParallelQuery{``1},System.Func{``0,``1,``2})">
@@ -2142,51 +2188,6 @@
       <exception cref="T:System.ArgumentNullException"><paramref name="first">first</paramref> or <paramref name="second">second</paramref> or <paramref name="resultSelector">resultSelector</paramref> is a null reference (Nothing in Visual Basic).</exception>
       <exception cref="T:System.OperationCanceledException">The query was canceled with the token passed in through <paramref name="WithCancellation">WithCancellation</paramref>.</exception>
       <exception cref="T:System.AggregateException">One or more exceptions occurred during the evaluation of the query.</exception>
-    </member>
-    <member name="T:System.Linq.ParallelExecutionMode">
-      <summary>The query execution mode is a hint that specifies how the system should handle performance trade-offs when parallelizing queries.</summary>
-    </member>
-    <member name="F:System.Linq.ParallelExecutionMode.Default">
-      <summary>This is the default setting. PLINQ will examine the query&amp;#39;s structure and will only parallelize the query if will likely result in speedup. If the query structure indicates that speedup is not likely to be obtained, then PLINQ will execute the query as an ordinary LINQ to Objects query.</summary>
-      <returns></returns>
-    </member>
-    <member name="F:System.Linq.ParallelExecutionMode.ForceParallelism">
-      <summary>Parallelize the entire query, even if that means using high-overhead algorithms. Use this flag in cases where you know that parallel execution of the query will result in speedup, but PLINQ in the Default mode would execute it as sequential.</summary>
-      <returns></returns>
-    </member>
-    <member name="T:System.Linq.ParallelMergeOptions">
-      <summary>Specifies the preferred type of output merge to use in a query. In other words, it indicates how PLINQ should merge the results from the various partitions back into a single result sequence. This is a hint only, and may not be respected by the system when parallelizing all queries.</summary>
-    </member>
-    <member name="F:System.Linq.ParallelMergeOptions.AutoBuffered">
-      <summary>Use a merge with output buffers of a size chosen by the system. Results will accumulate into an output buffer before they are available to the consumer of the query.</summary>
-      <returns></returns>
-    </member>
-    <member name="F:System.Linq.ParallelMergeOptions.Default">
-      <summary>Use the default merge type, which is AutoBuffered.</summary>
-      <returns></returns>
-    </member>
-    <member name="F:System.Linq.ParallelMergeOptions.FullyBuffered">
-      <summary>Use a merge with full output buffers. The system will accumulate all of the results before making any of them available to the consumer of the query.</summary>
-      <returns></returns>
-    </member>
-    <member name="F:System.Linq.ParallelMergeOptions.NotBuffered">
-      <summary>Use a merge without output buffers. As soon as result elements have been computed, make that element available to the consumer of the query.</summary>
-      <returns></returns>
-    </member>
-    <member name="T:System.Linq.ParallelQuery`1">
-      <summary>Represents a parallel sequence.</summary>
-      <typeparam name="TSource">The type of element in the source sequence.</typeparam>
-    </member>
-    <member name="M:System.Linq.ParallelQuery`1.GetEnumerator">
-      <summary>Returns an enumerator that iterates through the sequence.</summary>
-      <returns>An enumerator that iterates through the sequence.</returns>
-    </member>
-    <member name="T:System.Linq.ParallelQuery">
-      <summary>Represents a parallel sequence.</summary>
-    </member>
-    <member name="M:System.Linq.ParallelQuery.System#Collections#IEnumerable#GetEnumerator">
-      <summary>Returns an enumerator that iterates through the sequence.</summary>
-      <returns>An enumerator that iterates through the sequence.</returns>
     </member>
   </members>
 </doc>

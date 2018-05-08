@@ -3,6 +3,1354 @@
     <name>System.Memory</name>
   </assembly>
   <members>
+    <member name="T:System.Buffers.IBufferWriter`1">
+      <typeparam name="T"></typeparam>
+    </member>
+    <member name="M:System.Buffers.IBufferWriter`1.Advance(System.Int32)">
+      <param name="count"></param>
+    </member>
+    <member name="M:System.Buffers.IBufferWriter`1.GetMemory(System.Int32)">
+      <param name="sizeHint"></param>
+      <returns></returns>
+    </member>
+    <member name="M:System.Buffers.IBufferWriter`1.GetSpan(System.Int32)">
+      <param name="sizeHint"></param>
+      <returns></returns>
+    </member>
+    <member name="T:System.Buffers.BuffersExtensions">
+      
+    </member>
+    <member name="M:System.Buffers.BuffersExtensions.CopyTo``1(System.Buffers.ReadOnlySequence{``0},System.Span{``0})">
+      <param name="source"></param>
+      <param name="destination"></param>
+      <typeparam name="T"></typeparam>
+    </member>
+    <member name="M:System.Buffers.BuffersExtensions.PositionOf``1(System.Buffers.ReadOnlySequence{``0},``0)">
+      <param name="source"></param>
+      <param name="value"></param>
+      <typeparam name="T"></typeparam>
+      <returns></returns>
+    </member>
+    <member name="M:System.Buffers.BuffersExtensions.ToArray``1(System.Buffers.ReadOnlySequence{``0})">
+      <param name="sequence"></param>
+      <typeparam name="T"></typeparam>
+      <returns></returns>
+    </member>
+    <member name="M:System.Buffers.BuffersExtensions.Write``1(System.Buffers.IBufferWriter{``0},System.ReadOnlySpan{``0})">
+      <param name="writer"></param>
+      <param name="value"></param>
+      <typeparam name="T"></typeparam>
+    </member>
+    <member name="T:System.Buffers.Binary.BinaryPrimitives">
+      
+    </member>
+    <member name="M:System.Buffers.Binary.BinaryPrimitives.ReadInt16BigEndian(System.ReadOnlySpan{System.Byte})">
+      <param name="source"></param>
+      <returns></returns>
+    </member>
+    <member name="M:System.Buffers.Binary.BinaryPrimitives.ReadInt16LittleEndian(System.ReadOnlySpan{System.Byte})">
+      <param name="source"></param>
+      <returns></returns>
+    </member>
+    <member name="M:System.Buffers.Binary.BinaryPrimitives.ReadInt32BigEndian(System.ReadOnlySpan{System.Byte})">
+      <param name="source"></param>
+      <returns></returns>
+    </member>
+    <member name="M:System.Buffers.Binary.BinaryPrimitives.ReadInt32LittleEndian(System.ReadOnlySpan{System.Byte})">
+      <param name="source"></param>
+      <returns></returns>
+    </member>
+    <member name="M:System.Buffers.Binary.BinaryPrimitives.ReadInt64BigEndian(System.ReadOnlySpan{System.Byte})">
+      <param name="source"></param>
+      <returns></returns>
+    </member>
+    <member name="M:System.Buffers.Binary.BinaryPrimitives.ReadInt64LittleEndian(System.ReadOnlySpan{System.Byte})">
+      <param name="source"></param>
+      <returns></returns>
+    </member>
+    <member name="M:System.Buffers.Binary.BinaryPrimitives.ReadUInt16BigEndian(System.ReadOnlySpan{System.Byte})">
+      <param name="source"></param>
+      <returns></returns>
+    </member>
+    <member name="M:System.Buffers.Binary.BinaryPrimitives.ReadUInt16LittleEndian(System.ReadOnlySpan{System.Byte})">
+      <param name="source"></param>
+      <returns></returns>
+    </member>
+    <member name="M:System.Buffers.Binary.BinaryPrimitives.ReadUInt32BigEndian(System.ReadOnlySpan{System.Byte})">
+      <param name="source"></param>
+      <returns></returns>
+    </member>
+    <member name="M:System.Buffers.Binary.BinaryPrimitives.ReadUInt32LittleEndian(System.ReadOnlySpan{System.Byte})">
+      <param name="source"></param>
+      <returns></returns>
+    </member>
+    <member name="M:System.Buffers.Binary.BinaryPrimitives.ReadUInt64BigEndian(System.ReadOnlySpan{System.Byte})">
+      <param name="source"></param>
+      <returns></returns>
+    </member>
+    <member name="M:System.Buffers.Binary.BinaryPrimitives.ReadUInt64LittleEndian(System.ReadOnlySpan{System.Byte})">
+      <param name="source"></param>
+      <returns></returns>
+    </member>
+    <member name="M:System.Buffers.Binary.BinaryPrimitives.ReverseEndianness(System.UInt64)">
+      <param name="value"></param>
+      <returns></returns>
+    </member>
+    <member name="M:System.Buffers.Binary.BinaryPrimitives.ReverseEndianness(System.UInt32)">
+      <param name="value"></param>
+      <returns></returns>
+    </member>
+    <member name="M:System.Buffers.Binary.BinaryPrimitives.ReverseEndianness(System.UInt16)">
+      <param name="value"></param>
+      <returns></returns>
+    </member>
+    <member name="M:System.Buffers.Binary.BinaryPrimitives.ReverseEndianness(System.SByte)">
+      <param name="value"></param>
+      <returns></returns>
+    </member>
+    <member name="M:System.Buffers.Binary.BinaryPrimitives.ReverseEndianness(System.Int16)">
+      <param name="value"></param>
+      <returns></returns>
+    </member>
+    <member name="M:System.Buffers.Binary.BinaryPrimitives.ReverseEndianness(System.Int32)">
+      <param name="value"></param>
+      <returns></returns>
+    </member>
+    <member name="M:System.Buffers.Binary.BinaryPrimitives.ReverseEndianness(System.Byte)">
+      <param name="value"></param>
+      <returns></returns>
+    </member>
+    <member name="M:System.Buffers.Binary.BinaryPrimitives.ReverseEndianness(System.Int64)">
+      <param name="value"></param>
+      <returns></returns>
+    </member>
+    <member name="M:System.Buffers.Binary.BinaryPrimitives.TryReadInt16BigEndian(System.ReadOnlySpan{System.Byte},System.Int16@)">
+      <param name="source"></param>
+      <param name="value"></param>
+      <returns></returns>
+    </member>
+    <member name="M:System.Buffers.Binary.BinaryPrimitives.TryReadInt16LittleEndian(System.ReadOnlySpan{System.Byte},System.Int16@)">
+      <param name="source"></param>
+      <param name="value"></param>
+      <returns></returns>
+    </member>
+    <member name="M:System.Buffers.Binary.BinaryPrimitives.TryReadInt32BigEndian(System.ReadOnlySpan{System.Byte},System.Int32@)">
+      <param name="source"></param>
+      <param name="value"></param>
+      <returns></returns>
+    </member>
+    <member name="M:System.Buffers.Binary.BinaryPrimitives.TryReadInt32LittleEndian(System.ReadOnlySpan{System.Byte},System.Int32@)">
+      <param name="source"></param>
+      <param name="value"></param>
+      <returns></returns>
+    </member>
+    <member name="M:System.Buffers.Binary.BinaryPrimitives.TryReadInt64BigEndian(System.ReadOnlySpan{System.Byte},System.Int64@)">
+      <param name="source"></param>
+      <param name="value"></param>
+      <returns></returns>
+    </member>
+    <member name="M:System.Buffers.Binary.BinaryPrimitives.TryReadInt64LittleEndian(System.ReadOnlySpan{System.Byte},System.Int64@)">
+      <param name="source"></param>
+      <param name="value"></param>
+      <returns></returns>
+    </member>
+    <member name="M:System.Buffers.Binary.BinaryPrimitives.TryReadUInt16BigEndian(System.ReadOnlySpan{System.Byte},System.UInt16@)">
+      <param name="source"></param>
+      <param name="value"></param>
+      <returns></returns>
+    </member>
+    <member name="M:System.Buffers.Binary.BinaryPrimitives.TryReadUInt16LittleEndian(System.ReadOnlySpan{System.Byte},System.UInt16@)">
+      <param name="source"></param>
+      <param name="value"></param>
+      <returns></returns>
+    </member>
+    <member name="M:System.Buffers.Binary.BinaryPrimitives.TryReadUInt32BigEndian(System.ReadOnlySpan{System.Byte},System.UInt32@)">
+      <param name="source"></param>
+      <param name="value"></param>
+      <returns></returns>
+    </member>
+    <member name="M:System.Buffers.Binary.BinaryPrimitives.TryReadUInt32LittleEndian(System.ReadOnlySpan{System.Byte},System.UInt32@)">
+      <param name="source"></param>
+      <param name="value"></param>
+      <returns></returns>
+    </member>
+    <member name="M:System.Buffers.Binary.BinaryPrimitives.TryReadUInt64BigEndian(System.ReadOnlySpan{System.Byte},System.UInt64@)">
+      <param name="source"></param>
+      <param name="value"></param>
+      <returns></returns>
+    </member>
+    <member name="M:System.Buffers.Binary.BinaryPrimitives.TryReadUInt64LittleEndian(System.ReadOnlySpan{System.Byte},System.UInt64@)">
+      <param name="source"></param>
+      <param name="value"></param>
+      <returns></returns>
+    </member>
+    <member name="M:System.Buffers.Binary.BinaryPrimitives.TryWriteInt16BigEndian(System.Span{System.Byte},System.Int16)">
+      <param name="destination"></param>
+      <param name="value"></param>
+      <returns></returns>
+    </member>
+    <member name="M:System.Buffers.Binary.BinaryPrimitives.TryWriteInt16LittleEndian(System.Span{System.Byte},System.Int16)">
+      <param name="destination"></param>
+      <param name="value"></param>
+      <returns></returns>
+    </member>
+    <member name="M:System.Buffers.Binary.BinaryPrimitives.TryWriteInt32BigEndian(System.Span{System.Byte},System.Int32)">
+      <param name="destination"></param>
+      <param name="value"></param>
+      <returns></returns>
+    </member>
+    <member name="M:System.Buffers.Binary.BinaryPrimitives.TryWriteInt32LittleEndian(System.Span{System.Byte},System.Int32)">
+      <param name="destination"></param>
+      <param name="value"></param>
+      <returns></returns>
+    </member>
+    <member name="M:System.Buffers.Binary.BinaryPrimitives.TryWriteInt64BigEndian(System.Span{System.Byte},System.Int64)">
+      <param name="destination"></param>
+      <param name="value"></param>
+      <returns></returns>
+    </member>
+    <member name="M:System.Buffers.Binary.BinaryPrimitives.TryWriteInt64LittleEndian(System.Span{System.Byte},System.Int64)">
+      <param name="destination"></param>
+      <param name="value"></param>
+      <returns></returns>
+    </member>
+    <member name="M:System.Buffers.Binary.BinaryPrimitives.TryWriteUInt16BigEndian(System.Span{System.Byte},System.UInt16)">
+      <param name="destination"></param>
+      <param name="value"></param>
+      <returns></returns>
+    </member>
+    <member name="M:System.Buffers.Binary.BinaryPrimitives.TryWriteUInt16LittleEndian(System.Span{System.Byte},System.UInt16)">
+      <param name="destination"></param>
+      <param name="value"></param>
+      <returns></returns>
+    </member>
+    <member name="M:System.Buffers.Binary.BinaryPrimitives.TryWriteUInt32BigEndian(System.Span{System.Byte},System.UInt32)">
+      <param name="destination"></param>
+      <param name="value"></param>
+      <returns></returns>
+    </member>
+    <member name="M:System.Buffers.Binary.BinaryPrimitives.TryWriteUInt32LittleEndian(System.Span{System.Byte},System.UInt32)">
+      <param name="destination"></param>
+      <param name="value"></param>
+      <returns></returns>
+    </member>
+    <member name="M:System.Buffers.Binary.BinaryPrimitives.TryWriteUInt64BigEndian(System.Span{System.Byte},System.UInt64)">
+      <param name="destination"></param>
+      <param name="value"></param>
+      <returns></returns>
+    </member>
+    <member name="M:System.Buffers.Binary.BinaryPrimitives.TryWriteUInt64LittleEndian(System.Span{System.Byte},System.UInt64)">
+      <param name="destination"></param>
+      <param name="value"></param>
+      <returns></returns>
+    </member>
+    <member name="M:System.Buffers.Binary.BinaryPrimitives.WriteInt16BigEndian(System.Span{System.Byte},System.Int16)">
+      <param name="destination"></param>
+      <param name="value"></param>
+    </member>
+    <member name="M:System.Buffers.Binary.BinaryPrimitives.WriteInt16LittleEndian(System.Span{System.Byte},System.Int16)">
+      <param name="destination"></param>
+      <param name="value"></param>
+    </member>
+    <member name="M:System.Buffers.Binary.BinaryPrimitives.WriteInt32BigEndian(System.Span{System.Byte},System.Int32)">
+      <param name="destination"></param>
+      <param name="value"></param>
+    </member>
+    <member name="M:System.Buffers.Binary.BinaryPrimitives.WriteInt32LittleEndian(System.Span{System.Byte},System.Int32)">
+      <param name="destination"></param>
+      <param name="value"></param>
+    </member>
+    <member name="M:System.Buffers.Binary.BinaryPrimitives.WriteInt64BigEndian(System.Span{System.Byte},System.Int64)">
+      <param name="destination"></param>
+      <param name="value"></param>
+    </member>
+    <member name="M:System.Buffers.Binary.BinaryPrimitives.WriteInt64LittleEndian(System.Span{System.Byte},System.Int64)">
+      <param name="destination"></param>
+      <param name="value"></param>
+    </member>
+    <member name="M:System.Buffers.Binary.BinaryPrimitives.WriteUInt16BigEndian(System.Span{System.Byte},System.UInt16)">
+      <param name="destination"></param>
+      <param name="value"></param>
+    </member>
+    <member name="M:System.Buffers.Binary.BinaryPrimitives.WriteUInt16LittleEndian(System.Span{System.Byte},System.UInt16)">
+      <param name="destination"></param>
+      <param name="value"></param>
+    </member>
+    <member name="M:System.Buffers.Binary.BinaryPrimitives.WriteUInt32BigEndian(System.Span{System.Byte},System.UInt32)">
+      <param name="destination"></param>
+      <param name="value"></param>
+    </member>
+    <member name="M:System.Buffers.Binary.BinaryPrimitives.WriteUInt32LittleEndian(System.Span{System.Byte},System.UInt32)">
+      <param name="destination"></param>
+      <param name="value"></param>
+    </member>
+    <member name="M:System.Buffers.Binary.BinaryPrimitives.WriteUInt64BigEndian(System.Span{System.Byte},System.UInt64)">
+      <param name="destination"></param>
+      <param name="value"></param>
+    </member>
+    <member name="M:System.Buffers.Binary.BinaryPrimitives.WriteUInt64LittleEndian(System.Span{System.Byte},System.UInt64)">
+      <param name="destination"></param>
+      <param name="value"></param>
+    </member>
+    <member name="T:System.ReadOnlySpan`1">
+      <typeparam name="T"></typeparam>
+    </member>
+    <member name="M:System.ReadOnlySpan`1.#ctor(`0[])">
+      <param name="array"></param>
+    </member>
+    <member name="M:System.ReadOnlySpan`1.#ctor(System.Void*,System.Int32)">
+      <param name="pointer"></param>
+      <param name="length"></param>
+    </member>
+    <member name="M:System.ReadOnlySpan`1.#ctor(`0[],System.Int32)">
+      <param name="array"></param>
+      <param name="start"></param>
+    </member>
+    <member name="M:System.ReadOnlySpan`1.#ctor(`0[],System.Int32,System.Int32)">
+      <param name="array"></param>
+      <param name="start"></param>
+      <param name="length"></param>
+    </member>
+    <member name="M:System.ReadOnlySpan`1.CopyTo(System.Span{`0})">
+      <param name="destination"></param>
+    </member>
+    <member name="M:System.ReadOnlySpan`1.DangerousCreate(System.Object,`0@,System.Int32)">
+      <param name="obj"></param>
+      <param name="objectData"></param>
+      <param name="length"></param>
+      <returns></returns>
+    </member>
+    <member name="M:System.ReadOnlySpan`1.DangerousGetPinnableReference">
+      <returns></returns>
+    </member>
+    <member name="P:System.ReadOnlySpan`1.Empty">
+      <returns></returns>
+    </member>
+    <member name="M:System.ReadOnlySpan`1.Equals(System.Object)">
+      <param name="obj"></param>
+      <returns></returns>
+    </member>
+    <member name="M:System.ReadOnlySpan`1.GetHashCode">
+      <returns></returns>
+    </member>
+    <member name="P:System.ReadOnlySpan`1.IsEmpty">
+      <returns></returns>
+    </member>
+    <member name="P:System.ReadOnlySpan`1.Item(System.Int32)">
+      <param name="index"></param>
+      <returns></returns>
+    </member>
+    <member name="P:System.ReadOnlySpan`1.Length">
+      <returns></returns>
+    </member>
+    <member name="M:System.ReadOnlySpan`1.op_Equality(System.ReadOnlySpan{`0},System.ReadOnlySpan{`0})">
+      <param name="left"></param>
+      <param name="right"></param>
+      <returns></returns>
+    </member>
+    <member name="M:System.ReadOnlySpan`1.op_Implicit(T[])~System.ReadOnlySpan{T}">
+      <param name="array"></param>
+      <returns></returns>
+    </member>
+    <member name="M:System.ReadOnlySpan`1.op_Implicit(System.ArraySegment{T})~System.ReadOnlySpan{T}">
+      <param name="arraySegment"></param>
+      <returns></returns>
+    </member>
+    <member name="M:System.ReadOnlySpan`1.op_Inequality(System.ReadOnlySpan{`0},System.ReadOnlySpan{`0})">
+      <param name="left"></param>
+      <param name="right"></param>
+      <returns></returns>
+    </member>
+    <member name="M:System.ReadOnlySpan`1.Slice(System.Int32)">
+      <param name="start"></param>
+      <returns></returns>
+    </member>
+    <member name="M:System.ReadOnlySpan`1.Slice(System.Int32,System.Int32)">
+      <param name="start"></param>
+      <param name="length"></param>
+      <returns></returns>
+    </member>
+    <member name="M:System.ReadOnlySpan`1.ToArray">
+      <returns></returns>
+    </member>
+    <member name="M:System.ReadOnlySpan`1.TryCopyTo(System.Span{`0})">
+      <param name="destination"></param>
+      <returns></returns>
+    </member>
+    <member name="T:System.SequencePosition">
+      
+    </member>
+    <member name="M:System.SequencePosition.#ctor(System.Object,System.Int32)">
+      <param name="object"></param>
+      <param name="integer"></param>
+    </member>
+    <member name="M:System.SequencePosition.Equals(System.Object)">
+      <param name="obj"></param>
+      <returns></returns>
+    </member>
+    <member name="M:System.SequencePosition.Equals(System.SequencePosition)">
+      <param name="other"></param>
+      <returns></returns>
+    </member>
+    <member name="M:System.SequencePosition.GetHashCode">
+      <returns></returns>
+    </member>
+    <member name="M:System.SequencePosition.GetInteger">
+      <returns></returns>
+    </member>
+    <member name="M:System.SequencePosition.GetObject">
+      <returns></returns>
+    </member>
+    <member name="M:System.SequencePosition.op_Equality(System.SequencePosition,System.SequencePosition)">
+      <param name="left"></param>
+      <param name="right"></param>
+      <returns></returns>
+    </member>
+    <member name="M:System.SequencePosition.op_Inequality(System.SequencePosition,System.SequencePosition)">
+      <param name="left"></param>
+      <param name="right"></param>
+      <returns></returns>
+    </member>
+    <member name="T:System.Buffers.Text.Utf8Parser">
+      
+    </member>
+    <member name="M:System.Buffers.Text.Utf8Parser.TryParse(System.ReadOnlySpan{System.Byte},System.Boolean@,System.Int32@,System.Char)">
+      <param name="source"></param>
+      <param name="value"></param>
+      <param name="bytesConsumed"></param>
+      <param name="standardFormat"></param>
+      <returns></returns>
+    </member>
+    <member name="M:System.Buffers.Text.Utf8Parser.TryParse(System.ReadOnlySpan{System.Byte},System.Byte@,System.Int32@,System.Char)">
+      <param name="source"></param>
+      <param name="value"></param>
+      <param name="bytesConsumed"></param>
+      <param name="standardFormat"></param>
+      <returns></returns>
+    </member>
+    <member name="M:System.Buffers.Text.Utf8Parser.TryParse(System.ReadOnlySpan{System.Byte},System.DateTime@,System.Int32@,System.Char)">
+      <param name="source"></param>
+      <param name="value"></param>
+      <param name="bytesConsumed"></param>
+      <param name="standardFormat"></param>
+      <returns></returns>
+    </member>
+    <member name="M:System.Buffers.Text.Utf8Parser.TryParse(System.ReadOnlySpan{System.Byte},System.DateTimeOffset@,System.Int32@,System.Char)">
+      <param name="source"></param>
+      <param name="value"></param>
+      <param name="bytesConsumed"></param>
+      <param name="standardFormat"></param>
+      <returns></returns>
+    </member>
+    <member name="M:System.Buffers.Text.Utf8Parser.TryParse(System.ReadOnlySpan{System.Byte},System.Decimal@,System.Int32@,System.Char)">
+      <param name="source"></param>
+      <param name="value"></param>
+      <param name="bytesConsumed"></param>
+      <param name="standardFormat"></param>
+      <returns></returns>
+    </member>
+    <member name="M:System.Buffers.Text.Utf8Parser.TryParse(System.ReadOnlySpan{System.Byte},System.Double@,System.Int32@,System.Char)">
+      <param name="source"></param>
+      <param name="value"></param>
+      <param name="bytesConsumed"></param>
+      <param name="standardFormat"></param>
+      <returns></returns>
+    </member>
+    <member name="M:System.Buffers.Text.Utf8Parser.TryParse(System.ReadOnlySpan{System.Byte},System.Guid@,System.Int32@,System.Char)">
+      <param name="source"></param>
+      <param name="value"></param>
+      <param name="bytesConsumed"></param>
+      <param name="standardFormat"></param>
+      <returns></returns>
+    </member>
+    <member name="M:System.Buffers.Text.Utf8Parser.TryParse(System.ReadOnlySpan{System.Byte},System.Int16@,System.Int32@,System.Char)">
+      <param name="source"></param>
+      <param name="value"></param>
+      <param name="bytesConsumed"></param>
+      <param name="standardFormat"></param>
+      <returns></returns>
+    </member>
+    <member name="M:System.Buffers.Text.Utf8Parser.TryParse(System.ReadOnlySpan{System.Byte},System.Int32@,System.Int32@,System.Char)">
+      <param name="source"></param>
+      <param name="value"></param>
+      <param name="bytesConsumed"></param>
+      <param name="standardFormat"></param>
+      <returns></returns>
+    </member>
+    <member name="M:System.Buffers.Text.Utf8Parser.TryParse(System.ReadOnlySpan{System.Byte},System.Int64@,System.Int32@,System.Char)">
+      <param name="source"></param>
+      <param name="value"></param>
+      <param name="bytesConsumed"></param>
+      <param name="standardFormat"></param>
+      <returns></returns>
+    </member>
+    <member name="M:System.Buffers.Text.Utf8Parser.TryParse(System.ReadOnlySpan{System.Byte},System.SByte@,System.Int32@,System.Char)">
+      <param name="source"></param>
+      <param name="value"></param>
+      <param name="bytesConsumed"></param>
+      <param name="standardFormat"></param>
+      <returns></returns>
+    </member>
+    <member name="M:System.Buffers.Text.Utf8Parser.TryParse(System.ReadOnlySpan{System.Byte},System.Single@,System.Int32@,System.Char)">
+      <param name="source"></param>
+      <param name="value"></param>
+      <param name="bytesConsumed"></param>
+      <param name="standardFormat"></param>
+      <returns></returns>
+    </member>
+    <member name="M:System.Buffers.Text.Utf8Parser.TryParse(System.ReadOnlySpan{System.Byte},System.TimeSpan@,System.Int32@,System.Char)">
+      <param name="source"></param>
+      <param name="value"></param>
+      <param name="bytesConsumed"></param>
+      <param name="standardFormat"></param>
+      <returns></returns>
+    </member>
+    <member name="M:System.Buffers.Text.Utf8Parser.TryParse(System.ReadOnlySpan{System.Byte},System.UInt16@,System.Int32@,System.Char)">
+      <param name="source"></param>
+      <param name="value"></param>
+      <param name="bytesConsumed"></param>
+      <param name="standardFormat"></param>
+      <returns></returns>
+    </member>
+    <member name="M:System.Buffers.Text.Utf8Parser.TryParse(System.ReadOnlySpan{System.Byte},System.UInt32@,System.Int32@,System.Char)">
+      <param name="source"></param>
+      <param name="value"></param>
+      <param name="bytesConsumed"></param>
+      <param name="standardFormat"></param>
+      <returns></returns>
+    </member>
+    <member name="M:System.Buffers.Text.Utf8Parser.TryParse(System.ReadOnlySpan{System.Byte},System.UInt64@,System.Int32@,System.Char)">
+      <param name="source"></param>
+      <param name="value"></param>
+      <param name="bytesConsumed"></param>
+      <param name="standardFormat"></param>
+      <returns></returns>
+    </member>
+    <member name="T:System.Buffers.Text.Utf8Formatter">
+      
+    </member>
+    <member name="M:System.Buffers.Text.Utf8Formatter.TryFormat(System.Boolean,System.Span{System.Byte},System.Int32@,System.Buffers.StandardFormat)">
+      <param name="value"></param>
+      <param name="destination"></param>
+      <param name="bytesWritten"></param>
+      <param name="format"></param>
+      <returns></returns>
+    </member>
+    <member name="M:System.Buffers.Text.Utf8Formatter.TryFormat(System.Byte,System.Span{System.Byte},System.Int32@,System.Buffers.StandardFormat)">
+      <param name="value"></param>
+      <param name="destination"></param>
+      <param name="bytesWritten"></param>
+      <param name="format"></param>
+      <returns></returns>
+    </member>
+    <member name="M:System.Buffers.Text.Utf8Formatter.TryFormat(System.DateTime,System.Span{System.Byte},System.Int32@,System.Buffers.StandardFormat)">
+      <param name="value"></param>
+      <param name="destination"></param>
+      <param name="bytesWritten"></param>
+      <param name="format"></param>
+      <returns></returns>
+    </member>
+    <member name="M:System.Buffers.Text.Utf8Formatter.TryFormat(System.DateTimeOffset,System.Span{System.Byte},System.Int32@,System.Buffers.StandardFormat)">
+      <param name="value"></param>
+      <param name="destination"></param>
+      <param name="bytesWritten"></param>
+      <param name="format"></param>
+      <returns></returns>
+    </member>
+    <member name="M:System.Buffers.Text.Utf8Formatter.TryFormat(System.Decimal,System.Span{System.Byte},System.Int32@,System.Buffers.StandardFormat)">
+      <param name="value"></param>
+      <param name="destination"></param>
+      <param name="bytesWritten"></param>
+      <param name="format"></param>
+      <returns></returns>
+    </member>
+    <member name="M:System.Buffers.Text.Utf8Formatter.TryFormat(System.Double,System.Span{System.Byte},System.Int32@,System.Buffers.StandardFormat)">
+      <param name="value"></param>
+      <param name="destination"></param>
+      <param name="bytesWritten"></param>
+      <param name="format"></param>
+      <returns></returns>
+    </member>
+    <member name="M:System.Buffers.Text.Utf8Formatter.TryFormat(System.Guid,System.Span{System.Byte},System.Int32@,System.Buffers.StandardFormat)">
+      <param name="value"></param>
+      <param name="destination"></param>
+      <param name="bytesWritten"></param>
+      <param name="format"></param>
+      <returns></returns>
+    </member>
+    <member name="M:System.Buffers.Text.Utf8Formatter.TryFormat(System.Int16,System.Span{System.Byte},System.Int32@,System.Buffers.StandardFormat)">
+      <param name="value"></param>
+      <param name="destination"></param>
+      <param name="bytesWritten"></param>
+      <param name="format"></param>
+      <returns></returns>
+    </member>
+    <member name="M:System.Buffers.Text.Utf8Formatter.TryFormat(System.Int32,System.Span{System.Byte},System.Int32@,System.Buffers.StandardFormat)">
+      <param name="value"></param>
+      <param name="destination"></param>
+      <param name="bytesWritten"></param>
+      <param name="format"></param>
+      <returns></returns>
+    </member>
+    <member name="M:System.Buffers.Text.Utf8Formatter.TryFormat(System.Int64,System.Span{System.Byte},System.Int32@,System.Buffers.StandardFormat)">
+      <param name="value"></param>
+      <param name="destination"></param>
+      <param name="bytesWritten"></param>
+      <param name="format"></param>
+      <returns></returns>
+    </member>
+    <member name="M:System.Buffers.Text.Utf8Formatter.TryFormat(System.SByte,System.Span{System.Byte},System.Int32@,System.Buffers.StandardFormat)">
+      <param name="value"></param>
+      <param name="destination"></param>
+      <param name="bytesWritten"></param>
+      <param name="format"></param>
+      <returns></returns>
+    </member>
+    <member name="M:System.Buffers.Text.Utf8Formatter.TryFormat(System.Single,System.Span{System.Byte},System.Int32@,System.Buffers.StandardFormat)">
+      <param name="value"></param>
+      <param name="destination"></param>
+      <param name="bytesWritten"></param>
+      <param name="format"></param>
+      <returns></returns>
+    </member>
+    <member name="M:System.Buffers.Text.Utf8Formatter.TryFormat(System.TimeSpan,System.Span{System.Byte},System.Int32@,System.Buffers.StandardFormat)">
+      <param name="value"></param>
+      <param name="destination"></param>
+      <param name="bytesWritten"></param>
+      <param name="format"></param>
+      <returns></returns>
+    </member>
+    <member name="M:System.Buffers.Text.Utf8Formatter.TryFormat(System.UInt16,System.Span{System.Byte},System.Int32@,System.Buffers.StandardFormat)">
+      <param name="value"></param>
+      <param name="destination"></param>
+      <param name="bytesWritten"></param>
+      <param name="format"></param>
+      <returns></returns>
+    </member>
+    <member name="M:System.Buffers.Text.Utf8Formatter.TryFormat(System.UInt32,System.Span{System.Byte},System.Int32@,System.Buffers.StandardFormat)">
+      <param name="value"></param>
+      <param name="destination"></param>
+      <param name="bytesWritten"></param>
+      <param name="format"></param>
+      <returns></returns>
+    </member>
+    <member name="M:System.Buffers.Text.Utf8Formatter.TryFormat(System.UInt64,System.Span{System.Byte},System.Int32@,System.Buffers.StandardFormat)">
+      <param name="value"></param>
+      <param name="destination"></param>
+      <param name="bytesWritten"></param>
+      <param name="format"></param>
+      <returns></returns>
+    </member>
+    <member name="T:System.Buffers.Text.Base64">
+      
+    </member>
+    <member name="M:System.Buffers.Text.Base64.DecodeFromUtf8(System.ReadOnlySpan{System.Byte},System.Span{System.Byte},System.Int32@,System.Int32@,System.Boolean)">
+      <param name="utf8"></param>
+      <param name="bytes"></param>
+      <param name="bytesConsumed"></param>
+      <param name="bytesWritten"></param>
+      <param name="isFinalBlock"></param>
+      <returns></returns>
+    </member>
+    <member name="M:System.Buffers.Text.Base64.DecodeFromUtf8InPlace(System.Span{System.Byte},System.Int32@)">
+      <param name="buffer"></param>
+      <param name="bytesWritten"></param>
+      <returns></returns>
+    </member>
+    <member name="M:System.Buffers.Text.Base64.EncodeToUtf8(System.ReadOnlySpan{System.Byte},System.Span{System.Byte},System.Int32@,System.Int32@,System.Boolean)">
+      <param name="bytes"></param>
+      <param name="utf8"></param>
+      <param name="bytesConsumed"></param>
+      <param name="bytesWritten"></param>
+      <param name="isFinalBlock"></param>
+      <returns></returns>
+    </member>
+    <member name="M:System.Buffers.Text.Base64.EncodeToUtf8InPlace(System.Span{System.Byte},System.Int32,System.Int32@)">
+      <param name="buffer"></param>
+      <param name="dataLength"></param>
+      <param name="bytesWritten"></param>
+      <returns></returns>
+    </member>
+    <member name="M:System.Buffers.Text.Base64.GetMaxDecodedFromUtf8Length(System.Int32)">
+      <param name="length"></param>
+      <returns></returns>
+    </member>
+    <member name="M:System.Buffers.Text.Base64.GetMaxEncodedToUtf8Length(System.Int32)">
+      <param name="length"></param>
+      <returns></returns>
+    </member>
+    <member name="T:System.Buffers.StandardFormat">
+      
+    </member>
+    <member name="M:System.Buffers.StandardFormat.#ctor(System.Char,System.Byte)">
+      <param name="symbol"></param>
+      <param name="precision"></param>
+    </member>
+    <member name="M:System.Buffers.StandardFormat.Equals(System.Buffers.StandardFormat)">
+      <param name="other"></param>
+      <returns></returns>
+    </member>
+    <member name="M:System.Buffers.StandardFormat.Equals(System.Object)">
+      <param name="obj"></param>
+      <returns></returns>
+    </member>
+    <member name="M:System.Buffers.StandardFormat.GetHashCode">
+      <returns></returns>
+    </member>
+    <member name="P:System.Buffers.StandardFormat.HasPrecision">
+      <returns></returns>
+    </member>
+    <member name="P:System.Buffers.StandardFormat.IsDefault">
+      <returns></returns>
+    </member>
+    <member name="F:System.Buffers.StandardFormat.MaxPrecision">
+      <returns></returns>
+    </member>
+    <member name="F:System.Buffers.StandardFormat.NoPrecision">
+      <returns></returns>
+    </member>
+    <member name="M:System.Buffers.StandardFormat.op_Equality(System.Buffers.StandardFormat,System.Buffers.StandardFormat)">
+      <param name="left"></param>
+      <param name="right"></param>
+      <returns></returns>
+    </member>
+    <member name="M:System.Buffers.StandardFormat.op_Implicit(System.Char)~System.Buffers.StandardFormat">
+      <param name="symbol"></param>
+      <returns></returns>
+    </member>
+    <member name="M:System.Buffers.StandardFormat.op_Inequality(System.Buffers.StandardFormat,System.Buffers.StandardFormat)">
+      <param name="left"></param>
+      <param name="right"></param>
+      <returns></returns>
+    </member>
+    <member name="M:System.Buffers.StandardFormat.Parse(System.ReadOnlySpan{System.Char})">
+      <param name="format"></param>
+      <returns></returns>
+    </member>
+    <member name="M:System.Buffers.StandardFormat.Parse(System.String)">
+      <param name="format"></param>
+      <returns></returns>
+    </member>
+    <member name="P:System.Buffers.StandardFormat.Precision">
+      <returns></returns>
+    </member>
+    <member name="P:System.Buffers.StandardFormat.Symbol">
+      <returns></returns>
+    </member>
+    <member name="M:System.Buffers.StandardFormat.ToString">
+      <returns></returns>
+    </member>
+    <member name="T:System.Runtime.InteropServices.SequenceMarshal">
+      
+    </member>
+    <member name="M:System.Runtime.InteropServices.SequenceMarshal.TryGetArray``1(System.Buffers.ReadOnlySequence{``0},System.ArraySegment{``0}@)">
+      <param name="sequence"></param>
+      <param name="segment"></param>
+      <typeparam name="T"></typeparam>
+      <returns></returns>
+    </member>
+    <member name="M:System.Runtime.InteropServices.SequenceMarshal.TryGetMemoryManager``1(System.Buffers.ReadOnlySequence{``0},System.Buffers.MemoryManager{``0}@,System.Int32@,System.Int32@)">
+      <param name="sequence"></param>
+      <param name="manager"></param>
+      <param name="start"></param>
+      <param name="length"></param>
+      <typeparam name="T"></typeparam>
+      <returns></returns>
+    </member>
+    <member name="M:System.Runtime.InteropServices.SequenceMarshal.TryGetReadOnlyMemory``1(System.Buffers.ReadOnlySequence{``0},System.ReadOnlyMemory{``0}@)">
+      <param name="sequence"></param>
+      <param name="memory"></param>
+      <typeparam name="T"></typeparam>
+      <returns></returns>
+    </member>
+    <member name="M:System.Runtime.InteropServices.SequenceMarshal.TryGetReadOnlySequenceSegment``1(System.Buffers.ReadOnlySequence{``0},System.Buffers.ReadOnlySequenceSegment{``0}@,System.Int32@,System.Buffers.ReadOnlySequenceSegment{``0}@,System.Int32@)">
+      <param name="sequence"></param>
+      <param name="startSegment"></param>
+      <param name="startIndex"></param>
+      <param name="endSegment"></param>
+      <param name="endIndex"></param>
+      <typeparam name="T"></typeparam>
+      <returns></returns>
+    </member>
+    <member name="T:System.Runtime.InteropServices.MemoryMarshal">
+      
+    </member>
+    <member name="M:System.Runtime.InteropServices.MemoryMarshal.AsBytes``1(System.ReadOnlySpan{``0})">
+      <param name="span"></param>
+      <typeparam name="T"></typeparam>
+      <returns></returns>
+    </member>
+    <member name="M:System.Runtime.InteropServices.MemoryMarshal.AsBytes``1(System.Span{``0})">
+      <param name="span"></param>
+      <typeparam name="T"></typeparam>
+      <returns></returns>
+    </member>
+    <member name="M:System.Runtime.InteropServices.MemoryMarshal.AsMemory``1(System.ReadOnlyMemory{``0})">
+      <param name="memory"></param>
+      <typeparam name="T"></typeparam>
+      <returns></returns>
+    </member>
+    <member name="M:System.Runtime.InteropServices.MemoryMarshal.Cast``2(System.ReadOnlySpan{``0})">
+      <param name="span"></param>
+      <typeparam name="TFrom"></typeparam>
+      <typeparam name="TTo"></typeparam>
+      <returns></returns>
+    </member>
+    <member name="M:System.Runtime.InteropServices.MemoryMarshal.Cast``2(System.Span{``0})">
+      <param name="span"></param>
+      <typeparam name="TFrom"></typeparam>
+      <typeparam name="TTo"></typeparam>
+      <returns></returns>
+    </member>
+    <member name="M:System.Runtime.InteropServices.MemoryMarshal.CreateReadOnlySpan``1(``0@,System.Int32)">
+      <param name="reference"></param>
+      <param name="length"></param>
+      <typeparam name="T"></typeparam>
+      <returns></returns>
+    </member>
+    <member name="M:System.Runtime.InteropServices.MemoryMarshal.CreateSpan``1(``0@,System.Int32)">
+      <param name="reference"></param>
+      <param name="length"></param>
+      <typeparam name="T"></typeparam>
+      <returns></returns>
+    </member>
+    <member name="M:System.Runtime.InteropServices.MemoryMarshal.GetReference``1(System.Span{``0})">
+      <param name="span"></param>
+      <typeparam name="T"></typeparam>
+      <returns></returns>
+    </member>
+    <member name="M:System.Runtime.InteropServices.MemoryMarshal.GetReference``1(System.ReadOnlySpan{``0})">
+      <param name="span"></param>
+      <typeparam name="T"></typeparam>
+      <returns></returns>
+    </member>
+    <member name="M:System.Runtime.InteropServices.MemoryMarshal.Read``1(System.ReadOnlySpan{System.Byte})">
+      <param name="source"></param>
+      <typeparam name="T"></typeparam>
+      <returns></returns>
+    </member>
+    <member name="M:System.Runtime.InteropServices.MemoryMarshal.ToEnumerable``1(System.ReadOnlyMemory{``0})">
+      <param name="memory"></param>
+      <typeparam name="T"></typeparam>
+      <returns></returns>
+    </member>
+    <member name="M:System.Runtime.InteropServices.MemoryMarshal.TryGetArray``1(System.ReadOnlyMemory{``0},System.ArraySegment{``0}@)">
+      <param name="memory"></param>
+      <param name="segment"></param>
+      <typeparam name="T"></typeparam>
+      <returns></returns>
+    </member>
+    <member name="M:System.Runtime.InteropServices.MemoryMarshal.TryGetMemoryManager``2(System.ReadOnlyMemory{``0},``1@)">
+      <param name="memory"></param>
+      <param name="manager"></param>
+      <typeparam name="T"></typeparam>
+      <typeparam name="TManager"></typeparam>
+      <returns></returns>
+    </member>
+    <member name="M:System.Runtime.InteropServices.MemoryMarshal.TryGetMemoryManager``2(System.ReadOnlyMemory{``0},``1@,System.Int32@,System.Int32@)">
+      <param name="memory"></param>
+      <param name="manager"></param>
+      <param name="start"></param>
+      <param name="length"></param>
+      <typeparam name="T"></typeparam>
+      <typeparam name="TManager"></typeparam>
+      <returns></returns>
+    </member>
+    <member name="M:System.Runtime.InteropServices.MemoryMarshal.TryGetString(System.ReadOnlyMemory{System.Char},System.String@,System.Int32@,System.Int32@)">
+      <param name="memory"></param>
+      <param name="text"></param>
+      <param name="start"></param>
+      <param name="length"></param>
+      <returns></returns>
+    </member>
+    <member name="M:System.Runtime.InteropServices.MemoryMarshal.TryRead``1(System.ReadOnlySpan{System.Byte},``0@)">
+      <param name="source"></param>
+      <param name="value"></param>
+      <typeparam name="T"></typeparam>
+      <returns></returns>
+    </member>
+    <member name="M:System.Runtime.InteropServices.MemoryMarshal.TryWrite``1(System.Span{System.Byte},``0@)">
+      <param name="destination"></param>
+      <param name="value"></param>
+      <typeparam name="T"></typeparam>
+      <returns></returns>
+    </member>
+    <member name="M:System.Runtime.InteropServices.MemoryMarshal.Write``1(System.Span{System.Byte},``0@)">
+      <param name="destination"></param>
+      <param name="value"></param>
+      <typeparam name="T"></typeparam>
+    </member>
+    <member name="T:System.MemoryExtensions">
+      
+    </member>
+    <member name="M:System.MemoryExtensions.AsMemory(System.String)">
+      <param name="text"></param>
+      <returns></returns>
+    </member>
+    <member name="M:System.MemoryExtensions.AsMemory(System.String,System.Int32)">
+      <param name="text"></param>
+      <param name="start"></param>
+      <returns></returns>
+    </member>
+    <member name="M:System.MemoryExtensions.AsMemory(System.String,System.Int32,System.Int32)">
+      <param name="text"></param>
+      <param name="start"></param>
+      <param name="length"></param>
+      <returns></returns>
+    </member>
+    <member name="M:System.MemoryExtensions.AsMemory``1(System.ArraySegment{``0})">
+      <param name="segment"></param>
+      <typeparam name="T"></typeparam>
+      <returns></returns>
+    </member>
+    <member name="M:System.MemoryExtensions.AsMemory``1(``0[])">
+      <param name="array"></param>
+      <typeparam name="T"></typeparam>
+      <returns></returns>
+    </member>
+    <member name="M:System.MemoryExtensions.AsMemory``1(System.ArraySegment{``0},System.Int32)">
+      <param name="segment"></param>
+      <param name="start"></param>
+      <typeparam name="T"></typeparam>
+      <returns></returns>
+    </member>
+    <member name="M:System.MemoryExtensions.AsMemory``1(``0[],System.Int32)">
+      <param name="array"></param>
+      <param name="start"></param>
+      <typeparam name="T"></typeparam>
+      <returns></returns>
+    </member>
+    <member name="M:System.MemoryExtensions.AsMemory``1(System.ArraySegment{``0},System.Int32,System.Int32)">
+      <param name="segment"></param>
+      <param name="start"></param>
+      <param name="length"></param>
+      <typeparam name="T"></typeparam>
+      <returns></returns>
+    </member>
+    <member name="M:System.MemoryExtensions.AsMemory``1(``0[],System.Int32,System.Int32)">
+      <param name="array"></param>
+      <param name="start"></param>
+      <param name="length"></param>
+      <typeparam name="T"></typeparam>
+      <returns></returns>
+    </member>
+    <member name="M:System.MemoryExtensions.AsSpan(System.String,System.Int32,System.Int32)">
+      <param name="text"></param>
+      <param name="start"></param>
+      <param name="length"></param>
+      <returns></returns>
+    </member>
+    <member name="M:System.MemoryExtensions.AsSpan(System.String,System.Int32)">
+      <param name="text"></param>
+      <param name="start"></param>
+      <returns></returns>
+    </member>
+    <member name="M:System.MemoryExtensions.AsSpan(System.String)">
+      <param name="text"></param>
+      <returns></returns>
+    </member>
+    <member name="M:System.MemoryExtensions.AsSpan``1(System.ArraySegment{``0})">
+      <param name="segment"></param>
+      <typeparam name="T"></typeparam>
+      <returns></returns>
+    </member>
+    <member name="M:System.MemoryExtensions.AsSpan``1(``0[])">
+      <param name="array"></param>
+      <typeparam name="T"></typeparam>
+      <returns></returns>
+    </member>
+    <member name="M:System.MemoryExtensions.AsSpan``1(System.ArraySegment{``0},System.Int32)">
+      <param name="segment"></param>
+      <param name="start"></param>
+      <typeparam name="T"></typeparam>
+      <returns></returns>
+    </member>
+    <member name="M:System.MemoryExtensions.AsSpan``1(``0[],System.Int32)">
+      <param name="array"></param>
+      <param name="start"></param>
+      <typeparam name="T"></typeparam>
+      <returns></returns>
+    </member>
+    <member name="M:System.MemoryExtensions.AsSpan``1(System.ArraySegment{``0},System.Int32,System.Int32)">
+      <param name="segment"></param>
+      <param name="start"></param>
+      <param name="length"></param>
+      <typeparam name="T"></typeparam>
+      <returns></returns>
+    </member>
+    <member name="M:System.MemoryExtensions.AsSpan``1(``0[],System.Int32,System.Int32)">
+      <param name="array"></param>
+      <param name="start"></param>
+      <param name="length"></param>
+      <typeparam name="T"></typeparam>
+      <returns></returns>
+    </member>
+    <member name="M:System.MemoryExtensions.BinarySearch``2(System.ReadOnlySpan{``0},``1)">
+      <param name="span"></param>
+      <param name="comparable"></param>
+      <typeparam name="T"></typeparam>
+      <typeparam name="TComparable"></typeparam>
+      <returns></returns>
+    </member>
+    <member name="M:System.MemoryExtensions.BinarySearch``2(System.Span{``0},``1)">
+      <param name="span"></param>
+      <param name="comparable"></param>
+      <typeparam name="T"></typeparam>
+      <typeparam name="TComparable"></typeparam>
+      <returns></returns>
+    </member>
+    <member name="M:System.MemoryExtensions.BinarySearch``2(System.Span{``0},``0,``1)">
+      <param name="span"></param>
+      <param name="value"></param>
+      <param name="comparer"></param>
+      <typeparam name="T"></typeparam>
+      <typeparam name="TComparer"></typeparam>
+      <returns></returns>
+    </member>
+    <member name="M:System.MemoryExtensions.BinarySearch``2(System.ReadOnlySpan{``0},``0,``1)">
+      <param name="span"></param>
+      <param name="value"></param>
+      <param name="comparer"></param>
+      <typeparam name="T"></typeparam>
+      <typeparam name="TComparer"></typeparam>
+      <returns></returns>
+    </member>
+    <member name="M:System.MemoryExtensions.BinarySearch``1(System.Span{``0},System.IComparable{``0})">
+      <param name="span"></param>
+      <param name="comparable"></param>
+      <typeparam name="T"></typeparam>
+      <returns></returns>
+    </member>
+    <member name="M:System.MemoryExtensions.BinarySearch``1(System.ReadOnlySpan{``0},System.IComparable{``0})">
+      <param name="span"></param>
+      <param name="comparable"></param>
+      <typeparam name="T"></typeparam>
+      <returns></returns>
+    </member>
+    <member name="M:System.MemoryExtensions.CompareTo(System.ReadOnlySpan{System.Char},System.ReadOnlySpan{System.Char},System.StringComparison)">
+      <param name="span"></param>
+      <param name="other"></param>
+      <param name="comparisonType"></param>
+      <returns></returns>
+    </member>
+    <member name="M:System.MemoryExtensions.Contains(System.ReadOnlySpan{System.Char},System.ReadOnlySpan{System.Char},System.StringComparison)">
+      <param name="span"></param>
+      <param name="value"></param>
+      <param name="comparisonType"></param>
+      <returns></returns>
+    </member>
+    <member name="M:System.MemoryExtensions.CopyTo``1(``0[],System.Memory{``0})">
+      <param name="source"></param>
+      <param name="destination"></param>
+      <typeparam name="T"></typeparam>
+    </member>
+    <member name="M:System.MemoryExtensions.CopyTo``1(``0[],System.Span{``0})">
+      <param name="source"></param>
+      <param name="destination"></param>
+      <typeparam name="T"></typeparam>
+    </member>
+    <member name="M:System.MemoryExtensions.EndsWith(System.ReadOnlySpan{System.Char},System.ReadOnlySpan{System.Char},System.StringComparison)">
+      <param name="span"></param>
+      <param name="value"></param>
+      <param name="comparisonType"></param>
+      <returns></returns>
+    </member>
+    <member name="M:System.MemoryExtensions.EndsWith``1(System.ReadOnlySpan{``0},System.ReadOnlySpan{``0})">
+      <param name="span"></param>
+      <param name="value"></param>
+      <typeparam name="T"></typeparam>
+      <returns></returns>
+    </member>
+    <member name="M:System.MemoryExtensions.EndsWith``1(System.Span{``0},System.ReadOnlySpan{``0})">
+      <param name="span"></param>
+      <param name="value"></param>
+      <typeparam name="T"></typeparam>
+      <returns></returns>
+    </member>
+    <member name="M:System.MemoryExtensions.Equals(System.ReadOnlySpan{System.Char},System.ReadOnlySpan{System.Char},System.StringComparison)">
+      <param name="span"></param>
+      <param name="other"></param>
+      <param name="comparisonType"></param>
+      <returns></returns>
+    </member>
+    <member name="M:System.MemoryExtensions.IndexOf(System.ReadOnlySpan{System.Char},System.ReadOnlySpan{System.Char},System.StringComparison)">
+      <param name="span"></param>
+      <param name="value"></param>
+      <param name="comparisonType"></param>
+      <returns></returns>
+    </member>
+    <member name="M:System.MemoryExtensions.IndexOf``1(System.ReadOnlySpan{``0},System.ReadOnlySpan{``0})">
+      <param name="span"></param>
+      <param name="value"></param>
+      <typeparam name="T"></typeparam>
+      <returns></returns>
+    </member>
+    <member name="M:System.MemoryExtensions.IndexOf``1(System.ReadOnlySpan{``0},``0)">
+      <param name="span"></param>
+      <param name="value"></param>
+      <typeparam name="T"></typeparam>
+      <returns></returns>
+    </member>
+    <member name="M:System.MemoryExtensions.IndexOf``1(System.Span{``0},System.ReadOnlySpan{``0})">
+      <param name="span"></param>
+      <param name="value"></param>
+      <typeparam name="T"></typeparam>
+      <returns></returns>
+    </member>
+    <member name="M:System.MemoryExtensions.IndexOf``1(System.Span{``0},``0)">
+      <param name="span"></param>
+      <param name="value"></param>
+      <typeparam name="T"></typeparam>
+      <returns></returns>
+    </member>
+    <member name="M:System.MemoryExtensions.IndexOfAny``1(System.Span{``0},``0,``0,``0)">
+      <param name="span"></param>
+      <param name="value0"></param>
+      <param name="value1"></param>
+      <param name="value2"></param>
+      <typeparam name="T"></typeparam>
+      <returns></returns>
+    </member>
+    <member name="M:System.MemoryExtensions.IndexOfAny``1(System.ReadOnlySpan{``0},``0,``0,``0)">
+      <param name="span"></param>
+      <param name="value0"></param>
+      <param name="value1"></param>
+      <param name="value2"></param>
+      <typeparam name="T"></typeparam>
+      <returns></returns>
+    </member>
+    <member name="M:System.MemoryExtensions.IndexOfAny``1(System.Span{``0},``0,``0)">
+      <param name="span"></param>
+      <param name="value0"></param>
+      <param name="value1"></param>
+      <typeparam name="T"></typeparam>
+      <returns></returns>
+    </member>
+    <member name="M:System.MemoryExtensions.IndexOfAny``1(System.ReadOnlySpan{``0},``0,``0)">
+      <param name="span"></param>
+      <param name="value0"></param>
+      <param name="value1"></param>
+      <typeparam name="T"></typeparam>
+      <returns></returns>
+    </member>
+    <member name="M:System.MemoryExtensions.IndexOfAny``1(System.Span{``0},System.ReadOnlySpan{``0})">
+      <param name="span"></param>
+      <param name="values"></param>
+      <typeparam name="T"></typeparam>
+      <returns></returns>
+    </member>
+    <member name="M:System.MemoryExtensions.IndexOfAny``1(System.ReadOnlySpan{``0},System.ReadOnlySpan{``0})">
+      <param name="span"></param>
+      <param name="values"></param>
+      <typeparam name="T"></typeparam>
+      <returns></returns>
+    </member>
+    <member name="M:System.MemoryExtensions.IsWhiteSpace(System.ReadOnlySpan{System.Char})">
+      <param name="span"></param>
+      <returns></returns>
+    </member>
+    <member name="M:System.MemoryExtensions.LastIndexOf``1(System.ReadOnlySpan{``0},System.ReadOnlySpan{``0})">
+      <param name="span"></param>
+      <param name="value"></param>
+      <typeparam name="T"></typeparam>
+      <returns></returns>
+    </member>
+    <member name="M:System.MemoryExtensions.LastIndexOf``1(System.ReadOnlySpan{``0},``0)">
+      <param name="span"></param>
+      <param name="value"></param>
+      <typeparam name="T"></typeparam>
+      <returns></returns>
+    </member>
+    <member name="M:System.MemoryExtensions.LastIndexOf``1(System.Span{``0},System.ReadOnlySpan{``0})">
+      <param name="span"></param>
+      <param name="value"></param>
+      <typeparam name="T"></typeparam>
+      <returns></returns>
+    </member>
+    <member name="M:System.MemoryExtensions.LastIndexOf``1(System.Span{``0},``0)">
+      <param name="span"></param>
+      <param name="value"></param>
+      <typeparam name="T"></typeparam>
+      <returns></returns>
+    </member>
+    <member name="M:System.MemoryExtensions.LastIndexOfAny``1(System.Span{``0},``0,``0,``0)">
+      <param name="span"></param>
+      <param name="value0"></param>
+      <param name="value1"></param>
+      <param name="value2"></param>
+      <typeparam name="T"></typeparam>
+      <returns></returns>
+    </member>
+    <member name="M:System.MemoryExtensions.LastIndexOfAny``1(System.ReadOnlySpan{``0},``0,``0,``0)">
+      <param name="span"></param>
+      <param name="value0"></param>
+      <param name="value1"></param>
+      <param name="value2"></param>
+      <typeparam name="T"></typeparam>
+      <returns></returns>
+    </member>
+    <member name="M:System.MemoryExtensions.LastIndexOfAny``1(System.Span{``0},``0,``0)">
+      <param name="span"></param>
+      <param name="value0"></param>
+      <param name="value1"></param>
+      <typeparam name="T"></typeparam>
+      <returns></returns>
+    </member>
+    <member name="M:System.MemoryExtensions.LastIndexOfAny``1(System.ReadOnlySpan{``0},``0,``0)">
+      <param name="span"></param>
+      <param name="value0"></param>
+      <param name="value1"></param>
+      <typeparam name="T"></typeparam>
+      <returns></returns>
+    </member>
+    <member name="M:System.MemoryExtensions.LastIndexOfAny``1(System.Span{``0},System.ReadOnlySpan{``0})">
+      <param name="span"></param>
+      <param name="values"></param>
+      <typeparam name="T"></typeparam>
+      <returns></returns>
+    </member>
+    <member name="M:System.MemoryExtensions.LastIndexOfAny``1(System.ReadOnlySpan{``0},System.ReadOnlySpan{``0})">
+      <param name="span"></param>
+      <param name="values"></param>
+      <typeparam name="T"></typeparam>
+      <returns></returns>
+    </member>
+    <member name="M:System.MemoryExtensions.Overlaps``1(System.ReadOnlySpan{``0},System.ReadOnlySpan{``0})">
+      <param name="span"></param>
+      <param name="other"></param>
+      <typeparam name="T"></typeparam>
+      <returns></returns>
+    </member>
+    <member name="M:System.MemoryExtensions.Overlaps``1(System.Span{``0},System.ReadOnlySpan{``0})">
+      <param name="span"></param>
+      <param name="other"></param>
+      <typeparam name="T"></typeparam>
+      <returns></returns>
+    </member>
+    <member name="M:System.MemoryExtensions.Overlaps``1(System.ReadOnlySpan{``0},System.ReadOnlySpan{``0},System.Int32@)">
+      <param name="span"></param>
+      <param name="other"></param>
+      <param name="elementOffset"></param>
+      <typeparam name="T"></typeparam>
+      <returns></returns>
+    </member>
+    <member name="M:System.MemoryExtensions.Overlaps``1(System.Span{``0},System.ReadOnlySpan{``0},System.Int32@)">
+      <param name="span"></param>
+      <param name="other"></param>
+      <param name="elementOffset"></param>
+      <typeparam name="T"></typeparam>
+      <returns></returns>
+    </member>
+    <member name="M:System.MemoryExtensions.Reverse``1(System.Span{``0})">
+      <param name="span"></param>
+      <typeparam name="T"></typeparam>
+    </member>
+    <member name="M:System.MemoryExtensions.SequenceCompareTo``1(System.Span{``0},System.ReadOnlySpan{``0})">
+      <param name="span"></param>
+      <param name="other"></param>
+      <typeparam name="T"></typeparam>
+      <returns></returns>
+    </member>
+    <member name="M:System.MemoryExtensions.SequenceCompareTo``1(System.ReadOnlySpan{``0},System.ReadOnlySpan{``0})">
+      <param name="span"></param>
+      <param name="other"></param>
+      <typeparam name="T"></typeparam>
+      <returns></returns>
+    </member>
+    <member name="M:System.MemoryExtensions.SequenceEqual``1(System.ReadOnlySpan{``0},System.ReadOnlySpan{``0})">
+      <param name="span"></param>
+      <param name="other"></param>
+      <typeparam name="T"></typeparam>
+      <returns></returns>
+    </member>
+    <member name="M:System.MemoryExtensions.SequenceEqual``1(System.Span{``0},System.ReadOnlySpan{``0})">
+      <param name="span"></param>
+      <param name="other"></param>
+      <typeparam name="T"></typeparam>
+      <returns></returns>
+    </member>
+    <member name="M:System.MemoryExtensions.StartsWith(System.ReadOnlySpan{System.Char},System.ReadOnlySpan{System.Char},System.StringComparison)">
+      <param name="span"></param>
+      <param name="value"></param>
+      <param name="comparisonType"></param>
+      <returns></returns>
+    </member>
+    <member name="M:System.MemoryExtensions.StartsWith``1(System.ReadOnlySpan{``0},System.ReadOnlySpan{``0})">
+      <param name="span"></param>
+      <param name="value"></param>
+      <typeparam name="T"></typeparam>
+      <returns></returns>
+    </member>
+    <member name="M:System.MemoryExtensions.StartsWith``1(System.Span{``0},System.ReadOnlySpan{``0})">
+      <param name="span"></param>
+      <param name="value"></param>
+      <typeparam name="T"></typeparam>
+      <returns></returns>
+    </member>
+    <member name="M:System.MemoryExtensions.ToLower(System.ReadOnlySpan{System.Char},System.Span{System.Char},System.Globalization.CultureInfo)">
+      <param name="source"></param>
+      <param name="destination"></param>
+      <param name="culture"></param>
+      <returns></returns>
+    </member>
+    <member name="M:System.MemoryExtensions.ToLowerInvariant(System.ReadOnlySpan{System.Char},System.Span{System.Char})">
+      <param name="source"></param>
+      <param name="destination"></param>
+      <returns></returns>
+    </member>
+    <member name="M:System.MemoryExtensions.ToUpper(System.ReadOnlySpan{System.Char},System.Span{System.Char},System.Globalization.CultureInfo)">
+      <param name="source"></param>
+      <param name="destination"></param>
+      <param name="culture"></param>
+      <returns></returns>
+    </member>
+    <member name="M:System.MemoryExtensions.ToUpperInvariant(System.ReadOnlySpan{System.Char},System.Span{System.Char})">
+      <param name="source"></param>
+      <param name="destination"></param>
+      <returns></returns>
+    </member>
+    <member name="M:System.MemoryExtensions.Trim(System.ReadOnlySpan{System.Char})">
+      <param name="span"></param>
+      <returns></returns>
+    </member>
+    <member name="M:System.MemoryExtensions.Trim(System.ReadOnlySpan{System.Char},System.Char)">
+      <param name="span"></param>
+      <param name="trimChar"></param>
+      <returns></returns>
+    </member>
+    <member name="M:System.MemoryExtensions.Trim(System.ReadOnlySpan{System.Char},System.ReadOnlySpan{System.Char})">
+      <param name="span"></param>
+      <param name="trimChars"></param>
+      <returns></returns>
+    </member>
+    <member name="M:System.MemoryExtensions.TrimEnd(System.ReadOnlySpan{System.Char})">
+      <param name="span"></param>
+      <returns></returns>
+    </member>
+    <member name="M:System.MemoryExtensions.TrimEnd(System.ReadOnlySpan{System.Char},System.Char)">
+      <param name="span"></param>
+      <param name="trimChar"></param>
+      <returns></returns>
+    </member>
+    <member name="M:System.MemoryExtensions.TrimEnd(System.ReadOnlySpan{System.Char},System.ReadOnlySpan{System.Char})">
+      <param name="span"></param>
+      <param name="trimChars"></param>
+      <returns></returns>
+    </member>
+    <member name="M:System.MemoryExtensions.TrimStart(System.ReadOnlySpan{System.Char})">
+      <param name="span"></param>
+      <returns></returns>
+    </member>
+    <member name="M:System.MemoryExtensions.TrimStart(System.ReadOnlySpan{System.Char},System.Char)">
+      <param name="span"></param>
+      <param name="trimChar"></param>
+      <returns></returns>
+    </member>
+    <member name="M:System.MemoryExtensions.TrimStart(System.ReadOnlySpan{System.Char},System.ReadOnlySpan{System.Char})">
+      <param name="span"></param>
+      <param name="trimChars"></param>
+      <returns></returns>
+    </member>
     <member name="T:System.Span`1">
       <typeparam name="T"></typeparam>
     </member>
@@ -65,16 +1413,16 @@
       <param name="right"></param>
       <returns></returns>
     </member>
-    <member name="M:System.Span`1.op_Implicit(System.ArraySegment{T})~System.Span{T}">
-      <param name="arraySegment"></param>
-      <returns></returns>
-    </member>
     <member name="M:System.Span`1.op_Implicit(System.Span{T})~System.ReadOnlySpan{T}">
       <param name="span"></param>
       <returns></returns>
     </member>
     <member name="M:System.Span`1.op_Implicit(T[])~System.Span{T}">
       <param name="array"></param>
+      <returns></returns>
+    </member>
+    <member name="M:System.Span`1.op_Implicit(System.ArraySegment{T})~System.Span{T}">
+      <param name="arraySegment"></param>
       <returns></returns>
     </member>
     <member name="M:System.Span`1.op_Inequality(System.Span{`0},System.Span{`0})">
@@ -98,257 +1446,173 @@
       <param name="destination"></param>
       <returns></returns>
     </member>
-    <member name="T:System.SpanExtensions">
+    <member name="T:System.Buffers.ReadOnlySequenceSegment`1">
+      <typeparam name="T"></typeparam>
+    </member>
+    <member name="M:System.Buffers.ReadOnlySequenceSegment`1.#ctor">
       
     </member>
-    <member name="M:System.SpanExtensions.AsBytes``1(System.ReadOnlySpan{``0})">
-      <param name="source"></param>
-      <typeparam name="T"></typeparam>
+    <member name="P:System.Buffers.ReadOnlySequenceSegment`1.Memory">
       <returns></returns>
     </member>
-    <member name="M:System.SpanExtensions.AsBytes``1(System.Span{``0})">
-      <param name="source"></param>
-      <typeparam name="T"></typeparam>
+    <member name="P:System.Buffers.ReadOnlySequenceSegment`1.Next">
       <returns></returns>
     </member>
-    <member name="M:System.SpanExtensions.AsSpan(System.String)">
-      <param name="text"></param>
+    <member name="P:System.Buffers.ReadOnlySequenceSegment`1.RunningIndex">
       <returns></returns>
     </member>
-    <member name="M:System.SpanExtensions.AsSpan``1(System.ArraySegment{``0})">
-      <param name="arraySegment"></param>
-      <typeparam name="T"></typeparam>
-      <returns></returns>
-    </member>
-    <member name="M:System.SpanExtensions.AsSpan``1(``0[])">
-      <param name="array"></param>
-      <typeparam name="T"></typeparam>
-      <returns></returns>
-    </member>
-    <member name="M:System.SpanExtensions.CopyTo``1(``0[],System.Span{``0})">
-      <param name="array"></param>
-      <param name="destination"></param>
+    <member name="T:System.Buffers.ReadOnlySequence`1">
       <typeparam name="T"></typeparam>
     </member>
-    <member name="M:System.SpanExtensions.IndexOf(System.Span{System.Byte},System.ReadOnlySpan{System.Byte})">
-      <param name="span"></param>
-      <param name="value"></param>
-      <returns></returns>
+    <member name="M:System.Buffers.ReadOnlySequence`1.#ctor(System.ReadOnlyMemory{`0})">
+      <param name="memory"></param>
     </member>
-    <member name="M:System.SpanExtensions.IndexOf(System.Span{System.Byte},System.Byte)">
-      <param name="span"></param>
-      <param name="value"></param>
-      <returns></returns>
-    </member>
-    <member name="M:System.SpanExtensions.IndexOf(System.ReadOnlySpan{System.Byte},System.Byte)">
-      <param name="span"></param>
-      <param name="value"></param>
-      <returns></returns>
-    </member>
-    <member name="M:System.SpanExtensions.IndexOf(System.ReadOnlySpan{System.Byte},System.ReadOnlySpan{System.Byte})">
-      <param name="span"></param>
-      <param name="value"></param>
-      <returns></returns>
-    </member>
-    <member name="M:System.SpanExtensions.IndexOf``1(System.ReadOnlySpan{``0},System.ReadOnlySpan{``0})">
-      <param name="span"></param>
-      <param name="value"></param>
-      <typeparam name="T"></typeparam>
-      <returns></returns>
-    </member>
-    <member name="M:System.SpanExtensions.IndexOf``1(System.ReadOnlySpan{``0},``0)">
-      <param name="span"></param>
-      <param name="value"></param>
-      <typeparam name="T"></typeparam>
-      <returns></returns>
-    </member>
-    <member name="M:System.SpanExtensions.IndexOf``1(System.Span{``0},System.ReadOnlySpan{``0})">
-      <param name="span"></param>
-      <param name="value"></param>
-      <typeparam name="T"></typeparam>
-      <returns></returns>
-    </member>
-    <member name="M:System.SpanExtensions.IndexOf``1(System.Span{``0},``0)">
-      <param name="span"></param>
-      <param name="value"></param>
-      <typeparam name="T"></typeparam>
-      <returns></returns>
-    </member>
-    <member name="M:System.SpanExtensions.IndexOfAny(System.ReadOnlySpan{System.Byte},System.Byte,System.Byte,System.Byte)">
-      <param name="span"></param>
-      <param name="value0"></param>
-      <param name="value1"></param>
-      <param name="value2"></param>
-      <returns></returns>
-    </member>
-    <member name="M:System.SpanExtensions.IndexOfAny(System.Span{System.Byte},System.Byte,System.Byte,System.Byte)">
-      <param name="span"></param>
-      <param name="value0"></param>
-      <param name="value1"></param>
-      <param name="value2"></param>
-      <returns></returns>
-    </member>
-    <member name="M:System.SpanExtensions.IndexOfAny(System.Span{System.Byte},System.Byte,System.Byte)">
-      <param name="span"></param>
-      <param name="value0"></param>
-      <param name="value1"></param>
-      <returns></returns>
-    </member>
-    <member name="M:System.SpanExtensions.IndexOfAny(System.ReadOnlySpan{System.Byte},System.ReadOnlySpan{System.Byte})">
-      <param name="span"></param>
-      <param name="values"></param>
-      <returns></returns>
-    </member>
-    <member name="M:System.SpanExtensions.IndexOfAny(System.Span{System.Byte},System.ReadOnlySpan{System.Byte})">
-      <param name="span"></param>
-      <param name="values"></param>
-      <returns></returns>
-    </member>
-    <member name="M:System.SpanExtensions.IndexOfAny(System.ReadOnlySpan{System.Byte},System.Byte,System.Byte)">
-      <param name="span"></param>
-      <param name="value0"></param>
-      <param name="value1"></param>
-      <returns></returns>
-    </member>
-    <member name="M:System.SpanExtensions.NonPortableCast``2(System.ReadOnlySpan{``0})">
-      <param name="source"></param>
-      <typeparam name="TFrom"></typeparam>
-      <typeparam name="TTo"></typeparam>
-      <returns></returns>
-    </member>
-    <member name="M:System.SpanExtensions.NonPortableCast``2(System.Span{``0})">
-      <param name="source"></param>
-      <typeparam name="TFrom"></typeparam>
-      <typeparam name="TTo"></typeparam>
-      <returns></returns>
-    </member>
-    <member name="M:System.SpanExtensions.SequenceEqual(System.ReadOnlySpan{System.Byte},System.ReadOnlySpan{System.Byte})">
-      <param name="first"></param>
-      <param name="second"></param>
-      <returns></returns>
-    </member>
-    <member name="M:System.SpanExtensions.SequenceEqual(System.Span{System.Byte},System.ReadOnlySpan{System.Byte})">
-      <param name="first"></param>
-      <param name="second"></param>
-      <returns></returns>
-    </member>
-    <member name="M:System.SpanExtensions.SequenceEqual``1(System.ReadOnlySpan{``0},System.ReadOnlySpan{``0})">
-      <param name="first"></param>
-      <param name="second"></param>
-      <typeparam name="T"></typeparam>
-      <returns></returns>
-    </member>
-    <member name="M:System.SpanExtensions.SequenceEqual``1(System.Span{``0},System.ReadOnlySpan{``0})">
-      <param name="first"></param>
-      <param name="second"></param>
-      <typeparam name="T"></typeparam>
-      <returns></returns>
-    </member>
-    <member name="M:System.SpanExtensions.StartsWith(System.ReadOnlySpan{System.Byte},System.ReadOnlySpan{System.Byte})">
-      <param name="span"></param>
-      <param name="value"></param>
-      <returns></returns>
-    </member>
-    <member name="M:System.SpanExtensions.StartsWith(System.Span{System.Byte},System.ReadOnlySpan{System.Byte})">
-      <param name="span"></param>
-      <param name="value"></param>
-      <returns></returns>
-    </member>
-    <member name="M:System.SpanExtensions.StartsWith``1(System.ReadOnlySpan{``0},System.ReadOnlySpan{``0})">
-      <param name="span"></param>
-      <param name="value"></param>
-      <typeparam name="T"></typeparam>
-      <returns></returns>
-    </member>
-    <member name="M:System.SpanExtensions.StartsWith``1(System.Span{``0},System.ReadOnlySpan{``0})">
-      <param name="span"></param>
-      <param name="value"></param>
-      <typeparam name="T"></typeparam>
-      <returns></returns>
-    </member>
-    <member name="T:System.ReadOnlySpan`1">
-      <typeparam name="T"></typeparam>
-    </member>
-    <member name="M:System.ReadOnlySpan`1.#ctor(`0[])">
+    <member name="M:System.Buffers.ReadOnlySequence`1.#ctor(`0[])">
       <param name="array"></param>
     </member>
-    <member name="M:System.ReadOnlySpan`1.#ctor(System.Void*,System.Int32)">
-      <param name="pointer"></param>
-      <param name="length"></param>
-    </member>
-    <member name="M:System.ReadOnlySpan`1.#ctor(`0[],System.Int32)">
-      <param name="array"></param>
-      <param name="start"></param>
-    </member>
-    <member name="M:System.ReadOnlySpan`1.#ctor(`0[],System.Int32,System.Int32)">
+    <member name="M:System.Buffers.ReadOnlySequence`1.#ctor(`0[],System.Int32,System.Int32)">
       <param name="array"></param>
       <param name="start"></param>
       <param name="length"></param>
     </member>
-    <member name="M:System.ReadOnlySpan`1.CopyTo(System.Span{`0})">
-      <param name="destination"></param>
+    <member name="M:System.Buffers.ReadOnlySequence`1.#ctor(System.Buffers.ReadOnlySequenceSegment{`0},System.Int32,System.Buffers.ReadOnlySequenceSegment{`0},System.Int32)">
+      <param name="startSegment"></param>
+      <param name="startIndex"></param>
+      <param name="endSegment"></param>
+      <param name="endIndex"></param>
     </member>
-    <member name="M:System.ReadOnlySpan`1.DangerousCreate(System.Object,`0@,System.Int32)">
-      <param name="obj"></param>
-      <param name="objectData"></param>
-      <param name="length"></param>
+    <member name="F:System.Buffers.ReadOnlySequence`1.Empty">
       <returns></returns>
     </member>
-    <member name="M:System.ReadOnlySpan`1.DangerousGetPinnableReference">
+    <member name="P:System.Buffers.ReadOnlySequence`1.End">
       <returns></returns>
     </member>
-    <member name="P:System.ReadOnlySpan`1.Empty">
+    <member name="P:System.Buffers.ReadOnlySequence`1.First">
       <returns></returns>
     </member>
-    <member name="M:System.ReadOnlySpan`1.Equals(System.Object)">
-      <param name="obj"></param>
+    <member name="M:System.Buffers.ReadOnlySequence`1.GetEnumerator">
       <returns></returns>
     </member>
-    <member name="M:System.ReadOnlySpan`1.GetHashCode">
+    <member name="M:System.Buffers.ReadOnlySequence`1.GetPosition(System.Int64)">
+      <param name="offset"></param>
       <returns></returns>
     </member>
-    <member name="P:System.ReadOnlySpan`1.IsEmpty">
+    <member name="M:System.Buffers.ReadOnlySequence`1.GetPosition(System.Int64,System.SequencePosition)">
+      <param name="offset"></param>
+      <param name="origin"></param>
       <returns></returns>
     </member>
-    <member name="P:System.ReadOnlySpan`1.Item(System.Int32)">
-      <param name="index"></param>
+    <member name="P:System.Buffers.ReadOnlySequence`1.IsEmpty">
       <returns></returns>
     </member>
-    <member name="P:System.ReadOnlySpan`1.Length">
+    <member name="P:System.Buffers.ReadOnlySequence`1.IsSingleSegment">
       <returns></returns>
     </member>
-    <member name="M:System.ReadOnlySpan`1.op_Equality(System.ReadOnlySpan{`0},System.ReadOnlySpan{`0})">
-      <param name="left"></param>
-      <param name="right"></param>
+    <member name="P:System.Buffers.ReadOnlySequence`1.Length">
       <returns></returns>
     </member>
-    <member name="M:System.ReadOnlySpan`1.op_Implicit(System.ArraySegment{T})~System.ReadOnlySpan{T}">
-      <param name="arraySegment"></param>
-      <returns></returns>
-    </member>
-    <member name="M:System.ReadOnlySpan`1.op_Implicit(T[])~System.ReadOnlySpan{T}">
-      <param name="array"></param>
-      <returns></returns>
-    </member>
-    <member name="M:System.ReadOnlySpan`1.op_Inequality(System.ReadOnlySpan{`0},System.ReadOnlySpan{`0})">
-      <param name="left"></param>
-      <param name="right"></param>
-      <returns></returns>
-    </member>
-    <member name="M:System.ReadOnlySpan`1.Slice(System.Int32)">
+    <member name="M:System.Buffers.ReadOnlySequence`1.Slice(System.Int64)">
       <param name="start"></param>
       <returns></returns>
     </member>
-    <member name="M:System.ReadOnlySpan`1.Slice(System.Int32,System.Int32)">
+    <member name="M:System.Buffers.ReadOnlySequence`1.Slice(System.SequencePosition)">
+      <param name="start"></param>
+      <returns></returns>
+    </member>
+    <member name="M:System.Buffers.ReadOnlySequence`1.Slice(System.Int32,System.Int32)">
       <param name="start"></param>
       <param name="length"></param>
       <returns></returns>
     </member>
-    <member name="M:System.ReadOnlySpan`1.ToArray">
+    <member name="M:System.Buffers.ReadOnlySequence`1.Slice(System.Int32,System.SequencePosition)">
+      <param name="start"></param>
+      <param name="end"></param>
       <returns></returns>
     </member>
-    <member name="M:System.ReadOnlySpan`1.TryCopyTo(System.Span{`0})">
-      <param name="destination"></param>
+    <member name="M:System.Buffers.ReadOnlySequence`1.Slice(System.Int64,System.Int64)">
+      <param name="start"></param>
+      <param name="length"></param>
+      <returns></returns>
+    </member>
+    <member name="M:System.Buffers.ReadOnlySequence`1.Slice(System.Int64,System.SequencePosition)">
+      <param name="start"></param>
+      <param name="end"></param>
+      <returns></returns>
+    </member>
+    <member name="M:System.Buffers.ReadOnlySequence`1.Slice(System.SequencePosition,System.Int32)">
+      <param name="start"></param>
+      <param name="length"></param>
+      <returns></returns>
+    </member>
+    <member name="M:System.Buffers.ReadOnlySequence`1.Slice(System.SequencePosition,System.Int64)">
+      <param name="start"></param>
+      <param name="length"></param>
+      <returns></returns>
+    </member>
+    <member name="M:System.Buffers.ReadOnlySequence`1.Slice(System.SequencePosition,System.SequencePosition)">
+      <param name="start"></param>
+      <param name="end"></param>
+      <returns></returns>
+    </member>
+    <member name="P:System.Buffers.ReadOnlySequence`1.Start">
+      <returns></returns>
+    </member>
+    <member name="M:System.Buffers.ReadOnlySequence`1.ToString">
+      <returns></returns>
+    </member>
+    <member name="M:System.Buffers.ReadOnlySequence`1.TryGet(System.SequencePosition@,System.ReadOnlyMemory{`0}@,System.Boolean)">
+      <param name="position"></param>
+      <param name="memory"></param>
+      <param name="advance"></param>
+      <returns></returns>
+    </member>
+    <member name="T:System.Buffers.ReadOnlySequence`1.Enumerator">
+      <typeparam name="T"></typeparam>
+    </member>
+    <member name="M:System.Buffers.ReadOnlySequence`1.Enumerator.#ctor(System.Buffers.ReadOnlySequence{`0}@)">
+      <param name="sequence"></param>
+    </member>
+    <member name="P:System.Buffers.ReadOnlySequence`1.Enumerator.Current">
+      <returns></returns>
+    </member>
+    <member name="M:System.Buffers.ReadOnlySequence`1.Enumerator.MoveNext">
+      <returns></returns>
+    </member>
+    <member name="T:System.Buffers.OperationStatus">
+      
+    </member>
+    <member name="F:System.Buffers.OperationStatus.DestinationTooSmall">
+      <returns></returns>
+    </member>
+    <member name="F:System.Buffers.OperationStatus.Done">
+      <returns></returns>
+    </member>
+    <member name="F:System.Buffers.OperationStatus.InvalidData">
+      <returns></returns>
+    </member>
+    <member name="F:System.Buffers.OperationStatus.NeedMoreData">
+      <returns></returns>
+    </member>
+    <member name="T:System.Buffers.MemoryPool`1">
+      <typeparam name="T"></typeparam>
+    </member>
+    <member name="M:System.Buffers.MemoryPool`1.#ctor">
+      
+    </member>
+    <member name="M:System.Buffers.MemoryPool`1.Dispose">
+      
+    </member>
+    <member name="M:System.Buffers.MemoryPool`1.Dispose(System.Boolean)">
+      <param name="disposing"></param>
+    </member>
+    <member name="P:System.Buffers.MemoryPool`1.MaxBufferSize">
+      <returns></returns>
+    </member>
+    <member name="M:System.Buffers.MemoryPool`1.Rent(System.Int32)">
+      <param name="minBufferSize"></param>
+      <returns></returns>
+    </member>
+    <member name="P:System.Buffers.MemoryPool`1.Shared">
       <returns></returns>
     </member>
   </members>
