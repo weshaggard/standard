@@ -3,8 +3,8 @@
   <Import Project="$([MSBuild]::GetDirectoryNameOfFileAbove($(MSBuildThisFileDirectory), dir.props))\dir.props" />
 
   <PropertyGroup>
-    <Version>2.0.0</Version>
-    <PrereleaseLabel>preview3</PrereleaseLabel>
+    <Version>2.1.0</Version>
+    <PrereleaseLabel>rc1</PrereleaseLabel>
     <HarvestStablePackage>false</HarvestStablePackage>
     <SkipPackageFileCheck>true</SkipPackageFileCheck>
     <OmitDependencies>true</OmitDependencies>
